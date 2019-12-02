@@ -9,6 +9,6 @@ namespace backend.Models
         public string Email { get; set; }
         public string Role { get; set; }
         public string PhotoPath { get; set; }
-        
+        public string AuthenticationCode { get; set; }
     }
 }
