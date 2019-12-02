@@ -42,12 +42,14 @@ code {
 
   left: 0.5%;
   right: 0.5%;
-  top: 12%;
-  bottom: 12%;
+  bottom: 1%;
 
   font-weight: 900;
   font-size: 35px;
   line-height: 40px;
 
   color: white;
+  background-color: transparent !important;
+  border: none !important;
+  -webkit-box-shadow: none !important;
 }

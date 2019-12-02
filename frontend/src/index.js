@@ -2,10 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faCoffee, faBars } from '@fortawesome/free-solid-svg-icons';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './index.css';
 import App from './App';
-import Header from './Components/header'
+import { Header } from './Components/header'
 import * as serviceWorker from './serviceWorker';
 
 library.add(faCoffee, faBars);
