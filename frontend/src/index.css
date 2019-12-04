@@ -53,3 +53,25 @@ code {
   border: none !important;
   -webkit-box-shadow: none !important;
 }
+
+.solidButton{
+  position: relative;
+  width: 9.375rem;
+  height: 4.375rem;
+
+  background: #031231;
+  border-radius: 19px;
+  background-color: #031231 !important;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+}
+
+.softButton{
+  position: absolute;
+
+  background: #b0d7ff;
+  border-radius: 19px;
+  background-color: #b0d7ff !important;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+}
