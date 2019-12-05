@@ -1,3 +1,11 @@
 import React from 'react'
 
-const Burger = props
+export const BurgerNav = ({ open }) => {
+    return (
+        <div className="burgerNav">
+            <a href="/">Element 1</a>
+            <a href="/">Element 1</a>
+            <a href="/">Element 1</a>
+        </div>
+    )
+}
