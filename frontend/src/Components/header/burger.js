@@ -4,15 +4,31 @@ import anime from 'animejs'
 
 export class BurgerNav extends React.Component {
     myRef = React.createRef()
+    isHidden = false;
 
     componentDidUpdate() {
+        if (this.isHidden) {
+            var basicTimeline = anime.timeline();
+            basicTimeline
+                .add({
+                    targets: this.myRef.current,
+                    duration: 500,
+                    translateX: 0,
+                    easing: 'easeInOutQuad'
+                })
+            this.isHidden = false;
+        } else {
+            var basicTimeline = anime.timeline();
+            basicTimeline
+                .add({
+                    targets: this.myRef.current,
+                    duration: 500,
+                    translateX: -310,
+                    easing: 'easeInOutQuad'
+                })
+            this.isHidden = true;
+        }
 
-        var basicTimeline = anime.timeline();
-        basicTimeline
-            .add({
-                targets: this.myRef.current,
-                translateX: -310
-            })
     }
 
     render() {
