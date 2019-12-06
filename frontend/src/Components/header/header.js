@@ -3,18 +3,23 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button, Container } from 'react-bootstrap'
 import { BurgerNav } from "./burger"
 
-export const Header = () => {
-    const [open, setOpen] = useState(false)
+export class Header extends React.Component {
+    state = { alteredPosition: true }
 
-    return (
-        <div className="header" >
-            <Button className="burger">
-                <FontAwesomeIcon icon="bars" />
-            </Button>
-            <BurgerNav open={open} setOpen={setOpen}/>
-            <Container className="schoolName">
-                {'School name goes here through API call'}
-            </Container>
-        </div>
-    )
+    render() {
+        return (
+            <div className="header" >
+                <Button className="burger"
+                    onClick={() =>
+                        this.setState({ alteredPosition: !this.state.alteredPosition })
+                    }>
+                    <FontAwesomeIcon icon="bars" />
+                </Button>
+                <BurgerNav/>
+                <Container className="schoolName">
+                    {'School name goes here through API call'}
+                </Container>
+            </div >
+        )
+    }
 }
