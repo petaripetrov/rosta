@@ -10,7 +10,7 @@ export const burgerReducer = (state = [], action, burger) => {
                 basicTimeline
                     .add({
                         targets: action.ref.current,
-                        duration: 500,
+                        duration: 400,
                         translateX: 300,
                         easing: 'easeInOutQuad'
                     })
@@ -20,7 +20,7 @@ export const burgerReducer = (state = [], action, burger) => {
                 basicTimeline
                     .add({
                         targets: action.ref.current,
-                        duration: 500,
+                        duration: 400,
                         translateX: 0,
                         easing: 'easeInOutQuad'
                     })
