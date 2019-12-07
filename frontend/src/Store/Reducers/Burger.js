@@ -1,16 +1,35 @@
-import { combineReducers } from 'redux'
-import { BURGER_ON, BURGER_OFF } from '../Actions/Burger'
+import anime from 'animejs'
 
-export const burgerReducer =(state = [], action) => {
+var isHidden = true;
+export const burgerReducer = (state = [], action, burger) => {
+    var basicTimeline = anime.timeline();
+
     switch (action.type) {
-        case BURGER_ON:
-            return [
-                ...state,
-                {
-                    sidebarMenu: 'shown'
-                }
-            ]
-        case BURGER_OFF:
-            return state.map
+        case 'BURGER_TURN':
+            if (isHidden) {
+                basicTimeline
+                    .add({
+                        targets: action.ref.current,
+                        duration: 500,
+                        translateX: 300,
+                        easing: 'easeInOutQuad'
+                    })
+                isHidden = false
+                return state
+            } else {
+                basicTimeline
+                    .add({
+                        targets: action.ref.current,
+                        duration: 500,
+                        translateX: 0,
+                        easing: 'easeInOutQuad'
+                    })
+                isHidden = true
+
+                return state
+
+            }
+        default:
+            return state;
     }
 }
