@@ -1,14 +1,19 @@
-import { createStore, applyMiddleware } from 'redux'
+import { createStore, applyMiddleware, compose } from 'redux'
 import thunkMiddleware from 'redux-thunk'
 
 import createRootReducer from './Reducers'
+
+const initialState = {
+    burgerNavState: true,
+}
 
 function configureStore(preloadedState: any) {
     const store = createStore(
         createRootReducer(),
         preloadedState,
-        applyMiddleware(
-            thunkMiddleware
+        compose(
+            applyMiddleware(thunkMiddleware),
+            window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
         )
     )
 
@@ -17,4 +22,4 @@ function configureStore(preloadedState: any) {
 
 const store = configureStore()
 
-export default store;
+export default store
