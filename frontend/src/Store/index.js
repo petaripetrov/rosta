@@ -3,10 +3,6 @@ import thunkMiddleware from 'redux-thunk'
 
 import createRootReducer from './Reducers'
 
-const initialState = {
-    burgerNavState: true,
-}
-
 function configureStore(preloadedState: any) {
     const store = createStore(
         createRootReducer(),
