@@ -1,0 +1,16 @@
+/home/kris/Documents/rosta/backend/backend/bin/Debug/netcoreapp3.0/appsettings.Development.json
+/home/kris/Documents/rosta/backend/backend/bin/Debug/netcoreapp3.0/appsettings.json
+/home/kris/Documents/rosta/backend/backend/bin/Debug/netcoreapp3.0/Properties/launchSettings.json
+/home/kris/Documents/rosta/backend/backend/bin/Debug/netcoreapp3.0/backend.deps.json
+/home/kris/Documents/rosta/backend/backend/bin/Debug/netcoreapp3.0/backend.runtimeconfig.json
+/home/kris/Documents/rosta/backend/backend/bin/Debug/netcoreapp3.0/backend.runtimeconfig.dev.json
+/home/kris/Documents/rosta/backend/backend/bin/Debug/netcoreapp3.0/backend.dll
+/home/kris/Documents/rosta/backend/backend/bin/Debug/netcoreapp3.0/backend.pdb
+/home/kris/Documents/rosta/backend/backend/obj/Debug/netcoreapp3.0/backend.csprojAssemblyReference.cache
+/home/kris/Documents/rosta/backend/backend/obj/Debug/netcoreapp3.0/staticwebassets/backend.StaticWebAssets.Manifest.cache
+/home/kris/Documents/rosta/backend/backend/obj/Debug/netcoreapp3.0/staticwebassets/backend.StaticWebAssets.xml
+/home/kris/Documents/rosta/backend/backend/obj/Debug/netcoreapp3.0/backend.AssemblyInfoInputs.cache
+/home/kris/Documents/rosta/backend/backend/obj/Debug/netcoreapp3.0/backend.AssemblyInfo.cs
+/home/kris/Documents/rosta/backend/backend/obj/Debug/netcoreapp3.0/backend.RazorTargetAssemblyInfo.cache
+/home/kris/Documents/rosta/backend/backend/obj/Debug/netcoreapp3.0/backend.dll
+/home/kris/Documents/rosta/backend/backend/obj/Debug/netcoreapp3.0/backend.pdb

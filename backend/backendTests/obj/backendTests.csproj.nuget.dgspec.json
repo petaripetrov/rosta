@@ -4,14 +4,14 @@
     "/home/kris/Documents/rosta/backend/backendTests/backendTests.csproj": {}
   },
   "projects": {
-    "/home/kris/Documents/rosta/backend/backendTests/backendTests.csproj": {
+    "/home/kris/Documents/rosta/backend/backend/backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/kris/Documents/rosta/backend/backendTests/backendTests.csproj",
-        "projectName": "backendTests",
-        "projectPath": "/home/kris/Documents/rosta/backend/backendTests/backendTests.csproj",
+        "projectUniqueName": "/home/kris/Documents/rosta/backend/backend/backend.csproj",
+        "projectName": "backend",
+        "projectPath": "/home/kris/Documents/rosta/backend/backend/backend.csproj",
         "packagesPath": "/home/kris/.nuget/packages/",
-        "outputPath": "/home/kris/Documents/rosta/backend/backendTests/obj/",
+        "outputPath": "/home/kris/Documents/rosta/backend/backend/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/kris/.config/NuGet/NuGet.Config"
@@ -36,6 +36,79 @@
       "frameworks": {
         "netcoreapp3.0": {
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.0.100/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/kris/Documents/rosta/backend/backendTests/backendTests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/kris/Documents/rosta/backend/backendTests/backendTests.csproj",
+        "projectName": "backendTests",
+        "projectPath": "/home/kris/Documents/rosta/backend/backendTests/backendTests.csproj",
+        "packagesPath": "/home/kris/.nuget/packages/",
+        "outputPath": "/home/kris/Documents/rosta/backend/backendTests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/kris/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {
+              "/home/kris/Documents/rosta/backend/backend/backend.csproj": {
+                "projectPath": "/home/kris/Documents/rosta/backend/backend/backend.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "dependencies": {
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[16.2.0, )"
@@ -43,6 +116,10 @@
             "NUnit3TestAdapter": {
               "target": "Package",
               "version": "[3.13.0, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[3.0.0, )"
             },
             "nunit": {
               "target": "Package",
@@ -58,7 +135,16 @@
             "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.0.100/RuntimeIdentifierGraph.json"
         }
       }
     }
