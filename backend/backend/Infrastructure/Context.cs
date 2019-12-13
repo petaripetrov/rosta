@@ -28,6 +28,7 @@ namespace backend.Infrastructure
         {
             
         }
+        // A small change
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

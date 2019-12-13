@@ -858,7 +858,7 @@
       "outputPath": "/home/kris/Documents/rosta/backend/backend/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/kris/.nuget/NuGet/NuGet.Config"
+        "/home/kris/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.0"
