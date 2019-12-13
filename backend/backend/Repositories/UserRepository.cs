@@ -1,4 +1,7 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using backend.Infrastructure;
 using backend.Models;
 
 namespace backend.Repositories
@@ -7,27 +10,49 @@ namespace backend.Repositories
     {
         public void Add(User value)
         {
-            throw new System.NotImplementedException();
+            try
+            {
+                using (var context = new Context())
+                {
+                    context.Users.Add(value);
+                    context.SaveChanges();
+                }
+            }
+            catch (ArgumentNullException e)
+            {
+                throw new ArgumentNullException(e.Message); 
+            }
+            
         }
 
         public void Delete(User value)
         {
-            throw new System.NotImplementedException();
+            using (var context = new Context())
+            {
+                context.Users.Remove(value);
+                context.SaveChanges();
+            }
         }
 
         public User GetById(int id)
         {
-            throw new System.NotImplementedException();
+            var context = new Context();
+            return context.Users.FirstOrDefault(x => x.Id == id);
         }
 
         public void Edit(User value)
         {
-            throw new System.NotImplementedException();
+            using (var context = new Context())
+            {
+                context.Users.Update(value);
+                context.SaveChanges();
+            }
         }
 
         public IEnumerable<User> GetAll()
         {
-            throw new System.NotImplementedException();
+            var context = new Context();
+            return context.Users.ToList();
         }
     }
 }

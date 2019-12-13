@@ -26,9 +26,19 @@
   "frameworks": {
     "netcoreapp3.0": {
       "dependencies": {
-        "Microsoft.EntityFrameworkCore.Sqlite": {
+        "Microsoft.EntityFrameworkCore": {
           "target": "Package",
-          "version": "[3.1.0-preview3.19554.8, )"
+          "version": "[3.0.0, )"
+        },
+        "Microsoft.EntityFrameworkCore.Design": {
+          "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[3.0.0, )"
+        },
+        "Pomelo.EntityFrameworkCore.MySql": {
+          "target": "Package",
+          "version": "[3.0.0, )"
         }
       },
       "imports": [
@@ -40,7 +50,16 @@
         "net48"
       ],
       "assetTargetFallback": true,
-      "warn": true
+      "warn": true,
+      "frameworkReferences": {
+        "Microsoft.AspNetCore.App": {
+          "privateAssets": "none"
+        },
+        "Microsoft.NETCore.App": {
+          "privateAssets": "all"
+        }
+      },
+      "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.0.100/RuntimeIdentifierGraph.json"
     }
   }
 }

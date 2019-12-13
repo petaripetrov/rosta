@@ -81,6 +81,9 @@ namespace backend.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    b.Property<int?>("AuthorId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Color")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
@@ -100,6 +103,8 @@ namespace backend.Migrations
                         .HasColumnType("datetime(6)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("AuthorId");
 
                     b.ToTable("Surveys");
                 });
@@ -171,9 +176,16 @@ namespace backend.Migrations
 
             modelBuilder.Entity("backend.Models.Option", b =>
                 {
-                    b.HasOne("backend.Models.Survey", null)
+                    b.HasOne("backend.Models.Survey", "Survey")
                         .WithMany("Options")
                         .HasForeignKey("SurveyId");
+                });
+
+            modelBuilder.Entity("backend.Models.Survey", b =>
+                {
+                    b.HasOne("backend.Models.User", "Author")
+                        .WithMany()
+                        .HasForeignKey("AuthorId");
                 });
 
             modelBuilder.Entity("backend.Models.User", b =>
