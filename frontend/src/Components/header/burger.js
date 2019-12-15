@@ -11,7 +11,6 @@ export function BurgerNav() {
     const burgerState = useSelector(state => state.burger.burgerTurn)
 
     if (burgerState) {
-        console.log(burgerReference)
         basicTimeline
             .add({
                 targets: burgerReference.current,
