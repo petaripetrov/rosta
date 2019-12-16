@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 code {
@@ -13,12 +14,10 @@ code {
 }
 
 .header{
-  position: relative;
   width: 100%;
-  min-height: 10%;
   height: 50px;
 
-  background: #031231;
+  background: #031231 !important;
 }
 
 .schoolName{
@@ -91,4 +90,9 @@ code {
 .burgerLinkText{
   font-size: 20px;
   color: black;
+}
+
+.svgGraphic{
+  bottom: 60%;
+  top: 60%
 }
