@@ -1,8 +1,6 @@
 import React, { useRef } from 'react'
 import { Button } from 'react-bootstrap'
 import { useSelector } from 'react-redux'
-import store from '../../Store'
-import { burgerTurn } from '../../Store/Actions/Burger'
 import anime from 'animejs'
 
 export function BurgerNav() {

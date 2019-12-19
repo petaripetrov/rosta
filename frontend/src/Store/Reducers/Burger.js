@@ -1,8 +1,5 @@
-import anime from 'animejs'
-
 var isHidden = true;
 export const burgerReducer = (state = [], action, burger) => {
-    var basicTimeline = anime.timeline();
 
     switch (action.type) {
         case 'BURGER_TURN':
