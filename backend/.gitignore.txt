@@ -1,0 +1,5 @@
+#Ignore obj and bin
+backend/backend/obj/
+backend/backend/bin/
+backend/backendTests/obj
+backed/backendTests/bin

@@ -5415,31 +5415,33 @@
     ]
   },
   "packageFolders": {
-    "/home/kris/.nuget/packages/": {}
+    "C:\\Users\\pepi-\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/kris/Documents/rosta/backend/backendTests/backendTests.csproj",
+      "projectUniqueName": "C:\\Projects\\rosta\\backend\\backendTests\\backendTests.csproj",
       "projectName": "backendTests",
-      "projectPath": "/home/kris/Documents/rosta/backend/backendTests/backendTests.csproj",
-      "packagesPath": "/home/kris/.nuget/packages/",
-      "outputPath": "/home/kris/Documents/rosta/backend/backendTests/obj/",
+      "projectPath": "C:\\Projects\\rosta\\backend\\backendTests\\backendTests.csproj",
+      "packagesPath": "C:\\Users\\pepi-\\.nuget\\packages\\",
+      "outputPath": "C:\\Projects\\rosta\\backend\\backendTests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/kris/.config/NuGet/NuGet.Config"
+        "C:\\Users\\pepi-\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "/home/kris/Documents/rosta/backend/backend/backend.csproj": {
-              "projectPath": "/home/kris/Documents/rosta/backend/backend/backend.csproj"
+            "C:\\Projects\\rosta\\backend\\backend\\backend.csproj": {
+              "projectPath": "C:\\Projects\\rosta\\backend\\backend\\backend.csproj"
             }
           }
         }
@@ -5488,7 +5490,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.0.100/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

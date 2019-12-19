@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "/home/kris/.dotnet/store/|arch|/|tfm|",
-      "/home/kris/.nuget/packages"
+      "C:\\Users\\pepi-\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\pepi-\\.nuget\\packages"
     ]
   }
 }
