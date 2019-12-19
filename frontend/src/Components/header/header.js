@@ -30,7 +30,10 @@ export function Header() {
                     <FontAwesomeIcon icon="bars" />
                 </Button>
                 <BurgerNav />
+                <div className="schoolName">
+                    {'School Name'}
+                </div>
             </Navbar>
-        </div >
+        </div>
     )
 }
