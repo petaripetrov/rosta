@@ -1,25 +1,104 @@
 {
   "format": 1,
   "restore": {
-    "/home/kris/Documents/rosta/backend/backendTests/backendTests.csproj": {}
+    "C:\\Projects\\rosta\\backend\\backendTests\\backendTests.csproj": {}
   },
   "projects": {
-    "/home/kris/Documents/rosta/backend/backend/backend.csproj": {
+    "C:\\Projects\\rosta\\backend\\backendTests\\backendTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/kris/Documents/rosta/backend/backend/backend.csproj",
-        "projectName": "backend",
-        "projectPath": "/home/kris/Documents/rosta/backend/backend/backend.csproj",
-        "packagesPath": "/home/kris/.nuget/packages/",
-        "outputPath": "/home/kris/Documents/rosta/backend/backend/obj/",
+        "projectUniqueName": "C:\\Projects\\rosta\\backend\\backendTests\\backendTests.csproj",
+        "projectName": "backendTests",
+        "projectPath": "C:\\Projects\\rosta\\backend\\backendTests\\backendTests.csproj",
+        "packagesPath": "C:\\Users\\pepi-\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\rosta\\backend\\backendTests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/kris/.config/NuGet/NuGet.Config"
+          "C:\\Users\\pepi-\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {
+              "C:\\Projects\\rosta\\backend\\backend\\backend.csproj": {
+                "projectPath": "C:\\Projects\\rosta\\backend\\backend\\backend.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.2.0, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[3.13.0, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "nunit": {
+              "target": "Package",
+              "version": "[3.12.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projects\\rosta\\backend\\backend\\backend.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\rosta\\backend\\backend\\backend.csproj",
+        "projectName": "backend",
+        "projectPath": "C:\\Projects\\rosta\\backend\\backend\\backend.csproj",
+        "packagesPath": "C:\\Users\\pepi-\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\rosta\\backend\\backend\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\pepi-\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -69,82 +148,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.0.100/RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "/home/kris/Documents/rosta/backend/backendTests/backendTests.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "/home/kris/Documents/rosta/backend/backendTests/backendTests.csproj",
-        "projectName": "backendTests",
-        "projectPath": "/home/kris/Documents/rosta/backend/backendTests/backendTests.csproj",
-        "packagesPath": "/home/kris/.nuget/packages/",
-        "outputPath": "/home/kris/Documents/rosta/backend/backendTests/obj/",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "/home/kris/.config/NuGet/NuGet.Config"
-        ],
-        "originalTargetFrameworks": [
-          "netcoreapp3.0"
-        ],
-        "sources": {
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netcoreapp3.0": {
-            "projectReferences": {
-              "/home/kris/Documents/rosta/backend/backend/backend.csproj": {
-                "projectPath": "/home/kris/Documents/rosta/backend/backend/backend.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netcoreapp3.0": {
-          "dependencies": {
-            "Microsoft.NET.Test.Sdk": {
-              "target": "Package",
-              "version": "[16.2.0, )"
-            },
-            "NUnit3TestAdapter": {
-              "target": "Package",
-              "version": "[3.13.0, )"
-            },
-            "Pomelo.EntityFrameworkCore.MySql": {
-              "target": "Package",
-              "version": "[3.0.0, )"
-            },
-            "nunit": {
-              "target": "Package",
-              "version": "[3.12.0, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.0.100/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

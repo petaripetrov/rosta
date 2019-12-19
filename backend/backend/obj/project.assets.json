@@ -846,24 +846,26 @@
     ]
   },
   "packageFolders": {
-    "/home/kris/.nuget/packages/": {}
+    "C:\\Users\\pepi-\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/kris/Documents/rosta/backend/backend/backend.csproj",
+      "projectUniqueName": "C:\\Projects\\rosta\\backend\\backend\\backend.csproj",
       "projectName": "backend",
-      "projectPath": "/home/kris/Documents/rosta/backend/backend/backend.csproj",
-      "packagesPath": "/home/kris/.nuget/packages/",
-      "outputPath": "/home/kris/Documents/rosta/backend/backend/obj/",
+      "projectPath": "C:\\Projects\\rosta\\backend\\backend\\backend.csproj",
+      "packagesPath": "C:\\Users\\pepi-\\.nuget\\packages\\",
+      "outputPath": "C:\\Projects\\rosta\\backend\\backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/kris/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\pepi-\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -913,7 +915,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.0.100/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
