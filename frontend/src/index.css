@@ -90,5 +90,17 @@ code {
   color: black;
 }
 
-#top-tick{
+.container-fluid {
+  position: absolute;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  overflow:auto;
 }
+
+.svgName{
+  position: absolute;
+  top: 50%;
+  padding: 0 0
+}
+

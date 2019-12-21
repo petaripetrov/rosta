@@ -6,7 +6,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
 import { BrowserRouter } from 'react-router-dom';
-import {Container} from 'react-bootstrap'
 
 import './index.css';
 import App from './App';
@@ -20,10 +19,8 @@ ReactDOM.render(
     <Provider store={store}>
         <ConnectedRouter history={history}>
             <BrowserRouter>
-                <Container>
-                    <Header />
-                    <App />
-                </Container>
+                <Header />
+                <App />
             </BrowserRouter>
         </ConnectedRouter>
     </Provider>,
