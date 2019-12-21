@@ -100,9 +100,9 @@ code {
 }
 
 .svgName{
-  position: absolute;
+  position: relative;
 
-  top: 8%;
+  top: 10%;
   left: 4%;
 }
 
@@ -110,8 +110,24 @@ code {
   position: relative;
 
   width: 47%;
-  top: 30%;
-  left: 52%;
+  right: 10px;
+  bottom: 10px;
+}
+
+.buttonContainer{
+  position: relative;
+  flex: auto;
+}
+
+.loginButton{
+  top: 50%;
+  left: 4%;
+}
+
+.registerButton{
+  top: calc(50% + 60px);
+  left: 4%;
+  display: none;
 }
 
 @media only screen and (max-width: 800px){
@@ -125,9 +141,43 @@ code {
   }
 
   .svgDrawing{
-    top: 10%;
+    min-width: 320px;
+    top: 22%;
     left: 0;
     margin: 0 auto;
   }
+
+  .buttonContainer{
+    left: -165px;
+    top: -5%;
+    margin: 0 auto;
+  }
+
 }
 
+.solidButton{
+  position: relative;
+  width: 9.375rem;
+  height: 4.375rem;
+  margin: 3px;
+
+  background: #031231;
+  border-radius: 19px;
+  background-color: #031231 !important;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+}
+
+.softButton{
+  position: absolute;
+  width: 338px;
+  height: 56px;
+  margin: 3px;
+
+  background: #b0d7ff;
+  display: block;
+  border-radius: 19px;
+  background-color: #b0d7ff !important;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+}

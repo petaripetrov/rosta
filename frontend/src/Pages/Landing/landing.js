@@ -4,6 +4,7 @@ import { Container } from 'react-bootstrap'
 
 import SvgName from './rosta.svg'
 import SvgDrawing from './undraw_voting_nvu7 1.svg'
+import { RostaButton } from '../../Components/Library'
 
 export const Landing = () => {
     const ref = React.createRef()
@@ -13,6 +14,10 @@ export const Landing = () => {
         <Container fluid="true" >
             <img src={SvgName} className="svgName"></img>
             <img src={SvgDrawing} className="svgDrawing"></img>
+            <div className="buttonContainer">
+                <RostaButton text="Login" type="soft" className="loginButton" />
+                <RostaButton text="Register" type="soft" className="registerButton" />
+            </div>
         </Container>
     )
 }
