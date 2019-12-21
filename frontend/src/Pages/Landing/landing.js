@@ -14,10 +14,8 @@ export const Landing = () => {
         <Container fluid="true" >
             <img src={SvgName} className="svgName"></img>
             <img src={SvgDrawing} className="svgDrawing"></img>
-            <div className="buttonContainer">
-                <RostaButton text="Login" type="soft" className="loginButton" />
-                <RostaButton text="Register" type="soft" className="registerButton" />
-            </div>
+            <RostaButton text="Login" type="soft" className="loginButton" />
+            <RostaButton text="Register" type="soft" className="registerButton" />
         </Container>
     )
 }

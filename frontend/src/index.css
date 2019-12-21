@@ -96,37 +96,30 @@ code {
   display: flex;
   flex-flow: column;
   height: 100%;
-  overflow:auto;
+  overflow: auto;
 }
 
 .svgName{
-  position: relative;
+  position: absolute;
 
   top: 10%;
   left: 4%;
 }
 
 .svgDrawing{
-  position: relative;
+  position: absolute;
 
   width: 47%;
   right: 10px;
   bottom: 10px;
 }
 
-.buttonContainer{
-  position: relative;
-  flex: auto;
-}
-
 .loginButton{
-  top: 50%;
-  left: 4%;
+  top: 52%
 }
 
 .registerButton{
-  top: calc(50% + 60px);
-  left: 4%;
+  top: calc(52% + 7px);
   display: none;
 }
 
@@ -142,17 +135,20 @@ code {
 
   .svgDrawing{
     min-width: 320px;
-    top: 22%;
+    top: 25%;
     left: 0;
     margin: 0 auto;
   }
 
-  .buttonContainer{
-    left: -165px;
-    top: -5%;
+  .loginButton{
+    right: 0;
     margin: 0 auto;
   }
 
+  .registerButton{
+    right: 0;
+    margin: 0 auto;
+  }
 }
 
 .solidButton{
@@ -169,10 +165,9 @@ code {
 }
 
 .softButton{
-  position: absolute;
+  position: relative;
   width: 338px;
   height: 56px;
-  margin: 3px;
 
   background: #b0d7ff;
   display: block;
