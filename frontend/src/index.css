@@ -92,6 +92,7 @@ code {
 
 .container-fluid {
   position: absolute;
+
   display: flex;
   flex-flow: column;
   height: 100%;
@@ -100,7 +101,33 @@ code {
 
 .svgName{
   position: absolute;
-  top: 50%;
-  padding: 0 0
+
+  top: 8%;
+  left: 4%;
+}
+
+.svgDrawing{
+  position: relative;
+
+  width: 47%;
+  top: 30%;
+  left: 52%;
+}
+
+@media only screen and (max-width: 800px){
+  .svgName{
+    position: relative;
+
+    width: 80%;
+    min-width: 224px;
+    left: 0;
+    margin: 0 auto;
+  }
+
+  .svgDrawing{
+    top: 10%;
+    left: 0;
+    margin: 0 auto;
+  }
 }
 
