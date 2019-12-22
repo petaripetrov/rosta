@@ -1,11 +1,10 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Landing } from './Pages/Landing/landing'
+
 
 function App() {
   return (
-    <div>
-      <FontAwesomeIcon icon="coffee" />
-    </div>
+      <Landing />
   );
 }
 
