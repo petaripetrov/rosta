@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button, Navbar } from 'react-bootstrap'
 import anime from 'animejs'
 import { BurgerNav } from "./burger"
+import './header.css'
 
 export function Header() {
     const myRef = React.createRef()

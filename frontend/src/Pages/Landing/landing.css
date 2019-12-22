@@ -1,0 +1,61 @@
+.container-fluid {
+    position: absolute;
+  
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    overflow: auto;
+  }
+  
+  .svgName{
+    position: absolute;
+  
+    top: 10%;
+    left: 4%;
+  }
+  
+  .svgDrawing{
+    position: absolute;
+  
+    width: 47%;
+    right: 10px;
+    bottom: 10px;
+  }
+  
+  .loginButton{
+    top: 52%;
+    left: calc(4% + 100px)
+  }
+  
+  .registerButton{
+    top: calc(52% + 7px);
+    left: calc(4% + 100px)
+  }
+  
+  @media only screen and (max-width: 800px){
+    .svgName{
+      position: relative;
+  
+      width: 80%;
+      min-width: 224px;
+      left: 0;
+      margin: 0 auto;
+    }
+  
+    .svgDrawing{
+      min-width: 320px;
+      top: 25%;
+      left: 0;
+      margin: 0 auto;
+    }
+
+    .loginButton{
+      left: 0;
+      margin: 0 auto;
+    }
+
+    .registerButton{
+      left: 0;
+      margin: 0 auto;;
+    }
+  }

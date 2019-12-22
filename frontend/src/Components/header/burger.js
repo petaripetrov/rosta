@@ -2,6 +2,7 @@ import React, { useRef } from 'react'
 import { Button } from 'react-bootstrap'
 import { useSelector } from 'react-redux'
 import anime from 'animejs'
+import './header.css'
 
 export function BurgerNav() {
     const basicTimeline = anime.timeline()
