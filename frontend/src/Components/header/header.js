@@ -6,7 +6,7 @@ import anime from 'animejs'
 import { BurgerNav } from "./burger"
 import './header.css'
 
-export function Header() {
+export const Header = () => {
     const myRef = React.createRef()
     const dispatch = useDispatch()
 
