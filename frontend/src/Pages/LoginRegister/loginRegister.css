@@ -65,6 +65,11 @@
     padding-bottom: 22px;
 }
 
+.registerSubmitGroup{
+    padding-top: 60px;
+    padding-bottom: 22px;
+}
+
 .formRegisterButton{
     position: relative;
     width: 100%;

@@ -1,46 +1,65 @@
-import React, { useState, useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import './loginRegister.css'
 import { Form, Button } from 'react-bootstrap'
+import { RostaButton } from '../../Components/Library/'
 
-export const LoginRegister = (props, state) => {
-    const [validated, setValidated] = useState(false)
+export const LoginRegister = props => {
 
     const email = useRef()
     const password = useRef()
+    const confirmedPassword = useRef()
+    const username = useRef()
+    const [passwordValidity, setPasswordValidity] = useState(true)
 
 
-    const handleSubmit = event => {
+    const handleLoginSubmit = event => {
 
         event.preventDefault()
-        alert(`pass API request with ${email.current.value} & ${password.current.value}`)
-
+        alert(`pass API request to login with ${email.current.value} & ${password.current.value}`)
     }
 
-    const onChangeEmail = event => {
-        console.log(password.current.value)
+    const handleRegisterSubmit = event => {
+        if (passwordValidity) {
+            event.preventDefault()
+        } else {
+            event.preventDefault()
+            alert(`pass API request to register with ${email.current.value} & ${password.current.value} & ${username.current.value}`)
+        }
+    }
+
+    const validatePassword = () => {
+        if (password.current.value !== '' && confirmedPassword.current !== '') {
+            if (password.current.value === confirmedPassword.current.value) {
+                setPasswordValidity(passwordValidity => passwordValidity = false)
+            } else {
+                setPasswordValidity(passwordValidity => passwordValidity = true)
+            }
+        } else {
+            setPasswordValidity(passwordValidity => passwordValidity = true)
+        }
     }
 
     if (props.type === 'login') {
         return (
-            <Form onSubmit={handleSubmit} className="loginForm">
+            <Form onSubmit={handleLoginSubmit} className="loginForm">
                 <Form.Group controlId="formEmail">
                     <Form.Label>Email</Form.Label>
-                    <Form.Control required="true" type="email" ref={email} onChange={onChangeEmail} placeholder="Enter email" />
+                    <Form.Control required={true} type="email" ref={email} placeholder="Enter email" />
                 </Form.Group>
 
                 <Form.Group controlId="formPassword">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control required="true" type="password" ref={password} placeholder="Password" />
+                    <Form.Control required={true} type="password" ref={password} placeholder="Password" />
                 </Form.Group>
 
                 <br />
                 <Form.Group>
-                    <Button required variant="primary" type="submit" className="loginSubmitButton">
+                    <Button variant="primary" type="submit" className="loginSubmitButton">
                         {'Submit'}
                     </Button>
                 </Form.Group>
                 <Form.Group className="loginRegisterButton">
-                    <Button variant="primary" className="formRegisterButton">
+                    <Button variant="primary" className="formRegisterButton" >
                         {'Register'}
                     </Button>
                 </Form.Group>
@@ -48,34 +67,33 @@ export const LoginRegister = (props, state) => {
         )
     } else if (props.type === 'register') {
         return (
-            <Form onSubmit={handleSubmit} className="registerForm">
+            <Form onSubmit={handleRegisterSubmit} className="registerForm">
                 <Form.Group controlId="formEmail">
                     <Form.Label>Email</Form.Label>
-                    <Form.Control type="email" placeholder="Enter email" />
-                </Form.Group>
-                <Form.Group controlId="formPassword">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" placeholder="Password" />
-                </Form.Group>
-                <Form.Group controlId="formPassword">
-                    <Form.Label>Confirm Password</Form.Label>
-                    <Form.Control type="password" placeholder="Password" />
-                </Form.Group>
-                <Form.Group controlId="formPassword">
-                    <Form.Label>Username</Form.Label>
-                    <Form.Control type="password" placeholder="Password" />
+                    <Form.Control required={true} type="email" ref={email} placeholder="Enter email" />
                 </Form.Group>
 
-                <Form.Group className="loginRegisterButton">
+                <Form.Group controlId="formPassword">
+                    <Form.Label>Password</Form.Label>
+                    <Form.Control required={true} type="password" ref={password} isInvalid={passwordValidity} onChange={validatePassword} placeholder="Password" />
+                </Form.Group>
+
+                <Form.Group controlId="formPassword">
+                    <Form.Label>Confirm Password</Form.Label>
+                    <Form.Control required={true} type="password" ref={confirmedPassword} isInvalid={passwordValidity} onChange={validatePassword} placeholder="Confirm Password" />
+                </Form.Group>
+
+                <Form.Group controlId="formPassword">
+                    <Form.Label>Username</Form.Label>
+                    <Form.Control required={true} type="text" ref={username} placeholder="Username" />
+                </Form.Group>
+
+                <Form.Group className="registerSubmitGroup">
                     <Button variant="primary" type="submit" className="registerSubmitButton">
                         {'Submit'}
                     </Button>
                 </Form.Group>
             </Form>
-        )
-    } else {
-        return (
-            'Specify valid type'
         )
     }
 }
