@@ -17,12 +17,8 @@ library.add(faCoffee, faBars);
 
 ReactDOM.render(
     <Provider store={store}>
-        <ConnectedRouter history={history}>
-            <BrowserRouter>
-                <Header />
-                <App />
-            </BrowserRouter>
-        </ConnectedRouter>
+        <Header />
+        <App />
     </Provider>,
     document.getElementById('root')
 );
