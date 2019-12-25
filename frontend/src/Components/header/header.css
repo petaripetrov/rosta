@@ -27,7 +27,7 @@
     color: white;
     background-color: transparent !important;
     border: none !important;
-    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
   }
   
   .burgerNav{
@@ -59,7 +59,7 @@
   
     background: #c4c4c4 !important;
     border: none !important;
-    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
     border-radius: 0 !important;
   }
   

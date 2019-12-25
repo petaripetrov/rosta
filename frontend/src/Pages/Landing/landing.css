@@ -1,12 +1,3 @@
-.container-fluid {
-    position: absolute;
-  
-    display: flex;
-    flex-flow: column;
-    height: 100%;
-    overflow: auto;
-  }
-  
   .svgName{
     position: absolute;
   
@@ -23,21 +14,25 @@
   }
   
   .loginButton{
+    position: absolute;
+
     top: 52%;
     left: calc(4% + 100px)
   }
   
   .registerButton{
-    top: calc(52% + 7px);
+    position: absolute;
+
+    top: calc(52% + 60px);
     left: calc(4% + 100px)
   }
   
   @media only screen and (max-width: 800px){
     .svgName{
-      position: relative;
   
       width: 80%;
       min-width: 224px;
+      right: 0;
       left: 0;
       margin: 0 auto;
     }
@@ -46,16 +41,21 @@
       min-width: 320px;
       top: 25%;
       left: 0;
+      right: 0;
       margin: 0 auto;
     }
 
     .loginButton{
       left: 0;
+      right: 0;
+      top: 62%;
       margin: 0 auto;
     }
 
     .registerButton{
       left: 0;
+      right: 0;
+      top: calc(62% + 60px);
       margin: 0 auto;;
     }
   }
