@@ -4,13 +4,11 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faCoffee, faBars } from '@fortawesome/free-solid-svg-icons';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Provider } from 'react-redux';
-import { ConnectedRouter } from 'connected-react-router';
-import { BrowserRouter } from 'react-router-dom';
 
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import store, { history } from './Store';
+import store from './Store';
 import { Header } from './Components'
 
 library.add(faCoffee, faBars);

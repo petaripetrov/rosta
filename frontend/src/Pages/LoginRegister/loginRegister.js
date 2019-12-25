@@ -1,19 +1,19 @@
 import React, { useRef, useState } from 'react'
 import './loginRegister.css'
 import { Form, Button } from 'react-bootstrap'
-import { RostaButton } from '../../Components/Library/'
+import { useHistory } from 'react-router-dom'
 
 export const LoginRegister = props => {
-
+    
+    const history = useHistory()
     const email = useRef()
     const password = useRef()
     const confirmedPassword = useRef()
     const username = useRef()
-    const [passwordValidity, setPasswordValidity] = useState(true)
+    const [passwordValidity, setPasswordValidity] = useState()
 
 
     const handleLoginSubmit = event => {
-
         event.preventDefault()
         alert(`pass API request to login with ${email.current.value} & ${password.current.value}`)
     }
@@ -59,7 +59,9 @@ export const LoginRegister = props => {
                     </Button>
                 </Form.Group>
                 <Form.Group className="loginRegisterButton">
-                    <Button variant="primary" className="formRegisterButton" >
+                    <Button variant="primary" className="formRegisterButton" onClick={() => {
+                        history.push('/register')
+                    }}>
                         {'Register'}
                     </Button>
                 </Form.Group>
