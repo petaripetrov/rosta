@@ -1,7 +1,6 @@
 import React from 'react'
-import anime from 'animejs'
 import { Container } from 'react-bootstrap'
-import { Link, useRouteMatch, Route, useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 import SvgName from './rosta.svg'
 import SvgDrawing from './undraw_voting_nvu7 1.svg'
@@ -13,8 +12,8 @@ export function Landing() {
 
     return (
         <Container>
-            <img src={SvgName} className="svgName"></img>
-            <img src={SvgDrawing} className="svgDrawing"></img>
+            <img src={SvgName} className="svgName" alt={'Rösta'}></img>
+            <img src={SvgDrawing} className="svgDrawing" alt="SVG Drawing"></img>
             <RostaButton text="Login" type="soft" className="loginButton" click={() => {
                 history.push('/login')
             }}>
