@@ -6,19 +6,21 @@ import SvgName from './rosta.svg'
 import SvgDrawing from './undraw_voting_nvu7 1.svg'
 import { RostaButton } from '../../Components/Library'
 import './landing.css'
+import { useTranslation } from 'react-i18next'
 
 export function Landing() {
     let history = useHistory()
+    const {t, i18n} = useTranslation()
 
     return (
         <Container>
             <img src={SvgName} className="svgName" alt={'Rösta'}></img>
             <img src={SvgDrawing} className="svgDrawing" alt="SVG Drawing"></img>
-            <RostaButton text="Login" type="soft" className="loginButton" click={() => {
+            <RostaButton text={t('Login')} type="soft" className="loginButton" click={() => {
                 history.push('/login')
             }}>
             </RostaButton>
-            <RostaButton text="Register" type="soft" className="registerButton" click={() => {
+            <RostaButton text={t('Register')} type="soft" className="registerButton" click={() => {
                 history.push('/register')
             }} />
         </Container>

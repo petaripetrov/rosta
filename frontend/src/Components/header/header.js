@@ -1,7 +1,7 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Button, Navbar } from 'react-bootstrap'
+import { Button, Navbar, ButtonGroup } from 'react-bootstrap'
 import anime from 'animejs'
 import { BurgerNav } from "./burger"
 import './header.css'
@@ -9,6 +9,17 @@ import './header.css'
 export const Header = () => {
     const myRef = React.createRef()
     const dispatch = useDispatch()
+    const currentLanguage = useSelector(state => state.translation.language)
+
+    let disableEnButton, disableBgButton
+
+    if (currentLanguage === 'en') {
+        disableBgButton = false
+        disableEnButton = true
+    } else if (currentLanguage === 'bg') {
+        disableEnButton = false
+        disableBgButton = true
+    }
 
     return (
         <div>
@@ -34,6 +45,18 @@ export const Header = () => {
                 <div className="schoolName">
                     {'School Name'}
                 </div>
+                <ButtonGroup aria-label="Language menu" className="buttonGroup">
+                    <Button className="languageButton" disabled={disableEnButton}
+                        onClick={() => {
+                            dispatch({ type: 'LANGUAGE_CHANGE_EN' })
+                        }}
+                    >{'EN'}</Button>
+                    <Button className="languageButton" disabled={disableBgButton}
+                        onClick={() => {
+                            dispatch({ type: 'LANGUAGE_CHANGE_BG' })
+                        }}
+                    > {'BG'}</Button>
+                </ButtonGroup>
             </Navbar>
         </div>
     )

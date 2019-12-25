@@ -1,8 +1,10 @@
+import { BURGER_TURN } from '../Actions'
+
 var isHidden = true;
-export const burgerReducer = (state = [], action, burger) => {
+export const burgerReducer = (state = {}, action) => {
 
     switch (action.type) {
-        case 'BURGER_TURN':
+        case BURGER_TURN:
             if (isHidden) {
                 isHidden = false
 
