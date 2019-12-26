@@ -1,6 +1,6 @@
 import React from 'react'
 import { Landing } from './Pages/Landing/landing'
-import { LoginRegister } from './Pages/LoginRegister/loginRegister'
+import { LoginForm, RegisterForm } from './Pages/LoginRegister/loginRegister'
 import { Switch, Route } from 'react-router-dom'
 
 function App() {
@@ -11,10 +11,10 @@ function App() {
         <Landing />
       </Route>
       <Route exact path="/login">
-        <LoginRegister type="login" />
+        <LoginForm />
       </Route>
       <Route exact path="/register">
-        <LoginRegister type="register" />
+        <RegisterForm />
       </Route>
     </Switch>
   );
