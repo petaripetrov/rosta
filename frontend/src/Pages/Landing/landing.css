@@ -17,14 +17,20 @@
     position: absolute;
 
     top: 52%;
-    left: calc(4% + 100px)
+    left: calc(4% + 100px);
+
+    color: black;
+    font-weight: bold;
   }
   
   .registerButton{
     position: absolute;
 
     top: calc(52% + 60px);
-    left: calc(4% + 100px)
+    left: calc(4% + 100px);
+
+    color: black;
+    font-weight: bold;
   }
   
   @media only screen and (max-width: 800px){

@@ -2,15 +2,17 @@ import React, { useRef, useState } from 'react'
 import './loginRegister.css'
 import { Form, Button } from 'react-bootstrap'
 import { useHistory } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 export const LoginRegister = props => {
-    
+
     const history = useHistory()
     const email = useRef()
     const password = useRef()
     const confirmedPassword = useRef()
     const username = useRef()
     const [passwordValidity, setPasswordValidity] = useState()
+    const [t, i18n] = useTranslation()
 
 
     const handleLoginSubmit = event => {
@@ -43,26 +45,26 @@ export const LoginRegister = props => {
         return (
             <Form onSubmit={handleLoginSubmit} className="loginForm">
                 <Form.Group controlId="formEmail">
-                    <Form.Label>Email</Form.Label>
+                    <Form.Label>{t('Email')}</Form.Label>
                     <Form.Control required={true} type="email" ref={email} placeholder="Enter email" />
                 </Form.Group>
 
                 <Form.Group controlId="formPassword">
-                    <Form.Label>Password</Form.Label>
+                    <Form.Label>{t('Password')}</Form.Label>
                     <Form.Control required={true} type="password" ref={password} placeholder="Password" />
                 </Form.Group>
 
                 <br />
                 <Form.Group>
                     <Button variant="primary" type="submit" className="loginSubmitButton">
-                        {'Submit'}
+                        {t('Login')}
                     </Button>
                 </Form.Group>
                 <Form.Group className="loginRegisterButton">
                     <Button variant="primary" className="formRegisterButton" onClick={() => {
                         history.push('/register')
                     }}>
-                        {'Register'}
+                        {t('Register')}
                     </Button>
                 </Form.Group>
             </Form>
@@ -71,28 +73,28 @@ export const LoginRegister = props => {
         return (
             <Form onSubmit={handleRegisterSubmit} className="registerForm">
                 <Form.Group controlId="formEmail">
-                    <Form.Label>Email</Form.Label>
+                    <Form.Label>{t('Email')}</Form.Label>
                     <Form.Control required={true} type="email" ref={email} placeholder="Enter email" />
                 </Form.Group>
 
                 <Form.Group controlId="formPassword">
-                    <Form.Label>Password</Form.Label>
+                    <Form.Label>{t('Password')}</Form.Label>
                     <Form.Control required={true} type="password" ref={password} isInvalid={passwordValidity} onChange={validatePassword} placeholder="Password" />
                 </Form.Group>
 
                 <Form.Group controlId="formPassword">
-                    <Form.Label>Confirm Password</Form.Label>
+                    <Form.Label>{t('Confirm Password')}</Form.Label>
                     <Form.Control required={true} type="password" ref={confirmedPassword} isInvalid={passwordValidity} onChange={validatePassword} placeholder="Confirm Password" />
                 </Form.Group>
 
                 <Form.Group controlId="formPassword">
-                    <Form.Label>Username</Form.Label>
+                    <Form.Label>{t('Username')}</Form.Label>
                     <Form.Control required={true} type="text" ref={username} placeholder="Username" />
                 </Form.Group>
 
                 <Form.Group className="registerSubmitGroup">
                     <Button variant="primary" type="submit" className="registerSubmitButton">
-                        {'Submit'}
+                        {t('Register')}
                     </Button>
                 </Form.Group>
             </Form>
