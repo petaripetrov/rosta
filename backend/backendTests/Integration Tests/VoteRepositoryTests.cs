@@ -13,6 +13,9 @@ namespace backendTests.Integration_Tests
         public void Add_Normal_Conditions()
         {
             var repo = new VoteRepository();
+            var vote = new Vote();
+            repo.Add(vote);
+            
         }
         
         [Test]

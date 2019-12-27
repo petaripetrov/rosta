@@ -22,6 +22,8 @@ namespace backendTests.Integration_Tests
                 DateTime.Today.AddDays(2), "Description",
                 options, owner);
             repo.Add(survey);
+            
+            Assert.True(repo.GetAll().Last().Author != null);
         }
 
         [Test]

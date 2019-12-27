@@ -12,7 +12,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 namespace backend.Controllers
 {
-    public class GetAllSchoolsController : BaseController
+    [ApiController]
+    [Route("[controller]")]
+    public class GetAllSchoolsController : ControllerBase
     {
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]

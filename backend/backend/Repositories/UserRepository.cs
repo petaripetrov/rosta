@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using backend.Infrastructure;
 using backend.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace backend.Repositories
 {
@@ -52,7 +53,19 @@ namespace backend.Repositories
         public IEnumerable<User> GetAll()
         {
             var context = new Context();
-            return context.Users.ToList();
+            return context.Users.Include(x => x.School).ToList();
         }
+
+        public void AddSchool(User user,School value)
+        {
+            using (var context = new Context())
+            {
+                user.School = value;
+                context.Users.Update(user);
+                context.SaveChanges();
+            }
+        }
+        
+        
     }
 }

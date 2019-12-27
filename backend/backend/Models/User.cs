@@ -1,6 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using backend.Repositories;
 using Microsoft.EntityFrameworkCore;
 namespace backend.Models
 {
@@ -13,6 +16,10 @@ namespace backend.Models
         public string Role { get; private set; }
         public string PhotoPath { get; set; }
         public string AuthenticationCode { get; private set; }
+        
+        public int? SchoolId { get; set; } 
+        public School School { get; set; }
+
 
         public User()
         {
@@ -46,6 +53,27 @@ namespace backend.Models
             Email = email;
             Role = role;
             AuthenticationCode = authenticationCode;
+        }
+        
+        public void ChangePassword(string password)
+        {
+            if (password == null)
+            {
+                throw new ArgumentNullException("Password cannot be null. ");
+            }
+
+            Password = password;
+
+        }
+
+        public void ChangeRole(string role)
+        {
+            if (role == null)
+            {
+                throw new ArgumentNullException("Role cannot be null. ");
+            }
+
+            Role = role;
         }
     }
 }

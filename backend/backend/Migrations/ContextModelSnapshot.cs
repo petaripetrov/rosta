@@ -51,7 +51,7 @@ namespace backend.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
-                    b.Property<int?>("SurveyId")
+                    b.Property<int>("SurveyId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -171,14 +171,17 @@ namespace backend.Migrations
                 {
                     b.HasOne("backend.Models.User", "Owner")
                         .WithMany()
-                        .HasForeignKey("OwnerId");
+                        .HasForeignKey("OwnerId")
+                        .OnDelete(DeleteBehavior.SetNull);
                 });
 
             modelBuilder.Entity("backend.Models.Option", b =>
                 {
                     b.HasOne("backend.Models.Survey", "Survey")
                         .WithMany("Options")
-                        .HasForeignKey("SurveyId");
+                        .HasForeignKey("SurveyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("backend.Models.Survey", b =>
@@ -190,8 +193,8 @@ namespace backend.Migrations
 
             modelBuilder.Entity("backend.Models.User", b =>
                 {
-                    b.HasOne("backend.Models.School", null)
-                        .WithMany("Admins")
+                    b.HasOne("backend.Models.School", "School")
+                        .WithMany("Users")
                         .HasForeignKey("SchoolId");
                 });
 

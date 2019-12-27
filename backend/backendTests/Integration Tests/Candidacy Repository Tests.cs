@@ -16,6 +16,7 @@ namespace backendTests.Integration_Tests
             var user = new UserRepository().GetAll().FirstOrDefault();
             var candidacy = new Candidacy("John","empty description","empty",user);
             repo.Add(candidacy);
+            Assert.True(repo.GetAll().Last().Owner != null);
         }
 
         [Test]

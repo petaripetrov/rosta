@@ -67,7 +67,7 @@ namespace backend.Repositories
         public IEnumerable<Candidacy> GetAll()
         {
             var context = new Context();
-            return context.Candidacies.ToList();
+            return context.Candidacies.Include(x => x.Owner).ToList();
         }
     }
 }

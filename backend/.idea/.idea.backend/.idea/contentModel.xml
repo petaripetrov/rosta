@@ -12,16 +12,63 @@
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="backend" t="IncludeRecursive">
         <e p="Controllers" t="Include">
+          <e p="CreateUser.cs" t="Include" />
+          <e p="GetAllSchoolsController.cs" t="Include" />
+          <e p="GetAllSurveysController.cs" t="Include" />
+          <e p="GetAllUsersController.cs" t="Include" />
+          <e p="SubmitCandidacyController.cs" t="Include" />
+          <e p="SubmitSurveyController.cs" t="Include" />
+          <e p="SubmitVoteController.cs" t="Include" />
+          <e p="UsersController.cs" t="Include" />
           <e p="WeatherForecastController.cs" t="Include" />
+        </e>
+        <e p="DTOs" t="Include">
+          <e p="CandidacyDTOs" t="Include">
+            <e p="CandidacyInput.cs" t="Include" />
+            <e p="CandidacySummary.cs" t="Include" />
+          </e>
+          <e p="DTOConverters" t="Include">
+            <e p="InputConverters" t="Include">
+              <e p="CandidacyInputConverter.cs" t="Include" />
+              <e p="SurveyInputConverter.cs" t="Include" />
+              <e p="VoteInputConverter.cs" t="Include" />
+            </e>
+          </e>
+          <e p="OptionDTOs" t="Include">
+            <e p="OptionSummary.cs" t="Include" />
+          </e>
+          <e p="SchoolDTOs" t="Include">
+            <e p="SchoolSummary.cs" t="Include" />
+          </e>
+          <e p="SurveyDTOs" t="Include">
+            <e p="SurveyInput.cs" t="Include" />
+            <e p="SurveySummary.cs" t="Include" />
+          </e>
+          <e p="UserDTOs" t="Include">
+            <e p="UserSummary.cs" t="Include" />
+          </e>
+          <e p="VoteDTOs" t="Include">
+            <e p="VoteInput.cs" t="Include" />
+            <e p="VoteSummary.cs" t="Include" />
+          </e>
         </e>
         <e p="Infrastructure" t="Include">
           <e p="Context.cs" t="Include" />
+        </e>
+        <e p="Interfaces" t="Include">
+          <e p="IConverter.cs" t="Include" />
         </e>
         <e p="Migrations" t="Include">
           <e p="20191208183249_Initial.Designer.cs" t="Include" />
           <e p="20191208183249_Initial.cs" t="Include" />
           <e p="20191209164713_Added_Survey_AuthorId.Designer.cs" t="Include" />
           <e p="20191209164713_Added_Survey_AuthorId.cs" t="Include" />
+          <e p="20191217165419_Candidacy_Changes_School_Changes.Designer.cs" t="Include" />
+          <e p="20191217165419_Candidacy_Changes_School_Changes.cs" t="Include" />
+          <e p="20191219170907_Users_Added_FK_Schools.Designer.cs" t="Include" />
+          <e p="20191219170907_Users_Added_FK_Schools.cs" t="Include" />
+          <e p="20191226170008_Survey_Users_FK_Changed.Designer.cs" t="Include" />
+          <e p="20191226170008_Survey_Users_FK_Changed.cs" t="Include" />
           <e p="ContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
@@ -36,6 +83,7 @@
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />
         </e>
+        <e p="Providers" t="Include" />
         <e p="Repositories" t="Include">
           <e p="CandidacyRepository.cs" t="Include" />
           <e p="IRepository.cs" t="Include" />
@@ -51,6 +99,7 @@
         <e p="appsettings.json" t="Include" />
         <e p="backend.csproj" t="IncludeRecursive" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="mono_crash.mem.14715.1.blob" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.0" t="Include">

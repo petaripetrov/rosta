@@ -14,3 +14,14 @@
 /home/kris/Documents/rosta/backend/backend/obj/Debug/netcoreapp3.0/backend.RazorTargetAssemblyInfo.cache
 /home/kris/Documents/rosta/backend/backend/obj/Debug/netcoreapp3.0/backend.dll
 /home/kris/Documents/rosta/backend/backend/obj/Debug/netcoreapp3.0/backend.pdb
+/home/kris/Documents/rosta/backend/backend/bin/Debug/netcoreapp3.0/backend
+/home/kris/Documents/rosta/backend/backend/bin/Debug/netcoreapp3.0/Microsoft.EntityFrameworkCore.dll
+/home/kris/Documents/rosta/backend/backend/bin/Debug/netcoreapp3.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/home/kris/Documents/rosta/backend/backend/bin/Debug/netcoreapp3.0/Microsoft.EntityFrameworkCore.Design.dll
+/home/kris/Documents/rosta/backend/backend/bin/Debug/netcoreapp3.0/Microsoft.EntityFrameworkCore.Relational.dll
+/home/kris/Documents/rosta/backend/backend/bin/Debug/netcoreapp3.0/MySqlConnector.dll
+/home/kris/Documents/rosta/backend/backend/bin/Debug/netcoreapp3.0/Newtonsoft.Json.dll
+/home/kris/Documents/rosta/backend/backend/bin/Debug/netcoreapp3.0/Pomelo.EntityFrameworkCore.MySql.dll
+/home/kris/Documents/rosta/backend/backend/bin/Debug/netcoreapp3.0/Pomelo.JsonObject.dll
+/home/kris/Documents/rosta/backend/backend/obj/Debug/netcoreapp3.0/backend.MvcApplicationPartsAssemblyInfo.cache
+/home/kris/Documents/rosta/backend/backend/obj/Debug/netcoreapp3.0/backend.csproj.CopyComplete
