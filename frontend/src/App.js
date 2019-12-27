@@ -1,11 +1,22 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React from 'react'
+import { Landing } from './Pages/Landing/landing'
+import { LoginForm, RegisterForm } from './Pages/LoginRegister/loginRegister'
+import { Switch, Route } from 'react-router-dom'
 
 function App() {
+
   return (
-    <div>
-      <FontAwesomeIcon icon="coffee" />
-    </div>
+    <Switch>
+      <Route exact path="/">
+        <Landing />
+      </Route>
+      <Route exact path="/login">
+        <LoginForm />
+      </Route>
+      <Route exact path="/register">
+        <RegisterForm />
+      </Route>
+    </Switch>
   );
 }
 

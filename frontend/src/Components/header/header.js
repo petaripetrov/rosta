@@ -1,40 +1,63 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Button, Container } from 'react-bootstrap'
+import { Button, Navbar, ButtonGroup } from 'react-bootstrap'
 import anime from 'animejs'
 import { BurgerNav } from "./burger"
+import './header.css'
 
-export class Header extends React.Component {
-    state = { alteredPosition: true }
-    myRef = React.createRef()
+export const Header = () => {
+    const myRef = React.createRef()
+    const dispatch = useDispatch()
+    const currentLanguage = useSelector(state => state.translation.language)
 
-    render() {
-        return (
-            <div className="header" >
-                <Button ref={this.myRef} className="burger"
+    let disableEnButton, disableBgButton
+
+    if (currentLanguage === 'en') {
+        disableBgButton = false
+        disableEnButton = true
+    } else if (currentLanguage === 'bg') {
+        disableEnButton = false
+        disableBgButton = true
+    }
+
+    return (
+        <div>
+            <Navbar bg="dark" variant="dark" className="header" fixed="top">
+                <Button ref={myRef} className="burger"
                     onClick={() => {
-                        this.setState({ alteredPosition: !this.state.alteredPosition, })
+                        dispatch({ type: 'BURGER_TURN' })
                         anime({
-                            targets: this.myRef.current,
-                            backgroundPositionX: '0px',
+                            targets: myRef.current,
                             scale: {
                                 value: [1, 0.8],
-                                duration: 1000
+                                duration: 1000,
                             },
-                            scale:{
+                            scale: {
                                 value: [0.8, 1],
                                 duration: 1000
                             }
                         })
-                }
-                }>
+                    }}>
                     <FontAwesomeIcon icon="bars" />
                 </Button>
-            <BurgerNav />
-            <Container className="schoolName">
-                {'School name goes here through API call'}
-            </Container>
-            </div >
-        )
-    }
+                <BurgerNav />
+                <div className="schoolName">
+                    {'School Name'}
+                </div>
+                <ButtonGroup aria-label="Language menu" className="buttonGroup">
+                    <Button className="languageButton" disabled={disableEnButton}
+                        onClick={() => {
+                            dispatch({ type: 'LANGUAGE_CHANGE_EN' })
+                        }}
+                    >{'EN'}</Button>
+                    <Button className="languageButton" disabled={disableBgButton}
+                        onClick={() => {
+                            dispatch({ type: 'LANGUAGE_CHANGE_BG' })
+                        }}
+                    > {'BG'}</Button>
+                </ButtonGroup>
+            </Navbar>
+        </div>
+    )
 }

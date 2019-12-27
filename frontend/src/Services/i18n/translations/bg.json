@@ -1,0 +1,14 @@
+{
+    "Login": "Влизане",
+    "Register": "Регистриране",
+    "Email": "Имейл адрес",
+    "Password": "Парола",
+    "Confirm Password": "Потвърждаване на парола",
+    "Username": "Потребителско име",
+
+    
+    "emailErrorMessage": "Моля въведете валиден имейл.",
+    "passwordErrorMessage": "Моля въвдете валидна парола(най-малко 8 знака).",
+    "passwordMatchError": "Паролите не съвпадат.",
+    "usernameError": "Потребителското име е заето."
+}

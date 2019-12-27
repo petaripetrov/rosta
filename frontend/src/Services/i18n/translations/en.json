@@ -1,0 +1,13 @@
+{
+    "Login": "Login",
+    "Register": "Register",
+    "Email": "Email",
+    "Password": "Password",
+    "Confirm Password": "Confirm Password",
+    "Username": "Username",
+
+    "emailErrorMessage": "Please enter a valid email.",
+    "passwordErrorMessage": "Please enter a valid password(at least 8 characters).",
+    "passwordMatchError": "Passwords don't match.",
+    "usernameError": "Username unavalible"
+}
