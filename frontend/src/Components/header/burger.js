@@ -1,13 +1,25 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { Button } from 'react-bootstrap'
 import { useSelector } from 'react-redux'
 import anime from 'animejs'
 import './header.css'
+import { useHistory } from 'react-router-dom'
 
 export function BurgerNav() {
     const basicTimeline = anime.timeline()
     const burgerReference = useRef(null)
     const burgerState = useSelector(state => state.burger.burgerTurn)
+    const options = useSelector(state => state.menu.options)
+    const history = useHistory()
+
+    console.log(options)
+
+    const burgerOptions = options ? options.map((option) =>
+        <Button key={option} onClick={() => {
+            history.push(`/${option}`.toLowerCase().replace(/\s/g, ''))
+        }}className="burgerLink">
+            <div className="burgerLinkText">{option}</div>
+        </Button>) : <div>error</div>
 
     if (burgerState) {
         basicTimeline
@@ -29,12 +41,7 @@ export function BurgerNav() {
     return (
         <div ref={burgerReference} className="burgerNav">
             <div className="transparentBar"></div>
-            <Button className="burgerLink">
-                <div className="burgerLinkText">Users</div>
-            </Button>
-            <Button className="burgerLink">
-                <div className="burgerLinkText">Test</div>
-            </Button>
+            {burgerOptions}
         </div>
     )
 }

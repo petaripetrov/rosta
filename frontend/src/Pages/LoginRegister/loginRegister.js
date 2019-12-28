@@ -49,7 +49,10 @@ export const LoginForm = () => {
                         message: `${t('welcomeMessage')}`
                     }
                 })
-                // history.push('/menu')
+                dispatch({
+                    type: 'DISPATCH_MENU_REQUEST'
+                })
+                history.push('/menu')
             } else {
                 alert(`pass API request to login with ${email.current.value} & ${password.current.value}`)
             }
