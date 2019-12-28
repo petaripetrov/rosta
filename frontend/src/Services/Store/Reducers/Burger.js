@@ -1,6 +1,6 @@
 import { BURGER_TURN } from '../Actions'
 
-var isHidden = true;
+let isHidden = true;
 export const burgerReducer = (state = {}, action) => {
 
     switch (action.type) {
@@ -23,6 +23,6 @@ export const burgerReducer = (state = {}, action) => {
 
             }
         default:
-            return state;
+            return state
     }
 }

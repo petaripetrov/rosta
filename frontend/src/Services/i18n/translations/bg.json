@@ -10,5 +10,6 @@
     "emailErrorMessage": "Моля въведете валиден имейл.",
     "passwordErrorMessage": "Моля въвдете валидна парола(най-малко 8 знака).",
     "passwordMatchError": "Паролите не съвпадат.",
-    "usernameError": "Потребителското име е заето."
+    "usernameError": "Потребителското име е заето.",
+    "welcomeMessage": "Добре дошли!"
 }

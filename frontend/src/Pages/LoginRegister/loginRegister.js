@@ -1,8 +1,9 @@
 import React, { useState, useRef } from 'react'
 import './loginRegister.css'
-import { Form, Button } from 'react-bootstrap'
+import { Form, Button, Toast } from 'react-bootstrap'
 import { useHistory } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { useDispatch } from 'react-redux'
 
 
 const BaseForm = (props) => {
@@ -30,17 +31,26 @@ export const LoginForm = () => {
     const password = useRef()
     const history = useHistory()
     const email = useRef()
+    const dispatch = useDispatch()
 
     let [emailValidation, setEmailValidation] = useState()
     let [passwordValidation, setPasswordValidation] = useState()
 
     return (
         <Form onSubmit={(event) => {
+            event.preventDefault()
             if (emailValidation === undefined || passwordValidation === undefined || emailValidation === true || passwordValidation === true) {
-                event.preventDefault()
                 alert('error')
+            } else if (email.current.value === 'admin@admin.com' && password.current.value === 'password') {
+                dispatch({
+                    type: 'TOASTER_DISPLAY',
+                    payload: {
+                        color: "lightgreen",
+                        message: `${t('welcomeMessage')}`
+                    }
+                })
+                // history.push('/menu')
             } else {
-                event.preventDefault()
                 alert(`pass API request to login with ${email.current.value} & ${password.current.value}`)
             }
         }} className="loginForm">

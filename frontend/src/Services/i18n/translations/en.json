@@ -9,5 +9,6 @@
     "emailErrorMessage": "Please enter a valid email.",
     "passwordErrorMessage": "Please enter a valid password(at least 8 characters).",
     "passwordMatchError": "Passwords don't match.",
-    "usernameError": "Username unavalible"
+    "usernameError": "Username unavalible",
+    "welcomeMessage": "Welcome!"
 }

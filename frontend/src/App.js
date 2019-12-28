@@ -16,6 +16,9 @@ function App() {
       <Route exact path="/register">
         <RegisterForm />
       </Route>
+      <Route exact path="/menu">
+        <div>{"menu"}</div>
+      </Route>
     </Switch>
   );
 }
