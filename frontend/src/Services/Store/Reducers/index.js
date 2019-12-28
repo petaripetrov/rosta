@@ -3,14 +3,14 @@ import { combineReducers } from 'redux'
 import { burgerReducer } from './Burger'
 import { translationReducer } from './Translation'
 import { toasterReducer } from './Toaster'
-import { menuReducer } from './Menu'
+import { loginReducer } from './Login'
 
 const createRootReducer = (history) => combineReducers({
     router: connectRouter(history),
     burger: burgerReducer,
     translation: translationReducer,
     toast: toasterReducer,
-    menu: menuReducer
+    login: loginReducer
     // other reducers go here with naming convention | name: nameRouter
 })
 

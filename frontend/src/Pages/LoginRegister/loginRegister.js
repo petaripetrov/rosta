@@ -50,7 +50,7 @@ export const LoginForm = () => {
                     }
                 })
                 dispatch({
-                    type: 'DISPATCH_MENU_REQUEST'
+                    type: 'LOGIN_USER'
                 })
                 history.push('/menu')
             } else {

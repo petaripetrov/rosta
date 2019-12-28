@@ -5,14 +5,12 @@ import anime from 'animejs'
 import './header.css'
 import { useHistory } from 'react-router-dom'
 
-export function BurgerNav() {
+export const BurgerNav = () =>{
     const basicTimeline = anime.timeline()
     const burgerReference = useRef(null)
     const burgerState = useSelector(state => state.burger.burgerTurn)
-    const options = useSelector(state => state.menu.options)
+    const options = useSelector(state => state.login.options)
     const history = useHistory()
-
-    console.log(options)
 
     const burgerOptions = options ? options.map((option) =>
         <Button key={option} onClick={() => {

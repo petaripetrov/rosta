@@ -29,6 +29,10 @@
     border: none !important;
     box-shadow: none !important;
   }
+
+  .burger:disabled{
+    display: none;
+  }
   
   .burgerNav{
     position: absolute;

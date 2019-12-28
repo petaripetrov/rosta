@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useMemo, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button, Navbar, ButtonGroup } from 'react-bootstrap'
@@ -10,7 +10,7 @@ export const Header = () => {
     const myRef = React.createRef()
     const dispatch = useDispatch()
     const currentLanguage = useSelector(state => state.translation.language)
-
+    const isLoggedIn = useSelector(state => state.login.isLoggedIn)
     let disableEnButton, disableBgButton
 
     if (currentLanguage === 'en') {
@@ -20,6 +20,8 @@ export const Header = () => {
         disableEnButton = false
         disableBgButton = true
     }
+
+    console.log(isLoggedIn)
 
     return (
         <div>
@@ -38,7 +40,7 @@ export const Header = () => {
                                 duration: 1000
                             }
                         })
-                    }}>
+                    }} disabled={!isLoggedIn}>
                     <FontAwesomeIcon icon="bars" />
                 </Button>
                 <BurgerNav />
