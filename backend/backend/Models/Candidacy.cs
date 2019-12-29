@@ -36,9 +36,10 @@ namespace backend.Models
                 photoPath = value;
             } 
         }
-        public int OwnerId { get; set; }
-        public virtual User Owner { get; set; }
+        public int? OwnerId { get; set; }
+        public  User Owner { get; set; }
 
+        //changed
         public Candidacy(string name,string description, string photoPath, User owner)
         {
             if (owner == null)

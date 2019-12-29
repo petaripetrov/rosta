@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using backend.Infrastructure;
 using backend.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace backend.Repositories
 {
@@ -52,7 +54,9 @@ namespace backend.Repositories
         public IEnumerable<Vote> GetAll()
         {
             var context = new Context();
-            return context.Votes.ToList();
+            return context.Votes.Include(x => x.Option).ToList();
         }
+
+        
     }
 }

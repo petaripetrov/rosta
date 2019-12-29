@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using backend.Infrastructure;
 using backend.Models;
 using backend.Repositories;
 using NUnit.Framework;
@@ -27,6 +28,22 @@ namespace backendTests.Integration_Tests
                 var user = new User(null,"1X523","Bar@mail.com","Student","1");
                 repo.Add(user);
             });
+        }
+
+        [Test]
+        public void Add_School_Not_Null()
+        {
+            var dbContext = new Context();
+            var schoolRepo = new SchoolRepository();
+            var repo = new UserRepository();
+            var user = new User("Ivan","1X523","Bar@mail.com","Student","1");
+            var school = schoolRepo.GetAll().Last();
+            repo.Add(user);
+            repo.AddSchool(user,school);
+            
+            
+            Assert.True(repo.GetAll().Last().School != null);
+
         }
         
         [Test]
@@ -97,6 +114,13 @@ namespace backendTests.Integration_Tests
              user.PhotoPath = "./Phtotos./photo.jpg";
              repo.Edit(user);
              Assert.IsTrue(repo.GetById(user.Id).PhotoPath != photoPath);
+        }
+
+        [Test]
+        public void GetAll()
+        {
+             var repo = new UserRepository();
+             var users = repo.GetAll();
         }
         
         

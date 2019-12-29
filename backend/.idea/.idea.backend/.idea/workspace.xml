@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="df290771-fae5-4299-a670-98d73b4b94cd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.backend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Controllers/AddOptionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Controllers/AddOptionController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/DTOs/DTOConverters/InputConverters/OptionInputConverter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/DTOs/DTOConverters/InputConverters/OptionInputConverter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/DTOs/OptionDTOs/OptionInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/DTOs/OptionDTOs/OptionInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Models/Survey.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Models/Survey.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Repositories/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Repositories/UserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/bin/Debug/netcoreapp3.0/backend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/backend/bin/Debug/netcoreapp3.0/backend.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/bin/Debug/netcoreapp3.0/backend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/backend/bin/Debug/netcoreapp3.0/backend.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/bin/Debug/netcoreapp3.0/backend.runtimeconfig.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/bin/Debug/netcoreapp3.0/backend.runtimeconfig.dev.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/obj/Debug/netcoreapp3.0/backend.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/Debug/netcoreapp3.0/backend.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/obj/Debug/netcoreapp3.0/backend.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/Debug/netcoreapp3.0/backend.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/obj/Debug/netcoreapp3.0/backend.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/Debug/netcoreapp3.0/backend.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/obj/Debug/netcoreapp3.0/backend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/Debug/netcoreapp3.0/backend.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/obj/Debug/netcoreapp3.0/backend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/Debug/netcoreapp3.0/backend.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/obj/backend.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/backend.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/obj/backend.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/backend.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/obj/backend.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/backend.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backendTests/obj/Debug/netcoreapp3.0/backendTests.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/backendTests/obj/Debug/netcoreapp3.0/backendTests.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backendTests/obj/Debug/netcoreapp3.0/backendTests.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/backendTests/obj/Debug/netcoreapp3.0/backendTests.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backendTests/obj/backendTests.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/backendTests/obj/backendTests.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backendTests/obj/backendTests.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/backendTests/obj/backendTests.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backendTests/obj/backendTests.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/backendTests/obj/backendTests.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backendTests/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/backendTests/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backendTests/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/backendTests/obj/project.packagespec.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/backend/DTOs/OptionDTOs/OptionInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/.local/share/Symbols/src/nunit/nunit/c933a883ea25263ec575a654dae69fa38000edd9/src/NUnitFramework/framework/Internal/Execution/CompositeWorkItem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/.local/share/Symbols/src/nunit/nunit/c933a883ea25263ec575a654dae69fa38000edd9/src/NUnitFramework/framework/Internal/Execution/SimpleWorkItemDispatcher.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2F22993E-2191-4253-8BC4-D1A5A5B4B7F2/147/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/C34D92CF-0375-4665-9D3D-BD7DD359F0E5/24/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/DB77E3B2-7989-47D2-B162-88293D8ADDF7/2E/ToCollection.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/WeatherForecast.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/Controllers/AddOptionController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/DTOs/DTOConverters/InputConverters/OptionInputConverter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6F7983DF-5846-436F-8E9C-B779867785C7/9/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backendTests/Integration Tests/SurveyRepository Tests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backendTests/Integration Tests/OptionRepository Tests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backendTests/Integration Tests/Candidacy Repository Tests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backendTests/Integration Tests/UserRepository Tests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backendTests/Integration Tests/VoteRepositoryTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backendTests/Integration Tests/SchoolRepository Tests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/Infrastructure/Context.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/Repositories/SchoolRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/Repositories/UserRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/Repositories/VoteRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/Repositories/CandidacyRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/Repositories/SurveyRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/Repositories/OptionRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/Repositories/IRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/Controllers/GetAllUsersController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/Controllers/SubmitSurveyController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/Controllers/SubmitCandidacyController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/Controllers/GetAllSchoolsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/Controllers/GetAllSurveysController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/Controllers/WeatherForecastController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/Controllers/CreateUser.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/Controllers/SubmitVoteController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/Controllers/UsersController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/Migrations/20191209164713_Added_Survey_AuthorId.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/Interfaces/IConverter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/Models/Option.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/Models/Vote.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/Models/Candidacy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/Models/Survey.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/Models/User.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/Models/School.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/DTOs/DTOConverters/InputConverters/VoteInputConverter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/DTOs/DTOConverters/InputConverters/CandidacyInputConverter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/DTOs/DTOConverters/InputConverters/SurveyInputConverter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/DTOs/CandidacyDTOs/CandidacyInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/DTOs/CandidacyDTOs/CandidacySummary.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/DTOs/SurveyDTOs/SurveyInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/DTOs/SurveyDTOs/SurveySummary.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/DTOs/SchoolDTOs/SchoolSummary.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/DTOs/OptionDTOs/OptionSummary.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/DTOs/VoteDTOs/VoteSummary.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/DTOs/VoteDTOs/VoteInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/DTOs/UserDTOs/UserSummary.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/backend/Controllers/createUser.cs" />
+        <option value="$PROJECT_DIR$/backend/Controllers/GetAllSurveys.cs" />
+        <option value="$PROJECT_DIR$/backend/Controllers/GetAllUsers.cs" />
+        <option value="$PROJECT_DIR$/backend/Controllers/UsersController.cs" />
+        <option value="$PROJECT_DIR$/backend/Models/Candidacy.cs" />
+        <option value="$PROJECT_DIR$/backend/Infrastructure/Context.cs" />
+        <option value="$PROJECT_DIR$/backend/Models/School.cs" />
+        <option value="$PROJECT_DIR$/backendTests/Integration Tests/UserRepository Tests.cs" />
+        <option value="$PROJECT_DIR$/backendTests/Integration Tests/Candidacy Repository Tests.cs" />
+        <option value="$PROJECT_DIR$/backend/Repositories/CandidacyRepository.cs" />
+        <option value="$PROJECT_DIR$/backendTests/Integration Tests/SurveyRepository Tests.cs" />
+        <option value="$PROJECT_DIR$/backend/Repositories/OptionRepository.cs" />
+        <option value="$PROJECT_DIR$/backend/Repositories/SurveyRepository.cs" />
+        <option value="$PROJECT_DIR$/backendTests/Integration Tests/SchoolRepository Tests.cs" />
+        <option value="$PROJECT_DIR$/backend/Repositories/SchoolRepository.cs" />
+        <option value="$PROJECT_DIR$/backend/Models/User.cs" />
+        <option value="$PROJECT_DIR$/backend/DTOs/CandidacyDTOs/CandidacySummary.cs" />
+        <option value="$PROJECT_DIR$/backend/DTOs/OptionDTOs/OptionSummary.cs" />
+        <option value="$PROJECT_DIR$/backend/DTOs/UserDTOs/UserSummary.cs" />
+        <option value="$PROJECT_DIR$/backend/DTOs/SchoolDTOs/SchoolSummary.cs" />
+        <option value="$PROJECT_DIR$/backendTests/Integration Tests/VoteRepositoryTests.cs" />
+        <option value="$PROJECT_DIR$/backend/Controllers/GetAllSurveysController.cs" />
+        <option value="$PROJECT_DIR$/backend/Controllers/GetAllUsersController.cs" />
+        <option value="$PROJECT_DIR$/backend/DTOs/SurveyDTOs/SurveySummary.cs" />
+        <option value="$PROJECT_DIR$/backend/DTOs/DTOConverters/SurveyConverter.cs" />
+        <option value="$PROJECT_DIR$/backend/Interfaces/IConverter.cs" />
+        <option value="$PROJECT_DIR$/backend/DTOs/SurveyDTOs/SurveyInput.cs" />
+        <option value="$PROJECT_DIR$/backend/DTOs/DTOConverters/InputConverters/SurveyInputConverter.cs" />
+        <option value="$PROJECT_DIR$/backend/DTOs/VoteDTOs/VoteSummary.cs" />
+        <option value="$PROJECT_DIR$/backend/DTOs/DTOConverters/InputConverters/VoteInputConverter.cs" />
+        <option value="$PROJECT_DIR$/backend/DTOs/VoteDTOs/VoteInput.cs" />
+        <option value="$PROJECT_DIR$/backend/Repositories/VoteRepository.cs" />
+        <option value="$PROJECT_DIR$/backend/Models/Vote.cs" />
+        <option value="$PROJECT_DIR$/backend/Controllers/WeatherForecastController.cs" />
+        <option value="$PROJECT_DIR$/backend/Controllers/CreateUser.cs" />
+        <option value="$PROJECT_DIR$/backend/DTOs/DTOConverters/InputConverters/CandidacyInputConverter.cs" />
+        <option value="$PROJECT_DIR$/backend/DTOs/CandidacyDTOs/CandidacyInput.cs" />
+        <option value="$PROJECT_DIR$/backend/Controllers/GetAllSchools.cs" />
+        <option value="$PROJECT_DIR$/backend/Controllers/GetAllSchoolsController.cs" />
+        <option value="$PROJECT_DIR$/backend/Controllers/SubmitCandidacyController.cs" />
+        <option value="$PROJECT_DIR$/backend/Controllers/SubmitSurveyController.cs" />
+        <option value="$PROJECT_DIR$/backend/Controllers/SubmitVoteController.cs" />
+        <option value="$PROJECT_DIR$/backend/Controllers/AddOptionController.cs" />
+        <option value="$PROJECT_DIR$/backend/DTOs/OptionDTOs/OptionInput.cs" />
+        <option value="$PROJECT_DIR$/backend/DTOs/DTOConverters/InputConverters/OptionInputConverter.cs" />
+        <option value="$PROJECT_DIR$/backend/Models/Survey.cs" />
+        <option value="$PROJECT_DIR$/backend/Repositories/UserRepository.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1V4QBMGN9Ufh2ye6vU3IR35bY7x" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TWShift.4" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager" selected=".NET Launch Settings Profile.backend">
+    <configuration name="backend" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/backend/backend.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v3.0" />
+      <option name="LAUNCH_PROFILE_NAME" value="backend" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="backend: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/backend/backend.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v3.0" />
+      <option name="LAUNCH_PROFILE_NAME" value="IIS Express" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="df290771-fae5-4299-a670-98d73b4b94cd" name="Default Changelist" comment="" />
+      <created>1576509751393</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1576509751393</updated>
+      <workItem from="1576509764304" duration="3689000" />
+      <workItem from="1576588862133" duration="11466000" />
+      <workItem from="1576771940235" duration="590000" />
+      <workItem from="1576774152496" duration="2677000" />
+      <workItem from="1576778796900" duration="2648000" />
+      <workItem from="1576869880754" duration="1891000" />
+      <workItem from="1576872653129" duration="1435000" />
+      <workItem from="1577011768042" duration="3639000" />
+      <workItem from="1577095430073" duration="10660000" />
+      <workItem from="1577109592274" duration="500000" />
+      <workItem from="1577202188219" duration="4075000" />
+      <workItem from="1577299431969" duration="1490000" />
+      <workItem from="1577362865069" duration="1238000" />
+      <workItem from="1577370606853" duration="5966000" />
+      <workItem from="1577378118426" duration="2154000" />
+      <workItem from="1577400451112" duration="10672000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1937" y="358" width="756" height="404" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1576512057005">
+      <screen x="1360" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1937" y="358" width="756" height="404" key="#com.intellij.fileTypes.FileTypeChooser/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1576512057005" />
+    <state x="2103" y="315" width="424" height="490" key="FileChooserDialogImpl" timestamp="1577376159635">
+      <screen x="1360" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2103" y="315" width="424" height="490" key="FileChooserDialogImpl/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1577376159635" />
+    <state width="1870" height="60" key="GridCell.Tab.0.bottom" timestamp="1577621708313">
+      <screen x="1360" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1870" height="60" key="GridCell.Tab.0.bottom/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1577621708313" />
+    <state width="1870" height="60" key="GridCell.Tab.0.center" timestamp="1577621708312">
+      <screen x="1360" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1870" height="60" key="GridCell.Tab.0.center/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1577621708312" />
+    <state width="1870" height="60" key="GridCell.Tab.0.left" timestamp="1577621708312">
+      <screen x="1360" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1870" height="60" key="GridCell.Tab.0.left/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1577621708312" />
+    <state width="1870" height="60" key="GridCell.Tab.0.right" timestamp="1577621708313">
+      <screen x="1360" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1870" height="60" key="GridCell.Tab.0.right/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1577621708313" />
+    <state width="1870" height="166" key="GridCell.Tab.1.bottom" timestamp="1577101130869">
+      <screen x="1360" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1870" height="166" key="GridCell.Tab.1.bottom/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1577101130869" />
+    <state width="1870" height="166" key="GridCell.Tab.1.center" timestamp="1577101130869">
+      <screen x="1360" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1870" height="166" key="GridCell.Tab.1.center/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1577101130869" />
+    <state width="1870" height="166" key="GridCell.Tab.1.left" timestamp="1577101130869">
+      <screen x="1360" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1870" height="166" key="GridCell.Tab.1.left/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1577101130869" />
+    <state width="1870" height="166" key="GridCell.Tab.1.right" timestamp="1577101130869">
+      <screen x="1360" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1870" height="166" key="GridCell.Tab.1.right/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1577101130869" />
+    <state width="1870" height="166" key="GridCell.Tab.2.bottom" timestamp="1577101130869">
+      <screen x="1360" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1870" height="166" key="GridCell.Tab.2.bottom/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1577101130869" />
+    <state width="1870" height="166" key="GridCell.Tab.2.center" timestamp="1577101130869">
+      <screen x="1360" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1870" height="166" key="GridCell.Tab.2.center/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1577101130869" />
+    <state width="1870" height="166" key="GridCell.Tab.2.left" timestamp="1577101130869">
+      <screen x="1360" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1870" height="166" key="GridCell.Tab.2.left/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1577101130869" />
+    <state width="1870" height="166" key="GridCell.Tab.2.right" timestamp="1577101130869">
+      <screen x="1360" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1870" height="166" key="GridCell.Tab.2.right/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1577101130869" />
+    <state width="1870" height="166" key="GridCell.Tab.3.bottom" timestamp="1577101130869">
+      <screen x="1360" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1870" height="166" key="GridCell.Tab.3.bottom/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1577101130869" />
+    <state width="1870" height="166" key="GridCell.Tab.3.center" timestamp="1577101130869">
+      <screen x="1360" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1870" height="166" key="GridCell.Tab.3.center/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1577101130869" />
+    <state width="1870" height="166" key="GridCell.Tab.3.left" timestamp="1577101130869">
+      <screen x="1360" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1870" height="166" key="GridCell.Tab.3.left/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1577101130869" />
+    <state width="1870" height="166" key="GridCell.Tab.3.right" timestamp="1577101130869">
+      <screen x="1360" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1870" height="166" key="GridCell.Tab.3.right/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1577101130869" />
+    <state width="1870" height="166" key="GridCell.Tab.4.bottom" timestamp="1577101130869">
+      <screen x="1360" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1870" height="166" key="GridCell.Tab.4.bottom/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1577101130869" />
+    <state width="1870" height="166" key="GridCell.Tab.4.center" timestamp="1577101130869">
+      <screen x="1360" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1870" height="166" key="GridCell.Tab.4.center/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1577101130869" />
+    <state width="1870" height="166" key="GridCell.Tab.4.left" timestamp="1577101130869">
+      <screen x="1360" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1870" height="166" key="GridCell.Tab.4.left/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1577101130869" />
+    <state width="1870" height="166" key="GridCell.Tab.4.right" timestamp="1577101130869">
+      <screen x="1360" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1870" height="166" key="GridCell.Tab.4.right/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1577101130869" />
+    <state x="1950" y="229" width="730" height="661" key="RiderGenerateDialog" timestamp="1577410351100">
+      <screen x="1360" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1950" y="229" width="730" height="661" key="RiderGenerateDialog/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1577410351100" />
+    <state x="2100" y="267" width="429" height="586" key="RollbackChangesDialog" timestamp="1576596160428">
+      <screen x="1360" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2100" y="267" width="429" height="586" key="RollbackChangesDialog/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1576596160428" />
+  </component>
+</project>

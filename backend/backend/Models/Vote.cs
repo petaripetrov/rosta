@@ -4,9 +4,12 @@ namespace backend.Models
 {
     public class Vote
     {
+        //TODO Fix adding new entry issue
         public int Id { get; set; }
         public DateTime Date { get; private set; }
+        public int SurveyId { get; set; }
         public Survey Survey { get; private set; }
+        public int OptionId { get; set; }
         public Option Option { get; private set; }
 
         public Vote()
@@ -25,8 +28,11 @@ namespace backend.Models
             }
 
             Date = date;
-            Survey = survey;
-            Option = option;
+            SurveyId = survey.Id;
+            OptionId = option.Id;
         }
+
+        
+        
     }
 }

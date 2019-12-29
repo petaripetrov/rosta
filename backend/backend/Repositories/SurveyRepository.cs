@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using backend.Infrastructure;
 using backend.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace backend.Repositories
 {
@@ -76,7 +77,7 @@ namespace backend.Repositories
         public IEnumerable<Survey> GetAll()
         {
             var context = new Context();
-            return context.Surveys.ToList();
+            return context.Surveys.Include(x => x.Author).ToList();
         }
     }
 }

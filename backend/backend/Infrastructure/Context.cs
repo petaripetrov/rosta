@@ -39,6 +39,7 @@ namespace backend.Infrastructure
                         maxRetryDelay: TimeSpan.FromSeconds(30),
                         errorNumbersToAdd: null);
                 });
+            optionsBuilder.EnableSensitiveDataLogging();
             base.OnConfiguring(optionsBuilder);
         }
 
@@ -46,6 +47,11 @@ namespace backend.Infrastructure
         {
             modelBuilder.Entity<Candidacy>().HasOne<User>(s => s.Owner).GetInfrastructure()
                 .OnDelete(DeleteBehavior.SetNull, ConfigurationSource.Convention);
+            
+            modelBuilder.Entity<School>().HasMany<User>(x => x.Users).WithOne(x => x.School);
+            
+            
+            
             base.OnModelCreating(modelBuilder);
         }
     }

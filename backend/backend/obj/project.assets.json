@@ -846,26 +846,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\pepi-\\.nuget\\packages\\": {}
+    "/home/kris/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projects\\rosta\\backend\\backend\\backend.csproj",
+      "projectUniqueName": "/home/kris/Documents/rostaNew/rosta/backend/backend/backend.csproj",
       "projectName": "backend",
-      "projectPath": "C:\\Projects\\rosta\\backend\\backend\\backend.csproj",
-      "packagesPath": "C:\\Users\\pepi-\\.nuget\\packages\\",
-      "outputPath": "C:\\Projects\\rosta\\backend\\backend\\obj\\",
+      "projectPath": "/home/kris/Documents/rostaNew/rosta/backend/backend/backend.csproj",
+      "packagesPath": "/home/kris/.nuget/packages/",
+      "outputPath": "/home/kris/Documents/rostaNew/rosta/backend/backend/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\pepi-\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/kris/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -907,6 +905,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[3.0.0, 3.0.0]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -915,7 +919,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.0.101/RuntimeIdentifierGraph.json"
       }
     }
   }

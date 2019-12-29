@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/home/kris/Documents/rosta/backend/backend/backend.csproj",
+    "projectUniqueName": "/home/kris/Documents/rostaNew/rosta/backend/backend/backend.csproj",
     "projectName": "backend",
-    "projectPath": "/home/kris/Documents/rosta/backend/backend/backend.csproj",
-    "outputPath": "/home/kris/Documents/rosta/backend/backend/obj/",
+    "projectPath": "/home/kris/Documents/rostaNew/rosta/backend/backend/backend.csproj",
+    "outputPath": "/home/kris/Documents/rostaNew/rosta/backend/backend/obj/",
     "projectStyle": "PackageReference",
     "originalTargetFrameworks": [
       "netcoreapp3.0"
@@ -51,6 +51,12 @@
       ],
       "assetTargetFallback": true,
       "warn": true,
+      "downloadDependencies": [
+        {
+          "name": "Microsoft.NETCore.App.Ref",
+          "version": "[3.0.0, 3.0.0]"
+        }
+      ],
       "frameworkReferences": {
         "Microsoft.AspNetCore.App": {
           "privateAssets": "none"
@@ -59,7 +65,7 @@
           "privateAssets": "all"
         }
       },
-      "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.0.100/RuntimeIdentifierGraph.json"
+      "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.0.101/RuntimeIdentifierGraph.json"
     }
   }
 }

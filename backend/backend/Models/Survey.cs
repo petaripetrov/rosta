@@ -6,6 +6,7 @@ namespace backend.Models
 {
     public class Survey
     {
+        //TODO Fix adding new entry issue
         public int Id { get; set; }
         public string Name { get; private set; }
         public List<Vote> Votes { get; private set; }
@@ -14,7 +15,7 @@ namespace backend.Models
         public DateTime EndDate { get; private set; }
         public string Description { get; private set; }
 
-        public int AuthorId { get; set; }
+        public int? AuthorId { get; set; }
         public User Author { get; private set; }
         
         private string photoPath = "";
@@ -97,6 +98,11 @@ namespace backend.Models
             
             Color = color;
             PhotoPath = photoPath;
+        }
+
+        public void AddOption(Option option)
+        {
+            Options.Add(option);
         }
     }
     
