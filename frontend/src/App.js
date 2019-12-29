@@ -1,25 +1,30 @@
 import React from 'react'
-import { Landing } from './Pages/Landing/landing'
-import { LoginForm, RegisterForm } from './Pages/LoginRegister/loginRegister'
+import { Landing, LoginForm, RegisterForm, Menu } from './Pages'
 import { Switch, Route } from 'react-router-dom'
+import { useSelector, useDispatch } from 'react-redux'
+import { AuthenticatedRoute } from './Components'
 
 function App() {
+  const dispatch = useDispatch()
+  dispatch({ type: 'LOAD_FROM_COOKIES' })
+
+  const isLoggedIn = useSelector(state => state.login.isLoggedIn)
 
   return (
     <Switch>
       <Route exact path="/">
-        <Landing />
+        <Landing isLoggedIn={isLoggedIn}/>
       </Route>
       <Route exact path="/login">
-        <LoginForm />
+        <LoginForm isLoggedIn={isLoggedIn} />
       </Route>
       <Route exact path="/register">
-        <RegisterForm />
+        <RegisterForm isLoggedIn={isLoggedIn} />
       </Route>
       <Route exact path="/menu">
-        <div>{"menu"}</div>
+        <Menu isLoggedIn={isLoggedIn} />
       </Route>
-    </Switch>
+    </Switch >
   );
 }
 

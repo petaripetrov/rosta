@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { Button } from 'react-bootstrap'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import anime from 'animejs'
 import './header.css'
 import { useHistory } from 'react-router-dom'
@@ -13,10 +13,18 @@ export const BurgerNav = () => {
     const burgerState = useSelector(state => state.burger.burgerTurn)
     const options = useSelector(state => state.login.options)
     const history = useHistory()
+    const dispatch = useDispatch()
 
     const burgerOptions = options ? options.map((option) =>
         <Button key={option} onClick={() => {
-            history.push(`/${option}`.toLowerCase().replace(/\s/g, ''))
+            dispatch({ type: 'BURGER_TURN' })
+            console.log(option)
+            if (option === 'Exit Account') {
+                dispatch({ type: 'LOGOUT_USER' })
+                history.push('/')
+            } else {
+                history.push(`/${option}`.toLowerCase().replace(/\s/g, ''))
+            }
         }} className="burgerLink">
             <div className="burgerLinkText">{t(option)}</div>
         </Button>) : <div>error</div>
@@ -33,7 +41,7 @@ export const BurgerNav = () => {
         basicTimeline
             .add({
                 targets: burgerReference.current,
-                duration: 400,
+                duration: 200,
                 translateX: 0,
                 easing: 'easeInOutQuad'
             })

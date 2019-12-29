@@ -1,23 +1,45 @@
-import { LOGIN_USER } from '../Actions'
+import { LOGIN_USER, LOGOUT_USER, LOAD_FROM_COOKIES } from '../Actions'
 
-let placeHolderSoICanSetUpLogicForWhenTheApiIsDone = false
-export const loginReducer = (state = { isLoggedIn: false}, action) => {
+export const loginReducer = (state = { isLoggedIn: false }, action, store) => {
+
     switch (action.type) {
         case LOGIN_USER:
-            if (!placeHolderSoICanSetUpLogicForWhenTheApiIsDone) {
 
-                // document.cookie = ``
+            var d = new Date()
+
+            document.cookie = `authcode=(test);expires=${d.setTime(d.getTime() + (8 * 60 * 60 * 1000))};path=/;`
+
+            return {
+                ...state,
+                isLoggedIn: true,
+                options: ["Surveys", "Submit Candidacy", "Submit Survey", "Exit Account"]
+            }
+
+        case LOGOUT_USER:
+            document.cookie = `authcode=(test);expires=01 Jan 2000;path=/;`
+
+            return {
+                ...state,
+                isLoggedIn: false,
+                options: []
+            }
+
+        case LOAD_FROM_COOKIES:
+
+            let authCodeExpression = /\(([^\)]+)\)/
+            let authCode = authCodeExpression.exec(document.cookie)
+            if (authCode) {
                 return {
                     ...state,
                     isLoggedIn: true,
+                    authCode: authCode[1],
                     options: ["Surveys", "Submit Candidacy", "Submit Survey", "Exit Account"]
                 }
             } else {
-                placeHolderSoICanSetUpLogicForWhenTheApiIsDone = true
-
                 return {
                     ...state,
-                    isLoggedIn: false
+                    isLoggedIn: false,
+                    options: []
                 }
             }
 
