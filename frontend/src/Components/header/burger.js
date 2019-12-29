@@ -4,8 +4,10 @@ import { useSelector } from 'react-redux'
 import anime from 'animejs'
 import './header.css'
 import { useHistory } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
-export const BurgerNav = () =>{
+export const BurgerNav = () => {
+    const { t } = useTranslation()
     const basicTimeline = anime.timeline()
     const burgerReference = useRef(null)
     const burgerState = useSelector(state => state.burger.burgerTurn)
@@ -15,8 +17,8 @@ export const BurgerNav = () =>{
     const burgerOptions = options ? options.map((option) =>
         <Button key={option} onClick={() => {
             history.push(`/${option}`.toLowerCase().replace(/\s/g, ''))
-        }}className="burgerLink">
-            <div className="burgerLinkText">{option}</div>
+        }} className="burgerLink">
+            <div className="burgerLinkText">{t(option)}</div>
         </Button>) : <div>error</div>
 
     if (burgerState) {

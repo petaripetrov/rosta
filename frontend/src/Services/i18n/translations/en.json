@@ -10,5 +10,11 @@
     "passwordErrorMessage": "Please enter a valid password(at least 8 characters).",
     "passwordMatchError": "Passwords don't match.",
     "usernameError": "Username unavalible",
-    "welcomeMessage": "Welcome!"
+    "welcomeMessage": "Welcome!",
+
+
+    "Surveys": "Surveys",
+    "Submit Candidacy": "Submit Candidacy",
+    "Submit Survey": "Submit Survey",
+    "Exit Account": "Exit Account"
 }

@@ -6,10 +6,11 @@ export const loginReducer = (state = { isLoggedIn: false}, action) => {
         case LOGIN_USER:
             if (!placeHolderSoICanSetUpLogicForWhenTheApiIsDone) {
 
+                // document.cookie = ``
                 return {
                     ...state,
                     isLoggedIn: true,
-                    options: ["Vote", "Submit Candidacy", "Submit Survey", "Exit Account"]
+                    options: ["Surveys", "Submit Candidacy", "Submit Survey", "Exit Account"]
                 }
             } else {
                 placeHolderSoICanSetUpLogicForWhenTheApiIsDone = true

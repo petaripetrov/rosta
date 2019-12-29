@@ -11,5 +11,11 @@
     "passwordErrorMessage": "Моля въвдете валидна парола(най-малко 8 знака).",
     "passwordMatchError": "Паролите не съвпадат.",
     "usernameError": "Потребителското име е заето.",
-    "welcomeMessage": "Добре дошли!"
+    "welcomeMessage": "Добре дошли!",
+
+
+    "Surveys": "Анкети",
+    "Submit Candidacy": "Подай кандидатура",
+    "Submit Survey": "Подай Анкета",
+    "Exit Account": "Изход"
 }

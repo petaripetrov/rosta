@@ -13,13 +13,13 @@ const BaseForm = (props) => {
         <React.Fragment>
             <Form.Group controlId="formEmail">
                 <Form.Label>{t('Email')}</Form.Label>
-                <Form.Control type="input" ref={props.email} placeholder="Enter email" isInvalid={props.emailValidation} onChange={props.onEmailChange} />
+                <Form.Control type="input" ref={props.email} placeholder="Enter email" isInvalid={props.emailValidation} onBlur={props.onEmailChange} />
                 <Form.Control.Feedback type='invalid'>{t('emailErrorMessage')}</Form.Control.Feedback>
             </Form.Group>
 
             <Form.Group controlId="formPassword">
                 <Form.Label>{t('Password')}</Form.Label>
-                <Form.Control type="password" ref={props.password} placeholder="Enter email" isInvalid={props.passwordValidation} onChange={props.onPasswordChange} />
+                <Form.Control type="password" ref={props.password} placeholder="Enter email" isInvalid={props.passwordValidation} onBlur={props.onPasswordChange} />
                 <Form.Control.Feedback type='invalid'>{t('passwordErrorMessage')}</Form.Control.Feedback>
             </Form.Group>
         </React.Fragment>
@@ -130,7 +130,7 @@ export const RegisterForm = () => {
             }} />
             <Form.Group controlId="formConfirmPassword">
                 <Form.Label>{t('Confirm Password')}</Form.Label>
-                <Form.Control type="password" ref={confirmedPassword} isInvalid={confirmedPasswordValidation} onChange={() => {
+                <Form.Control type="password" ref={confirmedPassword} isInvalid={confirmedPasswordValidation} onBlur={() => {
                     console.log(confirmedPasswordValidation)
                     if (password.current.value !== confirmedPassword.current.value) {
                         setConfirmedPasswordValidation(true)
@@ -143,7 +143,7 @@ export const RegisterForm = () => {
 
             <Form.Group controlId="formConfirmPassword">
                 <Form.Label>{t('Username')}</Form.Label>
-                <Form.Control type="text" ref={username} placeholder="Username" isInvalid={usernameValidation} onChange={() => {
+                <Form.Control type="text" ref={username} placeholder="Username" isInvalid={usernameValidation} onBlur={() => {
                     console.log(usernameValidation)
                     if (!username.current.value.match(/.{3,}$/)) {
                         setUsernameValidation(true)
