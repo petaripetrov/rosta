@@ -1,4 +1,8 @@
-$HEADER$namespace $NAMESPACE$
+namespace backend.DTOs.OptionDTOs
 {
-  public class $CLASS$ {$END$}
+    public class OptionInput
+    {
+        public string Name { get; set; }
+        public int SurveyId { get; set; }
+    }
 }

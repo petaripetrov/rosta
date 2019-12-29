@@ -11,12 +11,18 @@ namespace backend.Repositories
     {
         public void Add(User value)
         {
+            
             try
             {
                 using (var context = new Context())
                 {
-                    context.Users.Add(value);
-                    context.SaveChanges();
+                    if (!context.Users.Select(x => x.Email).Contains(value.Email))
+                    {
+                        context.Users.Add(value);
+                        context.SaveChanges();
+                    }
+                    
+                    
                 }
             }
             catch (ArgumentNullException e)

@@ -99,6 +99,11 @@ namespace backend.Models
             Color = color;
             PhotoPath = photoPath;
         }
+
+        public void AddOption(Option option)
+        {
+            Options.Add(option);
+        }
     }
     
 }

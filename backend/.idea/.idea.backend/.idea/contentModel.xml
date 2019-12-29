@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="$USER_HOME$/.Rider2019.3/system/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/.Rider2019.3/system/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_backend.-1677492749.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/.Rider2019.3/system/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_backend.1085058691.00" t="ExcludeRecursive" />
     <e p="$USER_HOME$/.nuget/packages/microsoft.net.test.sdk/16.2.0/build/netcoreapp1.0" t="Include">
       <e p="Microsoft.NET.Test.Sdk.Program.cs" t="Include" />
     </e>
@@ -12,6 +12,7 @@
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="backend" t="IncludeRecursive">
         <e p="Controllers" t="Include">
+          <e p="AddOptionController.cs" t="Include" />
           <e p="CreateUser.cs" t="Include" />
           <e p="GetAllSchoolsController.cs" t="Include" />
           <e p="GetAllSurveysController.cs" t="Include" />
@@ -30,11 +31,13 @@
           <e p="DTOConverters" t="Include">
             <e p="InputConverters" t="Include">
               <e p="CandidacyInputConverter.cs" t="Include" />
+              <e p="OptionInputConverter.cs" t="Include" />
               <e p="SurveyInputConverter.cs" t="Include" />
               <e p="VoteInputConverter.cs" t="Include" />
             </e>
           </e>
           <e p="OptionDTOs" t="Include">
+            <e p="OptionInput.cs" t="Include" />
             <e p="OptionSummary.cs" t="Include" />
           </e>
           <e p="SchoolDTOs" t="Include">
