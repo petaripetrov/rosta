@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/kris/Documents/rosta/backend/backend/backend.csproj": {}
+    "/home/kris/Documents/rostaNew/rosta/backend/backend/backend.csproj": {}
   },
   "projects": {
-    "/home/kris/Documents/rosta/backend/backend/backend.csproj": {
+    "/home/kris/Documents/rostaNew/rosta/backend/backend/backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/kris/Documents/rosta/backend/backend/backend.csproj",
+        "projectUniqueName": "/home/kris/Documents/rostaNew/rosta/backend/backend/backend.csproj",
         "projectName": "backend",
-        "projectPath": "/home/kris/Documents/rosta/backend/backend/backend.csproj",
+        "projectPath": "/home/kris/Documents/rostaNew/rosta/backend/backend/backend.csproj",
         "packagesPath": "/home/kris/.nuget/packages/",
-        "outputPath": "/home/kris/Documents/rosta/backend/backend/obj/",
+        "outputPath": "/home/kris/Documents/rostaNew/rosta/backend/backend/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/kris/.nuget/NuGet/NuGet.Config"
+          "/home/kris/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
