@@ -1,5 +1,5 @@
 import React from 'react'
-import { Landing, LoginForm, RegisterForm, Menu } from './Pages'
+import { Landing, LoginForm, RegisterForm, Menu, Surveys, SubmitCandidacy, SubmitSurvey } from './Pages'
 import { Switch, Route } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 
@@ -12,7 +12,7 @@ function App() {
   return (
     <Switch>
       <Route exact path="/">
-        <Landing isLoggedIn={isLoggedIn}/>
+        <Landing isLoggedIn={isLoggedIn} />
       </Route>
       <Route exact path="/login">
         <LoginForm isLoggedIn={isLoggedIn} />
@@ -22,6 +22,15 @@ function App() {
       </Route>
       <Route exact path="/menu">
         <Menu isLoggedIn={isLoggedIn} />
+      </Route>
+      <Route exact path="/surveys">
+        <Surveys isLoggedIn={isLoggedIn} />
+      </Route>
+      <Route exact path="/submitcandidacy">
+        <SubmitCandidacy isLoggedIn={isLoggedIn} />
+      </Route>
+      <Route exact path="/submitsurvey">
+        <SubmitSurvey isLoggedIn={isLoggedIn} />
       </Route>
     </Switch >
   );
