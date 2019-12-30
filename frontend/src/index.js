@@ -4,7 +4,6 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faCoffee, faBars } from '@fortawesome/free-solid-svg-icons'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Provider } from 'react-redux'
-import { BrowserRouter } from 'react-router-dom'
 import { ConnectedRouter } from 'connected-react-router'
 
 import './index.css'

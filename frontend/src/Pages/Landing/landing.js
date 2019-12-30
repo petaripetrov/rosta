@@ -10,7 +10,7 @@ import { useTranslation } from 'react-i18next'
 
 export const Landing = (props) => {
     let history = useHistory()
-    const { t, i18n } = useTranslation()
+    const { t } = useTranslation()
 
     return (
         props.isLoggedIn === false
@@ -25,6 +25,6 @@ export const Landing = (props) => {
                     history.push('/register')
                 }} />
             </Container>
-            : <Redirect to="/menu"/>
+            : <Redirect to="/menu" />
     )
 }

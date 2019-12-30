@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react'
+import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button, Navbar, ButtonGroup } from 'react-bootstrap'
@@ -20,8 +20,6 @@ export const Header = () => {
         disableEnButton = false
         disableBgButton = true
     }
-
-    console.log(isLoggedIn)
 
     return (
         <div>

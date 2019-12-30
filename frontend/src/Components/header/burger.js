@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import { Button } from 'react-bootstrap'
 import { useSelector, useDispatch } from 'react-redux'
 import anime from 'animejs'
@@ -33,7 +33,7 @@ export const BurgerNav = () => {
         basicTimeline
             .add({
                 targets: burgerReference.current,
-                duration: 400,
+                duration: 300,
                 translateX: 300,
                 easing: 'easeInOutQuad'
             })

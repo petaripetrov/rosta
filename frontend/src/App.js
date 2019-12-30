@@ -2,7 +2,6 @@ import React from 'react'
 import { Landing, LoginForm, RegisterForm, Menu } from './Pages'
 import { Switch, Route } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
-import { AuthenticatedRoute } from './Components'
 
 function App() {
   const dispatch = useDispatch()

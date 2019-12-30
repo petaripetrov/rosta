@@ -1,8 +1,9 @@
 import React from 'react'
 import { Redirect, useHistory } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
-import { Button } from 'react-bootstrap'
+import { Button, Container, ButtonGroup } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'
+import './menu.css'
 
 export const Menu = (props) => {
     const options = useSelector(state => state.login.options)
@@ -12,22 +13,24 @@ export const Menu = (props) => {
 
     const menuOptions = options ? options.map((option) =>
         <Button key={option} onClick={() => {
-            console.log(option)
             if (option === 'Exit Account') {
                 dispatch({ type: 'LOGOUT_USER' })
                 history.push('/')
             } else {
                 history.push(`/${option}`.toLowerCase().replace(/\s/g, ''))
             }
-        }} className="burgerLink">
+        }} className="menuButton">
             <div className="burgerLinkText">{t(option)}</div>
-        </Button>) : <div>error</div>
+        </Button>
+    ) : <div>{t('error')}</div>
 
     return (
         props.isLoggedIn === true
-            ? <div>
-                {menuOptions}
-            </div>
+            ? <Container>
+                <ButtonGroup id="menu">
+                    {menuOptions}
+                </ButtonGroup>
+            </Container>
             : <Redirect to="/login" />
     )
 }
