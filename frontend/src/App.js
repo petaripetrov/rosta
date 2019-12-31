@@ -1,6 +1,6 @@
 import React from 'react'
 import { Landing, LoginForm, RegisterForm, Menu, Surveys, SubmitCandidacy, SubmitSurvey } from './Pages'
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, Redirect } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 
 function App() {
@@ -31,6 +31,9 @@ function App() {
       </Route>
       <Route exact path="/submitsurvey">
         <SubmitSurvey isLoggedIn={isLoggedIn} />
+      </Route>
+      <Route path="*">
+        <Redirect to="/"/>
       </Route>
     </Switch >
   );
