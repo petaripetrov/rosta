@@ -10,24 +10,9 @@ export const BurgerNav = () => {
     const { t } = useTranslation()
     const basicTimeline = anime.timeline()
     const burgerReference = useRef(null)
-    const burgerState = useSelector(state => state.burger.burgerTurn)
-    const options = useSelector(state => state.login.options)
+    const burgerState = useSelector(state => state.burger.burgerState)
     const history = useHistory()
     const dispatch = useDispatch()
-
-    const burgerOptions = options ? options.map((option) =>
-        <Button key={option} onClick={() => {
-            dispatch({ type: 'BURGER_TURN' })
-            console.log(option)
-            if (option === 'Exit Account') {
-                dispatch({ type: 'LOGOUT_USER' })
-                history.push('/')
-            } else {
-                history.push(`/${option}`.toLowerCase().replace(/\s/g, ''))
-            }
-        }} className="burgerLink">
-            <div className="burgerLinkText">{t(option)}</div>
-        </Button>) : <div>error</div>
 
     if (burgerState) {
         basicTimeline
@@ -46,10 +31,31 @@ export const BurgerNav = () => {
                 easing: 'easeInOutQuad'
             })
     }
+
+    function handleSurveyButton() {
+        history.push('/surveys')
+    }
+
+    function handleCandidacyButton() {
+        history.push('/candidacies')
+    }
+
+    function handleExitButton() {
+        dispatch({ type: 'LOGOUT_USER' })
+    }
+
     return (
         <div ref={burgerReference} className="burgerNav">
             <div className="transparentBar"></div>
-            {burgerOptions}
+            <Button className="burgerLink" onClick={handleSurveyButton}>
+                <div>{t('surveys')}</div>
+            </Button>
+            <Button className="burgerLink" onClick={handleCandidacyButton}>
+                <div>{t('candidacies')}</div>
+            </Button>
+            <Button className="burgerLink" onClick={handleExitButton}>
+                <div>{t('exit Account')}</div>
+            </Button>
         </div>
     )
 }

@@ -11,30 +11,45 @@
 }
 
 
-.menuButton{
-    border-radius: 19px !important;
+.surveyButton{
     margin-right: 1.32%;
 
+    width: 165px;
+    
+    color: black;
+    font-weight: inherit;
+    font-size: 20px;
     background: #c4c4c4 !important;
     border: none !important;
     box-shadow: none !important;
     border-radius: 19px !important;
 }
 
-.test{
-    position: relative;
-width: 100%;
-height: 40px;
-top: 2.27%;
+.candidacyButton{
+    margin-right: 1.32%;
 
-margin-bottom: 6.27%;
+    width: 165px;
 
-display: block;
-align-items: center;
-text-align: center;
-
-background: #c4c4c4 !important;
-border: none !important;
-box-shadow: none !important;
-border-radius: 0 !important;
+    color: black;
+    font-weight: inherit;
+    font-size: 20px;
+    background: #c4c4c4 !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 19px !important;
 }
+
+.exitButton{
+    margin-right: 1.32%;
+
+    width: 165px;
+
+    color: black;
+    font-weight: inherit;
+    font-size: 20px;
+    background: #c4c4c4 !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 19px !important;
+}
+

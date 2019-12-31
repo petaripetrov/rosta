@@ -10,7 +10,7 @@ export const burgerReducer = (state = {}, action) => {
 
                 return {
                     ...state,
-                    burgerTurn: !isHidden
+                    burgerState: !isHidden
                 }
             } else {
 
@@ -18,7 +18,7 @@ export const burgerReducer = (state = {}, action) => {
 
                 return {
                     ...state,
-                    burgerTurn: !isHidden
+                    burgerState: !isHidden
                 }
 
             }

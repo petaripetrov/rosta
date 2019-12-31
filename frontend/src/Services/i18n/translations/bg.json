@@ -14,8 +14,9 @@
     "welcomeMessage": "Добре дошли!",
 
 
-    "Surveys": "Анкети",
-    "Submit Candidacy": "Подай кандидатура",
-    "Submit Survey": "Подай Анкета",
-    "Exit Account": "Изход"
+    "surveys": "Анкети",
+    "submit Survey": "Подай Анкета",
+    "candidacies": "Кандидатури",
+    "submit Candidacy": "Подай кандидатура",
+    "exit Account": "Изход"
 }

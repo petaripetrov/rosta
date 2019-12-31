@@ -1,5 +1,12 @@
 import React from 'react'
-import { Landing, LoginForm, RegisterForm, Menu, Surveys, SubmitCandidacy, SubmitSurvey } from './Pages'
+import { 
+  Landing, 
+  LoginForm, 
+  RegisterForm, 
+  Menu, 
+  Surveys, 
+  Candidacies
+} from './Pages'
 import { Switch, Route, Redirect } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 
@@ -26,14 +33,11 @@ function App() {
       <Route exact path="/surveys">
         <Surveys isLoggedIn={isLoggedIn} />
       </Route>
-      <Route exact path="/submitcandidacy">
-        <SubmitCandidacy isLoggedIn={isLoggedIn} />
-      </Route>
-      <Route exact path="/submitsurvey">
-        <SubmitSurvey isLoggedIn={isLoggedIn} />
+      <Route exact path="/candidacies">
+        <Candidacies isLoggedIn={isLoggedIn} />
       </Route>
       <Route path="*">
-        <Redirect to="/"/>
+        <Redirect to="/" />
       </Route>
     </Switch >
   );
