@@ -10,7 +10,7 @@ export const Header = () => {
     const myRef = React.createRef()
     const dispatch = useDispatch()
     const currentLanguage = useSelector(state => state.translation.language)
-
+    const isLoggedIn = useSelector(state => state.login.isLoggedIn)
     let disableEnButton, disableBgButton
 
     if (currentLanguage === 'en') {
@@ -38,7 +38,7 @@ export const Header = () => {
                                 duration: 1000
                             }
                         })
-                    }}>
+                    }} disabled={!isLoggedIn}>
                     <FontAwesomeIcon icon="bars" />
                 </Button>
                 <BurgerNav />
