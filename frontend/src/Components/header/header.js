@@ -7,7 +7,6 @@ import { BurgerNav } from "./burger"
 import './header.css'
 
 export const Header = () => {
-    const timeline = anime.timeline()
     const burgerButtonRef = useRef(null)
     const dispatch = useDispatch()
     const currentLanguage = useSelector(state => state.translation.language)
@@ -29,7 +28,7 @@ export const Header = () => {
                 <Button ref={burgerButtonRef} className="burger"
                     onClick={() => {
                         dispatch({ type: 'BURGER_TURN' })
-                        timeline.add({
+                        anime({
                             targets: burgerButtonRef.current,
                             scale: {
                                 value: [1, 0.8],

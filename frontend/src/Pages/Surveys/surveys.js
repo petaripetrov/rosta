@@ -1,5 +1,5 @@
-import React from 'react'
-import { Redirect, useHistory, Route, Link, useRouteMatch } from 'react-router-dom'
+import React, { useState } from 'react'
+import { Redirect, useHistory, Route, Link, useRouteMatch, useParams, useLocation } from 'react-router-dom'
 import { Container, Button } from 'react-bootstrap'
 
 import './surveys.css'
@@ -7,6 +7,7 @@ import './surveys.css'
 export const Surveys = (props) => {
     const history = useHistory()
     const { path, url } = useRouteMatch()
+    const location = useLocation()
 
     let surveys = [
         {
@@ -71,16 +72,12 @@ export const Surveys = (props) => {
         }
     ]
 
-    console.log({
-        path,
-        url
-    })
-    function handleSurveyButtonClick() {
-        history.push(`${url}/test`)
-    }
+    console.log(location)
 
-    const surveyButtonT = surveys.map((survey, index) =>
-        <Button key={index} className="surveyButton" onClick={handleSurveyButtonClick}>
+    const surveyButton = surveys.map((survey, index) =>
+        <Button key={index} className="surveyButton" onClick={() => {
+            history.push(`${url}/${survey.id}`)
+        }}>
             <span className="surveyButtonText">
                 {survey.name}
             </span>
@@ -88,19 +85,20 @@ export const Surveys = (props) => {
     )
 
     return (
-        <React.Fragment>
-            <Container fluid className="surveyOptionsContainer">
+        location.pathname === '/surveys'
+            ? <Container fluid className="surveyOptionsContainer">
                 <ul className="surveyList">
-                    {surveyButtonT}
+                    {surveyButton}
                 </ul>
             </Container>
-        </React.Fragment>
+            : <SurveysRendered />
     )
 }
 
-const SurveysRendered = (props) => {
-
-    return(
-        <div>Survey Test</div>
+export const SurveysRendered = () => {
+    const { surveyId } = useParams()
+    console.log(surveyId)
+    return (
+        <div>Survey Test {surveyId}</div>
     )
 }

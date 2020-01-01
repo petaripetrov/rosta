@@ -13,18 +13,16 @@ export const Landing = (props) => {
     const { t } = useTranslation()
 
     return (
-        props.isLoggedIn === false
-            ? <Container>
-                <img src={SvgName} className="svgName" alt={'Rösta'}></img>
-                <img src={SvgDrawing} className="svgDrawing" alt="SVG Drawing"></img>
-                <RostaButton text={t('Login')} type="soft" className="loginButton" click={() => {
-                    history.push('/login')
-                }}>
-                </RostaButton>
-                <RostaButton text={t('Register')} type="soft" className="registerButton" click={() => {
-                    history.push('/register')
-                }} />
-            </Container>
-            : <Redirect to="/menu" />
+        <Container>
+            <img src={SvgName} className="svgName" alt={'Rösta'}></img>
+            <img src={SvgDrawing} className="svgDrawing" alt="SVG Drawing"></img>
+            <RostaButton text={t('Login')} type="soft" className="loginButton" click={() => {
+                history.push('/login')
+            }}>
+            </RostaButton>
+            <RostaButton text={t('Register')} type="soft" className="registerButton" click={() => {
+                history.push('/register')
+            }} />
+        </Container>
     )
 }

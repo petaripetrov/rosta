@@ -37,58 +37,56 @@ export const LoginForm = (props) => {
     let [passwordValidation, setPasswordValidation] = useState()
 
     return (
-        props.isLoggedIn === false
-            ? <Form onSubmit={(event) => {
-                event.preventDefault()
-                if (emailValidation === undefined || passwordValidation === undefined || emailValidation === true || passwordValidation === true) {
-                    alert('error')
-                } else if (email.current.value === 'admin@admin.com' && password.current.value === 'password') {
-                    dispatch({
-                        type: 'TOASTER_DISPLAY',
-                        payload: {
-                            color: "lightgreen",
-                            message: `${t('welcomeMessage')}`
-                        }
-                    })
-                    dispatch({
-                        type: 'LOGIN_USER'
-                    })
-                    history.push('/menu')
-                } else {
-                    alert(`pass API request to login with ${email.current.value} & ${password.current.value}`)
-                }
-            }} className="loginForm">
-                <BaseForm email={email} emailValidation={emailValidation}
-                    onEmailChange={() => {
-                        if (!email.current.value.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
-                            setEmailValidation(true)
+        <Form onSubmit={(event) => {
+            event.preventDefault()
+            if (emailValidation === undefined || passwordValidation === undefined || emailValidation === true || passwordValidation === true) {
+                alert('error')
+            } else if (email.current.value === 'admin@admin.com' && password.current.value === 'password') {
+                dispatch({
+                    type: 'TOASTER_DISPLAY',
+                    payload: {
+                        color: "lightgreen",
+                        message: `${t('welcomeMessage')}`
+                    }
+                })
+                dispatch({
+                    type: 'LOGIN_USER'
+                })
+                history.push('/menu')
+            } else {
+                alert(`pass API request to login with ${email.current.value} & ${password.current.value}`)
+            }
+        }} className="loginForm">
+            <BaseForm email={email} emailValidation={emailValidation}
+                onEmailChange={() => {
+                    if (!email.current.value.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
+                        setEmailValidation(true)
 
-                        } else {
-                            setEmailValidation(false)
-                        }
-                    }} password={password} passwordValidation={passwordValidation}
-                    onPasswordChange={() => {
-                        if (!password.current.value.match(/.{8,}$/)) {
-                            setPasswordValidation(true)
-                        } else {
-                            setPasswordValidation(false)
-                        }
-                    }} />
-                <br />
-                <Form.Group>
-                    <Button variant="primary" type="submit" className="loginSubmitButton">
-                        {t('Login')}
-                    </Button>
-                </Form.Group>
-                <Form.Group className="loginRegisterButton">
-                    <Button variant="primary" className="formRegisterButton" onClick={() => {
-                        history.push('/register')
-                    }}>
-                        {t('Register')}
-                    </Button>
-                </Form.Group>
-            </Form>
-            : <Redirect to="/menu" />
+                    } else {
+                        setEmailValidation(false)
+                    }
+                }} password={password} passwordValidation={passwordValidation}
+                onPasswordChange={() => {
+                    if (!password.current.value.match(/.{8,}$/)) {
+                        setPasswordValidation(true)
+                    } else {
+                        setPasswordValidation(false)
+                    }
+                }} />
+            <br />
+            <Form.Group>
+                <Button variant="primary" type="submit" className="loginSubmitButton">
+                    {t('Login')}
+                </Button>
+            </Form.Group>
+            <Form.Group className="loginRegisterButton">
+                <Button variant="primary" className="formRegisterButton" onClick={() => {
+                    history.push('/register')
+                }}>
+                    {t('Register')}
+                </Button>
+            </Form.Group>
+        </Form>
     )
 }
 
@@ -107,62 +105,60 @@ export const RegisterForm = (props) => {
 
 
     return (
-        props.isLoggedIn === false
-            ? <Form onSubmit={(event) => {
-                if (passwordValidation) {
-                    event.preventDefault()
-                } else {
-                    event.preventDefault()
-                    alert(`pass API request to register with ${email.current.value} & ${password.current.value} & ${username.current.value}`)
-                }
-            }} className="registerForm">
-                <BaseForm email={email} emailValidation={emailValidation} onEmailChange={() => {
-                    if (!email.current.value.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
-                        setEmailValidation(true)
+        <Form onSubmit={(event) => {
+            if (passwordValidation) {
+                event.preventDefault()
+            } else {
+                event.preventDefault()
+                alert(`pass API request to register with ${email.current.value} & ${password.current.value} & ${username.current.value}`)
+            }
+        }} className="registerForm">
+            <BaseForm email={email} emailValidation={emailValidation} onEmailChange={() => {
+                if (!email.current.value.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
+                    setEmailValidation(true)
 
+                } else {
+                    setEmailValidation(false)
+                }
+            }} password={password} passwordValidation={passwordValidation} onPasswordChange={() => {
+                if (!password.current.value.match(/.{8,}$/)) {
+                    setPasswordValidation(true)
+                } else {
+                    setPasswordValidation(false)
+                }
+            }} />
+            <Form.Group controlId="formConfirmPassword">
+                <Form.Label>{t('Confirm Password')}</Form.Label>
+                <Form.Control type="password" ref={confirmedPassword} isInvalid={confirmedPasswordValidation} onBlur={() => {
+                    console.log(confirmedPasswordValidation)
+                    if (password.current.value !== confirmedPassword.current.value) {
+                        setConfirmedPasswordValidation(true)
                     } else {
-                        setEmailValidation(false)
+                        setConfirmedPasswordValidation(false)
                     }
-                }} password={password} passwordValidation={passwordValidation} onPasswordChange={() => {
-                    if (!password.current.value.match(/.{8,}$/)) {
-                        setPasswordValidation(true)
+                }} placeholder="Confirm Password" />
+                <Form.Control.Feedback type="invalid">{t('passwordMatchError')}</Form.Control.Feedback>
+            </Form.Group>
+
+            <Form.Group controlId="formConfirmPassword">
+                <Form.Label>{t('Username')}</Form.Label>
+                <Form.Control type="text" ref={username} placeholder="Username" isInvalid={usernameValidation} onBlur={() => {
+                    console.log(usernameValidation)
+                    if (!username.current.value.match(/.{3,}$/)) {
+                        setUsernameValidation(true)
                     } else {
-                        setPasswordValidation(false)
+                        setUsernameValidation(false)
                     }
                 }} />
-                <Form.Group controlId="formConfirmPassword">
-                    <Form.Label>{t('Confirm Password')}</Form.Label>
-                    <Form.Control type="password" ref={confirmedPassword} isInvalid={confirmedPasswordValidation} onBlur={() => {
-                        console.log(confirmedPasswordValidation)
-                        if (password.current.value !== confirmedPassword.current.value) {
-                            setConfirmedPasswordValidation(true)
-                        } else {
-                            setConfirmedPasswordValidation(false)
-                        }
-                    }} placeholder="Confirm Password" />
-                    <Form.Control.Feedback type="invalid">{t('passwordMatchError')}</Form.Control.Feedback>
-                </Form.Group>
+                <Form.Control.Feedback type="invalid">{t('usernameError')}</Form.Control.Feedback>
+            </Form.Group>
 
-                <Form.Group controlId="formConfirmPassword">
-                    <Form.Label>{t('Username')}</Form.Label>
-                    <Form.Control type="text" ref={username} placeholder="Username" isInvalid={usernameValidation} onBlur={() => {
-                        console.log(usernameValidation)
-                        if (!username.current.value.match(/.{3,}$/)) {
-                            setUsernameValidation(true)
-                        } else {
-                            setUsernameValidation(false)
-                        }
-                    }} />
-                    <Form.Control.Feedback type="invalid">{t('usernameError')}</Form.Control.Feedback>
-                </Form.Group>
-
-                <Form.Group className="registerSubmitGroup">
-                    <Button variant="primary" type="submit" className="registerSubmitButton">
-                        {t('Register')}
-                    </Button>
-                </Form.Group>
-            </Form>
-            : <Redirect to="/menu" />
+            <Form.Group className="registerSubmitGroup">
+                <Button variant="primary" type="submit" className="registerSubmitButton">
+                    {t('Register')}
+                </Button>
+            </Form.Group>
+        </Form>
     )
 }
 

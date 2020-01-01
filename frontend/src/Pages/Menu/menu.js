@@ -10,33 +10,31 @@ export const Menu = (props) => {
     const history = useHistory()
     const { t } = useTranslation()
 
-    function handleSurveyButton(){
+    function handleSurveyButton() {
         history.push('/surveys')
     }
 
-    function handleCandidacyButton(){
+    function handleCandidacyButton() {
         history.push('/candidacies')
     }
 
-    function handleExitButton(){
-        dispatch({type: 'LOGOUT_USER'})
+    function handleExitButton() {
+        dispatch({ type: 'LOGOUT_USER' })
     }
 
     return (
-        props.isLoggedIn === true
-            ? <Container>
-                <ButtonGroup id="menu">
-                    <Button className="surveyMenuButton" onClick={handleSurveyButton}>
-                        <div>{t('surveys')}</div>
-                    </Button>
-                    <Button className="candidacyButton" onClick={handleCandidacyButton}>
-                        <div>{t('candidacies')}</div>
-                    </Button>
-                    <Button className="exitButton" onClick={handleExitButton}>
-                        <div>{t('exit Account')}</div>
-                    </Button>
-                </ButtonGroup>
-            </Container>
-            : <Redirect to="/login" />
+        <Container>
+            <ButtonGroup id="menu">
+                <Button className="surveyMenuButton" onClick={handleSurveyButton}>
+                    <div>{t('surveys')}</div>
+                </Button>
+                <Button className="candidacyButton" onClick={handleCandidacyButton}>
+                    <div>{t('candidacies')}</div>
+                </Button>
+                <Button className="exitButton" onClick={handleExitButton}>
+                    <div>{t('exit Account')}</div>
+                </Button>
+            </ButtonGroup>
+        </Container>
     )
 }
