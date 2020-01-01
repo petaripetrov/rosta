@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
-import { useHistory, Redirect } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 import SvgName from './rosta.svg'
 import SvgDrawing from './undraw_voting_nvu7 1.svg'

@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react'
 import './loginRegister.css'
 import { Form, Button } from 'react-bootstrap'
-import { useHistory, Redirect } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useDispatch } from 'react-redux'
 

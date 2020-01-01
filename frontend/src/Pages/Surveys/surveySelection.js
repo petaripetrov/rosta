@@ -1,11 +1,14 @@
-import React, { useState } from 'react'
-import { Redirect, useHistory, Route, Link, useRouteMatch, useParams, useLocation } from 'react-router-dom'
+import React from 'react'
+import { useHistory, Route, useRouteMatch, useLocation } from 'react-router-dom'
 import { Container, Button } from 'react-bootstrap'
+import { useDispatch } from 'react-redux'
 
+import { SelectedSurvey } from './selectedSurvey'
 import './surveys.css'
 
 export const Surveys = (props) => {
     const history = useHistory()
+    const dispatch = useDispatch()
     const { path, url } = useRouteMatch()
     const location = useLocation()
 
@@ -74,8 +77,12 @@ export const Surveys = (props) => {
 
     console.log(location)
 
-    const surveyButton = surveys.map((survey, index) =>
+    const surveyButtons = surveys.map((survey, index) =>
         <Button key={index} className="surveyButton" onClick={() => {
+            dispatch({
+                type: 'SELECT_SURVEY',
+                payload: survey
+            })
             history.push(`${url}/${survey.id}`)
         }}>
             <span className="surveyButtonText">
@@ -84,21 +91,25 @@ export const Surveys = (props) => {
         </Button>
     )
 
-    return (
-        location.pathname === '/surveys'
-            ? <Container fluid className="surveyOptionsContainer">
-                <ul className="surveyList">
-                    {surveyButton}
-                </ul>
-            </Container>
-            : <SurveysRendered />
-    )
-}
+    const SurveyWrapper = () => {
 
-export const SurveysRendered = () => {
-    const { surveyId } = useParams()
-    console.log(surveyId)
+        return (
+            location.pathname === '/surveys'
+                ? <Container fluid className="surveyOptionsContainer">
+                    <ul className="surveyList">
+                        {surveyButtons}
+                    </ul>
+                </Container>
+                : null
+        )
+    }
+
     return (
-        <div>Survey Test {surveyId}</div>
+        <React.Fragment>
+            <Route path={`${path}/:surveyId`}>
+                <SelectedSurvey />
+            </Route>
+            <SurveyWrapper />
+        </React.Fragment>
     )
 }

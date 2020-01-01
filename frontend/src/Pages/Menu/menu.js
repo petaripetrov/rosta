@@ -1,5 +1,5 @@
 import React from 'react'
-import { Redirect, useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { Button, Container, ButtonGroup } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'

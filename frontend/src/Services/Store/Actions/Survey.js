@@ -1,0 +1,2 @@
+export const SELECT_SURVEY = 'SELECT_SURVEY'
+export const UN_SELECT_SURVEY = 'UN_SELECT_SURVEY'
