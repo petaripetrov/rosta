@@ -26,7 +26,7 @@ export const Menu = (props) => {
         props.isLoggedIn === true
             ? <Container>
                 <ButtonGroup id="menu">
-                    <Button className="surveyButton" onClick={handleSurveyButton}>
+                    <Button className="surveyMenuButton" onClick={handleSurveyButton}>
                         <div>{t('surveys')}</div>
                     </Button>
                     <Button className="candidacyButton" onClick={handleCandidacyButton}>
