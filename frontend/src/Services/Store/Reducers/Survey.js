@@ -1,6 +1,12 @@
-import { SELECT_SURVEY, UN_SELECT_SURVEY } from '../Actions'
+import { SELECT_SURVEY, UN_SELECT_SURVEY, FETCH_SURVEYS_PENDING, FETCH_SURVEYS_SUCCESS, FETCH_SURVEYS_ERROR } from '../Actions'
 
-export const surveyReducer = (state = {}, action) => {
+const initialState = {
+    pending: false,
+    surveys: [],
+    error: null
+}
+
+export const surveyReducer = (state = initialState, action) => {
 
     switch (action.type) {
         case SELECT_SURVEY:
@@ -15,6 +21,31 @@ export const surveyReducer = (state = {}, action) => {
             return {
                 ...state,
                 selectedSurvey: null
+            }
+
+        case FETCH_SURVEYS_PENDING:
+
+            return {
+                ...state,
+                pending: true
+            }
+
+        case FETCH_SURVEYS_SUCCESS:
+            
+            console.log(action)
+
+            return {
+                ...state,
+                pending: false,
+                surveys: action.surveys
+            }
+
+        case FETCH_SURVEYS_ERROR:
+
+            return {
+                ...state,
+                pending: false,
+                error: action.error
             }
 
         default:
