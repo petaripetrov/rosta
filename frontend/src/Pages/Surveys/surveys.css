@@ -2,6 +2,8 @@
     position: absolute;
     
     height: 93.5%;
+
+    scrollbar-color: rebeccapurple green;
 }
 
 .surveyList{

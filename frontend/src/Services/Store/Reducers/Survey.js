@@ -32,8 +32,6 @@ export const surveyReducer = (state = initialState, action) => {
 
         case FETCH_SURVEYS_SUCCESS:
             
-            console.log(action)
-
             return {
                 ...state,
                 pending: false,

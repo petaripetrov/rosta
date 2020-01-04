@@ -130,7 +130,6 @@ export const RegisterForm = (props) => {
             <Form.Group controlId="formConfirmPassword">
                 <Form.Label>{t('Confirm Password')}</Form.Label>
                 <Form.Control type="password" ref={confirmedPassword} isInvalid={confirmedPasswordValidation} onBlur={() => {
-                    console.log(confirmedPasswordValidation)
                     if (password.current.value !== confirmedPassword.current.value) {
                         setConfirmedPasswordValidation(true)
                     } else {
@@ -143,7 +142,6 @@ export const RegisterForm = (props) => {
             <Form.Group controlId="formConfirmPassword">
                 <Form.Label>{t('Username')}</Form.Label>
                 <Form.Control type="text" ref={username} placeholder="Username" isInvalid={usernameValidation} onBlur={() => {
-                    console.log(usernameValidation)
                     if (!username.current.value.match(/.{3,}$/)) {
                         setUsernameValidation(true)
                     } else {

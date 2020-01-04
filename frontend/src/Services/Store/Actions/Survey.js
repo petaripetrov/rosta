@@ -34,7 +34,6 @@ function fetchSurveys() {
                 if (res.error) {
                     throw (res.error);
                 }
-                console.log(res)
                 dispatch(fetchSurveysSuccess(res))
                 return res.posts
             })
