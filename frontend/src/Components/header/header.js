@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button, Navbar, ButtonGroup } from 'react-bootstrap'
@@ -7,10 +7,11 @@ import { BurgerNav } from "./burger"
 import './header.css'
 
 export const Header = () => {
-    const myRef = React.createRef()
+    const burgerButtonRef = useRef(null)
     const dispatch = useDispatch()
     const currentLanguage = useSelector(state => state.translation.language)
     const isLoggedIn = useSelector(state => state.login.isLoggedIn)
+
     let disableEnButton, disableBgButton
 
     if (currentLanguage === 'en') {
@@ -24,11 +25,11 @@ export const Header = () => {
     return (
         <div>
             <Navbar bg="dark" variant="dark" className="header" fixed="top">
-                <Button ref={myRef} className="burger"
+                <Button ref={burgerButtonRef} className="burger"
                     onClick={() => {
                         dispatch({ type: 'BURGER_TURN' })
                         anime({
-                            targets: myRef.current,
+                            targets: burgerButtonRef.current,
                             scale: {
                                 value: [1, 0.8],
                                 duration: 1000,

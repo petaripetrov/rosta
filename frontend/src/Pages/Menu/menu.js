@@ -1,36 +1,41 @@
 import React from 'react'
-import { Redirect, useHistory } from 'react-router-dom'
-import { useSelector, useDispatch } from 'react-redux'
+import { useHistory } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
 import { Button, Container, ButtonGroup } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'
+
 import './menu.css'
 
 export const Menu = (props) => {
-    const options = useSelector(state => state.login.options)
     const dispatch = useDispatch()
     const history = useHistory()
     const { t } = useTranslation()
 
-    const menuOptions = options ? options.map((option) =>
-        <Button key={option} onClick={() => {
-            if (option === 'Exit Account') {
-                dispatch({ type: 'LOGOUT_USER' })
-                history.push('/')
-            } else {
-                history.push(`/${option}`.toLowerCase().replace(/\s/g, ''))
-            }
-        }} className="menuButton">
-            <div className="burgerLinkText">{t(option)}</div>
-        </Button>
-    ) : <div>{t('error')}</div>
+    function handleSurveyButton() {
+        history.push('/surveys')
+    }
+
+    function handleCandidacyButton() {
+        history.push('/candidacies')
+    }
+
+    function handleExitButton() {
+        dispatch({ type: 'LOGOUT_USER' })
+    }
 
     return (
-        props.isLoggedIn === true
-            ? <Container>
-                <ButtonGroup id="menu">
-                    {menuOptions}
-                </ButtonGroup>
-            </Container>
-            : <Redirect to="/login" />
+        <Container>
+            <ButtonGroup id="menu">
+                <Button className="surveyMenuButton" onClick={handleSurveyButton}>
+                    <div>{t('surveys')}</div>
+                </Button>
+                <Button className="candidacyButton" onClick={handleCandidacyButton}>
+                    <div>{t('candidacies')}</div>
+                </Button>
+                <Button className="exitButton" onClick={handleExitButton}>
+                    <div>{t('exit Account')}</div>
+                </Button>
+            </ButtonGroup>
+        </Container>
     )
 }

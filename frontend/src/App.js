@@ -1,6 +1,13 @@
 import React from 'react'
-import { Landing, LoginForm, RegisterForm, Menu, Surveys, SubmitCandidacy, SubmitSurvey } from './Pages'
-import { Switch, Route, Redirect } from 'react-router-dom'
+import {
+  Landing,
+  LoginForm,
+  RegisterForm,
+  Menu,
+  Surveys,
+  Candidacies,
+} from './Pages'
+import { Switch, Route, Redirect} from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 
 function App() {
@@ -9,31 +16,64 @@ function App() {
 
   const isLoggedIn = useSelector(state => state.login.isLoggedIn)
 
+  function AuthorizedRoute({ children, ...rest }) {
+    return (
+      <Route
+        {...rest}
+        render={({ location }) =>
+          isLoggedIn ? (
+            children) : (
+              <Redirect
+                to={{
+                  pathname: "/login",
+                  state: { from: location }
+                }}
+              />
+            )
+        } />
+    )
+  }
+
+  function NoAuthorizationRoute({ children, ...rest }) {
+    return (
+      <Route
+        {...rest}
+        render={({ location }) =>
+          !isLoggedIn ? (
+            children) : (
+              <Redirect
+                to={{
+                  pathname: "/menu",
+                  state: { from: location }
+                }}
+              />
+            )
+        } />
+    )
+  }
+
   return (
     <Switch>
-      <Route exact path="/">
-        <Landing isLoggedIn={isLoggedIn} />
-      </Route>
-      <Route exact path="/login">
-        <LoginForm isLoggedIn={isLoggedIn} />
-      </Route>
-      <Route exact path="/register">
-        <RegisterForm isLoggedIn={isLoggedIn} />
-      </Route>
-      <Route exact path="/menu">
-        <Menu isLoggedIn={isLoggedIn} />
-      </Route>
-      <Route exact path="/surveys">
-        <Surveys isLoggedIn={isLoggedIn} />
-      </Route>
-      <Route exact path="/submitcandidacy">
-        <SubmitCandidacy isLoggedIn={isLoggedIn} />
-      </Route>
-      <Route exact path="/submitsurvey">
-        <SubmitSurvey isLoggedIn={isLoggedIn} />
-      </Route>
+      <NoAuthorizationRoute exact path="/">
+        <Landing />
+      </NoAuthorizationRoute>
+      <NoAuthorizationRoute exact path="/login">
+        <LoginForm />
+      </NoAuthorizationRoute>
+      <NoAuthorizationRoute exact path="/register">
+        <RegisterForm />
+      </NoAuthorizationRoute>
+      <AuthorizedRoute exact path="/menu">
+        <Menu />
+      </AuthorizedRoute>
+      <AuthorizedRoute path="/surveys">
+        <Surveys />
+      </AuthorizedRoute>
+      <AuthorizedRoute exact path="/candidacies">
+        <Candidacies />
+      </AuthorizedRoute>
       <Route path="*">
-        <Redirect to="/"/>
+        <Redirect to="/" />
       </Route>
     </Switch >
   );

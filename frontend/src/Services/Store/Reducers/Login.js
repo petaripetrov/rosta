@@ -12,7 +12,6 @@ export const loginReducer = (state = { isLoggedIn: false }, action, store) => {
             return {
                 ...state,
                 isLoggedIn: true,
-                options: ["Surveys", "Submit Candidacy", "Submit Survey", "Exit Account"]
             }
 
         case LOGOUT_USER:
@@ -33,7 +32,6 @@ export const loginReducer = (state = { isLoggedIn: false }, action, store) => {
                     ...state,
                     isLoggedIn: true,
                     authCode: authCode[1],
-                    options: ["Surveys", "Submit Candidacy", "Submit Survey", "Exit Account"]
                 }
             } else {
                 return {
