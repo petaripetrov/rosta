@@ -4,6 +4,8 @@ import { useDispatch } from 'react-redux'
 import { Button, Container, ButtonGroup } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'
 
+import fetchSurveys from '../../Services/Store/Actions/Survey'
+
 import './menu.css'
 
 export const Menu = (props) => {
@@ -12,6 +14,7 @@ export const Menu = (props) => {
     const { t } = useTranslation()
 
     function handleSurveyButton() {
+        dispatch(fetchSurveys())
         history.push('/surveys')
     }
 
