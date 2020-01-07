@@ -4,6 +4,7 @@ import { Container, Button } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { SelectedSurvey } from './selectedSurvey'
+import fetchSurveys from '../../Services/Store/Actions/Survey'
 import './surveys.css'
 
 export const Surveys = (props) => {
@@ -46,6 +47,8 @@ export const Surveys = (props) => {
         return (
             <div>Loading...</div>
         )
+    } else if(survey.pending === false && survey.surveys.length === 0){
+        dispatch(fetchSurveys())
     }
 
     return (

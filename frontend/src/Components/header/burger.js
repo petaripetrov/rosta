@@ -1,36 +1,20 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import { Button } from 'react-bootstrap'
-import { useSelector, useDispatch } from 'react-redux'
-import anime from 'animejs'
-import './header.css'
+import { useDispatch } from 'react-redux'
+import { useSpring, animated } from 'react-spring'
 import { useHistory } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
-export const BurgerNav = () => {
+import './header.css'
+
+export const BurgerNav = (props) => {
     const { t } = useTranslation()
-    const basicTimeline = anime.timeline()
-    const burgerReference = useRef(null)
-    const burgerState = useSelector(state => state.burger.burgerState)
     const history = useHistory()
     const dispatch = useDispatch()
 
-    if (burgerState) {
-        basicTimeline
-            .add({
-                targets: burgerReference.current,
-                duration: 300,
-                translateX: 300,
-                easing: 'easeInOutQuad'
-            })
-    } else {
-        basicTimeline
-            .add({
-                targets: burgerReference.current,
-                duration: 200,
-                translateX: 0,
-                easing: 'easeInOutQuad'
-            })
-    }
+    const animation = useSpring({
+        marginLeft: props.burgerState ? 0 : -315
+    })
 
     function handleSurveyButton() {
         history.push('/surveys')
@@ -45,7 +29,7 @@ export const BurgerNav = () => {
     }
 
     return (
-        <div ref={burgerReference} className="burgerNav">
+        <animated.div style={animation} className="burgerNav">
             <div className="transparentBar"></div>
             <Button className="burgerLink" onClick={handleSurveyButton}>
                 <div>{t('surveys')}</div>
@@ -56,6 +40,6 @@ export const BurgerNav = () => {
             <Button className="burgerLink" onClick={handleExitButton}>
                 <div>{t('exit Account')}</div>
             </Button>
-        </div>
+        </animated.div>
     )
 }
