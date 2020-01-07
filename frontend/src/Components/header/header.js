@@ -22,24 +22,31 @@ export const Header = () => {
         disableBgButton = true
     }
 
+    function handleBurgerButtonFocus() {
+        dispatch({ type: 'BURGER_TURN' })
+
+        anime({
+            targets: burgerButtonRef.current,
+            scale: {
+                value: [1, 0.8],
+                duration: 1000
+            },
+            scale: {
+                value: [0.8, 1],
+                duration: 1000
+            }
+        })
+    }
+
+    function handleBurgerButtonBlur() {
+        dispatch({ type: 'BURGER_TURN' })
+    }
+
     return (
         <div>
             <Navbar bg="dark" variant="dark" className="header" fixed="top">
                 <Button ref={burgerButtonRef} className="burger"
-                    onClick={() => {
-                        dispatch({ type: 'BURGER_TURN' })
-                        anime({
-                            targets: burgerButtonRef.current,
-                            scale: {
-                                value: [1, 0.8],
-                                duration: 1000,
-                            },
-                            scale: {
-                                value: [0.8, 1],
-                                duration: 1000
-                            }
-                        })
-                    }} disabled={!isLoggedIn}>
+                    onFocus={handleBurgerButtonFocus} onBlur={handleBurgerButtonFocus} disabled={!isLoggedIn}>
                     <FontAwesomeIcon icon="bars" />
                 </Button>
                 <BurgerNav />

@@ -7,7 +7,7 @@ import {
   Surveys,
   Candidacies,
 } from './Pages'
-import { Switch, Route, Redirect} from 'react-router-dom'
+import { Switch, Route, Redirect } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 
 function App() {
