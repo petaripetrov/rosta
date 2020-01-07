@@ -11,10 +11,10 @@ export const Surveys = (props) => {
     const dispatch = useDispatch()
     const { path, url } = useRouteMatch()
     const location = useLocation()
-    const surveys = useSelector(state => state.survey)
+    const survey = useSelector(state => state.survey)
 
 
-    const surveyButtons = surveys.surveys.map((survey, index) =>
+    const surveyButtons = survey.surveys.map((survey, index) =>
         <Button key={index} className="surveyButton" onClick={() => {
             dispatch({
                 type: 'SELECT_SURVEY',
@@ -41,7 +41,7 @@ export const Surveys = (props) => {
         )
     }
 
-    if (surveys.pending === true || surveys.error != null) {
+    if (survey.pending === true) {
 
         return (
             <div>Loading...</div>
