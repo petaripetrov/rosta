@@ -5,10 +5,12 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.Extensions.Configuration.Ini;
+using IdentityServer4.EntityFramework.Options;
+using Microsoft.AspNetCore.ApiAuthorization.IdentityServer;
 
 namespace backend.Infrastructure
 {
-    public class Context : DbContext
+    public class Context : ApiAuthorizationDbContext<User>
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Candidacy> Candidacies { get; set; }

@@ -5,12 +5,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using backend.Repositories;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 namespace backend.Models
 {
-    public  class User
+    public  class UserDetails : IdentityUser<int>
     {
         public int Id { get; set; }
-        public string Username { get; private set; }
+        public string UserName { get; private set; }
         public string Password { get; private set; }
         public string Email { get;  set; }
         public string Role { get; private set; }
@@ -21,13 +22,13 @@ namespace backend.Models
         public School School { get; set; }
 
 
-        public User()
+        public UserDetails()
         {
         }
 
-        public User(string username, string password, string email, string role, string authenticationCode)
+        public UserDetails(string userName, string password, string email, string role, string authenticationCode)
         {
-            if (username == null)
+            if (userName == null)
             {
                 throw new ArgumentNullException("Username cannot be null. ");
             }
@@ -48,7 +49,7 @@ namespace backend.Models
                 throw new ArgumentNullException("authenticationCode cannot be null. ");
             }
             
-            Username = username;
+            UserName = userName;
             Password = password;
             Email = email;
             Role = role;

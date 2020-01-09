@@ -1,10 +1,7 @@
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using backend.Repositories;
 
-namespace backend.Models
+namespace backend.Models.Data
 {
     public class School
     {
@@ -58,7 +55,7 @@ namespace backend.Models
         //     }
         // }
 
-        public ICollection<User> Users { get; set; }
+        public ICollection<UserDetails> Users { get; set; }
         
         
         private string name;

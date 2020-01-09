@@ -1,6 +1,6 @@
 using System;
 
-namespace backend.Models
+namespace backend.Models.Data
 {
     public class Option
     {
