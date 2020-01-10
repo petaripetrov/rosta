@@ -4,7 +4,7 @@ import {
   LoginForm,
   RegisterForm,
   Menu,
-  // Surveys,
+  Surveys,
   Candidacies,
 } from './Pages'
 import { Switch, Route, Redirect } from 'react-router-dom'
@@ -76,10 +76,10 @@ const App: FunctionComponent = () => {
           <Menu />
         </AuthorizedRoute>
         <AuthorizedRoute exact={false} path="/surveys">
-          {/* <Surveys /> */}
+          <Surveys />
         </AuthorizedRoute>
         <AuthorizedRoute exact path="/candidacies">
-          {/* <Candidacies /> */}
+          <Candidacies />
         </AuthorizedRoute>
         <Route path="*">
           <Redirect to="/" />

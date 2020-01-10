@@ -1,9 +1,7 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
 import { Redirect } from 'react-router-dom'
 
-export const SelectedSurvey = (props) => {
-    console.log(props.selectedSurvey)
+export const SelectedSurvey = (props: any) => {
 
     if (props.selectedSurvey === null) {
 
