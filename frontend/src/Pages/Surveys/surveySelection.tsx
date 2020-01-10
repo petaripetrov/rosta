@@ -9,16 +9,13 @@ import './surveys.css'
 import { useTranslation } from 'react-i18next'
 import { Survey } from '../../types'
 
-export const Surveys: FunctionComponent<{ initial?: Survey }> = ({initial}) => {
+export const Surveys: FunctionComponent<{ initial?: Survey }> = ({ initial }) => {
     const history = useHistory()
-    const dispatch = useDispatch()
     const { path, url } = useRouteMatch()
     const location = useLocation()
     const survey = useSelector((state: any) => state.survey)
     const { t } = useTranslation()
     const [selectedSurvey, setSelectedSurvey] = useState(initial)
-
-    dispatch(fetchSurveys())
 
 
     const surveyButtons = survey.surveys.map((survey: Survey, index: number) =>
