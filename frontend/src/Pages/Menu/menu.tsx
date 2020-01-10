@@ -1,13 +1,12 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import { useHistory } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { Button, Container, ButtonGroup } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'
 
-import fetchSurveys from '../../Services/Store/Actions/Survey'
 import './menu.css'
 
-export const Menu = (props) => {
+export const Menu: FunctionComponent = () => {
     const dispatch = useDispatch()
     const history = useHistory()
     const { t } = useTranslation()

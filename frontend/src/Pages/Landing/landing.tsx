@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import { Container, Button } from 'react-bootstrap'
 import { useHistory } from 'react-router-dom'
 
@@ -7,7 +7,7 @@ import SvgDrawing from './undraw_voting_nvu7 1.svg'
 import './landing.css'
 import { useTranslation } from 'react-i18next'
 
-export const Landing = () => {
+export const Landing: FunctionComponent = () => {
     let history = useHistory()
     const { t } = useTranslation()
 

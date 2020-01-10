@@ -1,24 +1,27 @@
-import React, { useState } from 'react'
+import React, { useState, FunctionComponent } from 'react'
 import { useHistory, Route, useRouteMatch, useLocation } from 'react-router-dom'
 import { Button, Row } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { SelectedSurvey } from './selectedSurvey'
-// import fetchSurveys from '../../Services/Store/Actions/Survey'
+import fetchSurveys from '../../Services/Store/Actions/Survey'
 import './surveys.css'
 import { useTranslation } from 'react-i18next'
+import { Survey } from '../../types'
 
-export const Surveys = (props) => {
+export const Surveys: FunctionComponent<{ initial?: Survey }> = ({initial}) => {
     const history = useHistory()
     const dispatch = useDispatch()
     const { path, url } = useRouteMatch()
     const location = useLocation()
-    const survey = useSelector(state => state.survey)
+    const survey = useSelector((state: any) => state.survey)
     const { t } = useTranslation()
-    const [selectedSurvey, setSelectedSurvey] = useState(null)
+    const [selectedSurvey, setSelectedSurvey] = useState(initial)
+
+    dispatch(fetchSurveys())
 
 
-    const surveyButtons = survey.surveys.map((survey, index) =>
+    const surveyButtons = survey.surveys.map((survey: Survey, index: number) =>
         <Button key={index} className="surveyButton" onClick={() => {
             setSelectedSurvey(survey)
             history.push(`${url}/${survey.id}`)
@@ -46,7 +49,6 @@ export const Surveys = (props) => {
             <div>Loading...</div>
         )
     } else if (survey.pending === false && survey.surveys.length === 0) {
-        // dispatch(fetchSurveys())
     }
 
     return (

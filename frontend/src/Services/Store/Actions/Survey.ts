@@ -1,3 +1,5 @@
+import { Dispatch } from "redux"
+
 export const SELECT_SURVEY = 'SELECT_SURVEY'
 export const UN_SELECT_SURVEY = 'UN_SELECT_SURVEY'
 
@@ -25,22 +27,22 @@ function fetchSurveysError(error: Error) {
     }
 }
 
-// function fetchSurveys() {
-//     return dispatch => {
-//         dispatch(fetchSurveysPending())
-//         fetch('https://localhost:44375/getAllSurveys/1')
-//             .then(res => res.json())
-//             .then(res => {
-//                 if (res.error) {
-//                     throw (res.error);
-//                 }
-//                 dispatch(fetchSurveysSuccess(res))
-//                 return res.posts
-//             })
-//             .catch(error => {
-//                 dispatch(fetchSurveysError(error));
-//             })
-//     }
-// }
+function fetchSurveys() {
+    return (dispatch: Dispatch) => {
+        dispatch(fetchSurveysPending())
+        fetch('https://localhost:44375/getAllSurveys/1')
+            .then(res => res.json())
+            .then(res => {
+                if (res.error) {
+                    throw (res.error);
+                }
+                dispatch(fetchSurveysSuccess(res))
+                return res.posts
+            })
+            .catch(error => {
+                dispatch(fetchSurveysError(error));
+            })
+    }
+}
 
-// export default fetchSurveys
+export default fetchSurveys
