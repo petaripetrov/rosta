@@ -1,0 +1,5 @@
+export * from './Landing/landing'
+export * from './LoginRegister/loginRegister'
+export * from './Menu/menu'
+export * from './Surveys/surveySelection'
+export * from './Candidacies/candidacies'
