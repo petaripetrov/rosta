@@ -9,7 +9,6 @@ const initialState = {
 }
 
 interface SurveyAction extends Action {
-    payload: any,
     surveys: Array<Survey>,
     error: any
 }
