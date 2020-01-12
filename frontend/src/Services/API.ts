@@ -41,8 +41,6 @@ export default function useAPI(type: string) {
 
             case APIEndpoints.login:
 
-                console.log('oop')
-
                 break
 
             default:
