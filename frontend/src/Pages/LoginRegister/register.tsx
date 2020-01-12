@@ -10,11 +10,10 @@ export const RegisterForm: FunctionComponent = () => {
     const username = useRef<any>(null)
     const { t } = useTranslation()
 
-
-    let [confirmedPasswordValidation, setConfirmedPasswordValidation] = useState()
-    let [emailValidation, setEmailValidation] = useState()
-    let [passwordValidation, setPasswordValidation] = useState()
-    let [usernameValidation, setUsernameValidation] = useState()
+    const [confirmedPasswordValidation, setConfirmedPasswordValidation] = useState()
+    const [emailValidation, setEmailValidation] = useState()
+    const [passwordValidation, setPasswordValidation] = useState()
+    const [usernameValidation, setUsernameValidation] = useState()
 
     function handleSubmit(event: FormEvent) {
         event.preventDefault()
