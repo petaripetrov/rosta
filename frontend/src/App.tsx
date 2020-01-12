@@ -23,28 +23,49 @@ const App: FunctionComponent = () => {
     path: string
   }
 
-  const AuthorizedRoute: React.FC<RouteInterface> = ({ children, path }) => {
-    return (
-      <Route
-        exact
-        path={path}
-        render={({ location }) =>
-          isLoggedIn ? (
-            children) : (
-              <Redirect
-                to={{
-                  pathname: "/login",
-                  state: { from: location }
-                }}
-              />
-            )
-        } />
-    )
+  const AuthorizedRoute: React.FC<RouteInterface> = ({ children, exact, path }) => {
+
+    if (exact) {
+      return (
+        <Route
+          exact
+          path={path}
+          render={({ location }) =>
+            isLoggedIn ? (
+              children) : (
+                <Redirect
+                  to={{
+                    pathname: "/login",
+                    state: { from: location }
+                  }}
+                />
+              )
+          } />
+      )
+    } else {
+      return (
+        <Route
+          path={path}
+          render={({ location }) =>
+            isLoggedIn ? (
+              children) : (
+                <Redirect
+                  to={{
+                    pathname: "/login",
+                    state: { from: location }
+                  }}
+                />
+              )
+          }
+        />
+      )
+    }
   }
 
   const NoAuthorizationRoute: React.FC<RouteInterface> = ({ children, path }) => {
     return (
       <Route
+        exact
         path={path}
         render={({ location }) =>
           !isLoggedIn ? (
