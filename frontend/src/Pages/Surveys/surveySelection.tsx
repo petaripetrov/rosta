@@ -1,26 +1,26 @@
-import React from 'react'
+import React, { useState, FunctionComponent } from 'react'
 import { useHistory, Route, useRouteMatch, useLocation } from 'react-router-dom'
-import { Container, Button } from 'react-bootstrap'
+import { Button, Row } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { SelectedSurvey } from './selectedSurvey'
 import fetchSurveys from '../../Services/Store/Actions/Survey'
 import './surveys.css'
+import { useTranslation } from 'react-i18next'
+import { Survey } from '../../types'
 
-export const Surveys = (props) => {
+export const Surveys: FunctionComponent<{ initial?: Survey }> = ({initial}) => {
     const history = useHistory()
     const dispatch = useDispatch()
     const { path, url } = useRouteMatch()
     const location = useLocation()
-    const survey = useSelector(state => state.survey)
+    const survey = useSelector((state: any) => state.survey)
+    const [selectedSurvey, setSelectedSurvey] = useState(initial)
 
 
-    const surveyButtons = survey.surveys.map((survey, index) =>
+    const surveyButtons = survey.surveys.map((survey: Survey, index: number) =>
         <Button key={index} className="surveyButton" onClick={() => {
-            dispatch({
-                type: 'SELECT_SURVEY',
-                payload: survey
-            })
+            setSelectedSurvey(survey)
             history.push(`${url}/${survey.id}`)
         }}>
             <span className="surveyButtonText">
@@ -33,11 +33,9 @@ export const Surveys = (props) => {
 
         return (
             location.pathname === '/surveys'
-                ? <Container fluid className="surveyOptionsContainer">
-                    <ul className="surveyList">
-                        {surveyButtons}
-                    </ul>
-                </Container>
+                ? <ul className="surveyList">
+                    {surveyButtons}
+                </ul>
                 : null
         )
     }
@@ -47,15 +45,17 @@ export const Surveys = (props) => {
         return (
             <div>Loading...</div>
         )
-    } else if(survey.pending === false && survey.surveys.length === 0){
+    } else if (survey.pending === false && survey.surveys.length === 0) {
         dispatch(fetchSurveys())
     }
 
     return (
         <React.Fragment>
             <Route path={`${path}/:surveyId`}>
-                <SelectedSurvey />
+                <SelectedSurvey selectedSurvey={selectedSurvey} />
             </Route>
+            <Row>
+            </Row>
             <SurveyWrapper />
         </React.Fragment>
     )

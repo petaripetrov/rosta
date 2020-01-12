@@ -1,4 +1,6 @@
-import { SELECT_SURVEY, UN_SELECT_SURVEY, FETCH_SURVEYS_PENDING, FETCH_SURVEYS_SUCCESS, FETCH_SURVEYS_ERROR } from '../Actions'
+import { FETCH_SURVEYS_PENDING, FETCH_SURVEYS_SUCCESS, FETCH_SURVEYS_ERROR } from '../Actions'
+import { Action } from 'redux'
+import { Survey } from '../../../types'
 
 const initialState = {
     pending: false,
@@ -6,23 +8,15 @@ const initialState = {
     error: null
 }
 
-export const surveyReducer = (state = initialState, action) => {
+interface SurveyAction extends Action {
+    payload: any,
+    surveys: Array<Survey>,
+    error: any
+}
+
+export const surveyReducer = (state = initialState, action: SurveyAction) => {
 
     switch (action.type) {
-        case SELECT_SURVEY:
-
-            return {
-                ...state,
-                selectedSurvey: action.payload
-            }
-
-        case UN_SELECT_SURVEY:
-
-            return {
-                ...state,
-                selectedSurvey: null
-            }
-
         case FETCH_SURVEYS_PENDING:
 
             return {
@@ -31,7 +25,7 @@ export const surveyReducer = (state = initialState, action) => {
             }
 
         case FETCH_SURVEYS_SUCCESS:
-            
+
             return {
                 ...state,
                 pending: false,

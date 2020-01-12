@@ -5,7 +5,7 @@ import { toasterReducer } from './Toaster'
 import { loginReducer } from './Login'
 import { surveyReducer } from './Survey'
 
-const createRootReducer = (history) => combineReducers({
+const createRootReducer = (history: any) => combineReducers({
     router: connectRouter(history),
     translation: translationReducer,
     toast: toasterReducer,

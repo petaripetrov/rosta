@@ -1,6 +1,14 @@
 import { TOASTER_DISPLAY } from '../Actions'
+import { Action } from 'redux'
 
-export const toasterReducer = (state = {}, action) => {
+interface ToasterAction extends Action{
+    payload: {
+        color: string,
+        message: string
+    }
+}
+
+export const toasterReducer = (state = {}, action: ToasterAction) => {
 
     switch (action.type) {
         case TOASTER_DISPLAY:

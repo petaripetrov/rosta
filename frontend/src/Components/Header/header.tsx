@@ -2,18 +2,17 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button, Navbar, ButtonGroup } from 'react-bootstrap'
-// import anime from 'animejs'
 import { useSpring, animated } from 'react-spring'
 import { BurgerNav } from "./burger"
 import './header.css'
 
 export const Header = () => {
     const dispatch = useDispatch()
-    const currentLanguage = useSelector(state => state.translation.language)
-    const isLoggedIn = useSelector(state => state.login.isLoggedIn)
-    const [on, toggle] = useState(false)
+    const currentLanguage = useSelector((state: any) => state.translation.language)
+    const isLoggedIn = useSelector((state: any) => state.login.isLoggedIn)
+    const [burgerOn, toggleBurger] = useState(false)
     const animation = useSpring({
-        opacity: on ? 0 : 1,
+        opacity: burgerOn ? 0 : 1,
         config: {
             duration: 200
         }
@@ -30,11 +29,11 @@ export const Header = () => {
     }
 
     function handleBurgerButton() {
-        toggle(!on)
+        toggleBurger(!burgerOn)
     }
 
     function handleBurgerButtonBlur() {
-        toggle(false)
+        toggleBurger(false)
     }
 
     return (
@@ -46,7 +45,7 @@ export const Header = () => {
                         <FontAwesomeIcon icon="bars" />
                     </Button>
                 </animated.div>
-                <BurgerNav burgerState={on} />
+                <BurgerNav burgerState={burgerOn} />
                 <div className="schoolName">
                     {'School Name'}
                 </div>

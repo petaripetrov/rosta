@@ -1,3 +1,5 @@
+import { Dispatch } from "redux"
+
 export const SELECT_SURVEY = 'SELECT_SURVEY'
 export const UN_SELECT_SURVEY = 'UN_SELECT_SURVEY'
 
@@ -11,14 +13,14 @@ function fetchSurveysPending() {
     }
 }
 
-function fetchSurveysSuccess(surveys) {
+function fetchSurveysSuccess(surveys: any) {
     return {
         type: FETCH_SURVEYS_SUCCESS,
         surveys: surveys
     }
 }
 
-function fetchSurveysError(error) {
+function fetchSurveysError(error: Error) {
     return {
         type: FETCH_SURVEYS_ERROR,
         error: error
@@ -26,7 +28,7 @@ function fetchSurveysError(error) {
 }
 
 function fetchSurveys() {
-    return dispatch => {
+    return (dispatch: Dispatch) => {
         dispatch(fetchSurveysPending())
         fetch('https://localhost:44375/getAllSurveys/1')
             .then(res => res.json())

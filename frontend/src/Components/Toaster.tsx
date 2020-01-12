@@ -3,7 +3,7 @@ import { Toast } from 'react-bootstrap'
 import { useSelector } from 'react-redux'
 
 export const Toaster = () => {
-    let toasterParams = useSelector(state => state.toast)
+    let toasterParams = useSelector((state: any) => state.toast)
     const [show, setShow] = useState(false)
 
     useMemo(() => {

@@ -9,12 +9,15 @@ import { ConnectedRouter } from 'connected-react-router'
 import './index.css'
 import App from './App'
 import * as serviceWorker from './serviceWorker'
-import store, { history } from './Services/Store'
+import { configureStore, history } from './Services/Store'
 import { Header, Toaster } from './Components'
 import './Services/i18n/i18n'
 
 
-library.add(faCoffee, faBars);
+
+library.add(faCoffee, faBars)
+
+const store = configureStore()
 
 ReactDOM.render(
     <Provider store={store}>

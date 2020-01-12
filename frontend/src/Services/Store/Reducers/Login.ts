@@ -1,6 +1,7 @@
 import { LOGIN_USER, LOGOUT_USER, LOAD_FROM_COOKIES } from '../Actions'
+import { Action } from 'redux'
 
-export const loginReducer = (state = { isLoggedIn: false }, action, store) => {
+export const loginReducer = (state = { isLoggedIn: false }, action: Action) => {
 
     switch (action.type) {
         case LOGIN_USER:

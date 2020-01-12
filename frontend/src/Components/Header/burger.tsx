@@ -7,7 +7,11 @@ import { useTranslation } from 'react-i18next'
 
 import './header.css'
 
-export const BurgerNav = (props) => {
+interface BurgerNavProps{
+    burgerState: Boolean
+}
+
+export const BurgerNav = (props: BurgerNavProps) => {
     const { t } = useTranslation()
     const history = useHistory()
     const dispatch = useDispatch()
