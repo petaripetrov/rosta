@@ -1,11 +1,15 @@
 import React from 'react'
 import { Redirect } from 'react-router-dom'
-import useAPI from '../../Services/API'
+import { Survey } from '../../types'
+import { Row, Container } from 'react-bootstrap'
 
-export const SelectedSurvey = (props: any) => {
+interface selectedSurveyProps {
+    selectedSurvey: Survey
+}
 
-    const test = useAPI('login')
+const SelectedSurvey = (props: selectedSurveyProps) => {
 
+    console.log(props.selectedSurvey)
     if (props.selectedSurvey === null) {
 
         return (
@@ -14,9 +18,18 @@ export const SelectedSurvey = (props: any) => {
     } else {
 
         return (
-            <div>
-                test
-            </div>
+            <Container className="selectedSurveyWrapper">
+                <div>Name</div>
+                <div className="nameField">
+                    <div>{props.selectedSurvey.name}</div>
+                </div>
+                <div>Description</div>
+                <div className="descriptionField">
+                    <div>{props.selectedSurvey.description}</div>
+                </div>
+            </Container>
         )
     }
 }
+
+export default SelectedSurvey

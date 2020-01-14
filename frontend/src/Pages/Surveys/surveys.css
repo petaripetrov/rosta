@@ -13,27 +13,84 @@
     margin-right: 1.32%;
     margin-bottom: 10px;
 
-    width: 45%;
-    height: 55%;
-    max-width: 400px;
-    max-height: 400px;
+    width: 291px !important;
+    height: 275px !important;
 
     background: #c4c4c4 !important;
     border: none !important;
     box-shadow: none !important;
-    border-radius: 85px !important;
+    border-radius: 50px !important;
+    border-end-end-radius: 0px !important;
 }
+
+.surveyCol{
+    position: absolute;
+    height: 100%;
+    width: 320px;
+
+    left: 83.1%
+}
+
+.surveyList{
+    height: 100%;
+    top: 0;
+
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
 
 .createSurveyButton{
     position: absolute;
 
     left: 87%;
+
+    color: black;
+    font-weight: bold;
+    
+    background: #c4c4c4 !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 19px !important;
 }
 
 .surveyButtonText{
     color: black;
     font-size: large;
     font-weight: bold;
+}
+
+.selectedSurveyWrapper{
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 10%;
+
+    height: 92.01%;
+    width: 30.15%;
+}
+
+.nameField {
+    margin: 0 auto;
+    background-color: #D8D5DB;
+    height: 5%;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 19px;
+}
+
+.descriptionField{
+    background-color: #D8D5DB;
+    height: 53.60%;
+    display: flex;
+
+    justify-content: center;
+
+    border-radius: 19px;
 }
 
 @media only screen and (max-width: 800px){
