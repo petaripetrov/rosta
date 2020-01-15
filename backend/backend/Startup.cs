@@ -49,8 +49,8 @@ namespace backend
             services.AddIdentityServer()
                 .AddApiAuthorization<User, IdentityContext>();
 
-            services.AddAuthentication("OAuth")
-                .AddJwtBearer("OAuth", config =>
+            services.AddAuthentication()
+                .AddJwtBearer(config =>
                 {
                     var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Constants.Secret));
             

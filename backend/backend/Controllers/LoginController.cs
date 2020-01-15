@@ -59,7 +59,8 @@ namespace backend.Controllers
                     Constants.Audiance,
                     claims,
                     DateTime.Now,
-                    DateTime.Now.AddHours(12)
+                    DateTime.Now.AddHours(2),
+                    signingCredentials
                     );
 
                 var access_token = new JwtSecurityTokenHandler().WriteToken(token);

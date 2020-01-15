@@ -41,7 +41,7 @@ namespace backend.Controllers
             
             if (result.Succeeded)
             {
-                await _userManager.AddToRoleAsync(user, "User");
+                await _userManager.AddToRoleAsync(_userManager.FindByEmailAsync(input.Email).Result, "User");
                 _logger.LogInformation("Account Created",user);
                 return Ok();
                 

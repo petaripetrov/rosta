@@ -27,7 +27,7 @@ namespace backend.Controllers
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        [Authorize()]
+        [Authorize(AuthenticationSchemes = "Bearer")]
         
         public List<SurveySummary> GetSurveys(int id)
         {
