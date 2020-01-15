@@ -10,16 +10,18 @@ import { Survey } from '../../types'
 import { useTranslation } from 'react-i18next'
 
 export const Surveys: FunctionComponent<{ initial?: Survey }> = ({ initial = { name: 'Error' } }) => {
-    const { path, url } = useRouteMatch()
+    const history = useHistory()
+    const { path } = useRouteMatch()
     const location = useLocation()
     const surveys = useAPI('surveys')
     const [selectedSurvey, setSelectedSurvey] = useState(initial)
     const { t } = useTranslation()
-    let surveyButtons = surveys !== undefined
+
+
+    const surveyButtons = surveys !== undefined
         ? surveys.map((survey: Survey, index: number) =>
             <Button key={index} className="surveyButton" onClick={() => {
                 setSelectedSurvey(survey)
-                // history.push(`${url}/answerSurvey`)
             }}>
                 <span className="surveyButtonText">
                     {survey.name}
@@ -28,12 +30,14 @@ export const Surveys: FunctionComponent<{ initial?: Survey }> = ({ initial = { n
         )
         : <div>error</div>
 
+
     const SurveyWrapper = () => {
 
         return (
             location.pathname === '/surveys'
                 ? <React.Fragment>
-                    {/* <Button className="createSurveyButton" onClick={() => { history.push(`${url}/createSurvey`) }}>{t('createSurvey')}</Button> */}
+                    <SelectedSurvey selectedSurvey={selectedSurvey} />
+                    <Button className="createSurveyButton" onClick={() => { history.push(`${path}/createSurvey`) }}>{t('createSurvey')}</Button>
                     <Row>
                         <Col className="surveyCol">
                             <ListGroup className="surveyList">
@@ -48,7 +52,6 @@ export const Surveys: FunctionComponent<{ initial?: Survey }> = ({ initial = { n
 
     return (
         <React.Fragment>
-            <SelectedSurvey selectedSurvey={selectedSurvey} />
             <Route path={`${path}/createSurvey`}>
                 <CreateSurvey />
             </Route>

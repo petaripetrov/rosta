@@ -43,7 +43,10 @@
 .createSurveyButton{
     position: absolute;
 
-    left: 87%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
 
     color: black;
     font-weight: bold;
@@ -52,6 +55,27 @@
     border: none !important;
     box-shadow: none !important;
     border-radius: 19px !important;
+}
+
+.createSurveyForm{
+    height: 100%;
+    width: 100%;
+}
+
+.surveyNameGroup{
+    margin: 0;
+    width: 40%;
+    max-width: 371.2px;
+}
+
+.descriptionGroup{
+    margin: 0;
+    width: 40%;
+    max-width: 371.2px;
+}
+
+.descriptionControl{
+    height: 380px;
 }
 
 .surveyButtonText{

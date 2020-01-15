@@ -29,7 +29,7 @@ export const Toaster: FunctionComponent<{ initial?: ToasterParams }> = ({ initia
         )
     } else {
         return (
-            <Toast show={show} autohide className="toast">
+            <Toast show={show} className="toast">
                 <Toast.Header closeButton={false} style={{
                     backgroundColor: toasterParams.color
                 }}>
