@@ -8,7 +8,7 @@ using backend.Infrastructure;
 
 namespace backend.Migrations
 {
-    [DbContext(typeof(Context))]
+    [DbContext(typeof(DataContext))]
     [Migration("20191208183249_Initial")]
     partial class Initial
     {

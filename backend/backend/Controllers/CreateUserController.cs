@@ -17,12 +17,12 @@ namespace backend.Controllers
     //TODO To be deleted.
     [ApiController]
     [Route("[controller]")]
-    public class CreateUser : ControllerBase
+    public class CreateUserController : ControllerBase
     {
-        private readonly ILogger<UsersController> _logger;
+        private readonly ILogger<CreateUserController> _logger;
         private readonly UserManager<User> _userManager;
 
-        public CreateUser(ILogger<UsersController> logger,UserManager<User> userManager)
+        public CreateUserController(ILogger<CreateUserController> logger,UserManager<User> userManager)
         {
             _logger = logger;
             _userManager = userManager;

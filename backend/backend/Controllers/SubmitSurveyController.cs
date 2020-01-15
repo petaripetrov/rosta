@@ -5,7 +5,6 @@ using System.Net.Mime;
 using System.Threading.Tasks;
 using backend.DTOs.DTOConverters.InputConverters;
 using backend.DTOs.SurveyDTOs;
-using backend.Models;
 using backend.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

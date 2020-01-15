@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace backend.Models
+namespace backend.Models.Data
 {
     public class Survey
     {

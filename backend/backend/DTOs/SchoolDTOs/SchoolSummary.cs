@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using backend.DTOs.UserDTOs;
-using backend.Models;
+using backend.Models.Data;
 
 namespace backend.DTOs.SchoolDTOs
 {

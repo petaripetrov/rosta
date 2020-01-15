@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using backend.DTOs.CandidacyDTOs;
 using backend.DTOs.DTOConverters.InputConverters;
 using backend.DTOs.UserDTOs;
-using backend.Models;
 using backend.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -33,7 +32,8 @@ namespace backend.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public void Submit(CandidacyInput input)
         {
-            _repository.Add(CandidacyInputConverter.Convert(input));
+            //TODO Fix this
+            //_repository.Add(CandidacyInputConverter.Convert(input));
         }
     }
 }

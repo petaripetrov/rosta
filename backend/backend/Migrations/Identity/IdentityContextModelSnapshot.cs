@@ -243,6 +243,9 @@ namespace backend.Migrations.Identity
                         .IsConcurrencyToken()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
+                    b.Property<int>("DetailsId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Email")
                         .HasColumnType("varchar(256) CHARACTER SET utf8mb4")
                         .HasMaxLength(256);

@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using backend.DTOs.DTOConverters.InputConverters;
 using backend.DTOs.SurveyDTOs;
 using backend.DTOs.VoteDTOs;
-using backend.Models;
 using backend.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

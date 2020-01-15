@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using backend.Infrastructure;
-using backend.Models;
+using backend.Models.Data;
 using Microsoft.EntityFrameworkCore;
 
 namespace backend.Repositories
@@ -13,7 +13,7 @@ namespace backend.Repositories
         {
             try
             {
-                using (var context = new Context())
+                using (var context = new DataContext())
                 {
                     context.Candidacies.Add(value);
                     context.SaveChanges();
@@ -28,7 +28,7 @@ namespace backend.Repositories
 
         public void Delete(Candidacy value)
         {
-            using (var context = new Context())
+            using (var context = new DataContext())
             {
                 context.Candidacies.Attach(value);
                 context.Candidacies.Remove(value);
@@ -39,7 +39,7 @@ namespace backend.Repositories
         public Candidacy GetById(int id)
         {
             Candidacy result = null;
-            using (var context = new Context())
+            using (var context = new DataContext())
             {
                 result = context.Candidacies.FirstOrDefault(x => x.Id == id);
             }
@@ -51,7 +51,7 @@ namespace backend.Repositories
         {
             try
             {
-                using (var context = new Context())
+                using (var context = new DataContext())
                 {
                     context.Candidacies.Update(value);
                     context.SaveChanges();
@@ -66,7 +66,7 @@ namespace backend.Repositories
 
         public IEnumerable<Candidacy> GetAll()
         {
-            var context = new Context();
+            var context = new DataContext();
             return context.Candidacies.Include(x => x.Owner).ToList();
         }
     }

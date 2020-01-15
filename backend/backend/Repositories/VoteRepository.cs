@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using backend.Infrastructure;
-using backend.Models;
+using backend.Models.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,7 +14,7 @@ namespace backend.Repositories
         {
             try
             {
-                using (var context = new Context())
+                using (var context = new DataContext())
                 {
                     context.Votes.Add(value);
                     context.SaveChanges();
@@ -29,7 +29,7 @@ namespace backend.Repositories
 
         public void Delete(Vote value)
         {
-            using (var context = new Context())
+            using (var context = new DataContext())
             {
                 context.Votes.Remove(value);
                 context.SaveChanges();
@@ -38,13 +38,13 @@ namespace backend.Repositories
 
         public Vote GetById(int id)
         {
-            var context = new Context();
+            var context = new DataContext();
             return context.Votes.FirstOrDefault(x => x.Id == id);
         }
 
         public void Edit(Vote value)
         {
-            using (var context = new Context())
+            using (var context = new DataContext())
             {
                 context.Votes.Update(value);
                 context.SaveChanges();
@@ -53,7 +53,7 @@ namespace backend.Repositories
 
         public IEnumerable<Vote> GetAll()
         {
-            var context = new Context();
+            var context = new DataContext();
             return context.Votes.Include(x => x.Option).ToList();
         }
 

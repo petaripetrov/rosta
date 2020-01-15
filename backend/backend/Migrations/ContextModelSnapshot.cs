@@ -7,7 +7,7 @@ using backend.Infrastructure;
 
 namespace backend.Migrations
 {
-    [DbContext(typeof(Context))]
+    [DbContext(typeof(DataContext))]
     partial class ContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
@@ -17,7 +17,7 @@ namespace backend.Migrations
                 .HasAnnotation("ProductVersion", "3.0.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-            modelBuilder.Entity("backend.Models.Candidacy", b =>
+            modelBuilder.Entity("backend.Models.Data.Candidacy", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -42,7 +42,7 @@ namespace backend.Migrations
                     b.ToTable("Candidacies");
                 });
 
-            modelBuilder.Entity("backend.Models.Option", b =>
+            modelBuilder.Entity("backend.Models.Data.Option", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -61,7 +61,7 @@ namespace backend.Migrations
                     b.ToTable("Options");
                 });
 
-            modelBuilder.Entity("backend.Models.School", b =>
+            modelBuilder.Entity("backend.Models.Data.School", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -75,7 +75,7 @@ namespace backend.Migrations
                     b.ToTable("Schools");
                 });
 
-            modelBuilder.Entity("backend.Models.Survey", b =>
+            modelBuilder.Entity("backend.Models.Data.Survey", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -109,41 +109,29 @@ namespace backend.Migrations
                     b.ToTable("Surveys");
                 });
 
-            modelBuilder.Entity("backend.Models.User", b =>
+            modelBuilder.Entity("backend.Models.Data.UserDetails", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<string>("AuthenticationCode")
-                        .HasColumnType("longtext CHARACTER SET utf8mb4");
-
-                    b.Property<string>("Email")
-                        .HasColumnType("longtext CHARACTER SET utf8mb4");
-
-                    b.Property<string>("Password")
-                        .HasColumnType("longtext CHARACTER SET utf8mb4");
-
                     b.Property<string>("PhotoPath")
-                        .HasColumnType("longtext CHARACTER SET utf8mb4");
-
-                    b.Property<string>("Role")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<int?>("SchoolId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Username")
+                    b.Property<string>("UserId")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.HasKey("Id");
 
                     b.HasIndex("SchoolId");
 
-                    b.ToTable("Users");
+                    b.ToTable("UserDetails");
                 });
 
-            modelBuilder.Entity("backend.Models.Vote", b =>
+            modelBuilder.Entity("backend.Models.Data.Vote", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -152,10 +140,10 @@ namespace backend.Migrations
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<int?>("OptionId")
+                    b.Property<int>("OptionId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("SurveyId")
+                    b.Property<int>("SurveyId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -167,46 +155,50 @@ namespace backend.Migrations
                     b.ToTable("Votes");
                 });
 
-            modelBuilder.Entity("backend.Models.Candidacy", b =>
+            modelBuilder.Entity("backend.Models.Data.Candidacy", b =>
                 {
-                    b.HasOne("backend.Models.User", "Owner")
+                    b.HasOne("backend.Models.Data.UserDetails", "Owner")
                         .WithMany()
                         .HasForeignKey("OwnerId")
                         .OnDelete(DeleteBehavior.SetNull);
                 });
 
-            modelBuilder.Entity("backend.Models.Option", b =>
+            modelBuilder.Entity("backend.Models.Data.Option", b =>
                 {
-                    b.HasOne("backend.Models.Survey", "Survey")
+                    b.HasOne("backend.Models.Data.Survey", "Survey")
                         .WithMany("Options")
                         .HasForeignKey("SurveyId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("backend.Models.Survey", b =>
+            modelBuilder.Entity("backend.Models.Data.Survey", b =>
                 {
-                    b.HasOne("backend.Models.User", "Author")
+                    b.HasOne("backend.Models.Data.UserDetails", "Author")
                         .WithMany()
                         .HasForeignKey("AuthorId");
                 });
 
-            modelBuilder.Entity("backend.Models.User", b =>
+            modelBuilder.Entity("backend.Models.Data.UserDetails", b =>
                 {
-                    b.HasOne("backend.Models.School", "School")
+                    b.HasOne("backend.Models.Data.School", "School")
                         .WithMany("Users")
                         .HasForeignKey("SchoolId");
                 });
 
-            modelBuilder.Entity("backend.Models.Vote", b =>
+            modelBuilder.Entity("backend.Models.Data.Vote", b =>
                 {
-                    b.HasOne("backend.Models.Option", "Option")
+                    b.HasOne("backend.Models.Data.Option", "Option")
                         .WithMany()
-                        .HasForeignKey("OptionId");
+                        .HasForeignKey("OptionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.HasOne("backend.Models.Survey", "Survey")
+                    b.HasOne("backend.Models.Data.Survey", "Survey")
                         .WithMany("Votes")
-                        .HasForeignKey("SurveyId");
+                        .HasForeignKey("SurveyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }
