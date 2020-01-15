@@ -10,25 +10,25 @@
 }
 
 .surveyButton{
-    margin-right: 1.32%;
     margin-bottom: 10px;
 
-    width: 291px !important;
-    height: 275px !important;
+    min-width: 241px;
+    min-height: 225px;
 
     background: #c4c4c4 !important;
     border: none !important;
     box-shadow: none !important;
     border-radius: 50px !important;
-    border-end-end-radius: 0px !important;
 }
 
 .surveyCol{
     position: absolute;
     height: 100%;
     width: 320px;
+    right: 0;
 
-    left: 83.1%
+    scrollbar-color: gray transparent;
+    scrollbar-width: thin;
 }
 
 .surveyList{

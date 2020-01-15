@@ -22,13 +22,6 @@ export const LoginForm: FunctionComponent = () => {
             alert('error')
         } else if (email.current.value === 'admin@admin.com' && password.current.value === 'password') {
             dispatch({
-                type: 'TOASTER_DISPLAY',
-                payload: {
-                    color: "lightgreen",
-                    message: `${t('welcomeMessage')}`
-                }
-            })
-            dispatch({
                 type: 'LOGIN_USER'
             })
             history.push('/menu')
