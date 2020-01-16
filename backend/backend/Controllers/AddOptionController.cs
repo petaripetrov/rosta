@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using backend.DTOs.DTOConverters.InputConverters;
 using backend.DTOs.OptionDTOs;
 using backend.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -30,6 +31,7 @@ namespace backend.Controllers
         [Consumes(MediaTypeNames.Application.Json)]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [Authorize(AuthenticationSchemes = "Bearer")]
         public void Add(OptionInput input)
         {
             var survey = _surveyRepository.GetById(input.SurveyId);

@@ -1,4 +1,5 @@
 using backend.Models.Identity;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -17,6 +18,7 @@ namespace backend.Controllers
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [Authorize(AuthenticationSchemes = "Bearer")]
         public void SignOut()
         {
             _signInManager.SignOutAsync();

@@ -19,6 +19,7 @@ namespace backend.Controllers
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [Authorize(AuthenticationSchemes = "Bearer")]
         public List<SchoolSummary> Get()
         {
             var repo = new SchoolRepository();

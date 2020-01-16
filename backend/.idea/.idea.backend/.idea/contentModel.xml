@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="$USER_HOME$/.Rider2019.3/system/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/.Rider2019.3/system/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_backend.-1677492749.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/.Rider2019.3/system/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_backend.-1967824363.00" t="ExcludeRecursive" />
     <e p="$USER_HOME$/.nuget/packages/microsoft.net.test.sdk/16.2.0/build/netcoreapp1.0" t="Include">
       <e p="Microsoft.NET.Test.Sdk.Program.cs" t="Include" />
     </e>
@@ -22,7 +22,6 @@
           <e p="SubmitCandidacyController.cs" t="Include" />
           <e p="SubmitSurveyController.cs" t="Include" />
           <e p="SubmitVoteController.cs" t="Include" />
-          <e p="WeatherForecastController.cs" t="Include" />
         </e>
         <e p="DTOs" t="Include">
           <e p="CandidacyDTOs" t="Include">

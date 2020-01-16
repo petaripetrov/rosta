@@ -5,6 +5,7 @@ using System.Net.Mime;
 using System.Threading.Tasks;
 using backend.DTOs.UserDTOs;
 using backend.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -27,6 +28,7 @@ namespace backend.Controllers
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [Authorize(AuthenticationSchemes = "Bearer")]
         public List<UserSummary> GetUsersInSchool(int id)
         {
             var schoolRepo = new SchoolRepository();
