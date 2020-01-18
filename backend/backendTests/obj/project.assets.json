@@ -6389,11 +6389,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/kris/Documents/rosta2/rosta/backend/backendTests/backendTests.csproj",
+      "projectUniqueName": "/home/kris/Documents/rosta/backend/backendTests/backendTests.csproj",
       "projectName": "backendTests",
-      "projectPath": "/home/kris/Documents/rosta2/rosta/backend/backendTests/backendTests.csproj",
+      "projectPath": "/home/kris/Documents/rosta/backend/backendTests/backendTests.csproj",
       "packagesPath": "/home/kris/.nuget/packages/",
-      "outputPath": "/home/kris/Documents/rosta2/rosta/backend/backendTests/obj/",
+      "outputPath": "/home/kris/Documents/rosta/backend/backendTests/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/kris/.config/NuGet/NuGet.Config"
@@ -6407,8 +6407,8 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "/home/kris/Documents/rosta2/rosta/backend/backend/backend.csproj": {
-              "projectPath": "/home/kris/Documents/rosta2/rosta/backend/backend/backend.csproj"
+            "/home/kris/Documents/rosta/backend/backend/backend.csproj": {
+              "projectPath": "/home/kris/Documents/rosta/backend/backend/backend.csproj"
             }
           }
         }

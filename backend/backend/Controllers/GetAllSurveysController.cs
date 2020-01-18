@@ -29,11 +29,17 @@ namespace backend.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [Authorize(AuthenticationSchemes = "Bearer")]
         
-        public List<SurveySummary> GetSurveys(int id)
+        public async Task<IActionResult> GetSurveys(int id)
         {
+            var schoolRepo = new SchoolRepository();
+            if (!schoolRepo.GetAll().Select(x => x.Id).Contains(id))
+            {
+                return NotFound("No School with that Id.");
+            }
+            
             var result = _repository.GetAll().Where(x => x.Author.SchoolId == id).Select(x => new SurveySummary(x)).ToList();
-
-            return result;
+            
+            return Ok(result);
             
         }
         
