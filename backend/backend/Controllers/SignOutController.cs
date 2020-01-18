@@ -15,14 +15,15 @@ namespace backend.Controllers
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
         
-        [HttpPost]
-        [ProducesResponseType(StatusCodes.Status201Created)]
+        [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [Authorize(AuthenticationSchemes = "Bearer")]
         public void SignOut()
         {
             _signInManager.SignOutAsync();
             _logger.LogInformation($"{"User sign Out"}");
+            
         }
 
         public SignOutController(ILogger<SignOutController> logger,UserManager<User> userManager,SignInManager<User> signInManager)
