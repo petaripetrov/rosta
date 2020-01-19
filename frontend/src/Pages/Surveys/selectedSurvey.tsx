@@ -1,21 +1,17 @@
 import React from 'react'
-import { Redirect } from 'react-router-dom'
 import { Survey } from '../../types'
-import { Row, Container } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 interface selectedSurveyProps {
-    selectedSurvey: Survey
+    selectedSurvey?: Survey
 }
 
 const SelectedSurvey = (props: selectedSurveyProps) => {
 
     console.log(props.selectedSurvey)
-    if (props.selectedSurvey === null) {
+    if (props.selectedSurvey) {
 
-        return (
-            <Redirect to="/surveys" />
-        )
-    } else {
 
         return (
             <Container className="selectedSurveyWrapper">
@@ -28,6 +24,10 @@ const SelectedSurvey = (props: selectedSurveyProps) => {
                     <div>{props.selectedSurvey.description}</div>
                 </div>
             </Container>
+        )
+    } else {
+        return (
+            null
         )
     }
 }

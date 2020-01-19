@@ -21,14 +21,22 @@
     border-radius: 50px !important;
 }
 
+.fetchingSurveySvg{
+    text-align: center;
+}
+
 .surveyCol{
     position: absolute;
     height: 100%;
     width: 320px;
-    right: 0;
+    right: 1%;
 
     scrollbar-color: gray transparent;
     scrollbar-width: thin;
+
+    box-shadow: 
+    inset 0px 15px 8px -10px #CCC,
+    inset 0px -15px 8px -10px #CCC; 
 }
 
 .surveyList{

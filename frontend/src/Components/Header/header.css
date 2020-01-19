@@ -16,7 +16,7 @@
   .burger{
     position: absolute;
   
-    left: 0.5%;
+    left: 0;
     bottom: 1%;
     z-index: 1;
   

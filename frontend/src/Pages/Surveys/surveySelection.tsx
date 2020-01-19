@@ -8,8 +8,9 @@ import './surveys.css'
 import useAPI from '../../Services/API'
 import { Survey } from '../../types'
 import { useTranslation } from 'react-i18next'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-export const Surveys: FunctionComponent<{ initial?: Survey }> = ({ initial = { name: 'Error' } }) => {
+export const Surveys: FunctionComponent<{ initial?: Survey }> = ({ initial }) => {
     const history = useHistory()
     const { path } = useRouteMatch()
     const location = useLocation()
@@ -28,7 +29,10 @@ export const Surveys: FunctionComponent<{ initial?: Survey }> = ({ initial = { n
                 </span>
             </Button>
         )
-        : <div>error</div>
+        : <div className="fetchingSurveySvg">
+            <h1>{'Fetching Surveys'}</h1>
+            <FontAwesomeIcon icon="poll-h" size="10x" />
+        </div>
 
 
     const SurveyWrapper = () => {
