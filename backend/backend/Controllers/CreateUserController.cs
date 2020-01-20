@@ -42,6 +42,18 @@ namespace backend.Controllers
             if (result.Succeeded)
             {
                 await _userManager.AddToRoleAsync(_userManager.FindByEmailAsync(input.Email).Result, "User");
+                
+                //Adds UserDetails for newly added user
+                var repo = new UserDetailsRepository();
+                var userDetails = new UserDetails();
+                userDetails.UserId = _userManager.FindByEmailAsync(input.Email).Result.Id;
+                repo.Add(userDetails);
+                var detailsId = repo.GetAll().Last().Id;
+
+                user.DetailsId = detailsId;
+                _userManager.UpdateAsync(user);
+                
+                
                 _logger.LogInformation("Account Created",user);
                 return Ok();
                 

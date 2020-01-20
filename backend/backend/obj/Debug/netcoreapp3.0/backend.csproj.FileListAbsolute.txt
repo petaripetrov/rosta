@@ -123,3 +123,4 @@
 /home/kris/Documents/rosta2/rosta/backend/backend/obj/Debug/netcoreapp3.0/backend.csproj.CopyComplete
 /home/kris/Documents/rosta2/rosta/backend/backend/obj/Debug/netcoreapp3.0/backend.dll
 /home/kris/Documents/rosta2/rosta/backend/backend/obj/Debug/netcoreapp3.0/backend.pdb
+/home/kris/Documents/rosta/backend/backend/bin/Debug/netcoreapp3.0/BCrypt-Core.dll

@@ -9,14 +9,12 @@ namespace backend.DTOs.UserDTOs
         public string Id { get; set; }
         public string Username { get; set; }
         public string Email { get; set; }
-        public string Role { get; set; }
 
-        public UserSummary(string id, string username, string email, string role)
+        public UserSummary(string id, string username, string email)
         {
             Id = id;
             Username = username;
             Email = email;
-            Role = role;
         }
 
         public UserSummary(UserDetails userDetails)
