@@ -13,8 +13,9 @@
     "welcomeMessage": "Welcome!",
 
 
-    "Surveys": "Surveys",
-    "Submit Candidacy": "Submit Candidacy",
-    "Submit Survey": "Submit Survey",
-    "Exit Account": "Exit Account"
+    "surveys": "Surveys",
+    "submit Survey": "Submit Survey",
+    "candidacies": "Candidacies",
+    "submit Candidacy": "Submit Candidacy",
+    "exit Account": "Exit Account"
 }

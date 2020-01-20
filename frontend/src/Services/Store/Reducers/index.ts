@@ -1,16 +1,16 @@
 import { connectRouter } from 'connected-react-router'
 import { combineReducers } from 'redux'
-import { burgerReducer } from './Burger'
 import { translationReducer } from './Translation'
 import { toasterReducer } from './Toaster'
 import { loginReducer } from './Login'
+import { APIReducer } from './API'
 
-const createRootReducer = (history) => combineReducers({
+const createRootReducer = (history: any) => combineReducers({
     router: connectRouter(history),
-    burger: burgerReducer,
     translation: translationReducer,
     toast: toasterReducer,
-    login: loginReducer
+    login: loginReducer,
+    api: APIReducer
     // other reducers go here with naming convention | name: nameRouter
 })
 

@@ -1,5 +1,0 @@
-export * from './Landing/landing'
-export * from './LoginRegister/loginRegister'
-export * from './Menu/menu'
-export * from './Surveys/surveys'
-export * from './Submit/submit'
