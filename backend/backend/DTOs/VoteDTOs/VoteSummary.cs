@@ -1,6 +1,6 @@
 using System;
 using backend.DTOs.OptionDTOs;
-using backend.Models;
+using backend.Models.Data;
 
 namespace backend.DTOs.VoteDTOs
 {

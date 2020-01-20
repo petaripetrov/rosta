@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace backend.Models
+namespace backend.Models.Data
 {
     public class Survey
     {
@@ -16,7 +16,7 @@ namespace backend.Models
         public string Description { get; private set; }
 
         public int? AuthorId { get; set; }
-        public User Author { get; private set; }
+        public UserDetails Author { get; private set; }
         
         private string photoPath = "";
 
@@ -55,7 +55,7 @@ namespace backend.Models
             Votes = new List<Vote>();
         }
 
-        public Survey(string name, DateTime startDate, DateTime endDate, string description, IEnumerable<Option> options, User author)
+        public Survey(string name, DateTime startDate, DateTime endDate, string description, IEnumerable<Option> options, UserDetails author)
         {
             if (name == null)
             {
@@ -92,7 +92,7 @@ namespace backend.Models
             Votes = new List<Vote>();
             
         }
-        public Survey(string name, DateTime startDate, DateTime endDate, string description, IEnumerable<Option> options, User author, string photoPath, string color)
+        public Survey(string name, DateTime startDate, DateTime endDate, string description, IEnumerable<Option> options, UserDetails author, string photoPath, string color)
             : this(name,startDate,endDate,description,options,author)
         {
             

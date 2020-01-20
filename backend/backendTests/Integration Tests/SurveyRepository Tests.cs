@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using backend.Models;
+using backend.Models.Data;
 using backend.Repositories;
 using NUnit.Framework;
 
@@ -11,7 +11,7 @@ namespace backendTests.Integration_Tests
     public class SurveyRepository_Tests
     {
         private static List<Option> options = new List<Option>();
-        private static User owner = new UserRepository().GetAll().FirstOrDefault();
+        private static UserDetails owner = new UserDetailsRepository().GetAll().FirstOrDefault();
 
 
         [Test]
