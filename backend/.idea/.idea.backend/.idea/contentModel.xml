@@ -127,6 +127,8 @@
         <e p="appsettings.json" t="Include" />
         <e p="backend.csproj" t="IncludeRecursive" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="mono_crash.mem.12324.1.blob" t="Include" />
+        <e p="mono_crash.mem.13058.1.blob" t="Include" />
         <e p="mono_crash.mem.13285.1.blob" t="Include" />
         <e p="mono_crash.mem.14074.1.blob" t="Include" />
         <e p="mono_crash.mem.14312.1.blob" t="Include" />

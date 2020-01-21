@@ -18,7 +18,7 @@ namespace backend.Services.Authorization
             var sub = handler.ReadJwtToken(token).Payload.Sub;
             var user =  _usermanager.FindByIdAsync(sub).Result;
             var rolesValidity = roles.Select(x => _usermanager.IsInRoleAsync(user, x).Result).ToList();
-            return !rolesValidity.Contains(false);
+            return rolesValidity.Contains(true);
         }
     }
 }

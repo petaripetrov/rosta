@@ -28,9 +28,7 @@ namespace backend.Controllers
             _logger = logger;
             _userManager = userManager;
         }
-
-        //TODO
-        // Make Asynchronous
+        
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]

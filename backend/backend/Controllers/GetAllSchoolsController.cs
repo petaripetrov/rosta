@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Mime;
 using System.Threading.Tasks;
+using backend.DTOs.DTOConverters.Factories;
 using backend.DTOs.SchoolDTOs;
 using backend.DTOs.SurveyDTOs;
 using backend.Models.Identity;
 using backend.Repositories;
+using backend.Services.Authorization;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -19,9 +21,9 @@ namespace backend.Controllers
     public class GetAllSchoolsController : ControllerBase
     {
         private readonly UserManager<User> _userManager;
-        private readonly Logger<GetAllSchoolsController> _logger;
+        private readonly ILogger<GetAllSchoolsController> _logger;
 
-        public GetAllSchoolsController(Logger<GetAllSchoolsController> logger,UserManager<User> userManager)
+        public GetAllSchoolsController(ILogger<GetAllSchoolsController> logger,UserManager<User> userManager)
         {
             _userManager = userManager;
             _logger = logger;
@@ -31,28 +33,40 @@ namespace backend.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [Authorize(AuthenticationSchemes = "Bearer")]
-        public List<SchoolSummary> Get()
+        public async Task<IActionResult> Get()
         {
-            var repo = new SchoolRepository();
-            var userIds = repo.GetAll()
-                .Select(x => new
-                {
-                    Name = x.Name,
-                    UserIds = x.Users.Select(x => x.UserId)
+            var token = HttpContext.Request.Headers["Authorization"].Last().Split(" ").Last();
+            string[] roles = {"Admin","SchoolAdmin"};
 
-                }).ToDictionary(x => x.Name, x => x.UserIds);
-            
-            
-            foreach (var users in userIds.Values)
+            if (RoleService.CheckRoles(token,roles,_userManager))
             {
-                foreach (var user in users)
+                var repo = new SchoolRepository();
+                var userIds = repo.GetAll()
+                    .Select(x => new
+                    {
+                        Name = x.Name,
+                        UserIds = x.Users.Select(x => x.UserId)
+
+                    }).ToDictionary(x => x.Name, x => x.UserIds);
+            
+                var SchoolsUsers = new Dictionary<string,List<User>>();
+            
+                foreach (var school in userIds.Keys)
                 {
-                    
+                    SchoolsUsers.Add(school,userIds[school].Select(x => _userManager.FindByIdAsync(x).Result).ToList());
                 }
+            
+                var detailsRepo = new UserDetailsRepository();
+
+            
+                //Produces summary for each school with summaries for each of students.
+                var result = repo.GetAll().Select(x => new SchoolSummary(x.Id,x.Name,SchoolsUsers[x.Name]
+                    .Select(x => UserSummaryFactory.CreateSummary(detailsRepo.GetById(x.DetailsId),x)).ToList())).ToList();
+            
+                return Ok(result);
             }
 
-            
-            return repo.GetAll().Select(x => new SchoolSummary(x)).ToList();
+            return Unauthorized("Only Admin and SchoolAdmin roles have permission to this controller.");
         }
     }
 }

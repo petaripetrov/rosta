@@ -4,7 +4,6 @@ namespace backend.Models.Data
 {
     public class Vote
     {
-        //TODO Fix adding new entry issue
         public int Id { get; set; }
         public DateTime Date { get; private set; }
         public int SurveyId { get; set; }

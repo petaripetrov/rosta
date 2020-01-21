@@ -41,8 +41,6 @@ namespace backend.Controllers
         public async Task<IActionResult> Submit(VoteInput input)
         {
             var token = HttpContext.Request.Headers["Authorization"].Last().Split(" ").Last();
-            var handler = new JwtSecurityTokenHandler();
-            var sub = handler.ReadJwtToken(token).Payload.Sub;
             var roles = new List<string>(){"User"};
             
             if (RoleService.CheckRoles(token,roles,_userManager))
