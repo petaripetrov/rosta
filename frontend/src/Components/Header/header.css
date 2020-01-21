@@ -38,7 +38,7 @@
     position: absolute;
     height: 100vh;
     top: 50px;
-    left: -305.367px;
+    left: 0;
     width: 305.367px;
   
     display: block;
@@ -61,15 +61,12 @@
     align-items: center;
     text-align: center;
   
+    font: inherit;
+    color: black;
     background: #c4c4c4 !important;
     border: none !important;
     box-shadow: none !important;
     border-radius: 0 !important;
-  }
-  
-  .burgerLinkText{
-    font-size: 20px;
-    color: black;
   }
 
   .header{

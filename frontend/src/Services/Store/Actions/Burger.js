@@ -1,1 +1,0 @@
-export const BURGER_TURN = 'BURGER_TURN'

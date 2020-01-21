@@ -1,16 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button, Navbar, ButtonGroup } from 'react-bootstrap'
-import anime from 'animejs'
+import { useSpring, animated } from 'react-spring'
 import { BurgerNav } from "./burger"
 import './header.css'
 
 export const Header = () => {
-    const myRef = React.createRef()
     const dispatch = useDispatch()
-    const currentLanguage = useSelector(state => state.translation.language)
-    const isLoggedIn = useSelector(state => state.login.isLoggedIn)
+    const currentLanguage = useSelector((state: any) => state.translation.language)
+    const isLoggedIn = useSelector((state: any) => state.login.isLoggedIn)
+    const [burgerOn, toggleBurger] = useState(false)
+    const animation = useSpring({
+        opacity: burgerOn ? 0 : 1,
+        config: {
+            duration: 200
+        }
+    })
+
     let disableEnButton, disableBgButton
 
     if (currentLanguage === 'en') {
@@ -21,27 +28,24 @@ export const Header = () => {
         disableBgButton = true
     }
 
+    function handleBurgerButton() {
+        toggleBurger(!burgerOn)
+    }
+
+    function handleBurgerButtonBlur() {
+        toggleBurger(false)
+    }
+
     return (
         <div>
             <Navbar bg="dark" variant="dark" className="header" fixed="top">
-                <Button ref={myRef} className="burger"
-                    onClick={() => {
-                        dispatch({ type: 'BURGER_TURN' })
-                        anime({
-                            targets: myRef.current,
-                            scale: {
-                                value: [1, 0.8],
-                                duration: 1000,
-                            },
-                            scale: {
-                                value: [0.8, 1],
-                                duration: 1000
-                            }
-                        })
-                    }} disabled={!isLoggedIn}>
-                    <FontAwesomeIcon icon="bars" />
-                </Button>
-                <BurgerNav />
+                <animated.div style={animation}>
+                    <Button className="burger"
+                        onClick={handleBurgerButton} onBlur={handleBurgerButtonBlur} disabled={!isLoggedIn}>
+                        <FontAwesomeIcon icon="bars" />
+                    </Button>
+                </animated.div>
+                <BurgerNav burgerState={burgerOn} />
                 <div className="schoolName">
                     {'School Name'}
                 </div>
