@@ -10,6 +10,7 @@
 }
 
 .surveyButton{
+    margin-top: 10px;
     margin-bottom: 10px;
 
     min-width: 241px;
@@ -35,8 +36,8 @@
     scrollbar-width: thin;
 
     box-shadow: 
-    inset 0px 15px 8px -10px #CCC,
-    inset 0px -15px 8px -10px #CCC; 
+    inset 0px 11px 8px -10px #CCC,
+    inset 0px -11px 8px -10px #CCC; 
 }
 
 .surveyList{

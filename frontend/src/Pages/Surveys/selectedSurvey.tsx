@@ -2,6 +2,7 @@ import React from 'react'
 import { Survey } from '../../types'
 import { Container } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useTranslation } from 'react-i18next'
 
 interface selectedSurveyProps {
     selectedSurvey?: Survey
@@ -9,17 +10,17 @@ interface selectedSurveyProps {
 
 const SelectedSurvey = (props: selectedSurveyProps) => {
 
-    console.log(props.selectedSurvey)
-    if (props.selectedSurvey) {
+    const { t } = useTranslation()
 
+    if (props.selectedSurvey) {
 
         return (
             <Container className="selectedSurveyWrapper">
-                <div>Name</div>
+                <div>{t('name')}</div>
                 <div className="nameField">
                     <div>{props.selectedSurvey.name}</div>
                 </div>
-                <div>Description</div>
+                <div>{t('description')}</div>
                 <div className="descriptionField">
                     <div>{props.selectedSurvey.description}</div>
                 </div>
