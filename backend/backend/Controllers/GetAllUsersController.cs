@@ -55,7 +55,7 @@ namespace backend.Controllers
                 }
             }
 
-            return Unauthorized();
+            return Unauthorized("Only Admin, SchoolAdmin have access to this controller.");
 
 
         }

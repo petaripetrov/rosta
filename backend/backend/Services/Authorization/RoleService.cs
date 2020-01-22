@@ -20,5 +20,11 @@ namespace backend.Services.Authorization
             var rolesValidity = roles.Select(x => _usermanager.IsInRoleAsync(user, x).Result).ToList();
             return rolesValidity.Contains(true);
         }
+
+        public static List<string> GetAllRoles()
+        {
+            var roles = new List<string>(){"Admin","SchoolAdmin","User"};
+            return roles;
+        }
     }
 }
