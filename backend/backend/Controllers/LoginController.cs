@@ -47,6 +47,7 @@ namespace backend.Controllers
                 var claims = new[]
                 {
                     new Claim(JwtRegisteredClaimNames.Sub, user.Id),
+                    new Claim("Role","User")
                 };
 
                 var secretBytes = Encoding.UTF8.GetBytes(Constants.Secret);
@@ -63,8 +64,8 @@ namespace backend.Controllers
                     signingCredentials
                     );
 
-                var access_token = new JwtSecurityTokenHandler().WriteToken(token);
-                return Ok(access_token);
+                var access_tokenValue = new JwtSecurityTokenHandler().WriteToken(token);
+                return Ok(new {access_token = access_tokenValue});
             }
             else
             {

@@ -15,6 +15,13 @@ namespace backend.Controllers
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
         
+        public SignOutController(ILogger<SignOutController> logger,UserManager<User> userManager,SignInManager<User> signInManager)
+        {
+            _logger = logger;
+            _userManager = userManager;
+            _signInManager = signInManager;
+        }
+        
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -26,11 +33,6 @@ namespace backend.Controllers
             
         }
 
-        public SignOutController(ILogger<SignOutController> logger,UserManager<User> userManager,SignInManager<User> signInManager)
-        {
-            _logger = logger;
-            _userManager = userManager;
-            _signInManager = signInManager;
-        }
+       
     }
 }
