@@ -6,10 +6,16 @@ namespace backend.DTOs.DTOConverters.InputConverters
 {
     public class OptionInputConverter
     {
-        public static Option Convert(OptionInput input)
+        public static Option Convert(IOptionInput input)
         {
             var repo = new SurveyRepository();
-            return new Option(input.Name,repo.GetById(input.SurveyId));
+            return new Option(input.Name);
         }
+        public static Option Convert(IOptionInput toExistingSurveyInput, int surveyId)
+        {
+            var repo = new SurveyRepository();
+            return new Option(toExistingSurveyInput.Name,surveyId);
+        }
+        
     }
 }

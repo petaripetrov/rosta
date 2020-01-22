@@ -37,15 +37,15 @@ namespace backend.Controllers
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [Authorize(AuthenticationSchemes = "Bearer")]
-        public async Task<IActionResult> Add(OptionInput input)
+        public async Task<IActionResult> Add(OptionToExistingSurveyInput toExistingSurveyInput)
         {
             var token = HttpContext.Request.Headers["Authorization"].Last().Split(" ").Last();
             var roles = new List<string>(){"User","SchoolAdmin","Admin"};
 
             if (RoleService.CheckRoles(token,roles,_userManager))
             {
-                var survey = _surveyRepository.GetById(input.SurveyId);
-                var option = OptionInputConverter.Convert(input);
+                var survey = _surveyRepository.GetById(toExistingSurveyInput.SurveyId);
+                var option = OptionInputConverter.Convert(toExistingSurveyInput);
             
                 _optionRepository.Add(option);
                 survey.AddOption(option);

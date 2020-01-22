@@ -42,8 +42,10 @@
             </e>
           </e>
           <e p="OptionDTOs" t="Include">
-            <e p="OptionInput.cs" t="Include" />
+            <e p="IOptionInput.cs" t="Include" />
             <e p="OptionSummary.cs" t="Include" />
+            <e p="OptionToExistingSurveyInput.cs" t="Include" />
+            <e p="OptionToNewSurveyInput.cs" t="Include" />
           </e>
           <e p="SchoolDTOs" t="Include">
             <e p="SchoolSummary.cs" t="Include" />
@@ -146,6 +148,7 @@
         <e p="mono_crash.mem.22813.1.blob" t="Include" />
         <e p="mono_crash.mem.23526.1.blob" t="Include" />
         <e p="mono_crash.mem.24589.1.blob" t="Include" />
+        <e p="mono_crash.mem.29290.1.blob" t="Include" />
         <e p="mono_crash.mem.645.1.blob" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -159,7 +162,6 @@
       <e p="backendTests" t="IncludeRecursive">
         <e p="Integration Tests" t="Include">
           <e p="Candidacy Repository Tests.cs" t="Include" />
-          <e p="OptionRepository Tests.cs" t="Include" />
           <e p="SchoolRepository Tests.cs" t="Include" />
           <e p="SurveyRepository Tests.cs" t="Include" />
           <e p="VoteRepositoryTests.cs" t="Include" />

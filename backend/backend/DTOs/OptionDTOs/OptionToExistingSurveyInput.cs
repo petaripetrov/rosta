@@ -1,6 +1,6 @@
 namespace backend.DTOs.OptionDTOs
 {
-    public class OptionInput
+    public class OptionToExistingSurveyInput : IOptionInput
     {
         public string Name { get; set; }
         public int SurveyId { get; set; }

@@ -60,7 +60,7 @@ namespace backend.Repositories
         public IEnumerable<Option> GetAll()
         {
             var context = new DataContext();
-            return context.Options.Include(x => x.Survey).ToList();
+            return context.Options.ToList();
         }
     }
 }
