@@ -5,6 +5,9 @@
     "Password": "Парола",
     "Confirm Password": "Потвърждаване на парола",
     "Username": "Потребителско име",
+    "createSurvey": "Създайте анкета.",
+    "name": "Име",
+    "description":"Описание",
 
     
     "emailErrorMessage": "Моля въведете валиден имейл.",

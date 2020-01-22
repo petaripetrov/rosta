@@ -1,6 +1,6 @@
 import React, { useState, FunctionComponent, useEffect } from 'react'
 import { Toast } from 'react-bootstrap'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 
 interface ToasterParams {
     color: string
@@ -8,38 +8,28 @@ interface ToasterParams {
 }
 
 export const Toaster: FunctionComponent<{ initial?: ToasterParams }> = ({ initial }) => {
-    const passedToaster = useSelector((state: any) => state.toast)
+    const dispatch = useDispatch()
     const apiPending = useSelector((state: any) => state.api.pending)
     const [show, setShow] = useState(false)
     const [toasterParams, setToasterParamas] = useState(initial)
 
-    // Regular Toaster Handcle
+    // Regular Toaster Handle
     useEffect(() => {
-        if (Object.entries(passedToaster).length !== 0) {
-            setToasterParamas(passedToaster)
-            console.log(toasterParams)
-            setShow(true)
-        } else if (apiPending === true) {
+        if (apiPending === true) {
             setToasterParamas({ color: 'black', message: 'Loading...' })
             setShow(true)
-        } else if (apiPending === false) {
+        } else {
             setShow(false)
-            setToasterParamas({ color: '', message: '' })
         }
-    }, [passedToaster, apiPending])
+    }, [apiPending, dispatch])
 
     if (toasterParams === undefined) {
         return (
-            <Toast show={false}>
-            </Toast>
+            null
         )
     } else {
         return (
-            <Toast show={show} delay={1543} autohide onClose={() => setShow(false)} style={{
-                position: "relative",
-                margin: "0 auto",
-                top: "55px"
-            }}>
+            <Toast show={show} className="toast">
                 <Toast.Header closeButton={false} style={{
                     backgroundColor: toasterParams.color
                 }}>
