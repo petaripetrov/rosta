@@ -1,0 +1,24 @@
+{
+    "Login": "Login",
+    "Register": "Register",
+    "Email": "Email",
+    "Password": "Password",
+    "Confirm Password": "Confirm Password",
+    "Username": "Username",
+    "createSurvey": "Create Survey",
+    "name":"Name",
+    "description": "Description",
+
+    "emailErrorMessage": "Please enter a valid email.",
+    "passwordErrorMessage": "Please enter a valid password(at least 8 characters).",
+    "passwordMatchError": "Passwords don't match.",
+    "usernameError": "Username unavalible",
+    "welcomeMessage": "Welcome!",
+
+
+    "surveys": "Surveys",
+    "submit Survey": "Submit Survey",
+    "candidacies": "Candidacies",
+    "submit Candidacy": "Submit Candidacy",
+    "exit Account": "Exit Account"
+}
