@@ -1,0 +1,382 @@
+body {
+  margin: 0;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.appContainer{
+  position: absolute;
+  height: 90%;
+  top: 8%;
+}
+
+.toast{
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+
+  top: 55px;
+}
+
+.schoolName{
+    position: relative;
+  
+    margin: 0 auto;
+  
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: large;
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
+    text-align: center;
+    
+    color: #ffffff
+  }
+  
+  .burger{
+    position: absolute;
+  
+    left: 0;
+    bottom: 1%;
+    z-index: 1;
+  
+    font-weight: 900;
+    font-size: 35px;
+    line-height: 40px;
+  
+    color: white;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .burger:disabled{
+    display: none;
+  }
+  
+  .burgerNav{
+    position: absolute;
+    height: 100vh;
+    top: 50px;
+    left: 0;
+    width: 305.367px;
+  
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+  
+    background-color: #ffffff;
+  }
+  
+  .burgerLink{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    top: 2.27%;
+  
+    margin-bottom: 6.27%;
+  
+    display: block;
+    align-items: center;
+    text-align: center;
+  
+    font: inherit;
+    color: black;
+    background: #c4c4c4 !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+
+  .header{
+    width: 100%;
+    height: 50px;
+  
+    background: #031231 !important;
+  }
+  
+  .languageButton{
+
+    font-weight: bold;
+    padding: 5px;
+
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .buttonGroup{
+    position: absolute;
+
+    right: 0.5%;
+  }
+  .svgName{
+    position: absolute;
+  
+    top: 10%;
+    left: 4%;
+  }
+  
+  .svgDrawing{
+    position: absolute;
+  
+    width: 47%;
+    right: 10px;
+    bottom: 10px;
+  }
+  
+  .loginButton{
+    position: absolute;
+    width: 338px;
+    height: 56px;
+
+    top: 52%;
+    left: calc(4% + 100px);
+
+    color: black;
+    font-weight: bold;
+    background: #b0d7ff;
+    display: block;
+    border-radius: 19px;
+    background-color: #b0d7ff !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  
+  .registerButton{
+    position: absolute;
+    width: 338px;
+    height: 56px;
+
+    top: calc(52% + 60px);
+    left: calc(4% + 100px);
+
+    color: black;
+    font-weight: bold;
+    background: #b0d7ff;
+    display: block;
+    border-radius: 19px;
+    background-color: #b0d7ff !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  
+  @media only screen and (max-width: 800px){
+    .svgName{
+  
+      width: 80%;
+      min-width: 224px;
+      right: 0;
+      left: 0;
+      margin: 0 auto;
+    }
+  
+    .svgDrawing{
+      min-width: 320px;
+      top: 25%;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+
+    .loginButton{
+      left: 0;
+      right: 0;
+      top: 62%;
+      margin: 0 auto;
+    }
+
+    .registerButton{
+      left: 0;
+      right: 0;
+      top: calc(62% + 60px);
+      margin: 0 auto;;
+    }
+  }
+
+  .loginForm{
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 30%;
+
+    margin: 0 auto;
+    width: 52.19%;
+    max-width: 500px;
+
+    background: #D8D5DB;
+    border-radius: 35px;
+}
+
+.registerForm{
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 23%;
+
+    margin: 0 auto;
+    width: 52.19%;
+    max-width: 500px;
+
+    background: #D8D5DB;
+    border-radius: 35px;
+}
+
+.form-group{
+    position: relative;
+
+    width: 67.6%;
+    padding-top: 15px;
+    margin: 0 auto;
+}
+
+.form-control{
+    height: 60px;
+
+    background: #C4C4C4;
+    border-radius: 19px;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.loginSubmitButton{
+    position: relative;
+
+    width: 100%;
+    height: 56px;
+    
+
+    background: #b0d7ff !important;
+    border-radius: 19px;
+    border: none !important;
+    box-shadow: none !important;
+
+    color: black;
+    font-weight: bold;
+    
+}
+
+.loginRegisterButton{
+    padding-top: 7px;
+    padding-bottom: 22px;
+}
+
+.registerSubmitGroup{
+    padding-top: 60px;
+    padding-bottom: 22px;
+}
+
+.formRegisterButton{
+    position: relative;
+    width: 100%;
+    height: 56px;
+
+    background: #eae8ff !important;
+    border-radius: 19px;
+    border: none !important;
+    box-shadow: none !important;
+    
+    color: black;
+    font-weight: bold;
+}
+
+.registerSubmitButton{
+    position: relative;
+
+    width: 100%;
+    height: 56px;
+    
+
+    background: #b0d7ff !important;
+    border-radius: 19px;
+    border: none !important;
+    box-shadow: none !important;
+
+    color: black;
+    font-weight: bold;
+}
+
+
+@media only screen and (max-width: 800px){
+    .loginForm{
+        width: 90%;
+
+        top: 25%;
+        margin: 0 auto;
+    }
+
+    .registerForm{
+        width: 90%;
+
+        top: 10%;
+        margin: 0 auto;
+    }
+}
+
+#menu{
+  position: absolute;
+
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 40%;
+  
+  width: 82.5%;
+  height: 20%;
+}
+
+
+.surveyMenuButton{
+  margin-right: 1.32%;
+
+  width: 165px;
+  
+  color: black;
+  font-weight: inherit;
+  font-size: 20px;
+  background: #c4c4c4 !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 19px !important;
+}
+
+.candidacyButton{
+  margin-right: 1.32%;
+
+  width: 165px;
+
+  color: black;
+  font-weight: inherit;
+  font-size: 20px;
+  background: #c4c4c4 !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 19px !important;
+}
+
+.exitButton{
+  margin-right: 1.32%;
+
+  width: 165px;
+
+  color: black;
+  font-weight: inherit;
+  font-size: 20px;
+  background: #c4c4c4 !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 19px !important;
+}
+

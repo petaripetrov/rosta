@@ -6,7 +6,7 @@ import createRootReducer from './Reducers'
 
 export function configureStore() {
     const store = createStore(
-        createRootReducer(history),
+        createRootReducer(),
         composeWithDevTools(
             applyMiddleware(thunkMiddleware),
         )
