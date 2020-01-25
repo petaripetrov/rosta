@@ -6,6 +6,9 @@
     "projectPath": "/home/kris/Documents/rosta/backend/backend/backend.csproj",
     "outputPath": "/home/kris/Documents/rosta/backend/backend/obj/",
     "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+    ],
     "originalTargetFrameworks": [
       "netcoreapp3.0"
     ],

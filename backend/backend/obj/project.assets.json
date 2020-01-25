@@ -2494,7 +2494,8 @@
     ]
   },
   "packageFolders": {
-    "/home/kris/.nuget/packages/": {}
+    "/home/kris/.nuget/packages/": {},
+    "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
@@ -2505,8 +2506,11 @@
       "packagesPath": "/home/kris/.nuget/packages/",
       "outputPath": "/home/kris/Documents/rosta/backend/backend/obj/",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "/home/kris/.config/NuGet/NuGet.Config"
+        "/home/kris/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.0"

@@ -16,6 +16,7 @@
           <e p="AddToRoleController.cs" t="Include" />
           <e p="AddToSchoolController.cs" t="Include" />
           <e p="CreateUserController.cs" t="Include" />
+          <e p="GetAllCandidaciesController.cs" t="Include" />
           <e p="GetAllSchoolsController.cs" t="Include" />
           <e p="GetAllSurveysController.cs" t="Include" />
           <e p="GetAllUsersController.cs" t="Include" />

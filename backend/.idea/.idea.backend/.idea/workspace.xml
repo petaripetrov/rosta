@@ -2,23 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df290771-fae5-4299-a670-98d73b4b94cd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/DTOs/OptionDTOs/IOptionInput.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/DTOs/OptionDTOs/OptionToNewSurveyInput.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/mono_crash.mem.29290.1.blob" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/Controllers/GetAllCandidaciesController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.backend/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.backend/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.backend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Controllers/AddOptionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Controllers/AddOptionController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/DTOs/DTOConverters/InputConverters/OptionInputConverter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/DTOs/DTOConverters/InputConverters/OptionInputConverter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/DTOs/DTOConverters/InputConverters/SurveyInputConverter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/DTOs/DTOConverters/InputConverters/SurveyInputConverter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/DTOs/OptionDTOs/OptionInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/DTOs/OptionDTOs/OptionToExistingSurveyInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/DTOs/SurveyDTOs/SurveyInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/DTOs/SurveyDTOs/SurveyInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Models/Data/Option.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Models/Data/Option.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Repositories/OptionRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Repositories/OptionRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/bin/Debug/netcoreapp3.0/backend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/backend/bin/Debug/netcoreapp3.0/backend.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/bin/Debug/netcoreapp3.0/backend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/backend/bin/Debug/netcoreapp3.0/backend.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/bin/Debug/netcoreapp3.0/backend.runtimeconfig.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/bin/Debug/netcoreapp3.0/backend.runtimeconfig.dev.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/obj/Debug/netcoreapp3.0/backend.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/Debug/netcoreapp3.0/backend.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/obj/Debug/netcoreapp3.0/backend.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/Debug/netcoreapp3.0/backend.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/obj/Debug/netcoreapp3.0/backend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/Debug/netcoreapp3.0/backend.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/obj/Debug/netcoreapp3.0/backend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/Debug/netcoreapp3.0/backend.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendTests/Integration Tests/OptionRepository Tests.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/obj/backend.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/backend.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/obj/backend.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/backend.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/obj/backend.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/backend.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backendTests/bin/Debug/netcoreapp3.0/nunit_random_seed.tmp" beforeDir="false" afterPath="$PROJECT_DIR$/backendTests/bin/Debug/netcoreapp3.0/nunit_random_seed.tmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backendTests/obj/Debug/netcoreapp3.0/backendTests.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/backendTests/obj/Debug/netcoreapp3.0/backendTests.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backendTests/obj/Debug/netcoreapp3.0/backendTests.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/backendTests/obj/Debug/netcoreapp3.0/backendTests.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backendTests/obj/backendTests.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/backendTests/obj/backendTests.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backendTests/obj/backendTests.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/backendTests/obj/backendTests.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backendTests/obj/backendTests.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/backendTests/obj/backendTests.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backendTests/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/backendTests/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backendTests/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/backendTests/obj/project.packagespec.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +76,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/C34D92CF-0375-4665-9D3D-BD7DD359F0E5/24/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1DEB74A7-B5C6-44CA-821F-000560E09848/1D8/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backendTests/Integration Tests/Candidacy Repository Tests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/Controllers/GetAllCandidaciesController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/DB77E3B2-7989-47D2-B162-88293D8ADDF7/2E/ToCollection.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/Controllers/AddToSchoolController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/Controllers/AddToRoleController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -139,14 +146,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/backend/Models/Data/School.cs" />
-        <option value="$PROJECT_DIR$/backend/Models/Identity/Roles/User.cs" />
-        <option value="$PROJECT_DIR$/backend/Models/Identity/Roles/Student.cs" />
-        <option value="$PROJECT_DIR$/backend/Models/Identity/Roles/Admin.cs" />
-        <option value="$PROJECT_DIR$/backend/Models/Identity/Roles/SchoolAdmin.cs" />
-        <option value="$PROJECT_DIR$/backend/Models/Identity/Roles/UserRole.cs" />
-        <option value="$PROJECT_DIR$/backend/Models/Identity/Roles/AdminRole.cs" />
-        <option value="$PROJECT_DIR$/backend/Models/Identity/Roles/SchoolAdminRole.cs" />
         <option value="$PROJECT_DIR$/backend/Program.cs" />
         <option value="$PROJECT_DIR$/backendTests/Integration Tests/UserRepository Tests.cs" />
         <option value="$PROJECT_DIR$/backend/Controllers/CreateUser.cs" />
@@ -157,7 +156,6 @@
         <option value="$PROJECT_DIR$/backend/Infrastructure/Constants.cs" />
         <option value="$PROJECT_DIR$/backend/Startup.cs" />
         <option value="$PROJECT_DIR$/backend/Controllers/LoginController.cs" />
-        <option value="$PROJECT_DIR$/backend/Repositories/UserDetailsRepository.cs" />
         <option value="$PROJECT_DIR$/backend/Models/Data/UserDetails.cs" />
         <option value="$PROJECT_DIR$/backend/DTOs/UserDTOs/UserSummary.cs" />
         <option value="$PROJECT_DIR$/backend/DTOs/DTOConverters/Factories/UserSummaryFactory.cs" />
@@ -188,8 +186,17 @@
         <option value="$PROJECT_DIR$/backend/DTOs/OptionDTOs/OptionToNewSurveyInput.cs" />
         <option value="$PROJECT_DIR$/backend/DTOs/DTOConverters/InputConverters/OptionInputConverter.cs" />
         <option value="$PROJECT_DIR$/backend/DTOs/SurveyDTOs/SurveyInput.cs" />
-        <option value="$PROJECT_DIR$/backend/Repositories/OptionRepository.cs" />
         <option value="$PROJECT_DIR$/backend/Models/Data/Option.cs" />
+        <option value="$PROJECT_DIR$/backend/Controllers/GetAllCandidacies.cs" />
+        <option value="$PROJECT_DIR$/backend/Repositories/IRepository.cs" />
+        <option value="$PROJECT_DIR$/backend/Repositories/CandidacyRepository.cs" />
+        <option value="$PROJECT_DIR$/backend/Repositories/OptionRepository.cs" />
+        <option value="$PROJECT_DIR$/backend/Repositories/SchoolRepository.cs" />
+        <option value="$PROJECT_DIR$/backend/Repositories/SurveyRepository.cs" />
+        <option value="$PROJECT_DIR$/backend/Repositories/UserDetailsRepository.cs" />
+        <option value="$PROJECT_DIR$/backend/Repositories/VoteRepository.cs" />
+        <option value="$PROJECT_DIR$/backend/Models/Data/Candidacy.cs" />
+        <option value="$PROJECT_DIR$/backend/Controllers/GetAllCandidaciesController.cs" />
       </list>
     </option>
   </component>
@@ -298,7 +305,9 @@
       <workItem from="1579448207251" duration="5561000" />
       <workItem from="1579498504954" duration="1080000" />
       <workItem from="1579606334688" duration="1494000" />
-      <workItem from="1579680973698" duration="12552000" />
+      <workItem from="1579680973698" duration="13969000" />
+      <workItem from="1579816770361" duration="1168000" />
+      <workItem from="1579955804423" duration="2897000" />
     </task>
     <servers />
   </component>
@@ -339,94 +348,94 @@
     </state>
     <state x="526" y="248" width="396" height="334" key="FileChooserDialogImpl/1360.0.1920.1080/0.34.1360.734@0.34.1360.734" timestamp="1578047000560" />
     <state x="2103" y="315" width="424" height="490" key="FileChooserDialogImpl/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579363100856" />
-    <state width="1870" height="182" key="GridCell.Tab.0.bottom" timestamp="1579717639805">
+    <state width="1870" height="182" key="GridCell.Tab.0.bottom" timestamp="1579958820192">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state width="1310" height="60" key="GridCell.Tab.0.bottom/1360.0.1920.1080/0.34.1360.734@0.34.1360.734" timestamp="1578047099865" />
-    <state width="1870" height="182" key="GridCell.Tab.0.bottom/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579717639805" />
-    <state width="1870" height="182" key="GridCell.Tab.0.center" timestamp="1579717639805">
+    <state width="1870" height="182" key="GridCell.Tab.0.bottom/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579958820192" />
+    <state width="1870" height="182" key="GridCell.Tab.0.center" timestamp="1579958820192">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state width="1310" height="60" key="GridCell.Tab.0.center/1360.0.1920.1080/0.34.1360.734@0.34.1360.734" timestamp="1578047099865" />
-    <state width="1870" height="182" key="GridCell.Tab.0.center/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579717639805" />
-    <state width="1870" height="182" key="GridCell.Tab.0.left" timestamp="1579717639805">
+    <state width="1870" height="182" key="GridCell.Tab.0.center/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579958820192" />
+    <state width="1870" height="182" key="GridCell.Tab.0.left" timestamp="1579958820192">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state width="1310" height="60" key="GridCell.Tab.0.left/1360.0.1920.1080/0.34.1360.734@0.34.1360.734" timestamp="1578047099865" />
-    <state width="1870" height="182" key="GridCell.Tab.0.left/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579717639805" />
-    <state width="1870" height="182" key="GridCell.Tab.0.right" timestamp="1579717639805">
+    <state width="1870" height="182" key="GridCell.Tab.0.left/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579958820192" />
+    <state width="1870" height="182" key="GridCell.Tab.0.right" timestamp="1579958820192">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state width="1310" height="60" key="GridCell.Tab.0.right/1360.0.1920.1080/0.34.1360.734@0.34.1360.734" timestamp="1578047099865" />
-    <state width="1870" height="182" key="GridCell.Tab.0.right/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579717639805" />
-    <state width="1870" height="242" key="GridCell.Tab.1.bottom" timestamp="1579712766230">
+    <state width="1870" height="182" key="GridCell.Tab.0.right/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579958820192" />
+    <state width="1870" height="242" key="GridCell.Tab.1.bottom" timestamp="1579728215539">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state width="1870" height="242" key="GridCell.Tab.1.bottom/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579712766230" />
-    <state width="1870" height="242" key="GridCell.Tab.1.center" timestamp="1579712766230">
+    <state width="1870" height="242" key="GridCell.Tab.1.bottom/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579728215539" />
+    <state width="1870" height="242" key="GridCell.Tab.1.center" timestamp="1579728215539">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state width="1870" height="242" key="GridCell.Tab.1.center/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579712766230" />
-    <state width="1870" height="242" key="GridCell.Tab.1.left" timestamp="1579712766230">
+    <state width="1870" height="242" key="GridCell.Tab.1.center/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579728215539" />
+    <state width="1870" height="242" key="GridCell.Tab.1.left" timestamp="1579728215539">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state width="1870" height="242" key="GridCell.Tab.1.left/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579712766230" />
-    <state width="1870" height="242" key="GridCell.Tab.1.right" timestamp="1579712766230">
+    <state width="1870" height="242" key="GridCell.Tab.1.left/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579728215539" />
+    <state width="1870" height="242" key="GridCell.Tab.1.right" timestamp="1579728215539">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state width="1870" height="242" key="GridCell.Tab.1.right/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579712766230" />
-    <state width="1870" height="242" key="GridCell.Tab.2.bottom" timestamp="1579712766230">
+    <state width="1870" height="242" key="GridCell.Tab.1.right/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579728215539" />
+    <state width="1870" height="242" key="GridCell.Tab.2.bottom" timestamp="1579728215539">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state width="1870" height="242" key="GridCell.Tab.2.bottom/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579712766230" />
-    <state width="1870" height="242" key="GridCell.Tab.2.center" timestamp="1579712766230">
+    <state width="1870" height="242" key="GridCell.Tab.2.bottom/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579728215539" />
+    <state width="1870" height="242" key="GridCell.Tab.2.center" timestamp="1579728215539">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state width="1870" height="242" key="GridCell.Tab.2.center/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579712766230" />
-    <state width="1870" height="242" key="GridCell.Tab.2.left" timestamp="1579712766230">
+    <state width="1870" height="242" key="GridCell.Tab.2.center/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579728215539" />
+    <state width="1870" height="242" key="GridCell.Tab.2.left" timestamp="1579728215539">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state width="1870" height="242" key="GridCell.Tab.2.left/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579712766230" />
-    <state width="1870" height="242" key="GridCell.Tab.2.right" timestamp="1579712766230">
+    <state width="1870" height="242" key="GridCell.Tab.2.left/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579728215539" />
+    <state width="1870" height="242" key="GridCell.Tab.2.right" timestamp="1579728215539">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state width="1870" height="242" key="GridCell.Tab.2.right/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579712766230" />
-    <state width="1870" height="242" key="GridCell.Tab.3.bottom" timestamp="1579712766231">
+    <state width="1870" height="242" key="GridCell.Tab.2.right/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579728215539" />
+    <state width="1870" height="242" key="GridCell.Tab.3.bottom" timestamp="1579728215540">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state width="1870" height="242" key="GridCell.Tab.3.bottom/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579712766231" />
-    <state width="1870" height="242" key="GridCell.Tab.3.center" timestamp="1579712766230">
+    <state width="1870" height="242" key="GridCell.Tab.3.bottom/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579728215540" />
+    <state width="1870" height="242" key="GridCell.Tab.3.center" timestamp="1579728215540">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state width="1870" height="242" key="GridCell.Tab.3.center/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579712766230" />
-    <state width="1870" height="242" key="GridCell.Tab.3.left" timestamp="1579712766230">
+    <state width="1870" height="242" key="GridCell.Tab.3.center/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579728215540" />
+    <state width="1870" height="242" key="GridCell.Tab.3.left" timestamp="1579728215540">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state width="1870" height="242" key="GridCell.Tab.3.left/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579712766230" />
-    <state width="1870" height="242" key="GridCell.Tab.3.right" timestamp="1579712766231">
+    <state width="1870" height="242" key="GridCell.Tab.3.left/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579728215540" />
+    <state width="1870" height="242" key="GridCell.Tab.3.right" timestamp="1579728215540">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state width="1870" height="242" key="GridCell.Tab.3.right/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579712766231" />
-    <state width="1870" height="242" key="GridCell.Tab.4.bottom" timestamp="1579712766231">
+    <state width="1870" height="242" key="GridCell.Tab.3.right/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579728215540" />
+    <state width="1870" height="242" key="GridCell.Tab.4.bottom" timestamp="1579728215540">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state width="1870" height="242" key="GridCell.Tab.4.bottom/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579712766231" />
-    <state width="1870" height="242" key="GridCell.Tab.4.center" timestamp="1579712766231">
+    <state width="1870" height="242" key="GridCell.Tab.4.bottom/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579728215540" />
+    <state width="1870" height="242" key="GridCell.Tab.4.center" timestamp="1579728215540">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state width="1870" height="242" key="GridCell.Tab.4.center/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579712766231" />
-    <state width="1870" height="242" key="GridCell.Tab.4.left" timestamp="1579712766231">
+    <state width="1870" height="242" key="GridCell.Tab.4.center/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579728215540" />
+    <state width="1870" height="242" key="GridCell.Tab.4.left" timestamp="1579728215540">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state width="1870" height="242" key="GridCell.Tab.4.left/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579712766231" />
-    <state width="1870" height="242" key="GridCell.Tab.4.right" timestamp="1579712766231">
+    <state width="1870" height="242" key="GridCell.Tab.4.left/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579728215540" />
+    <state width="1870" height="242" key="GridCell.Tab.4.right" timestamp="1579728215540">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state width="1870" height="242" key="GridCell.Tab.4.right/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579712766231" />
-    <state x="2429" y="274" width="730" height="661" key="RiderGenerateDialog" timestamp="1579711740631">
+    <state width="1870" height="242" key="GridCell.Tab.4.right/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579728215540" />
+    <state x="2429" y="274" width="730" height="661" key="RiderGenerateDialog" timestamp="1579956426470">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state x="2429" y="274" width="730" height="661" key="RiderGenerateDialog/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579711740631" />
+    <state x="2429" y="274" width="730" height="661" key="RiderGenerateDialog/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579956426470" />
     <state x="2100" y="267" width="429" height="586" key="RollbackChangesDialog" timestamp="1579075239504">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
