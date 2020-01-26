@@ -2,6 +2,7 @@ import { Container, Button } from 'react-bootstrap'
 import { useRouter } from 'next/router'
 
 import { useTranslation } from 'react-i18next'
+import { useState } from 'react'
 
 const Landing = () => {
   const router = useRouter()
@@ -22,7 +23,7 @@ const Landing = () => {
       </svg>
       <svg className="svgDrawing" width="915" height="688" viewBox="0 0 915 688" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="undraw_voting_nvu7 1">
-          <g clip-path="url(#clip0)">
+          <g clipPath="url(#clip0)">
             <g id="vote-submission-box">
               <path id="Vector" opacity="0.4" d="M772.098 264.346C784.204 264.346 794.018 254.532 794.018 242.425C794.018 230.319 784.204 220.505 772.098 220.505C759.992 220.505 750.178 230.319 750.178 242.425C750.178 254.532 759.992 264.346 772.098 264.346Z" fill="#031231" />
               <path id="Vector_2" d="M790.457 487.549C773.137 506.512 772.508 534.134 772.508 534.134C772.508 534.134 799.961 531.012 817.281 512.05C834.601 493.088 835.23 465.466 835.23 465.466C835.23 465.466 807.777 468.587 790.457 487.549Z" fill="#3F3D56" />

@@ -7,6 +7,8 @@ import Header from "../components/Header/header"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './styles.css'
 import { useEffect } from "react"
+import Toaster from "../components/toaster"
+import { useRouter } from "next/router"
 
 library.add(faBars, faPollH)
 
@@ -15,12 +17,9 @@ const store = configureStore()
 
 const MyApp = ({ Component, pageProps }) => {
 
-    useEffect(() => {
-        store.dispatch({ type: 'LOAD_FROM_COOKIES' })
-    })
-
     return (
         <Provider store={store}>
+            <Toaster />
             <Header />
             <Component {...pageProps} />
         </Provider>

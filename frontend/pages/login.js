@@ -3,10 +3,12 @@ import { Form, Button, Row } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'
 import { useDispatch } from 'react-redux'
 import { useRouter } from 'next/router'
+import useAPI from '../components/useAPI'
 
 
 const LoginForm = () => {
     const { t } = useTranslation()
+    const disaptch = useDispatch()
     const password = useRef()
     const router = useRouter()
     const email = useRef()
@@ -15,23 +17,35 @@ const LoginForm = () => {
     let [emailValidation, setEmailValidation] = useState()
     let [passwordValidation, setPasswordValidation] = useState()
 
+    function loginUser(inputs) {
+
+        fetch('https://localhost:44375/login', {
+            method: 'POST',
+            body: JSON.stringify(inputs),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(response => response.json()
+        ).then(data => {
+            let token = data.access_token
+            router.push('/menu')
+            dispatch({
+                type: 'LOGIN_USER',
+                payload: token
+            })
+        })
+    }
+
     function handleSubmit(event) {
         event.preventDefault()
-        if (emailValidation === true || passwordValidation === true) {
-            alert('error')
-        } else if (email.current.value === 'admin@admin.com' && password.current.value === 'password') {
-            dispatch({
-                type: 'LOGIN_USER'
-            })
-            router.push('/menu')
-        } else {
-            alert(`pass API request to login with ${email.current.value} & ${password.current.value}`)
+        if (emailValidation === false && passwordValidation === false) {
+            loginUser({ email: email.current.value, password: password.current.value })
         }
     }
 
 
-    function handleEmailChange() {
-        if (!email.current.value.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
+    function handleEmailChange(event) {
+        if (!event.target.value.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
             setEmailValidation(true)
 
         } else {
@@ -39,8 +53,8 @@ const LoginForm = () => {
         }
     }
 
-    function handlePasswordChange() {
-        if (!password.current.value.match(/.{8,}$/)) {
+    function handlePasswordChange(event) {
+        if (!event.target.value.match(/.{8,}$/)) {
             setPasswordValidation(true)
 
         } else {

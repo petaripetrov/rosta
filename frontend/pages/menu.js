@@ -2,6 +2,7 @@ import { useDispatch } from 'react-redux'
 import { Button, Container, ButtonGroup } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'
 import { useRouter } from 'next/router'
+import { auth } from '../components/auth'
 
 const Menu = () => {
     const dispatch = useDispatch()
@@ -35,6 +36,11 @@ const Menu = () => {
             </ButtonGroup>
         </Container>
     )
+}
+
+Menu.getInitialProps = async () => {
+    const token = auth()
+    return { token }
 }
 
 export default Menu

@@ -160,7 +160,7 @@ code {
     width: 338px;
     height: 56px;
 
-    top: calc(52% + 60px);
+    top: calc(53% + 60px);
     left: calc(4% + 100px);
 
     color: black;
@@ -185,7 +185,7 @@ code {
   
     .svgDrawing{
       min-width: 320px;
-      top: 25%;
+      top: 27%;
       left: 0;
       right: 0;
       margin: 0 auto;
@@ -194,14 +194,14 @@ code {
     .loginButton{
       left: 0;
       right: 0;
-      top: 62%;
+      top: 32%;
       margin: 0 auto;
     }
 
     .registerButton{
       left: 0;
       right: 0;
-      top: calc(62% + 60px);
+      top: calc(32% + 60px);
       margin: 0 auto;;
     }
   }
@@ -210,7 +210,7 @@ code {
     position: absolute;
     right: 0;
     left: 0;
-    top: 30%;
+    top: 32%;
 
     margin: 0 auto;
     width: 52.19%;
