@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using backend.Infrastructure;
-using backend.Models;
+using backend.Models.Data;
 using Microsoft.EntityFrameworkCore;
 
 namespace backend.Repositories
@@ -15,7 +15,7 @@ namespace backend.Repositories
             {
                 try
                 {
-                    using (var context = new Context())
+                    using (var context = new DataContext())
                     {
                         context.Surveys.Add(value);
                         context.SaveChanges();
@@ -37,7 +37,7 @@ namespace backend.Repositories
 
         public void Delete(Survey value)
         {
-            using (var context = new Context())
+            using (var context = new DataContext())
             {
                 value.Options.Clear();
                 value.Votes.Clear();
@@ -49,7 +49,7 @@ namespace backend.Repositories
         public Survey GetById(int id)
         {
             Survey result;
-            using (var context = new Context())
+            using (var context = new DataContext())
             {
                 result = context.Surveys.FirstOrDefault(x => x.Id == id);
             }
@@ -61,7 +61,7 @@ namespace backend.Repositories
         {
             try
             {
-                using (var context = new Context())
+                using (var context = new DataContext())
                 {
                     context.Update(value);
                     context.SaveChanges();
@@ -76,7 +76,7 @@ namespace backend.Repositories
 
         public IEnumerable<Survey> GetAll()
         {
-            var context = new Context();
+            var context = new DataContext();
             return context.Surveys.Include(x => x.Author).ToList();
         }
     }

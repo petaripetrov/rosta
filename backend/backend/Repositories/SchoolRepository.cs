@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using backend.Infrastructure;
-using backend.Models;
+using backend.Models.Data;
 using Microsoft.EntityFrameworkCore;
 
 namespace backend.Repositories
@@ -13,7 +13,7 @@ namespace backend.Repositories
         {
             try
             {
-                using (var context = new Context())
+                using (var context = new DataContext())
                 {
                     context.Schools.Add(value);
                     context.SaveChanges();
@@ -28,7 +28,7 @@ namespace backend.Repositories
 
         public void Delete(School value)
         {
-            using (var context = new Context())
+            using (var context = new DataContext())
             {
                 context.Schools.Remove(value);
                 context.SaveChanges();
@@ -39,7 +39,7 @@ namespace backend.Repositories
         public School GetById(int id)
         {
             School temp;
-            using (var context = new Context())
+            using (var context = new DataContext())
             {
                 temp = context.Schools.Include(x => x.Users).FirstOrDefault(x => x.Id == id);
             }
@@ -49,7 +49,7 @@ namespace backend.Repositories
 
         public void Edit(School value)
         {
-            using (var context = new Context())
+            using (var context = new DataContext())
             {
                 context.Schools.Update(value);
                 context.SaveChanges();
@@ -59,7 +59,7 @@ namespace backend.Repositories
 
         public IEnumerable<School> GetAll()
         {
-            var context = new Context();
+            var context = new DataContext();
             return context.Schools.Include(x => x.Users).ToList();
         }
         

@@ -1,6 +1,6 @@
 using  System;
 using System.Linq;
-using backend.Models;
+using backend.Models.Data;
 using backend.Repositories;
 using NUnit.Framework;
 

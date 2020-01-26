@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using backend.Infrastructure;
-using backend.Models;
+using backend.Models.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
@@ -14,7 +14,7 @@ namespace backend.Repositories
         {
             try
             {
-                using (var context = new Context())
+                using (var context = new DataContext())
                 {
                     context.Options.Add(value);
                     context.SaveChanges();
@@ -30,7 +30,7 @@ namespace backend.Repositories
 
         public void Delete(Option value)
         {
-            using (var context = new Context())
+            using (var context = new DataContext())
             {
                 context.Options.Remove(value);
                 context.SaveChanges();
@@ -41,7 +41,7 @@ namespace backend.Repositories
         public Option GetById(int id)
         {
             Option temp = null;
-            using (var context = new Context())
+            using (var context = new DataContext())
             {
                 temp = context.Options.FirstOrDefault(x => x.Id == id);
                 
@@ -51,7 +51,7 @@ namespace backend.Repositories
 
         public void Edit(Option value)
         {
-            using (var context = new Context())
+            using (var context = new DataContext())
             {
                 context.Update(value);
             }
@@ -59,7 +59,7 @@ namespace backend.Repositories
 
         public IEnumerable<Option> GetAll()
         {
-            var context = new Context();
+            var context = new DataContext();
             return context.Options.Include(x => x.Survey).ToList();
         }
     }

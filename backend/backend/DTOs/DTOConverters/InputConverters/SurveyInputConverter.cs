@@ -1,8 +1,7 @@
 using System;
 using System.Collections.Generic;
 using backend.DTOs.SurveyDTOs;
-using backend.Interfaces;
-using backend.Models;
+using backend.Models.Data;
 
 namespace backend.DTOs.DTOConverters.InputConverters
 {

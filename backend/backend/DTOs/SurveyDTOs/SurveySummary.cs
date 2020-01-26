@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using backend.DTOs.OptionDTOs;
 using backend.DTOs.VoteDTOs;
-using backend.Models;
+using backend.Models.Data;
 
 namespace backend.DTOs.SurveyDTOs
 {

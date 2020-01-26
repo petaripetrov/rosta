@@ -1,5 +1,4 @@
 using System;
-using backend.Models;
 
 namespace backend.DTOs.VoteDTOs
 {

@@ -5,6 +5,9 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="BCrypt-Core" Version="2.0.0" />
+      <PackageReference Include="Microsoft.AspNetCore.ApiAuthorization.IdentityServer" Version="3.0.0" />
+      <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.0.0" />
       <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.0.0" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.0.0">
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -14,7 +17,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Providers" />
+      <Folder Include="Interfaces" />
     </ItemGroup>
 
 </Project>

@@ -1,6 +1,6 @@
 using System;
 using System.Linq;
-using backend.Models;
+using backend.Models.Data;
 using backend.Repositories;
 using NUnit.Framework;
 
@@ -13,7 +13,7 @@ namespace backendTests.Integration_Tests
         public void Add_Normal_Conditionals()
         {
             var repo = new CandidacyRepository();
-            var user = new UserRepository().GetAll().FirstOrDefault();
+            var user = new UserDetailsRepository().GetAll().FirstOrDefault();
             var candidacy = new Candidacy("John","empty description","empty",user);
             repo.Add(candidacy);
             Assert.True(repo.GetAll().Last().Owner != null);
@@ -23,12 +23,12 @@ namespace backendTests.Integration_Tests
         public void Add_User_Null()
         {
             var repo = new CandidacyRepository();
-            User user = null;
+            UserDetails userDetails = null;
             
             
             Assert.Throws<ArgumentNullException>(() =>
             {
-                var candidacy = new Candidacy("John","empty description","empty",user);
+                var candidacy = new Candidacy("John","empty description","empty",userDetails);
                 repo.Add(candidacy);
             });
         
@@ -39,7 +39,7 @@ namespace backendTests.Integration_Tests
         public void Add_Name_Null()
         {
             var repo = new CandidacyRepository();
-            var user = new User();
+            var user = new UserDetails();
             Assert.Throws<ArgumentNullException>(() =>
             {
                 var candidacy = new Candidacy(null, "empty description", "empty", user);
@@ -52,7 +52,7 @@ namespace backendTests.Integration_Tests
         public void Add_Description_Null()
         {
             var repo = new CandidacyRepository();
-            var user = new User();
+            var user = new UserDetails();
             Assert.Throws<ArgumentNullException>(() =>
             {
                 var candidacy = new Candidacy("John",null,"empty",user);
@@ -65,8 +65,8 @@ namespace backendTests.Integration_Tests
         public void Edit_Normal_Conditions()
         {
             var repo = new CandidacyRepository();
-            var user = new User();
-            var userRepo = new UserRepository();
+            var user = new UserDetails();
+            var userRepo = new UserDetailsRepository();
             userRepo.Add(user);
             var candidacy = new Candidacy("John","empty description","empty",user);
             repo.Add(candidacy);
@@ -80,8 +80,8 @@ namespace backendTests.Integration_Tests
         public void Edit_PhotoPath_Null()
         {
             var repo = new CandidacyRepository();
-            var user = new User();
-            var userRepo = new UserRepository();
+            var user = new UserDetails();
+            var userRepo = new UserDetailsRepository();
             userRepo.Add(user);
             var candidacy = new Candidacy("John","empty description","empty",user);
             repo.Add(candidacy);
@@ -99,8 +99,8 @@ namespace backendTests.Integration_Tests
         public void Edit_Description_Null()
         {
             var repo = new CandidacyRepository();
-            var user = new User();
-            var userRepo = new UserRepository();
+            var user = new UserDetails();
+            var userRepo = new UserDetailsRepository();
             userRepo.Add(user);
             var candidacy = new Candidacy("John","empty description","empty",user);
             repo.Add(candidacy);
@@ -118,8 +118,8 @@ namespace backendTests.Integration_Tests
         public void Delete_Normal_Conditions()
         {
             var repo = new CandidacyRepository();
-            var user = new User();
-            var userRepo = new UserRepository();
+            var user = new UserDetails();
+            var userRepo = new UserDetailsRepository();
             userRepo.Add(user);
             var candidacy = new Candidacy("John","empty description","empty",user);
             repo.Add(candidacy);

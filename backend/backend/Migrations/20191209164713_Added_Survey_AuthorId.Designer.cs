@@ -8,7 +8,7 @@ using backend.Infrastructure;
 
 namespace backend.Migrations
 {
-    [DbContext(typeof(Context))]
+    [DbContext(typeof(DataContext))]
     [Migration("20191209164713_Added_Survey_AuthorId")]
     partial class Added_Survey_AuthorId
     {

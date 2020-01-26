@@ -1,7 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
+using backend.DTOs.DTOConverters.Factories;
 using backend.DTOs.UserDTOs;
-using backend.Models;
+using backend.Models.Data;
 
 namespace backend.DTOs.SchoolDTOs
 {
@@ -18,11 +19,6 @@ namespace backend.DTOs.SchoolDTOs
             Users = users;
         }
 
-        public SchoolSummary(School school)
-        {
-            Id = school.Id;
-            Name = school.Name;
-            Users = school.Users.Select(x => new UserSummary(x)).ToList();
-        }
+       
     }
 }
