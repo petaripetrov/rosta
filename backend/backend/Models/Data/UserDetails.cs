@@ -21,7 +21,7 @@ namespace backend.Models.Data
         }
         
 
-        public UserDetails( string userId, int? schoolId)
+        public UserDetails(string userId, int? schoolId)
         {
             UserId = userId;
             SchoolId = schoolId;
