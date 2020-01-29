@@ -1,14 +1,18 @@
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
+using System.IO;
 using System.Linq;
 using System.Net.Mime;
 using System.Threading.Tasks;
 using backend.DTOs.CandidacyDTOs;
 using backend.DTOs.DTOConverters.Factories;
+using backend.Infrastructure.Infrastructure_Helpers;
 using backend.Models.Identity;
 using backend.Repositories;
 using backend.Services.Authorization;
+using Google.Apis.Auth.OAuth2;
+using Google.Cloud.Storage.V1;
 using IdentityServer4.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -19,46 +23,44 @@ namespace backend.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class GetAllCandidaciesController : ControllerBase
+    public class GetSurveyPhotoController: ControllerBase
     {
+        private readonly ILogger<GetSurveyPhotoController> _logger;
         private readonly UserManager<User> _userManager;
-        private readonly ILogger<GetAllCandidaciesController> _logger;
 
-        public GetAllCandidaciesController(UserManager<User> userManager, ILogger<GetAllCandidaciesController> logger)
+        public GetSurveyPhotoController(ILogger<GetSurveyPhotoController> logger, UserManager<User> userManager)
         {
-            _userManager = userManager;
             _logger = logger;
+            _userManager = userManager;
         }
 
-        [HttpGet]
+        [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [Authorize(AuthenticationSchemes = "Bearer")]
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> Get(int id)
         {
             var token = HttpContext.Request.Headers["Authorization"].Last().Split(" ").Last();
             string[] roles = {"User","Admin","SchoolAdmin"};
 
-            var repo = new CandidacyRepository();
-            var detailsRepo = new UserDetailsRepository();
-            
-            //Gets UserId(sub) fro token;
-            var handler = new JwtSecurityTokenHandler();
-            var sub = handler.ReadJwtToken(token).Payload.Sub;
-
-            var schoolId = detailsRepo.GetAll().First(x => x.UserId == sub).SchoolId;
-            
-            
             if (RoleService.CheckRoles(token,roles,_userManager))
             {
+                var surveyRepo = new SurveyRepository();
+                var survey = surveyRepo.GetById(id);
                 
-                var result = repo.GetAll().Where(x => detailsRepo.GetById(x.OwnerId.GetValueOrDefault()).SchoolId == schoolId).ToList();
-                return Ok(result);
+                var credentials =
+                    GoogleCredential.FromFile(
+                        "/home/kris/Documents/rosta/backend/backend/Infrastructure/Images/GCStorage/Rosta-a2299c0ab851.json");
+                var storage = StorageClient.CreateAsync(credentials);
+                var url = SignedUrlHelper.GenerateV4SignedGetUrl("deep-castle-261418-survey-photo-bucket",
+                    survey.PhotoPath);
+
+                return Ok(url);
+
             }
 
             return Unauthorized();
         }
-        
     }
 }
