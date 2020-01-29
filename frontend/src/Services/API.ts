@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 
 enum APIEndpoints {
     surveys = 'surveys',
@@ -10,6 +11,7 @@ export default function useAPI(type: string) {
 
     const dispatch = useDispatch()
     const [result, setResult] = useState()
+    const authCode = useSelector((state: any) => state.login.authCode)
 
     useEffect(() => {
         dispatch({ type: 'SET_PENDING_TRUE' })
@@ -17,7 +19,12 @@ export default function useAPI(type: string) {
         switch (type) {
 
             case APIEndpoints.surveys:
-                fetch('https://localhost:44375/getAllSurveys/1')
+                fetch('https://localhost:44375/getAllSurveys/1', {
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${authCode}`
+                    }
+                })
                     .then(res => res.json())
                     .then(res => {
                         if (res.error) {

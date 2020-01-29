@@ -5,6 +5,10 @@ import { useHistory } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useDispatch } from 'react-redux'
 
+interface loginFormInputs {
+    email: string,
+    password: string
+}
 
 export const LoginForm: FunctionComponent = () => {
     const { t } = useTranslation()
@@ -16,17 +20,44 @@ export const LoginForm: FunctionComponent = () => {
     let [emailValidation, setEmailValidation] = useState()
     let [passwordValidation, setPasswordValidation] = useState()
 
+    function loginUser(inputs: loginFormInputs) {
+        fetch('https://localhost:44375/login', {
+            method: 'POST',
+            body: JSON.stringify(inputs),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                return response.json()
+            } else {
+                throw Error(`Request rejected with status ${response.status}`)
+            }
+        }
+        ).then(data => {
+            let token = data.access_token
+            history.push('/menu')
+            dispatch({
+                type: 'TOASTER_DISPLAY',
+                payload: {
+                    color: "lightgreen",
+                    message: `${t('welcomeMessage')}`
+                }
+            })
+            dispatch({
+                type: 'LOGIN_USER',
+                payload: token
+            })
+        }).catch(error => console.log(error))
+    }
+
     function handleSubmit(event: FormEvent) {
         event.preventDefault()
-        if (emailValidation === undefined || passwordValidation === undefined || emailValidation === true || passwordValidation === true || email.current === null || password.current === null) {
-            alert('error')
-        } else if (email.current.value === 'admin@admin.com' && password.current.value === 'password') {
-            dispatch({
-                type: 'LOGIN_USER'
+        if (emailValidation !== undefined || passwordValidation !== undefined || emailValidation !== true || passwordValidation !== true || email.current !== null || password.current !== null) {
+            loginUser({
+                email: email.current.value,
+                password: password.current.value
             })
-            history.push('/menu')
-        } else {
-            alert(`pass API request to login with ${email.current.value} & ${password.current.value}`)
         }
     }
 
