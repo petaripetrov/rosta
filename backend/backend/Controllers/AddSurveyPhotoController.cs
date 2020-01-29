@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.Mime;
 using System.Threading.Tasks;
 using backend.Models.Identity;
+using backend.Repositories;
 using backend.Services.Authorization;
 using backend.Services.Security;
 using Google.Apis.Auth.OAuth2;
@@ -29,29 +30,36 @@ namespace backend.Controllers
             _logger = logger;
         }
 
-        [HttpPost]
-        //[Consumes(MediaTypeNames.Image.Jpeg)]
+        [HttpPost("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [Authorize(AuthenticationSchemes = "Bearer")]
 
-        public async Task<IActionResult> Add()
+        public async Task<IActionResult> Add(int id)
         {
             var token = HttpContext.Request.Headers["Authorization"].Last().Split(" ").Last();
             string[] roles = {"User", "Admin", "SchoolAdmin"};
             var handler = new JwtSecurityTokenHandler();
-
+            
             if (RoleService.CheckRoles(token, roles, _userManager))
             {
                 var httpRequest = HttpContext.Request;
-                var file = httpRequest.Body as FileStream;
+                var file = httpRequest.Body;
 
                 //checks the size of file
                 var imageHandler = new ImageSecurityHandler();
-                if (file != null &&!imageHandler.CheckFile(file))
+                if (!imageHandler.CheckFileSize(httpRequest.ContentLength.Value))
                 {
+                    
+                    _logger.LogInformation($"size is {httpRequest.ContentLength}");
                     return BadRequest("Photo must be between 5KB and 5MB");
+                }
+                //checks the format of file
+                if (!imageHandler.CheckFileFormat(httpRequest.ContentType))
+                {
+                    _logger.LogInformation($"file format is {httpRequest.ContentType}");
+                    return BadRequest("Wrong file format");
                 }
 
                 var sub = handler.ReadJwtToken(token).Payload.Sub;
@@ -73,9 +81,30 @@ namespace backend.Controllers
                         .Split("-").Last());
                 }
 
+                var surveyRepo = new SurveyRepository();
+                
+                if (!surveyRepo.GetAll().Select(x => x.Id).Contains(id))
+                {
+                    return BadRequest($"Survey doesnt with {id} exsit");
+                }
+                
+                var detailsRepo = new UserDetailsRepository();
+                var detailsId = detailsRepo.GetByUserId(sub).Id;
+                
+                if (surveyRepo.GetAll().First(x => x.Id == id).AuthorId != detailsId)
+                {
+                    return BadRequest("You dont have rights to edit that survey");
+                }
 
-                storage.Result.UploadObject("deep-castle-261418-survey-photo-bucket", $"{sub}-surveyPhoto-{lastId + 1}",
+                var survey = surveyRepo.GetById(id);
+                var photoPath = $"{sub}-{survey.Id}-surveyPhoto-{lastId + 1}";
+                storage.Result.UploadObject("deep-castle-261418-survey-photo-bucket", photoPath,
                     MediaTypeNames.Image.Jpeg, file, null);
+
+                
+                survey.PhotoPath = photoPath;
+                surveyRepo.Edit(survey);
+                
                 return Ok();
             }
 

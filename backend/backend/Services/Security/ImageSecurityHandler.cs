@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using System.Net.Mime;
+
 namespace backend.Services.Security
 {
     public class ImageSecurityHandler : FileSecurityHandler
@@ -8,6 +11,7 @@ namespace backend.Services.Security
             MinSize = 5 * 1024;
             //5MB 
             MaxSize = 5 * 1024 * 1024;
+            AllowedFormats = new List<string>(){MediaTypeNames.Image.Jpeg};
         }
     }
     

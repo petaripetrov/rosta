@@ -33,7 +33,6 @@ namespace backend.Controllers
         }
 
         [HttpPost]
-        //[Consumes(MediaTypeNames.Image.Jpeg)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
@@ -42,7 +41,7 @@ namespace backend.Controllers
         public async Task<IActionResult> Add()
         {
             var token = HttpContext.Request.Headers["Authorization"].Last().Split(" ").Last();
-            string[] roles = {"User","Admin","SchoolAdmin"};
+            string[] roles = {"User"};
             var handler = new JwtSecurityTokenHandler();
 
             if (RoleService.CheckRoles(token,roles,_userManager))
@@ -52,10 +51,17 @@ namespace backend.Controllers
 
                 //checks the size of file
                 var imageHandler = new ImageSecurityHandler();
-                if (imageHandler.CheckFileSize(httpRequest.ContentLength.Value) == false)
+                if (!imageHandler.CheckFileSize(httpRequest.ContentLength.Value))
                 {
+                    
                     _logger.LogInformation($"size is {httpRequest.ContentLength}");
                     return BadRequest("Photo must be between 5KB and 5MB");
+                }
+                //checks the format of file
+                if (!imageHandler.CheckFileFormat(httpRequest.ContentType))
+                {
+                    _logger.LogInformation($"file format is {httpRequest.ContentType}");
+                    return BadRequest("Wrong file format");
                 }
 
                 var sub = handler.ReadJwtToken(token).Payload.Sub;
