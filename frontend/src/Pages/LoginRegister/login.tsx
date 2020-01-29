@@ -83,14 +83,14 @@ export const LoginForm: FunctionComponent = () => {
             <Row>
                 <Form.Group controlId="formEmail">
                     <Form.Label>{t('Email')}</Form.Label>
-                    <Form.Control type="input" ref={email} placeholder="Enter email" isInvalid={emailValidation} onBlur={handleEmailChange} />
+                    <Form.Control type="input" ref={email} isInvalid={emailValidation} onBlur={handleEmailChange} />
                     <Form.Control.Feedback type='invalid'>{t('emailErrorMessage')}</Form.Control.Feedback>
                 </Form.Group>
             </Row>
             <Row>
                 <Form.Group controlId="formPassword">
                     <Form.Label>{t('Password')}</Form.Label>
-                    <Form.Control type="password" ref={password} placeholder="Enter email" isInvalid={passwordValidation} onBlur={handlePasswordChange} />
+                    <Form.Control type="password" ref={password} isInvalid={passwordValidation} onBlur={handlePasswordChange} />
                     <Form.Control.Feedback type='invalid'>{t('passwordErrorMessage')}</Form.Control.Feedback>
                 </Form.Group>
             </Row>

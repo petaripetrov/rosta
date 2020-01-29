@@ -1,8 +1,6 @@
 using System;
-using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
-namespace backend.Models
+namespace backend.Models.Data
 {
     
     public class Candidacy 
@@ -37,10 +35,10 @@ namespace backend.Models
             } 
         }
         public int? OwnerId { get; set; }
-        public  User Owner { get; set; }
+        public  UserDetails Owner { get; set; }
 
         //changed
-        public Candidacy(string name,string description, string photoPath, User owner)
+        public Candidacy(string name,string description, string photoPath, UserDetails owner)
         {
             if (owner == null)
             {

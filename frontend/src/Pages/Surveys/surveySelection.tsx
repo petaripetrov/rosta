@@ -1,51 +1,64 @@
 import React, { useState, FunctionComponent } from 'react'
 import { useHistory, Route, useRouteMatch, useLocation } from 'react-router-dom'
-import { Button, Row } from 'react-bootstrap'
+import { Button, Tab, Row, ListGroup, Col } from 'react-bootstrap'
 
-import { SelectedSurvey } from './selectedSurvey'
+import SelectedSurvey from './selectedSurvey'
+import CreateSurvey from './createSurvey'
 import './surveys.css'
 import useAPI from '../../Services/API'
 import { Survey } from '../../types'
+import { useTranslation } from 'react-i18next'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export const Surveys: FunctionComponent<{ initial?: Survey }> = ({ initial }) => {
     const history = useHistory()
-    const { path, url } = useRouteMatch()
+    const { path } = useRouteMatch()
     const location = useLocation()
     const surveys = useAPI('surveys')
     const [selectedSurvey, setSelectedSurvey] = useState(initial)
-    let surveyButtons: Array<Survey>
+    const { t } = useTranslation()
 
-    if (surveys !== undefined) {
-        surveyButtons = surveys.map((survey: Survey, index: number) =>
+
+    const surveyButtons = surveys !== undefined
+        ? surveys.map((survey: Survey, index: number) =>
             <Button key={index} className="surveyButton" onClick={() => {
                 setSelectedSurvey(survey)
-                history.push(`${url}/${survey.id}`)
             }}>
                 <span className="surveyButtonText">
                     {survey.name}
                 </span>
             </Button>
         )
-    }
+        : <div className="fetchingSurveySvg">
+            <h1>{'Fetching Surveys'}</h1>
+            <FontAwesomeIcon icon="poll-h" size="10x" />
+        </div>
+
 
     const SurveyWrapper = () => {
 
         return (
             location.pathname === '/surveys'
-                ? <ul className="surveyList">
-                    {surveyButtons}
-                </ul>
+                ? <React.Fragment>
+                    <SelectedSurvey selectedSurvey={selectedSurvey} />
+                    <Button className="createSurveyButton" onClick={() => { history.push(`${path}/createSurvey`) }}>{t('createSurvey')}</Button>
+                    <Row>
+                        <Col className="surveyCol">
+                            <ListGroup className="surveyList">
+                                {surveyButtons}
+                            </ListGroup>
+                        </Col>
+                    </Row>
+                </React.Fragment>
                 : null
         )
     }
 
     return (
         <React.Fragment>
-            <Route path={`${path}/:surveyId`}>
-                <SelectedSurvey selectedSurvey={selectedSurvey} />
+            <Route path={`${path}/createSurvey`}>
+                <CreateSurvey />
             </Route>
-            <Row>
-            </Row>
             <SurveyWrapper />
         </React.Fragment>
     )

@@ -1,5 +1,5 @@
 using backend.DTOs.VoteDTOs;
-using backend.Models;
+using backend.Models.Data;
 using backend.Repositories;
 
 namespace backend.DTOs.DTOConverters.InputConverters

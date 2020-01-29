@@ -1,5 +1,5 @@
 using backend.DTOs.CandidacyDTOs;
-using backend.Models;
+using backend.Models.Data;
 using backend.Repositories;
 
 namespace backend.DTOs.DTOConverters.InputConverters
@@ -8,7 +8,7 @@ namespace backend.DTOs.DTOConverters.InputConverters
     {
         public static Candidacy Convert(CandidacyInput input)
         {
-            return new Candidacy(input.Name,input.Description,input.PhotoPath,new UserRepository().GetById(input.OwnerId));
+            return new Candidacy(input.Name,input.Description,input.PhotoPath,new UserDetailsRepository().GetById(input.OwnerId));
         }
     }
 }

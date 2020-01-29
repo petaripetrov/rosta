@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faCoffee, faBars } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faPollH} from '@fortawesome/free-solid-svg-icons'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Provider } from 'react-redux'
 import { ConnectedRouter } from 'connected-react-router'
@@ -15,7 +15,7 @@ import './Services/i18n/i18n'
 
 
 
-library.add(faCoffee, faBars)
+library.add(faBars, faPollH)
 
 const store = configureStore()
 

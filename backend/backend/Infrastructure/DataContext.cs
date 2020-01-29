@@ -1,16 +1,18 @@
 using System;
-using backend.Models;
+using backend.Models.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.Extensions.Configuration.Ini;
+using IdentityServer4.EntityFramework.Options;
+using Microsoft.AspNetCore.ApiAuthorization.IdentityServer;
 
 namespace backend.Infrastructure
 {
-    public class Context : DbContext
+    public class DataContext : DbContext
     {
-        public DbSet<User> Users { get; set; }
+        public DbSet<UserDetails> UserDetails { get; set; }
         public DbSet<Candidacy> Candidacies { get; set; }
         public DbSet<Option> Options { get; set; }
         public DbSet<School> Schools { get; set; }
@@ -19,12 +21,12 @@ namespace backend.Infrastructure
 
         
 
-        public Context(DbContextOptions<Context> options) : base(options)
+        public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
             
         }
 
-        public Context() : base()
+        public DataContext() : base()
         {
             
         }
@@ -45,10 +47,10 @@ namespace backend.Infrastructure
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Candidacy>().HasOne<User>(s => s.Owner).GetInfrastructure()
+            modelBuilder.Entity<Candidacy>().HasOne<UserDetails>(s => s.Owner).GetInfrastructure()
                 .OnDelete(DeleteBehavior.SetNull, ConfigurationSource.Convention);
             
-            modelBuilder.Entity<School>().HasMany<User>(x => x.Users).WithOne(x => x.School);
+            modelBuilder.Entity<School>().HasMany<UserDetails>(x => x.Users).WithOne(x => x.School);
             
             
             

@@ -1,6 +1,7 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
-using backend.Models;
+using backend.Models.Data;
 using backend.Repositories;
 using NUnit.Framework;
 
@@ -14,6 +15,8 @@ namespace backendTests.Integration_Tests
         {
             var repo = new VoteRepository();
             var vote = new Vote();
+            vote.OptionId = 2;
+            vote.SurveyId = 3;
             repo.Add(vote);
             
         }
@@ -45,6 +48,8 @@ namespace backendTests.Integration_Tests
         {
             var repo = new VoteRepository();
             var vote = new Vote();
+            vote.OptionId = 2;
+            vote.SurveyId = 3;
             var count = repo.GetAll().Count();
             repo.Add(vote);
             repo.Delete(vote);

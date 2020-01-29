@@ -1,5 +1,5 @@
 using System;
-using backend.Models;
+using backend.Models.Data;
 
 namespace backend.DTOs.SurveyDTOs
 {
@@ -12,7 +12,7 @@ namespace backend.DTOs.SurveyDTOs
         public string Description { get; set; }
         public string Photo { get; set; }
         public string Color { get; set; }
-        public User Author { get; set; }
+        public UserDetails Author { get; set; }
         
         
     }

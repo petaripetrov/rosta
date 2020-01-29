@@ -1,22 +1,36 @@
 import React from 'react'
-import { Redirect } from 'react-router-dom'
-import useAPI from '../../Services/API'
+import { Survey } from '../../types'
+import { Container } from 'react-bootstrap'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useTranslation } from 'react-i18next'
 
-export const SelectedSurvey = (props: any) => {
+interface selectedSurveyProps {
+    selectedSurvey?: Survey
+}
 
-    const test = useAPI('login')
+const SelectedSurvey = (props: selectedSurveyProps) => {
 
-    if (props.selectedSurvey === null) {
+    const { t } = useTranslation()
+
+    if (props.selectedSurvey) {
 
         return (
-            <Redirect to="/surveys" />
+            <Container className="selectedSurveyWrapper">
+                <div>{t('name')}</div>
+                <div className="nameField">
+                    <div>{props.selectedSurvey.name}</div>
+                </div>
+                <div>{t('description')}</div>
+                <div className="descriptionField">
+                    <div>{props.selectedSurvey.description}</div>
+                </div>
+            </Container>
         )
     } else {
-
         return (
-            <div>
-                test
-            </div>
+            null
         )
     }
 }
+
+export default SelectedSurvey
