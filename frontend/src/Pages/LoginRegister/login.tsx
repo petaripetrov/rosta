@@ -27,10 +27,16 @@ export const LoginForm: FunctionComponent = () => {
             headers: {
                 'Content-Type': 'application/json'
             }
-        }).then(response => response.json()
+        }).then(response => {
+            if (response.ok) {
+                return response.json()
+            } else {
+                throw Error(`Request rejected with status ${response.status}`)
+            }
+        }
         ).then(data => {
             let token = data.access_token
-            // history.push('/menu')
+            history.push('/menu')
             dispatch({
                 type: 'TOASTER_DISPLAY',
                 payload: {
@@ -42,7 +48,7 @@ export const LoginForm: FunctionComponent = () => {
                 type: 'LOGIN_USER',
                 payload: token
             })
-        })
+        }).catch(error => console.log(error))
     }
 
     function handleSubmit(event: FormEvent) {

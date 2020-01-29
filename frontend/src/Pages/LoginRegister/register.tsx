@@ -2,12 +2,20 @@ import React, { useState, useRef, FormEvent, FunctionComponent } from 'react'
 import './loginRegister.css'
 import { Form, Button, Row } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'
+import { useHistory } from 'react-router-dom'
+
+interface registerFormInputs {
+    email: string,
+    password: string,
+    username: string
+}
 
 export const RegisterForm: FunctionComponent = () => {
     const email = useRef<any>(null)
     const password = useRef<any>(null)
     const confirmedPassword = useRef<any>(null)
     const username = useRef<any>(null)
+    const history = useHistory()
     const { t } = useTranslation()
 
     const [confirmedPasswordValidation, setConfirmedPasswordValidation] = useState()
@@ -15,12 +23,32 @@ export const RegisterForm: FunctionComponent = () => {
     const [passwordValidation, setPasswordValidation] = useState()
     const [usernameValidation, setUsernameValidation] = useState()
 
+    function registerUser(inputs: registerFormInputs) {
+        fetch('https://localhost:44375/createUser', {
+            method: 'POST',
+            body: JSON.stringify(inputs),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                history.push('/login')
+            } else {
+                throw Error(`Request rejected with status ${response.status}`)
+            }
+        }).catch(error => console.log(error))
+    }
+
     function handleSubmit(event: FormEvent) {
         event.preventDefault()
         if (emailValidation === undefined || passwordValidation === undefined || emailValidation === true || passwordValidation === true || confirmedPassword === undefined || username === undefined || email.current === null || password.current === null || username.current === null) {
             alert('error')
         } else {
-            alert(`pass API request to register`)
+            registerUser({
+                email: email.current.value,
+                password: password.current.value,
+                username: username.current.value
+            })
         }
     }
 

@@ -1,14 +1,18 @@
 import { LOGIN_USER, LOGOUT_USER, LOAD_FROM_COOKIES } from '../Actions'
 import { Action } from 'redux'
 
-export const loginReducer = (state = { isLoggedIn: false }, action: Action) => {
+interface LoginAction extends Action {
+    payload?: string
+}
+
+export const loginReducer = (state = { isLoggedIn: false }, action: LoginAction) => {
 
     switch (action.type) {
         case LOGIN_USER:
 
             var d = new Date()
 
-            document.cookie = `authcode=(test);expires=${d.setTime(d.getTime() + (8 * 60 * 60 * 1000))};path=/;`
+            document.cookie = `authcode=(${action.payload});expires=${d.setTime(d.getTime() + (8 * 60 * 60 * 1000))};path=/;`
 
             return {
                 ...state,
