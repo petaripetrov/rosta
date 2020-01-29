@@ -36,6 +36,13 @@ namespace backend.Repositories
                 return context.UserDetails.FirstOrDefault(x => x.Id == id);
             }
         }
+        public UserDetails GetByUserId(string id)
+        {
+            using (var context = new DataContext())
+            {
+                return context.UserDetails.FirstOrDefault(x => x.UserId == id);
+            }
+        }
 
         public void Edit(UserDetails value)
         {

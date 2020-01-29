@@ -18,11 +18,12 @@ namespace backend
         public async static Task Main(string[] args)
         {
             var host = CreateHostBuilder(args).Build();
-            
-            //Google Cloud Storage setup
+
+            //Google Cloud Storage setup - Candidacy(User) bucket
             string projectId = "deep-castle-261418";
             var credentials =
-                GoogleCredential.FromFile("/home/kris/Documents/rosta/backend/backend/Infrastructure/Images/GCStorage/Rosta-a2299c0ab851.json");
+                GoogleCredential.FromFile(
+                    "/home/kris/Documents/rosta/backend/backend/Infrastructure/Images/GCStorage/Rosta-a2299c0ab851.json");
             using (var client = await StorageClient.CreateAsync(credentials))
             {
                 string bucketName = projectId + "-user-photo-bucket";
@@ -30,43 +31,61 @@ namespace backend
                 {
                     // Creates the new bucket.
                     client.CreateBucket(projectId, bucketName);
-                    //Console.WriteLine($"Bucket {bucketName} created.");
+
                 }
                 catch (Google.GoogleApiException e)
                     when (e.Error.Code == 409)
                 {
                     // The bucket already exists.  That's fine.
-                    //Console.WriteLine(e.Error.Message);
                 }
 
 
+
             }
-            
-            using (var serviceScope = host.Services.CreateScope())
+
+            //Google Cloud Storage setup - Survey bucket
+            using (var client = await StorageClient.CreateAsync(credentials))
             {
-                var roleManager = serviceScope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+                string bucketName = projectId + "-survey-photo-bucket";
+                try
+                {
+                    // Creates the new bucket.
+                    client.CreateBucket(projectId, bucketName);
 
-                if (!await roleManager.RoleExistsAsync("Admin"))
-                {
-                    var adminRole = new IdentityRole("Admin");
-                    await roleManager.CreateAsync(adminRole);
                 }
-                
-                if (!await roleManager.RoleExistsAsync("SchoolAdmin"))
+                catch (Google.GoogleApiException e)
+                    when (e.Error.Code == 409)
                 {
-                    var posterRole = new IdentityRole("SchoolAdmin");
-                    await roleManager.CreateAsync(posterRole);
+                    // The bucket already exists.  That's fine.
                 }
-                
-                if (!await roleManager.RoleExistsAsync("User"))
+
+                //Roles setup
+                using (var serviceScope = host.Services.CreateScope())
                 {
-                    var posterRole = new IdentityRole("User");
-                    await roleManager.CreateAsync(posterRole);
+                    var roleManager = serviceScope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+
+                    if (!await roleManager.RoleExistsAsync("Admin"))
+                    {
+                        var adminRole = new IdentityRole("Admin");
+                        await roleManager.CreateAsync(adminRole);
+                    }
+
+                    if (!await roleManager.RoleExistsAsync("SchoolAdmin"))
+                    {
+                        var posterRole = new IdentityRole("SchoolAdmin");
+                        await roleManager.CreateAsync(posterRole);
+                    }
+
+                    if (!await roleManager.RoleExistsAsync("User"))
+                    {
+                        var posterRole = new IdentityRole("User");
+                        await roleManager.CreateAsync(posterRole);
+                    }
+
                 }
-                
+
+                await host.RunAsync();
             }
-            
-            await host.RunAsync();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
