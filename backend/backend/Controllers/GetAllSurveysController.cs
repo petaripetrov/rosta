@@ -34,19 +34,15 @@ namespace backend.Controllers
             _usermanager = userManager;
         }
 
-        [HttpGet("{id}")]
+        [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [Authorize(AuthenticationSchemes = "Bearer")]
 
-        public async Task<IActionResult> GetSurveys(int id)
+        public async Task<IActionResult> GetSurveys()
         {
             var schoolRepo = new SchoolRepository();
-            if (!schoolRepo.GetAll().Select(x => x.Id).Contains(id))
-            {
-                return NotFound("No School with that Id.");
-            }
-
+            
             var token = HttpContext.Request.Headers["Authorization"].Last().Split(" ").Last();
             string[] roles = {"User","Admin","SchoolAdmin"};
             
@@ -54,10 +50,10 @@ namespace backend.Controllers
             var sub = handler.ReadJwtToken(token).Payload.Sub;
             
             var detailsRepo = new UserDetailsRepository();
+            var id = detailsRepo.GetByUserId(sub).SchoolId.Value;
             
             //Checks if the User have needed role to access all surveys and if User is in that school
-            if (RoleService.CheckRoles(token, roles, _usermanager) &&
-                id == detailsRepo.GetAll().First(x => x.UserId == sub).SchoolId)
+            if (RoleService.CheckRoles(token, roles, _usermanager))
             {
                 var result = _repository.GetAll().Where(x => x.Author.SchoolId == id).Select(x => new SurveySummary(x))
                     .ToList();
