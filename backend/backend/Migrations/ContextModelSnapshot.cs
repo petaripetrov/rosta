@@ -115,9 +115,6 @@ namespace backend.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<string>("PhotoPath")
-                        .HasColumnType("longtext CHARACTER SET utf8mb4");
-
                     b.Property<int?>("SchoolId")
                         .HasColumnType("int");
 
@@ -155,6 +152,23 @@ namespace backend.Migrations
                     b.ToTable("Votes");
                 });
 
+            modelBuilder.Entity("backend.Models.Data.VoteRecord", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<int>("SurveyId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserDetailsId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("VoteRecords");
+                });
+
             modelBuilder.Entity("backend.Models.Data.Candidacy", b =>
                 {
                     b.HasOne("backend.Models.Data.UserDetails", "Owner")
@@ -165,7 +179,7 @@ namespace backend.Migrations
 
             modelBuilder.Entity("backend.Models.Data.Option", b =>
                 {
-                    b.HasOne("backend.Models.Data.Survey", "Survey")
+                    b.HasOne("backend.Models.Data.Survey", null)
                         .WithMany("Options")
                         .HasForeignKey("SurveyId")
                         .OnDelete(DeleteBehavior.Cascade)

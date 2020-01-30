@@ -13,7 +13,10 @@
       <e p="backend" t="IncludeRecursive">
         <e p="Controllers" t="Include">
           <e p="AddOptionController.cs" t="Include" />
+          <e p="AddToRoleController.cs" t="Include" />
+          <e p="AddToSchoolController.cs" t="Include" />
           <e p="CreateUserController.cs" t="Include" />
+          <e p="GetAllCandidaciesController.cs" t="Include" />
           <e p="GetAllSchoolsController.cs" t="Include" />
           <e p="GetAllSurveysController.cs" t="Include" />
           <e p="GetAllUsersController.cs" t="Include" />
@@ -40,8 +43,10 @@
             </e>
           </e>
           <e p="OptionDTOs" t="Include">
-            <e p="OptionInput.cs" t="Include" />
+            <e p="IOptionInput.cs" t="Include" />
             <e p="OptionSummary.cs" t="Include" />
+            <e p="OptionToExistingSurveyInput.cs" t="Include" />
+            <e p="OptionToNewSurveyInput.cs" t="Include" />
           </e>
           <e p="SchoolDTOs" t="Include">
             <e p="SchoolSummary.cs" t="Include" />
@@ -53,6 +58,8 @@
           <e p="UserDTOs" t="Include">
             <e p="LoginInput.cs" t="Include" />
             <e p="UserInput.cs" t="Include" />
+            <e p="UserRoleInput.cs" t="Include" />
+            <e p="UserSchoolInput.cs" t="Include" />
             <e p="UserSummary.cs" t="Include" />
           </e>
           <e p="VoteDTOs" t="Include">
@@ -135,12 +142,15 @@
         <e p="mono_crash.mem.14715.1.blob" t="Include" />
         <e p="mono_crash.mem.15094.1.blob" t="Include" />
         <e p="mono_crash.mem.16572.1.blob" t="Include" />
+        <e p="mono_crash.mem.1709.1.blob" t="Include" />
         <e p="mono_crash.mem.17340.1.blob" t="Include" />
         <e p="mono_crash.mem.18094.1.blob" t="Include" />
         <e p="mono_crash.mem.18964.1.blob" t="Include" />
         <e p="mono_crash.mem.22813.1.blob" t="Include" />
         <e p="mono_crash.mem.23526.1.blob" t="Include" />
         <e p="mono_crash.mem.24589.1.blob" t="Include" />
+        <e p="mono_crash.mem.29290.1.blob" t="Include" />
+        <e p="mono_crash.mem.645.1.blob" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.0" t="Include">
@@ -153,7 +163,6 @@
       <e p="backendTests" t="IncludeRecursive">
         <e p="Integration Tests" t="Include">
           <e p="Candidacy Repository Tests.cs" t="Include" />
-          <e p="OptionRepository Tests.cs" t="Include" />
           <e p="SchoolRepository Tests.cs" t="Include" />
           <e p="SurveyRepository Tests.cs" t="Include" />
           <e p="VoteRepositoryTests.cs" t="Include" />

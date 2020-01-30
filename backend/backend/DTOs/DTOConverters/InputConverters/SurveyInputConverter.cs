@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using backend.DTOs.SurveyDTOs;
 using backend.Models.Data;
+using backend.Repositories;
 
 namespace backend.DTOs.DTOConverters.InputConverters
 {
@@ -9,7 +11,11 @@ namespace backend.DTOs.DTOConverters.InputConverters
     {
         public static Survey Convert(SurveyInput input)
         {
-            return new Survey(input.Name,input.StartDate,input.EndDate,input.Description,new List<Option>(),input.Author,input.Photo,input.Color );
+            var authorRepo = new UserDetailsRepository();
+            var Author = authorRepo.GetById(input.AuthorId);
+            return new Survey(input.Name,input.StartDate,input.EndDate,input.Description
+                ,input.Options.Select(x => OptionInputConverter.Convert(x))
+                ,Author,input.PhotoPath,input.Color );
         }
     }
 }

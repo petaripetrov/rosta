@@ -22,35 +22,24 @@ namespace backend.Models.Data
 
         public int SurveyId { get; set; }
         
-        private Survey survey;
-        public Survey Survey
-        {
-            get { return survey;} 
-            set{
-                if (value == null)
-                {
-                    throw new ArgumentNullException("Survey cannot be null.");
-                }
-
-                survey = value;
-            } 
-        }
+       
 
         public Option()
         {
             
         }
 
-        public Option(string name, Survey survey)
+       
+
+        public Option(string name, int surveyId)
         {
-            if (survey == null)
-            {
-                 throw new ArgumentNullException("Survey cannot be null.");
-                                
-            }
-        
-            this.SurveyId = survey.Id;
-            this.Name = name;
+            this.name = name;
+            SurveyId = surveyId;
+        }
+
+        public Option(string name)
+        {
+            this.name = name;
         }
     }
 }

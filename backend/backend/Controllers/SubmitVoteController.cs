@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using backend.DTOs.DTOConverters.InputConverters;
 using backend.DTOs.SurveyDTOs;
 using backend.DTOs.VoteDTOs;
+using backend.Models.Data;
 using backend.Models.Identity;
 using backend.Repositories;
 using backend.Services.Authorization;
@@ -43,11 +44,34 @@ namespace backend.Controllers
             var token = HttpContext.Request.Headers["Authorization"].Last().Split(" ").Last();
             var roles = new List<string>(){"User"};
             
+            var handler = new JwtSecurityTokenHandler();
+            var sub = handler.ReadJwtToken(token).Payload.Sub;
+
             if (RoleService.CheckRoles(token,roles,_userManager))
             {
                 var vote = VoteInputConverter.Convert(input);
-                _repository.Add(vote);
-                return CreatedAtAction("Submit", vote);
+                
+                var detailsRepo = new UserDetailsRepository();
+                var voteRecordsRepo = new VoteRecordRepository();
+                
+                var detailsId = detailsRepo.GetByUserId(sub).Id;
+                var surveyId = vote.SurveyId;
+                
+                if (voteRecordsRepo.GetAll().Count(x => x.UserDetailsId == detailsId && x.SurveyId == surveyId) == 0)
+                {
+                    _repository.Add(vote);
+                
+               
+                
+                    var record = new VoteRecord(surveyId, detailsId);
+                    voteRecordsRepo.Add(record);
+                
+                    return CreatedAtAction("Submit", vote);
+                }
+
+                return BadRequest("You already voted");
+
+
             }
             else
             {

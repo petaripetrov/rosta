@@ -9,7 +9,6 @@ namespace backend.Models.Data
     {
         public int Id { get; set; }
         
-        public string PhotoPath { get; set; }
         [NotMapped]
         public User User { get; set; }
         public string UserId { get; set; }
@@ -22,9 +21,8 @@ namespace backend.Models.Data
         }
         
 
-        public UserDetails(string photoPath, string userId, int? schoolId)
+        public UserDetails(string userId, int? schoolId)
         {
-            PhotoPath = photoPath;
             UserId = userId;
             SchoolId = schoolId;
         }

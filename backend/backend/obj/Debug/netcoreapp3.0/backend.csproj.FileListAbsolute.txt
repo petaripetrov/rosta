@@ -124,3 +124,13 @@
 /home/kris/Documents/rosta2/rosta/backend/backend/obj/Debug/netcoreapp3.0/backend.dll
 /home/kris/Documents/rosta2/rosta/backend/backend/obj/Debug/netcoreapp3.0/backend.pdb
 /home/kris/Documents/rosta/backend/backend/bin/Debug/netcoreapp3.0/BCrypt-Core.dll
+/home/kris/Documents/rosta/backend/backend/bin/Debug/netcoreapp3.0/Google.Api.Gax.dll
+/home/kris/Documents/rosta/backend/backend/bin/Debug/netcoreapp3.0/Google.Api.Gax.Rest.dll
+/home/kris/Documents/rosta/backend/backend/bin/Debug/netcoreapp3.0/Google.Apis.dll
+/home/kris/Documents/rosta/backend/backend/bin/Debug/netcoreapp3.0/Google.Apis.Auth.PlatformServices.dll
+/home/kris/Documents/rosta/backend/backend/bin/Debug/netcoreapp3.0/Google.Apis.Auth.dll
+/home/kris/Documents/rosta/backend/backend/bin/Debug/netcoreapp3.0/Google.Apis.Core.dll
+/home/kris/Documents/rosta/backend/backend/bin/Debug/netcoreapp3.0/Google.Apis.Storage.v1.dll
+/home/kris/Documents/rosta/backend/backend/bin/Debug/netcoreapp3.0/Google.Cloud.Storage.V1.dll
+/home/kris/Documents/rosta/backend/backend/bin/Debug/netcoreapp3.0/System.Interactive.Async.dll
+/home/kris/Documents/rosta/backend/backend/bin/Debug/netcoreapp3.0/Infrastructure/Images/GCStorage/Rosta-a2299c0ab851.json
