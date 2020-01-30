@@ -51,7 +51,7 @@ namespace backend.Controllers
                 
                 var credentials =
                     GoogleCredential.FromFile(
-                        "/home/kris/Documents/rosta/backend/backend/Infrastructure/Images/GCStorage/Rosta-a2299c0ab851.json");
+                        PathHelper.GetCredentialsPath());
                 var storage = StorageClient.CreateAsync(credentials);
                 var url = SignedUrlHelper.GenerateV4SignedGetUrl("deep-castle-261418-user-photo-bucket",
                     candidacy.PhotoPath);

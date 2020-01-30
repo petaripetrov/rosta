@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using backend.Infrastructure.Infrastructure_Helpers;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Storage.V1;
 using Microsoft.AspNetCore.Hosting;
@@ -23,7 +24,7 @@ namespace backend
             string projectId = "deep-castle-261418";
             var credentials =
                 GoogleCredential.FromFile(
-                    "/home/kris/Documents/rosta/backend/backend/Infrastructure/Images/GCStorage/Rosta-a2299c0ab851.json");
+                    PathHelper.GetCredentialsPath());
             using (var client = await StorageClient.CreateAsync(credentials))
             {
                 string bucketName = projectId + "-user-photo-bucket";

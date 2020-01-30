@@ -3,6 +3,7 @@ using System.IO;
 using System.Linq;
 using System.Net.Mime;
 using System.Threading.Tasks;
+using backend.Infrastructure.Infrastructure_Helpers;
 using backend.Models.Identity;
 using backend.Repositories;
 using backend.Services.Authorization;
@@ -66,7 +67,7 @@ namespace backend.Controllers
 
                 var credentials =
                     GoogleCredential.FromFile(
-                        "/home/kris/Documents/rosta/backend/backend/Infrastructure/Images/GCStorage/Rosta-a2299c0ab851.json");
+                        PathHelper.GetCredentialsPath());
                 var storage = StorageClient.CreateAsync(credentials);
 
                 var lastId = 0;

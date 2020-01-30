@@ -67,7 +67,7 @@ namespace backend.Controllers
                 var sub = handler.ReadJwtToken(token).Payload.Sub;
             
                 var credentials =
-                    GoogleCredential.FromFile("/home/kris/Documents/rosta/backend/backend/Infrastructure/Images/GCStorage/Rosta-a2299c0ab851.json");
+                    GoogleCredential.FromFile("../Infrastructure/Images/GCStorage/Rosta-a2299c0ab851.json");
                 var storage = StorageClient.CreateAsync(credentials);
 
                 var lastId = 0;
