@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Button, Navbar, ButtonGroup } from 'react-bootstrap'
 import { useSpring, animated } from 'react-spring'
 import { BurgerNav } from "./burger"
 import './header.css'
