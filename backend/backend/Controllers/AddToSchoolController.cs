@@ -37,7 +37,7 @@ namespace backend.Controllers
             var token = HttpContext.Request.Headers["Authorization"].Last().Split(" ").Last();
             if (RoleService.CheckRoles(token,roles,_userManager))
             {
-                var userDetailsRepo = new UserDetailsRepository();
+                 var userDetailsRepo = new UserDetailsRepository();
                 var userDetails = userDetailsRepo.GetAll().First(x => x.UserId == input.UserId);
                 userDetails.SchoolId = input.SchoolId;
                 userDetailsRepo.Edit(userDetails);
