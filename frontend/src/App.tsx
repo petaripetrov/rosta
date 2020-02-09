@@ -82,7 +82,7 @@ const App: FunctionComponent = () => {
   }
 
   return (
-    <Container fluid className="appContainer">
+    <div className="container">
       <Switch>
         <NoAuthorizationRoute exact path="/">
           <Landing />
@@ -106,7 +106,7 @@ const App: FunctionComponent = () => {
           <Redirect to="/" />
         </Route>
       </Switch >
-    </Container>
+    </div>
   );
 }
 

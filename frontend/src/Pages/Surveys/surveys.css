@@ -27,7 +27,6 @@
 }
 
 .surveyCol{
-    position: absolute;
     height: 100%;
     width: 320px;
     right: 1%;
@@ -83,10 +82,6 @@
     max-width: 371.2px;
 }
 
-.descriptionControl{
-    height: 380px;
-}
-
 .surveyButtonText{
     color: black;
     font-size: large;
@@ -105,23 +100,15 @@
 }
 
 .nameField {
-    margin: 0 auto;
-    background-color: #D8D5DB;
-    height: 5%;
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
+    background: #D8D5DB !important;
 
     border-radius: 19px;
 }
 
 .descriptionField{
-    background-color: #D8D5DB;
-    height: 53.60%;
-    display: flex;
-
-    justify-content: center;
+    background: #D8D5DB !important;
+    max-height: 500px;
+    min-height: 200px;
 
     border-radius: 19px;
 }

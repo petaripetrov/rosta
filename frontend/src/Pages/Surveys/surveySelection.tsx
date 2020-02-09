@@ -18,8 +18,6 @@ export const Surveys: FunctionComponent<{ initial?: Survey }> = ({ initial }) =>
     const [selectedSurvey, setSelectedSurvey] = useState(initial)
     const { t } = useTranslation()
 
-    console.log(surveys)
-
     const surveyButtons = surveys !== undefined
         ? surveys.map((survey: Survey, index: number) =>
             <Button key={index} className="surveyButton" onClick={() => {

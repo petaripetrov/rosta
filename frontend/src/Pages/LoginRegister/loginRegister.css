@@ -34,13 +34,11 @@
     margin: 0 auto;
 }
 
-.form-control{
+.form-input{
     height: 60px;
 
     background: #C4C4C4;
     border-radius: 19px;
-    border: none !important;
-    box-shadow: none !important;
 }
 
 .loginSubmitButton{
@@ -67,7 +65,7 @@
 
 .registerSubmitGroup{
     padding-top: 60px;
-    padding-bottom: 22px;
+    
 }
 
 .formRegisterButton{
@@ -91,10 +89,10 @@
     height: 56px;
     
 
-    background: #b0d7ff !important;
-    border-radius: 19px;
-    border: none !important;
-    box-shadow: none !important;
+    background: #b0d7ff;
+    border-radius: 0 0 19px 19px;
+    border: none;
+    box-shadow: none;
 
     color: black;
     font-weight: bold;

@@ -1,15 +1,12 @@
 import React, { FunctionComponent, useState } from 'react'
 import { Form, Row, Col } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'
+import { Survey } from '../../types'
 
-interface createSurveyForm {
-    surveyName: string,
-    description: string
-}
 
-const CreateSurvey: FunctionComponent<{ initial?: createSurveyForm }> = ({ initial = { surveyName: '' } }) => {
+const CreateSurvey: FunctionComponent<{ initial?: Survey }> = ({ initial }) => {
 
-    const {t} = useTranslation()
+    const { t } = useTranslation()
 
     return (
         <Form>
@@ -17,7 +14,7 @@ const CreateSurvey: FunctionComponent<{ initial?: createSurveyForm }> = ({ initi
                 <Col>
                     <Form.Group className="surveyNameGroup">
                         <Form.Label>{t('name')}</Form.Label>
-                        <Form.Control type="input" />
+                        <Form.Control as="input" className="nameField" />
                     </Form.Group>
                 </Col>
             </Row>
@@ -25,7 +22,15 @@ const CreateSurvey: FunctionComponent<{ initial?: createSurveyForm }> = ({ initi
                 <Col>
                     <Form.Group className="descriptionGroup">
                         <Form.Label>{t('description')}</Form.Label>
-                        <Form.Control type="input" className="descriptionControl" />
+                        <Form.Control as="textarea" rows="14" className="descriptionField" />
+                    </Form.Group>
+                </Col>
+            </Row>
+            <Row>
+                <Col>
+                    <Form.Group className="oop">
+                        <Form.Label>date</Form.Label>
+                        <Form.Control as="time"></Form.Control>
                     </Form.Group>
                 </Col>
             </Row>

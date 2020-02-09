@@ -85,35 +85,27 @@ export const LoginForm: FunctionComponent = () => {
     }
 
     return (
-        <Form onSubmit={handleSubmit} className="loginForm">
-            <Row>
-                <Form.Group controlId="formEmail">
-                    <Form.Label>{t('Email')}</Form.Label>
-                    <Form.Control type="input" ref={email} isInvalid={emailValidation} onBlur={handleEmailChange} />
-                    <Form.Control.Feedback type='invalid'>{t('emailErrorMessage')}</Form.Control.Feedback>
-                </Form.Group>
-            </Row>
-            <Row>
-                <Form.Group controlId="formPassword">
-                    <Form.Label>{t('Password')}</Form.Label>
-                    <Form.Control type="password" ref={password} isInvalid={passwordValidation} onBlur={handlePasswordChange} />
-                    <Form.Control.Feedback type='invalid'>{t('passwordErrorMessage')}</Form.Control.Feedback>
-                </Form.Group>
-            </Row>
-            <Row>
-                <Form.Group>
-                    <Button variant="primary" type="submit" className="loginSubmitButton">
-                        {t('Login')}
-                    </Button>
-                </Form.Group>
-            </Row>
-            <Row>
-                <Form.Group className="loginRegisterButton">
-                    <Button variant="primary" className="formRegisterButton" onClick={handleRegisterButton}>
-                        {t('Register')}
-                    </Button>
-                </Form.Group>
-            </Row>
-        </Form>
+        <form onSubmit={handleSubmit} className="loginForm">
+            <div className="form-group">
+                <div className="form-label">{t('Email')}</div>
+                <input className="form-input" type="email" ref={email} onBlur={handleEmailChange} />
+                <div>{t('emailErrorMessage')}</div>
+            </div>
+            <div className="form-group">
+                <div className="form-label">{t('Password')}</div>
+                <input className="form-input" type="password" ref={password} onBlur={handlePasswordChange} />
+                <div>{t('passwordErrorMessage')}</div>
+            </div>
+            <div className="form-group">
+                <button type="submit" className="btn loginSubmitButton">
+                    {t('Login')}
+                </button>
+            </div>
+            <div className="form-group loginRegisterButton">
+                <button className="btn formRegisterButton" onClick={handleRegisterButton}>
+                    {t('Register')}
+                </button>
+            </div>
+        </form>
     )
 }

@@ -19,7 +19,7 @@ export default function useAPI(type: string) {
         switch (type) {
 
             case APIEndpoints.surveys:
-                fetch('https://localhost:44375/getAllSurveys/1', {
+                fetch('https://localhost:44375/getAllSurveys', {
                     headers: {
                         'Content-Type': 'application/json',
                         'Authorization': `Bearer ${authCode}`

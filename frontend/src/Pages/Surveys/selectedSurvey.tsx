@@ -1,7 +1,6 @@
 import React from 'react'
 import { Survey } from '../../types'
 import { Container } from 'react-bootstrap'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useTranslation } from 'react-i18next'
 
 interface selectedSurveyProps {

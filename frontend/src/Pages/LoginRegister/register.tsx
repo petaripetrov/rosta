@@ -86,43 +86,32 @@ export const RegisterForm: FunctionComponent = () => {
     }
 
     return (
-        <Form onSubmit={handleSubmit} className="registerForm" >
-            <Row>
-                <Form.Group controlId="formEmail">
-                    <Form.Label>{t('Email')}</Form.Label>
-                    <Form.Control type="input" ref={email} isInvalid={emailValidation} onBlur={handleEmailChange} />
-                    <Form.Control.Feedback type='invalid'>{t('emailErrorMessage')}</Form.Control.Feedback>
-                </Form.Group>
-            </Row>
-
-            <Row>
-                <Form.Group controlId="formPassword">
-                    <Form.Label>{t('Password')}</Form.Label>
-                    <Form.Control type="password" ref={password} isInvalid={passwordValidation} onBlur={handlePasswordChange} />
-                    <Form.Control.Feedback type='invalid'>{t('passwordErrorMessage')}</Form.Control.Feedback>
-                </Form.Group>
-            </Row>
-            <Row>
-                <Form.Group controlId="formConfirmPassword">
-                    <Form.Label>{t('Confirm Password')}</Form.Label>
-                    <Form.Control type="password" ref={confirmedPassword} isInvalid={confirmedPasswordValidation} onBlur={handleConfirmPasswordChange} />
-                    <Form.Control.Feedback type="invalid">{t('passwordMatchError')}</Form.Control.Feedback>
-                </Form.Group>
-            </Row>
-            <Row>
-                <Form.Group controlId="formConfirmPassword">
-                    <Form.Label>{t('Username')}</Form.Label>
-                    <Form.Control type="text" ref={username} isInvalid={usernameValidation} onBlur={handleUsernameChange} />
-                    <Form.Control.Feedback type="invalid">{t('usernameError')}</Form.Control.Feedback>
-                </Form.Group>
-            </Row>
-            <Row>
-                <Form.Group className="registerSubmitGroup">
-                    <Button variant="primary" type="submit" className="registerSubmitButton">
-                        {t('Register')}
-                    </Button>
-                </Form.Group>
-            </Row>
-        </Form >
+        <form onSubmit={handleSubmit} className="registerForm" >
+            <div className="form-group">
+                <div className="form-label">{t('Email')}</div>
+                <input className="form-input" type="text" ref={email} placeholder={t('Email')} onBlur={handleEmailChange}/>
+                <div>{t('emailErrorMessage')}</div>
+            </div>
+            <div className="form-group">
+                <div className="form-label">{t('Password')}</div>
+                <input className="form-input" type="password" ref={password} onBlur={handlePasswordChange}/>
+                <p>{t('passwordErrorMessage')}</p>
+            </div>
+            <div className="form-group">
+                <div className="form-label">{t('Confirm Password')}</div>
+                <input className="form-input" type="password" ref={confirmedPassword} onBlur={handleConfirmPasswordChange} />
+                <div>{t('passwordMatchError')}</div>
+            </div>
+            <div className="form-group">
+                <div className="form-label">{t('Username')}</div>
+                <input className="form-input" type="text" ref={username} onBlur={handleUsernameChange} />
+                <div>{t('usernameError')}</div>
+            </div>
+            <div className="registerSubmitGroup">
+                <button type="submit" className="btn registerSubmitButton">
+                    {t('Register')}
+                </button>
+            </div>
+        </form >
     )
 }

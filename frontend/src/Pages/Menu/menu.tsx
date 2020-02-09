@@ -24,7 +24,8 @@ export const Menu: FunctionComponent = () => {
     }
 
     return (
-        <Container>
+        // <Container>
+        <div>
             <ButtonGroup id="menu">
                 <Button className="surveyMenuButton" onClick={handleSurveyButton}>
                     <div>{t('surveys')}</div>
@@ -36,6 +37,7 @@ export const Menu: FunctionComponent = () => {
                     <div>{t('exit Account')}</div>
                 </Button>
             </ButtonGroup>
-        </Container>
+        </div>
+        // {/* </Container> */}
     )
 }
