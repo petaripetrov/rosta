@@ -3,6 +3,7 @@ import { initReactI18next } from 'react-i18next'
 import translationBg from './translations/bg.json'
 import translationEn from './translations/en.json'
 
+
 const resources = {
     en: {
         translation: translationEn
@@ -12,8 +13,10 @@ const resources = {
     }
 }
 
-i18n
-    .use(initReactI18next)
+/**
+ * Setups i18n with 2 JSON resources
+ */
+i18n.use(initReactI18next)
     .init({
         resources,
         lng: "en",

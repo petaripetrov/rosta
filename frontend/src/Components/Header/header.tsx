@@ -38,7 +38,7 @@ export const Header = () => {
 
     return (
         <React.Fragment>
-            <header className="navbar bg-primary header">
+            <header className="navbar bg-primary">
                 <section className="navbar-section">
                     <animated.div style={animation}>
                         <button className="burger"

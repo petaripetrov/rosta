@@ -1,12 +1,18 @@
 import React, { FunctionComponent } from 'react'
-import { Container, Button } from 'react-bootstrap'
 import { useHistory } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
 import './landing.css'
 
+/**
+ * Renders Landing page.
+ * Handles 2 route changes
+ */
 export const Landing: FunctionComponent = () => {
+
+    //Object needed to change routes
     let history = useHistory()
+    //Object needed to translate messages
     const { t } = useTranslation()
 
     function handleLoginButton() {

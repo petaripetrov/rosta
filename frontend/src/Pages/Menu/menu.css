@@ -10,37 +10,9 @@
     height: 20%;
 }
 
-
-.surveyMenuButton{
+.menuButton{
     margin-right: 1.32%;
-
-    width: 165px;
-    
-    color: black;
-    font-weight: inherit;
-    font-size: 20px;
-    background: #c4c4c4 !important;
-    border: none !important;
-    box-shadow: none !important;
-    border-radius: 19px !important;
-}
-
-.candidacyButton{
-    margin-right: 1.32%;
-
-    width: 165px;
-
-    color: black;
-    font-weight: inherit;
-    font-size: 20px;
-    background: #c4c4c4 !important;
-    border: none !important;
-    box-shadow: none !important;
-    border-radius: 19px !important;
-}
-
-.exitButton{
-    margin-right: 1.32%;
+    height: 100%;
 
     width: 165px;
 

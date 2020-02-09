@@ -24,10 +24,9 @@
 
     font-weight: bold;
     background: #b0d7ff;
-    display: block;
     border-radius: 19px;
-    background-color: #b0d7ff;
     border: none;
+    box-shadow: none;
   }
   
   .registerButton{
@@ -41,8 +40,8 @@
     font-weight: bold;
     background: #b0d7ff;
     border-radius: 19px;
-    background-color: #b0d7ff;
     border: none;
+    box-shadow: none;
     /* box-shadow: none !important; */
   }
   

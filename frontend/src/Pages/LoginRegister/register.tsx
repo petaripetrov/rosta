@@ -1,8 +1,8 @@
 import React, { useState, useRef, FormEvent, FunctionComponent } from 'react'
 import './loginRegister.css'
-import { Form, Button, Row } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'
 import { useHistory } from 'react-router-dom'
+import { FormInputField } from '../../types'
 
 interface registerFormInputs {
     email: string,
@@ -10,7 +10,11 @@ interface registerFormInputs {
     username: string
 }
 
-export const RegisterForm: FunctionComponent = () => {
+/**
+ * Renders RegisterForm
+ * @param {Object} initial - FormInputField type object to handle validation
+ */
+export const RegisterForm: FunctionComponent<{ initial?: FormInputField }> = ({ initial = { classNames: 'form-input', validity: undefined } }) => {
     const email = useRef<any>(null)
     const password = useRef<any>(null)
     const confirmedPassword = useRef<any>(null)
@@ -18,11 +22,25 @@ export const RegisterForm: FunctionComponent = () => {
     const history = useHistory()
     const { t } = useTranslation()
 
-    const [confirmedPasswordValidation, setConfirmedPasswordValidation] = useState()
-    const [emailValidation, setEmailValidation] = useState()
-    const [passwordValidation, setPasswordValidation] = useState()
-    const [usernameValidation, setUsernameValidation] = useState()
 
+    /**
+     * Creates a value that forces re-renders every time one or more of the values in the object changes and a function to update that value
+     * @param {object} FormInputField
+     * @param {string} classNames - a string representing the current classNames the element possesses
+     * @param {boolean} validity - represents the validity of the given input
+     */
+    const [confirmedPasswordState, setConfirmedPasswordState] = useState(initial)
+    const [emailState, setEmailState] = useState(initial)
+    const [passwordState, setPasswordState] = useState(initial)
+    const [usernameState, setUsernameState] = useState(initial)
+
+    /**
+     * Sends a 'POST' type request to the API with inputs given to it by the form.
+     * @param {object} RegisterFormInputs
+     * @param {string} email - string representing the currently inputed email
+     * @param {string} password - string representing the currently inputed password
+     * @param {string} username - string representing the currently inputed username
+     */
     function registerUser(inputs: registerFormInputs) {
         fetch('https://localhost:44375/createUser', {
             method: 'POST',
@@ -39,9 +57,13 @@ export const RegisterForm: FunctionComponent = () => {
         }).catch(error => console.log(error))
     }
 
+    /**
+     * Prevents default event resolution and replaces it with our implemantation
+     * @param event 
+     */
     function handleSubmit(event: FormEvent) {
         event.preventDefault()
-        if (emailValidation === undefined || passwordValidation === undefined || emailValidation === true || passwordValidation === true || confirmedPassword === undefined || username === undefined || email.current === null || password.current === null || username.current === null) {
+        if (emailState?.validity === true || passwordState?.validity === true || confirmedPasswordState?.validity === true || usernameState?.validity === true || email.current === null || password.current === null || username.current === null) {
             alert('error')
         } else {
             registerUser({
@@ -54,34 +76,58 @@ export const RegisterForm: FunctionComponent = () => {
 
     function handleEmailChange() {
         if (email.current !== null && !email.current.value.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
-            setEmailValidation(true)
+            setEmailState({
+                classNames: 'form-input is-error',
+                validity: true
+            })
 
         } else {
-            setEmailValidation(false)
+            setEmailState({
+                classNames: 'form-input',
+                validity: false
+            })
         }
     }
 
     function handlePasswordChange() {
-        if (password.current !== null && !password.current.value.match(/.{8,}$/)) {
-            setPasswordValidation(true)
+        if (password.current !== null && !password.current.value.match(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$/)) {
+            setPasswordState({
+                classNames: 'form-input is-error',
+                validity: true
+            })
         } else {
-            setPasswordValidation(false)
+            setPasswordState({
+                classNames: 'form-input',
+                validity: false
+            })
         }
     }
 
     function handleConfirmPasswordChange() {
         if (password.current !== null && confirmedPassword.current !== null && password.current.value !== confirmedPassword.current.value) {
-            setConfirmedPasswordValidation(true)
+            setConfirmedPasswordState({
+                classNames: 'form-input is-error',
+                validity: true
+            })
         } else {
-            setConfirmedPasswordValidation(false)
+            setConfirmedPasswordState({
+                classNames: 'form-input',
+                validity: false
+            })
         }
     }
 
     function handleUsernameChange() {
         if (username.current !== null && !username.current.value.match(/.{3,}$/)) {
-            setUsernameValidation(true)
+            setUsernameState({
+                classNames: 'form-input is-error',
+                validity: true
+            })
         } else {
-            setUsernameValidation(false)
+            setUsernameState({
+                classNames: 'form-input',
+                validity: false
+            })
         }
     }
 
@@ -89,23 +135,19 @@ export const RegisterForm: FunctionComponent = () => {
         <form onSubmit={handleSubmit} className="registerForm" >
             <div className="form-group">
                 <div className="form-label">{t('Email')}</div>
-                <input className="form-input" type="text" ref={email} placeholder={t('Email')} onBlur={handleEmailChange}/>
-                <div>{t('emailErrorMessage')}</div>
+                <input className={emailState.classNames} type="text" ref={email} placeholder={t('Email')} onChange={handleEmailChange} />
             </div>
             <div className="form-group">
                 <div className="form-label">{t('Password')}</div>
-                <input className="form-input" type="password" ref={password} onBlur={handlePasswordChange}/>
-                <p>{t('passwordErrorMessage')}</p>
+                <input className={passwordState.classNames} type="password" ref={password} onChange={handlePasswordChange} />
             </div>
             <div className="form-group">
                 <div className="form-label">{t('Confirm Password')}</div>
-                <input className="form-input" type="password" ref={confirmedPassword} onBlur={handleConfirmPasswordChange} />
-                <div>{t('passwordMatchError')}</div>
+                <input className={confirmedPasswordState.classNames} type="password" ref={confirmedPassword} onChange={handleConfirmPasswordChange} />
             </div>
             <div className="form-group">
                 <div className="form-label">{t('Username')}</div>
-                <input className="form-input" type="text" ref={username} onBlur={handleUsernameChange} />
-                <div>{t('usernameError')}</div>
+                <input className={usernameState.classNames} type="text" ref={username} onChange={handleUsernameChange} />
             </div>
             <div className="registerSubmitGroup">
                 <button type="submit" className="btn registerSubmitButton">

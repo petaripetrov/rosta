@@ -7,6 +7,10 @@ enum APIEndpoints {
     login = 'login'
 }
 
+/**
+ * Handles simple GET API requests.
+ * @param {string} type - route 
+ */
 export default function useAPI(type: string) {
 
     const dispatch = useDispatch()

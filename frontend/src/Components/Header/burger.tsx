@@ -7,10 +7,14 @@ import { useTranslation } from 'react-i18next'
 
 import './header.css'
 
-interface BurgerNavProps{
+interface BurgerNavProps {
     burgerState: Boolean
 }
 
+/**
+ * Renders a Burger style navigation menu
+ * @param {BurgerNavProps} props - properties for Burger Nav
+ */
 export const BurgerNav = (props: BurgerNavProps) => {
     const { t } = useTranslation()
     const history = useHistory()
@@ -34,16 +38,15 @@ export const BurgerNav = (props: BurgerNavProps) => {
 
     return (
         <animated.div style={animation} className="burgerNav">
-            <div className="transparentBar"></div>
-            <Button className="burgerLink" onClick={handleSurveyButton}>
+            <button className="burgerLink" onClick={handleSurveyButton}>
                 <div>{t('surveys')}</div>
-            </Button>
-            <Button className="burgerLink" onClick={handleCandidacyButton}>
+            </button>
+            <button className="burgerLink" onClick={handleCandidacyButton}>
                 <div>{t('candidacies')}</div>
-            </Button>
-            <Button className="burgerLink" onClick={handleExitButton}>
+            </button>
+            <button className="burgerLink" onClick={handleExitButton}>
                 <div>{t('exit Account')}</div>
-            </Button>
+            </button>
         </animated.div>
     )
 }
