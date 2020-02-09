@@ -40,19 +40,54 @@ namespace backend.Controllers
 
             if (RoleService.CheckRoles(token, roles, _userManager))
             {
-                var schoolRepo = new SchoolRepository();
-                try
+                if (RoleService.CheckRole(token,"Admin",_userManager))
                 {
-                    var school = schoolRepo.GetAll().First(x => x.Id == id);
-                    var result = school.Users.Select(x => UserSummaryFactory
-                        .CreateSummary(x,_userManager.FindByIdAsync(x.UserId).Result)).ToList();
+                    
+                    if (id == 0)
+                    {
+                        var detailsRepo = new UserDetailsRepository();
+                        var result = detailsRepo.GetAll().Select(x => UserSummaryFactory
+                            .CreateSummary(x,_userManager.FindByIdAsync(x.UserId).Result)).ToList();
+                        
+                        return Ok(result);
+                    }
+                    else
+                    {
+                        try
+                        {
+                            var schoolRepo = new SchoolRepository();
+                            var school = schoolRepo.GetAll().First(x => x.Id == id);
+                            var result = school.Users.Select(x => UserSummaryFactory
+                                .CreateSummary(x,_userManager.FindByIdAsync(x.UserId).Result)).ToList();
                 
-                    return Ok(result);
+                            return Ok(result);
+                        }
+                        catch (Exception e)
+                        {
+                            NotFound(e.Message);
+                        }
+                    }
+                   
+                 
                 }
-                catch (Exception e)
+                else
                 {
-                    NotFound(e.Message);
+                    var schoolRepo = new SchoolRepository();
+                    try
+                    {
+                        var school = schoolRepo.GetAll().First(x => x.Id == id);
+                        var result = school.Users.Select(x => UserSummaryFactory
+                            .CreateSummary(x,_userManager.FindByIdAsync(x.UserId).Result)).ToList();
+                
+                        return Ok(result);
+                    }
+                    catch (Exception e)
+                    {
+                        NotFound(e.Message);
+                    }
                 }
+                
+                
             }
 
             return Unauthorized("Only Admin, SchoolAdmin have access to this controller.");

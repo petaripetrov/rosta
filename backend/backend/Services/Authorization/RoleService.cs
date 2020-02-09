@@ -26,5 +26,15 @@ namespace backend.Services.Authorization
             var roles = new List<string>(){"Admin","SchoolAdmin","User"};
             return roles;
         }
+
+        public static bool CheckRole(string token, string role, UserManager<User> _userManager)
+        {
+            var handler = new JwtSecurityTokenHandler();
+            var sub = handler.ReadJwtToken(token).Payload.Sub;
+            var user =  _userManager.FindByIdAsync(sub).Result;
+            var roleValidity = _userManager.IsInRoleAsync(user, role).Result;
+
+            return roleValidity;
+        }
     }
 }
