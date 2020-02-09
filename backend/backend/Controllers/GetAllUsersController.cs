@@ -37,6 +37,13 @@ namespace backend.Controllers
         {
             var token = HttpContext.Request.Headers["Authorization"].Last().Split(" ").Last();
             string[] roles = {"Admin","SchoolAdmin"};
+            var schoolRepo = new SchoolRepository();
+
+            if (!schoolRepo.GetAll().Select(x => x.Id).Contains(id))
+            {
+                return BadRequest("Not such id");
+            }
+            
 
             if (RoleService.CheckRoles(token, roles, _userManager))
             {
@@ -55,7 +62,7 @@ namespace backend.Controllers
                     {
                         try
                         {
-                            var schoolRepo = new SchoolRepository();
+                            
                             var school = schoolRepo.GetAll().First(x => x.Id == id);
                             var result = school.Users.Select(x => UserSummaryFactory
                                 .CreateSummary(x,_userManager.FindByIdAsync(x.UserId).Result)).ToList();
@@ -72,7 +79,6 @@ namespace backend.Controllers
                 }
                 else
                 {
-                    var schoolRepo = new SchoolRepository();
                     try
                     {
                         var school = schoolRepo.GetAll().First(x => x.Id == id);
