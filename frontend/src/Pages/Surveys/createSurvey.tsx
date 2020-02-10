@@ -1,35 +1,31 @@
-import React, { FunctionComponent, useState } from 'react'
-import { Form, Row, Col } from 'react-bootstrap'
+import React, { FunctionComponent} from 'react'
 import { useTranslation } from 'react-i18next'
+import { Survey } from '../../types'
 
-interface createSurveyForm {
-    surveyName: string,
-    description: string
-}
 
-const CreateSurvey: FunctionComponent<{ initial?: createSurveyForm }> = ({ initial = { surveyName: '' } }) => {
+/**
+ * Renders a form for submiting a survey
+ * @param {Object} initial - empty object of type survey to map form input to
+ */
+const CreateSurvey: FunctionComponent<{ initial?: Survey }> = ({ initial }) => {
 
-    const {t} = useTranslation()
+    const { t } = useTranslation()
 
     return (
-        <Form>
-            <Row>
-                <Col>
-                    <Form.Group className="surveyNameGroup">
-                        <Form.Label>{t('name')}</Form.Label>
-                        <Form.Control type="input" />
-                    </Form.Group>
-                </Col>
-            </Row>
-            <Row>
-                <Col>
-                    <Form.Group className="descriptionGroup">
-                        <Form.Label>{t('description')}</Form.Label>
-                        <Form.Control type="input" className="descriptionControl" />
-                    </Form.Group>
-                </Col>
-            </Row>
-        </Form>
+        <form>
+            <div className="form-group surveyNameGroup">
+                <div className="form-label">{t('name')}</div>
+                <input className="form-input nameField" type="text" />
+            </div>
+            <div className="form-group descriptionGroup">
+                <div className="form-label">{t('description')}</div>
+                <textarea className="form-input descriptionField" rows={14} />
+            </div>
+            <div className="form-group">
+                <div className="form-label">date</div>
+                <input type="time"></input>
+            </div>
+        </form>
     )
 }
 

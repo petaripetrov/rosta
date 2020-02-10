@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Button, Navbar, ButtonGroup } from 'react-bootstrap'
 import { useSpring, animated } from 'react-spring'
 import { BurgerNav } from "./burger"
 import './header.css'
@@ -37,31 +36,35 @@ export const Header = () => {
     }
 
     return (
-        <div>
-            <Navbar bg="dark" variant="dark" className="header" fixed="top">
-                <animated.div style={animation}>
-                    <Button className="burger"
-                        onClick={handleBurgerButton} onBlur={handleBurgerButtonBlur} disabled={!isLoggedIn}>
-                        <FontAwesomeIcon icon="bars" />
-                    </Button>
-                </animated.div>
+        <React.Fragment>
+            <header className="navbar bg-primary">
+                <section className="navbar-section">
+                    <animated.div style={animation}>
+                        <button className="burger"
+                            onClick={handleBurgerButton} onBlur={handleBurgerButtonBlur} disabled={!isLoggedIn}>
+                            <FontAwesomeIcon icon="bars" />
+                        </button>
+                    </animated.div>
+                </section>
                 <BurgerNav burgerState={burgerOn} />
-                <div className="schoolName">
+                <section className="navbar-center schoolName">
                     {'School Name'}
-                </div>
-                <ButtonGroup aria-label="Language menu" className="buttonGroup">
-                    <Button className="languageButton" disabled={disableEnButton}
-                        onClick={() => {
-                            dispatch({ type: 'LANGUAGE_CHANGE_EN' })
-                        }}
-                    >{'EN'}</Button>
-                    <Button className="languageButton" disabled={disableBgButton}
-                        onClick={() => {
-                            dispatch({ type: 'LANGUAGE_CHANGE_BG' })
-                        }}
-                    > {'BG'}</Button>
-                </ButtonGroup>
-            </Navbar>
-        </div>
+                </section>
+                <section className="navbar-section">
+                    <div aria-label="Language menu" className="btn-group">
+                        <button className="languageButton btn text-light" disabled={disableEnButton}
+                            onClick={() => {
+                                dispatch({ type: 'LANGUAGE_CHANGE_EN' })
+                            }}
+                        >{'EN'}</button>
+                        <button className="languageButton btn text-light" disabled={disableBgButton}
+                            onClick={() => {
+                                dispatch({ type: 'LANGUAGE_CHANGE_BG' })
+                            }}
+                        > {'BG'}</button>
+                    </div>
+                </section>
+            </header >
+        </React.Fragment>
     )
 }

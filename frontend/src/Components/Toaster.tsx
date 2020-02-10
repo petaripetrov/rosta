@@ -1,5 +1,4 @@
 import React, { useState, FunctionComponent, useEffect } from 'react'
-import { Toast } from 'react-bootstrap'
 import { useSelector, useDispatch } from 'react-redux'
 
 interface ToasterParams {
@@ -29,14 +28,18 @@ export const Toaster: FunctionComponent<{ initial?: ToasterParams }> = ({ initia
         )
     } else {
         return (
-            <Toast show={show} className="toast">
-                <Toast.Header closeButton={false} style={{
-                    backgroundColor: toasterParams.color
-                }}>
-                    <strong>{'Rösta'}</strong>
-                </Toast.Header>
-                <Toast.Body>{toasterParams.message}</Toast.Body>
-            </Toast>
+            // <Toast show={show} className="toast">
+            //     <Toast.Header closeButton={false} style={{
+            //         backgroundColor: toasterParams.color
+            //     }}>
+            //         <strong>{'Rösta'}</strong>
+            //     </Toast.Header>
+            //     <Toast.Body>{toasterParams.message}</Toast.Body>
+            // </Toast>
+
+            <div></div>
         )
     }
 }
+
+//BIG TODO

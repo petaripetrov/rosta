@@ -9,8 +9,9 @@
     position: absolute;
   
     width: 47%;
+    max-width: 60%;
     right: 10px;
-    bottom: 10px;
+    bottom: 0;
   }
   
   .loginButton{
@@ -19,16 +20,13 @@
     height: 56px;
 
     top: 52%;
-    left: calc(4% + 100px);
+    left: 100px;
 
-    color: black;
     font-weight: bold;
     background: #b0d7ff;
-    display: block;
     border-radius: 19px;
-    background-color: #b0d7ff !important;
-    border: none !important;
-    box-shadow: none !important;
+    border: none;
+    box-shadow: none;
   }
   
   .registerButton{
@@ -37,16 +35,14 @@
     height: 56px;
 
     top: calc(52% + 60px);
-    left: calc(4% + 100px);
+    left: 100px;
 
-    color: black;
     font-weight: bold;
     background: #b0d7ff;
-    display: block;
     border-radius: 19px;
-    background-color: #b0d7ff !important;
-    border: none !important;
-    box-shadow: none !important;
+    border: none;
+    box-shadow: none;
+    /* box-shadow: none !important; */
   }
   
   @media only screen and (max-width: 800px){
@@ -80,17 +76,4 @@
       top: calc(32% + 60px);
       margin: 0 auto;;
     }
-  }
-
-  .solidButton{
-    position: relative;
-    width: 9.375rem;
-    height: 4.375rem;
-    margin: 3px;
-  
-    background: #031231;
-    border-radius: 19px;
-    background-color: #031231 !important;
-    border: none !important;
-    box-shadow: none !important;
   }

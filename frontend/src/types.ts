@@ -19,3 +19,8 @@ export interface Survey {
     photo?: string,
     color?: string
 }
+
+export interface FormInputField {
+    classNames?: string;
+    validity?: boolean;
+}
