@@ -11,7 +11,7 @@ import 'spectre.css/dist/spectre-exp.min.css'
 import App from './App'
 import * as serviceWorker from './serviceWorker'
 import { configureStore, history } from './Services/Store'
-import { Header, Toaster } from './Components'
+import { Header, ProgressBar } from './Components'
 import './Services/i18n/i18n'
 
 
@@ -34,7 +34,7 @@ ReactDOM.render(
     <Provider store={store}>
         <ConnectedRouter history={history}>
             <Header />
-            {/* Ignore this for now <Toaster /> */}
+            <ProgressBar />
             <App />
         </ConnectedRouter>
     </Provider>,

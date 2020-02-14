@@ -48,6 +48,10 @@ export const Surveys: FunctionComponent<{ initial?: Survey }> = ({ initial }) =>
             <FontAwesomeIcon icon="poll-h" size="10x" />
         </div>
 
+    const handleClearButton = () => {
+        setSelectedSurvey(initial)
+    }
+
 
     const SurveyWrapper = () => {
 
@@ -59,6 +63,7 @@ export const Surveys: FunctionComponent<{ initial?: Survey }> = ({ initial }) =>
                         <div className="surveyCol">
                             <ul className="surveyList">
                                 {surveyButtons}
+                                <button className="button" onClick={handleClearButton}>Clear</button>
                             </ul>
                         </div>
                 </React.Fragment>
