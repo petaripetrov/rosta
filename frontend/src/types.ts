@@ -1,12 +1,12 @@
-interface Option {
-    id: number,
+export interface Option {
+    id?: number,
     name: string
 }
 
-interface Vote {
-    id: number,
-    date: Date,
-    option: Option
+export interface Vote {
+    id?: number,
+    date: string,
+    optionId: number | undefined
 }
 
 export interface Survey {
@@ -14,7 +14,7 @@ export interface Survey {
     name?: string,
     votes?: Array<Vote>,
     options?: Array<Option>,
-    endDate?: Date,
+    endDate?: String,
     description?: string,
     photo?: string,
     color?: string

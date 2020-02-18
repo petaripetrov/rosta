@@ -1,11 +1,20 @@
-import React from 'react'
-import { Survey } from '../../types'
+import React, { useState, useEffect } from 'react'
+import { Survey, Option, Vote } from '../../types'
 import { useTranslation } from 'react-i18next'
+import { useSelector } from 'react-redux'
 
 interface selectedSurveyProps {
     selectedSurvey?: Survey
 }
 
+// interface surveyInput extends Vote {
+//     surveyId: number | undefined
+// }
+
+interface surveyInput {
+    surveyId: number | undefined
+    optionId: number | undefined
+}
 
 /**
  * Renders a survey
@@ -14,19 +23,87 @@ interface selectedSurveyProps {
 const SelectedSurvey = (props: selectedSurveyProps) => {
 
     const { t } = useTranslation()
+    const [voteState, setVoteState] = useState<surveyInput>()
+    const authCode = useSelector((state: any) => state.login.authCode)
+
+    // useEffect(() => {
+    //     console.log(voteState)
+    // }, [voteState])
+
+    function getDate() {
+        let date = new Date(),
+            year = date.getFullYear(),
+            month = (date.getMonth() + 1).toString(),
+            formatedMonth = (month.length === 1) ? ("0" + month) : month,
+            day = date.getDate().toString(),
+            formatedDay = (day.length === 1) ? ("0" + day) : day,
+            hour = date.getHours().toString(),
+            formatedHour = (hour.length === 1) ? ("0" + hour) : hour,
+            minute = date.getMinutes().toString(),
+            formatedMinute = (minute.length === 1) ? ("0" + minute) : minute,
+            second = date.getSeconds().toString(),
+            formatedSecond = (second.length === 1) ? ("0" + second) : second;
+        return (`${year}-${formatedMonth}-${formatedDay} ${formatedHour}:${formatedMinute}:${formatedSecond}`)
+    }
+
+    function submitVote() {
+
+        fetch('https://localhost:44375/submitVote', {
+            method: 'POST',
+            body: JSON.stringify(voteState),
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${authCode}`
+            }
+        }).then(response => {
+            if (response.ok) {
+                return response.json()
+            } else {
+                throw Error(`Request rejected with status ${response.status}`)
+            }
+        }).catch(error => console.log(error))
+    }
+
+    const selectedSurveyOptions =
+        props.selectedSurvey?.options?.map((option: Option, ) =>
+            <label className="form-radio">
+                <input type="radio" name="option" key={option.id} className="radio optionButton" onClick={() => {
+                    setVoteState({
+                        optionId: option?.id,
+                        surveyId: props.selectedSurvey?.id
+                    })
+                }}>
+                </input>
+                <i className="form-icon">
+                </i>{option.name}
+            </label>
+        )
 
     if (props.selectedSurvey) {
         return (
-            <div className="selectedSurveyWrapper">
-                <div>{t('name')}</div>
-                <div className="nameField">
-                    <div>{props.selectedSurvey.name}</div>
+            <form className="form-horizontal selectedSurvey p-centered">
+                <div className="form-group">
+                    <div className="form-label mx-2">{t('name')}</div>
+                    <div className="nameField">
+                        <div className="mx-2">{props.selectedSurvey.name}</div>
+                    </div>
                 </div>
-                <div>{t('description')}</div>
-                <div className="descriptionField">
-                    <div>{props.selectedSurvey.description}</div>
+                <div className="form-group">
+                    <div className="form-label mx-2">{t('description')}</div>
+                    <div className="descriptionField">
+                        <div className="mx-2">{props.selectedSurvey.description}</div>
+                    </div>
                 </div>
-            </div>
+                <div className="form-group">
+                    {selectedSurveyOptions}
+                </div>
+                <div>
+                    <button className="btn p-centered selectedSurveySubmit" onClick={(event) => {
+                        event.preventDefault()
+                        submitVote()
+                    }}>Submit</button>
+                </div>
+            </form>
         )
     } else {
         return (

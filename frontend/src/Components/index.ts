@@ -1,2 +1,2 @@
 export { Header } from './Header/header'
-export { Toaster } from './Toaster'
+export { ProgressBar } from './ProgressBar'
