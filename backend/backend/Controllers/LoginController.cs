@@ -69,7 +69,7 @@ namespace backend.Controllers
             }
             else
             {
-                return BadRequest();
+                return BadRequest("Wrong credentials");
             }
 
             

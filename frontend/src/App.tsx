@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react'
+import React, { FunctionComponent, useEffect } from 'react'
 import {
   Landing,
   LoginForm,
@@ -13,9 +13,38 @@ import { useSelector, useDispatch } from 'react-redux'
 /**
  * Renders an App shell that renders application pages
  */
+
+enum Roles {
+  Admin = 'Admin',
+  SchoolAdmin = 'SchoolAdmin'
+}
 const App: FunctionComponent = () => {
+
+  const authCode = useSelector((state: any) => state.login.authCode)
   const dispatch = useDispatch()
+
   dispatch({ type: 'LOAD_FROM_COOKIES' })
+
+  useEffect(() => {
+    fetch('https://localhost:44375/roleCheck', {
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${authCode}`
+      }
+    }).then(response => response.json())
+      .then(response => {
+        if(response.error){
+          throw(response.error)
+        }
+        dispatch({
+          type: 'SET_USER_ROLE',
+          payload: response.role
+        })
+      })
+      .catch(error => {
+        console.error(error)
+      })
+  }, [authCode])
 
   /**
    * Checks with global state that a user is logged in
@@ -36,51 +65,65 @@ const App: FunctionComponent = () => {
    * @param {string} path - path to render at
    */
   const AuthorizedRoute: React.FC<RouteInterface> = ({ children, exact, path }) => {
+    const role = useSelector((state: any) => state.login.role)
 
     if (exact) {
-      return (
-        <Route
-          exact
-          path={path}
-          render={({ location }) =>
-            isLoggedIn ? (
-              children) : (
-                <Redirect
-                  to={{
-                    pathname: "/login",
-                    state: { from: location }
-                  }}
-                />
-              )
-          } />
-      )
+      if (role === Roles.Admin || role === Roles.SchoolAdmin) {
+        return (
+          <Redirect to={{ pathname: '/dashboard' }} />
+        )
+      } else {
+
+        return (
+          <Route
+            exact
+            path={path}
+            render={() =>
+              isLoggedIn ? (
+                children) : (
+                  < Redirect
+                    to={{
+                      pathname: '/login',
+                    }
+                    }
+                  />
+                )
+            } />
+        )
+      }
     } else {
-      return (
-        <Route
-          path={path}
-          render={({ location }) =>
-            isLoggedIn ? (
-              children) : (
-                <Redirect
-                  to={{
-                    pathname: "/login",
-                    state: { from: location }
-                  }}
-                />
-              )
-          }
-        />
-      )
+      if (role === Roles.Admin || role === Roles.SchoolAdmin) {
+        return (
+          <Redirect to={{ pathname: '/dashboard' }} />
+        )
+      } else {
+
+        return (
+          <Route
+            path={path}
+            render={() =>
+              isLoggedIn ? (
+                children) : (
+                  < Redirect
+                    to={{
+                      pathname: '/login',
+                    }
+                    }
+                  />
+                )
+            } />
+        )
+      }
     }
   }
 
-   /**
-   * Returns functional component which renders out a page only if a user is not logged in. If a user is logged in this route redirects to the '/menu' page.
-   * @param {Object} RouteParams - Route params
-   * @param {any} children - component/s to render
-   * @param {boolean} exact - if the route is exact or not (match only to the given route and simular routes @example /path vs /path/secondPath
-   * @param {string} path - path to render at
-   */
+  /**
+  * Returns functional component which renders out a page only if a user is not logged in. If a user is logged in this route redirects to the '/menu' page.
+  * @param {Object} RouteParams - Route params
+  * @param {any} children - component/s to render
+  * @param {boolean} exact - if the route is exact or not (match only to the given route and simular routes @example /path vs /path/secondPath
+  * @param {string} path - path to render at
+  */
   const NoAuthorizationRoute: React.FC<RouteInterface> = ({ children, path }) => {
     return (
       <Route
@@ -122,12 +165,15 @@ const App: FunctionComponent = () => {
         <AuthorizedRoute exact={false} path="/surveys">
           <Surveys />
         </AuthorizedRoute>
-        <AuthorizedRoute exact path="/candidacies">
+        <AuthorizedRoute exact={false} path="/candidacies">
           <Candidacies />
         </AuthorizedRoute>
+        <AuthorizedRoute exact={false} path="/dashboard">
+          <div>Dashboard</div>
+        </AuthorizedRoute>
         <Route path="*">
-          <Redirect to="/" />
-        </Route>
+        <Redirect to="/" />
+      </Route>
       </Switch >
     </div>
   );

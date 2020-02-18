@@ -63,13 +63,6 @@ export const LoginForm: FunctionComponent<{ initial?: FormInputField }> = ({ ini
             let token = data.access_token
             history.push('/menu')
             dispatch({
-                type: 'TOASTER_DISPLAY',
-                payload: {
-                    color: "lightgreen",
-                    message: `${t('welcomeMessage')}`
-                }
-            })
-            dispatch({
                 type: 'LOGIN_USER',
                 payload: token
             })

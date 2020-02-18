@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useSpring, animated } from 'react-spring'
 import { BurgerNav } from "./burger"
 import './header.css'
+import useAPI from '../../Services/API'
 
 export const Header = () => {
     const dispatch = useDispatch()
@@ -16,6 +17,7 @@ export const Header = () => {
             duration: 200
         }
     })
+
 
     let disableEnButton, disableBgButton
 
