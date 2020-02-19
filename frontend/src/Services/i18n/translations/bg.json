@@ -21,5 +21,10 @@
     "submit Survey": "Подай Анкета",
     "candidacies": "Кандидатури",
     "submit Candidacy": "Подай кандидатура",
-    "exit Account": "Изход"
+    "exit Account": "Изход",
+
+    "endDate": "Край",
+    "color": "Цвят",
+    "photo": "Изображение",
+    "optionName": "Опция"
 }

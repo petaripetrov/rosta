@@ -39,7 +39,7 @@ export const Surveys: FunctionComponent<{ initial?: Survey }> = ({ initial }) =>
                 setSelectedSurvey(survey)
             }}>
                 <span className="surveyButtonText">
-                    {survey.name}
+                    {survey.Name}
                 </span>
             </button>
         )

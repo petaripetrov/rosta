@@ -55,7 +55,9 @@ namespace backend.Controllers
             //Checks if the User have needed role to access all surveys and if User is in that school
             if (RoleService.CheckRoles(token, roles, _usermanager))
             {
-                var result = _repository.GetAll().Where(x => x.Author.SchoolId == id).Select(x => new SurveySummary(x))
+                
+                var result = _repository.GetAll().Where(x => x.Author.SchoolId == id)
+                    .Select(x => new SurveySummary(x))
                     .ToList();
 
                 return Ok(result);

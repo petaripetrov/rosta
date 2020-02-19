@@ -20,11 +20,11 @@ const SelectedSurvey = (props: selectedSurveyProps) => {
             <div className="selectedSurveyWrapper">
                 <div>{t('name')}</div>
                 <div className="nameField">
-                    <div>{props.selectedSurvey.name}</div>
+                    <div>{props.selectedSurvey.Name}</div>
                 </div>
                 <div>{t('description')}</div>
                 <div className="descriptionField">
-                    <div>{props.selectedSurvey.description}</div>
+                    <div>{props.selectedSurvey.Description}</div>
                 </div>
             </div>
         )

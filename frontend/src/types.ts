@@ -1,23 +1,22 @@
-interface Option {
-    id: number,
+export interface Option {
     name: string
 }
 
-interface Vote {
+export interface Vote {
     id: number,
     date: Date,
     option: Option
 }
 
 export interface Survey {
-    id?: number,
-    name?: string,
-    votes?: Array<Vote>,
-    options?: Array<Option>,
-    endDate?: Date,
-    description?: string,
-    photo?: string,
-    color?: string
+    Name?: string,
+    StartDate?: Date
+    EndDate?: Date,
+    Description?: string,
+    PhotoPath?: string,
+    Color?: string,
+    Options?: Array<Option>
+    
 }
 
 export interface FormInputField {

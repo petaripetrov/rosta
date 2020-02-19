@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/kris/Documents/rosta/backend/backendTests/backendTests.csproj": {}
+    "/home/kris/Documents/pullRequests/rosta/backend/backendTests/backendTests.csproj": {}
   },
   "projects": {
-    "/home/kris/Documents/rosta/backend/backend/backend.csproj": {
+    "/home/kris/Documents/pullRequests/rosta/backend/backend/backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/kris/Documents/rosta/backend/backend/backend.csproj",
+        "projectUniqueName": "/home/kris/Documents/pullRequests/rosta/backend/backend/backend.csproj",
         "projectName": "backend",
-        "projectPath": "/home/kris/Documents/rosta/backend/backend/backend.csproj",
+        "projectPath": "/home/kris/Documents/pullRequests/rosta/backend/backend/backend.csproj",
         "packagesPath": "/home/kris/.nuget/packages/",
-        "outputPath": "/home/kris/Documents/rosta/backend/backend/obj/",
+        "outputPath": "/home/kris/Documents/pullRequests/rosta/backend/backend/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/share/dotnet/sdk/NuGetFallbackFolder"
@@ -43,6 +43,10 @@
               "target": "Package",
               "version": "[2.0.0, )"
             },
+            "Google.Cloud.Storage.V1": {
+              "target": "Package",
+              "version": "[2.5.0, )"
+            },
             "Microsoft.AspNetCore.ApiAuthorization.IdentityServer": {
               "target": "Package",
               "version": "[3.0.0, )"
@@ -60,6 +64,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[3.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
             },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
@@ -94,14 +102,14 @@
         }
       }
     },
-    "/home/kris/Documents/rosta/backend/backendTests/backendTests.csproj": {
+    "/home/kris/Documents/pullRequests/rosta/backend/backendTests/backendTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/kris/Documents/rosta/backend/backendTests/backendTests.csproj",
+        "projectUniqueName": "/home/kris/Documents/pullRequests/rosta/backend/backendTests/backendTests.csproj",
         "projectName": "backendTests",
-        "projectPath": "/home/kris/Documents/rosta/backend/backendTests/backendTests.csproj",
+        "projectPath": "/home/kris/Documents/pullRequests/rosta/backend/backendTests/backendTests.csproj",
         "packagesPath": "/home/kris/.nuget/packages/",
-        "outputPath": "/home/kris/Documents/rosta/backend/backendTests/obj/",
+        "outputPath": "/home/kris/Documents/pullRequests/rosta/backend/backendTests/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/share/dotnet/sdk/NuGetFallbackFolder"
@@ -118,8 +126,8 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "/home/kris/Documents/rosta/backend/backend/backend.csproj": {
-                "projectPath": "/home/kris/Documents/rosta/backend/backend/backend.csproj"
+              "/home/kris/Documents/pullRequests/rosta/backend/backend/backend.csproj": {
+                "projectPath": "/home/kris/Documents/pullRequests/rosta/backend/backend/backend.csproj"
               }
             }
           }

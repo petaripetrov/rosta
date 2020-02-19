@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="$USER_HOME$/.Rider2019.3/system/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/.Rider2019.3/system/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_backend.-1677492749.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/.Rider2019.3/system/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_backend.-1816779761.00" t="ExcludeRecursive" />
     <e p="$USER_HOME$/.nuget/packages/microsoft.net.test.sdk/16.2.0/build/netcoreapp1.0" t="Include">
       <e p="Microsoft.NET.Test.Sdk.Program.cs" t="Include" />
     </e>
@@ -12,7 +12,9 @@
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="backend" t="IncludeRecursive">
         <e p="Controllers" t="Include">
+          <e p="AddCandidacyPhotoController.cs" t="Include" />
           <e p="AddOptionController.cs" t="Include" />
+          <e p="AddSurveyPhotoController.cs" t="Include" />
           <e p="AddToRoleController.cs" t="Include" />
           <e p="AddToSchoolController.cs" t="Include" />
           <e p="CreateUserController.cs" t="Include" />
@@ -20,6 +22,8 @@
           <e p="GetAllSchoolsController.cs" t="Include" />
           <e p="GetAllSurveysController.cs" t="Include" />
           <e p="GetAllUsersController.cs" t="Include" />
+          <e p="GetCandidacyPhotoController.cs" t="Include" />
+          <e p="GetSurveyPhotoController.cs" t="Include" />
           <e p="LoginController.cs" t="Include" />
           <e p="SignOutController.cs" t="Include" />
           <e p="SubmitCandidacyController.cs" t="Include" />
@@ -70,7 +74,16 @@
         <e p="Infrastructure" t="Include">
           <e p="Constants.cs" t="Include" />
           <e p="DataContext.cs" t="Include" />
+          <e p="Helpers" t="Include">
+            <e p="PathHelper.cs" t="Include" />
+            <e p="SignedUrlHelper.cs" t="Include" />
+          </e>
           <e p="IdentityContext.cs" t="Include" />
+          <e p="Images" t="Include">
+            <e p="GCStorage" t="Include">
+              <e p="Rosta-a2299c0ab851.json" t="Include" />
+            </e>
+          </e>
         </e>
         <e p="Interfaces" t="Include" />
         <e p="Migrations" t="Include">
@@ -88,6 +101,10 @@
           <e p="20200109092553_User_UserDetailsChange.cs" t="Include" />
           <e p="20200112144040_UserDetails_Id_Chnaged_Tyoe.Designer.cs" t="Include" />
           <e p="20200112144040_UserDetails_Id_Chnaged_Tyoe.cs" t="Include" />
+          <e p="20200125134210_UserDetails_Removed_PhotoPath.Designer.cs" t="Include" />
+          <e p="20200125134210_UserDetails_Removed_PhotoPath.cs" t="Include" />
+          <e p="20200130000937_Added-VoteRecord.Designer.cs" t="Include" />
+          <e p="20200130000937_Added-VoteRecord.cs" t="Include" />
           <e p="ContextModelSnapshot.cs" t="Include" />
           <e p="Identity" t="Include">
             <e p="20200103123536_IdentityContext_Created.Designer.cs" t="Include" />
@@ -105,6 +122,7 @@
             <e p="Survey.cs" t="Include" />
             <e p="UserDetails.cs" t="Include" />
             <e p="Vote.cs" t="Include" />
+            <e p="VoteRecord.cs" t="Include" />
           </e>
           <e p="Identity" t="Include">
             <e p="User.cs" t="Include" />
@@ -121,11 +139,16 @@
           <e p="SchoolRepository.cs" t="Include" />
           <e p="SurveyRepository.cs" t="Include" />
           <e p="UserDetailsRepository.cs" t="Include" />
+          <e p="VoteRecordRepository.cs" t="Include" />
           <e p="VoteRepository.cs" t="Include" />
         </e>
         <e p="Services" t="Include">
           <e p="Authorization" t="Include">
             <e p="RoleService.cs" t="Include" />
+          </e>
+          <e p="Security" t="Include">
+            <e p="FileSecurityHandler.cs" t="Include" />
+            <e p="ImageSecurityHandler.cs" t="Include" />
           </e>
         </e>
         <e p="Startup.cs" t="Include" />
@@ -137,6 +160,7 @@
         <e p="mono_crash.mem.12324.1.blob" t="Include" />
         <e p="mono_crash.mem.13058.1.blob" t="Include" />
         <e p="mono_crash.mem.13285.1.blob" t="Include" />
+        <e p="mono_crash.mem.13333.1.blob" t="Include" />
         <e p="mono_crash.mem.14074.1.blob" t="Include" />
         <e p="mono_crash.mem.14312.1.blob" t="Include" />
         <e p="mono_crash.mem.14715.1.blob" t="Include" />
@@ -144,13 +168,16 @@
         <e p="mono_crash.mem.16572.1.blob" t="Include" />
         <e p="mono_crash.mem.1709.1.blob" t="Include" />
         <e p="mono_crash.mem.17340.1.blob" t="Include" />
+        <e p="mono_crash.mem.17555.1.blob" t="Include" />
         <e p="mono_crash.mem.18094.1.blob" t="Include" />
         <e p="mono_crash.mem.18964.1.blob" t="Include" />
+        <e p="mono_crash.mem.19308.1.blob" t="Include" />
         <e p="mono_crash.mem.22813.1.blob" t="Include" />
         <e p="mono_crash.mem.23526.1.blob" t="Include" />
         <e p="mono_crash.mem.24589.1.blob" t="Include" />
         <e p="mono_crash.mem.29290.1.blob" t="Include" />
         <e p="mono_crash.mem.645.1.blob" t="Include" />
+        <e p="mono_crash.mem.9359.1.blob" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.0" t="Include">
