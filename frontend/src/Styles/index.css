@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    font-weight: bold;
+    text-decoration-color: black;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.appContainer {
+  height: 90%;
+  top: 8%;
+}
+
+.progressBar{
+  top: -15px;
+}

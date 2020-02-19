@@ -1,0 +1,79 @@
+  .svgName{
+    position: absolute;
+  
+    top: 10%;
+    left: 4%;
+  }
+  
+  .svgDrawing{
+    position: absolute;
+  
+    width: 47%;
+    max-width: 60%;
+    right: 10px;
+    bottom: 0;
+  }
+  
+  .loginButton{
+    position: absolute;
+    width: 338px;
+    height: 56px;
+
+    top: 52%;
+    left: 100px;
+
+    font-weight: bold;
+    background: #b0d7ff;
+    border-radius: 19px;
+    border: none;
+    box-shadow: none;
+  }
+  
+  .registerButton{
+    position: absolute;
+    width: 338px;
+    height: 56px;
+
+    top: calc(52% + 60px);
+    left: 100px;
+
+    font-weight: bold;
+    background: #b0d7ff;
+    border-radius: 19px;
+    border: none;
+    box-shadow: none;
+    /* box-shadow: none !important; */
+  }
+  
+  @media only screen and (max-width: 800px){
+    .svgName{
+  
+      width: 80%;
+      min-width: 224px;
+      right: 0;
+      left: 0;
+      margin: 0 auto;
+    }
+  
+    .svgDrawing{
+      min-width: 320px;
+      top: 25%;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+
+    .loginButton{
+      left: 0;
+      right: 0;
+      top: 32%;
+      margin: 0 auto;
+    }
+
+    .registerButton{
+      left: 0;
+      right: 0;
+      top: calc(32% + 60px);
+      margin: 0 auto;;
+    }
+  }

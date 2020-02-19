@@ -1,0 +1,114 @@
+.loginForm{
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 30%;
+
+    margin: 0 auto;
+    width: 52.19%;
+    max-width: 500px;
+
+    background: #D8D5DB;
+    border-radius: 35px;
+}
+
+.registerForm{
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 12%;
+
+    margin: 0 auto;
+    width: 52.19%;
+    max-width: 500px;
+
+    background: #D8D5DB;
+    border-radius: 35px;
+}
+
+.form-group{
+    position: relative;
+
+    width: 67.6%;
+    padding-top: 15px;
+    margin: 0 auto;
+}
+
+.form-input{
+    height: 60px;
+
+    background: #C4C4C4;
+    border-radius: 19px;
+}
+
+.loginSubmitButton{
+    position: relative;
+
+    width: 100%;
+    height: 56px;
+    
+
+    background: #b0d7ff;
+    border-radius: 19px;
+    border: none;
+    box-shadow: none;
+
+    color: black;
+    font-weight: bold;
+    
+}
+
+.loginRegisterButton{
+    padding-top: 7px;
+    padding-bottom: 22px;
+}
+
+.registerSubmitGroup{
+    padding-top: 60px;
+}
+
+.formRegisterButton{
+    position: relative;
+    width: 100%;
+    height: 56px;
+
+    background: #eae8ff;
+    border-radius: 19px;
+    border: none;
+    box-shadow: none;
+    
+    color: black;
+    font-weight: bold;
+}
+
+.registerSubmitButton{
+    position: relative;
+
+    width: 100%;
+    height: 56px;
+
+    background: #b0d7ff;
+    border-radius: 0 0 19px 19px;
+    border: none;
+    box-shadow: none;
+
+    color: black;
+    font-weight: bold;
+}
+
+
+@media only screen and (max-width: 800px){
+    .loginForm{
+        width: 90%;
+
+        top: 25%;
+        margin: 0 auto;
+    }
+
+    .registerForm{
+        width: 90%;
+
+        top: 10%;
+        margin: 0 auto;
+    }
+}

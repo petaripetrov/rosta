@@ -1,0 +1,27 @@
+#menu{
+    position: absolute;
+
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 40%;
+    
+    width: 82.5%;
+    height: 20%;
+}
+
+.menuButton{
+    margin-right: 1.32%;
+    height: 100%;
+
+    width: 165px;
+
+    color: black;
+    font-weight: inherit;
+    font-size: 20px;
+    background: #c4c4c4 !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 19px !important;
+}
+

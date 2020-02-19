@@ -1,0 +1,67 @@
+  .schoolName{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: large;
+    white-space: nowrap;
+    
+    color: #ffffff
+  }
+   
+  .burger{  
+    font-weight: 900;
+    font-size: 35px;
+    line-height: 40px;
+  
+    color: white;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .navbar{
+    height: 50px;
+  }
+
+  .burger:disabled{
+    display: none;
+  }
+  
+  .burgerNav{
+    position: absolute;
+    left:0;
+    top: 50px;
+    width: 305.367px;
+  
+    background-color: #ffffff;
+  }
+  
+  .burgerLink{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    top: 2.27%;
+  
+    margin-bottom: 6.27%;
+  
+    display: block;
+    align-items: center;
+    text-align: center;
+  
+    font: inherit;
+    background: #c4c4c4;
+    border: none;
+    box-shadow: none ;
+    border-radius: 0 !important;
+  }
+
+  .languageButton{
+    font-weight: bold;
+    padding: 5px;
+
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .buttonGroup{
+    right: 0.5%;
+  }
