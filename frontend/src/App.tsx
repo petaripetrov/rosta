@@ -33,8 +33,8 @@ const App: FunctionComponent = () => {
       }
     }).then(response => response.json())
       .then(response => {
-        if(response.error){
-          throw(response.error)
+        if (response.error) {
+          throw (response.error)
         }
         dispatch({
           type: 'SET_USER_ROLE',
@@ -68,52 +68,51 @@ const App: FunctionComponent = () => {
     const role = useSelector((state: any) => state.login.role)
 
     if (exact) {
-      if (role === Roles.Admin || role === Roles.SchoolAdmin) {
-        return (
-          <Redirect to={{ pathname: '/dashboard' }} />
-        )
-      } else {
+      // if (role === Roles.Admin || role === Roles.SchoolAdmin) {
+      //   return (
+      //     <Redirect to={{ pathname: '/dashboard' }} />
+      //   )
+      // } else {
 
-        return (
-          <Route
-            exact
-            path={path}
-            render={() =>
-              isLoggedIn ? (
-                children) : (
-                  < Redirect
-                    to={{
-                      pathname: '/login',
-                    }
-                    }
-                  />
-                )
-            } />
-        )
-      }
+      return (
+        <Route
+          exact
+          path={path}
+          render={() =>
+            isLoggedIn ? (
+              children) : (
+                < Redirect
+                  to={{
+                    pathname: '/login',
+                  }
+                  }
+                />
+              )
+          } />
+      )
+      // }
     } else {
-      if (role === Roles.Admin || role === Roles.SchoolAdmin) {
-        return (
-          <Redirect to={{ pathname: '/dashboard' }} />
-        )
-      } else {
+      // if (role === Roles.Admin || role === Roles.SchoolAdmin) {
+      //   return (
+      //     <Redirect to={{ pathname: '/dashboard' }} />
+      //   )
+      // } else {
 
-        return (
-          <Route
-            path={path}
-            render={() =>
-              isLoggedIn ? (
-                children) : (
-                  < Redirect
-                    to={{
-                      pathname: '/login',
-                    }
-                    }
-                  />
-                )
-            } />
-        )
-      }
+      return (
+        <Route
+          path={path}
+          render={() =>
+            isLoggedIn ? (
+              children) : (
+                < Redirect
+                  to={{
+                    pathname: '/login',
+                  }
+                  }
+                />
+              )
+          } />
+      )
     }
   }
 
@@ -172,11 +171,11 @@ const App: FunctionComponent = () => {
           <div>Dashboard</div>
         </AuthorizedRoute>
         <Route path="*">
-        <Redirect to="/" />
-      </Route>
+          <Redirect to="/" />
+        </Route>
       </Switch >
     </div>
   );
 }
 
-export default App;
+export default App

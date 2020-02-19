@@ -14,7 +14,6 @@ namespace backend.DTOs.SurveyDTOs
         public string Description { get; set; }
         public string PhotoPath { get; set; }
         public string Color { get; set; }
-        public int AuthorId { get; set; }
 
         public List<OptionToNewSurveyInput> Options { get; set; }
         
