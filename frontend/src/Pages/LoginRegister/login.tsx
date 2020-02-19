@@ -46,7 +46,7 @@ export const LoginForm: FunctionComponent<{ initial?: FormInputField }> = ({ ini
      * @param {string} password - string representing the currently inputed password
      */
     function loginUser(inputs: LoginFormInputs) {
-        fetch('https://localhost:5001/login', {
+        fetch('https://localhost:44375/login', {
             method: 'POST',
             body: JSON.stringify(inputs),
             headers: {

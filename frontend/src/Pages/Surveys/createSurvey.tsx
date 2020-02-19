@@ -99,9 +99,8 @@ const CreateSurvey: FunctionComponent<{ initial?: SurveyInput }> = ({initial}) =
             'Color': color.current.value,
             'Options': optionsState
        }
-       console.log("zdr")
        
-        fetch('https://localhost:5001/submitSurvey',{
+        fetch('https://localhost:44375/submitSurvey',{
         method: 'POST',
         body: JSON.stringify(survey),
         headers: {
