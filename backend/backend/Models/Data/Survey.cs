@@ -60,10 +60,7 @@ namespace backend.Models.Data
             {
                 throw new ArgumentNullException("Name cannot be null. ");
             }
-            else if (startDate.CompareTo(DateTime.Now) < 0)
-            {
-                throw new ArgumentException("StartDate cannot be before current time. ");
-            }
+           
             else if (endDate.CompareTo(DateTime.Now) < 0)
             {
                 throw new ArgumentException("EndDate cannot be before current time. ");

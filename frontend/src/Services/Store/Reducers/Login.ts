@@ -1,11 +1,11 @@
-import { LOGIN_USER, LOGOUT_USER, LOAD_FROM_COOKIES } from '../Actions'
+import { LOGIN_USER, LOGOUT_USER, LOAD_FROM_COOKIES, SET_USER_ROLE } from '../Actions'
 import { Action } from 'redux'
 
 interface LoginAction extends Action {
     payload?: string
 }
 
-export const loginReducer = (state = { isLoggedIn: false }, action: LoginAction) => {
+export const loginReducer = (state = { isLoggedIn: false, role: null }, action: LoginAction) => {
 
     switch (action.type) {
         case LOGIN_USER:
@@ -25,7 +25,8 @@ export const loginReducer = (state = { isLoggedIn: false }, action: LoginAction)
             return {
                 ...state,
                 isLoggedIn: false,
-                options: []
+                authCode: undefined,
+                role: undefined
             }
 
         case LOAD_FROM_COOKIES:
@@ -44,6 +45,13 @@ export const loginReducer = (state = { isLoggedIn: false }, action: LoginAction)
                     isLoggedIn: false,
                     options: []
                 }
+            }
+
+        case SET_USER_ROLE:
+
+            return{
+                ...state,
+                role: action.payload
             }
 
         default:

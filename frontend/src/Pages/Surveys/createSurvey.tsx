@@ -1,6 +1,6 @@
 import React, { useRef, FunctionComponent, useState, InputHTMLAttributes} from 'react'
 import { useTranslation } from 'react-i18next'
-import { Survey, Option, Vote, FormInputField } from '../../types'
+import {SurveyInput, OptionInput } from '../../types'
 import { Surveys } from './surveySelection';
 import { useHistory } from 'react-router-dom'
 import { useSelector } from 'react-redux'
@@ -11,12 +11,12 @@ import { useSelector } from 'react-redux'
  * @param {Object} initial - empty object of type survey to map form input to
  */
 
-const CreateSurvey: FunctionComponent<{ initial?: Survey }> = ({initial}) => {
+const CreateSurvey: FunctionComponent<{ initial?: SurveyInput }> = ({initial}) => {
 
     const { t } = useTranslation()
     const history = useHistory()
     const [surveyState, setSurveyState] = useState(initial);
-    const [optionsState, setOptionsState] = useState(new Array<Option>())
+    const [optionsState, setOptionsState] = useState(new Array<OptionInput>())
     const color = useRef<any>(null)
     const name = useRef<any>(null)
     const endDate = useRef<any>(null)
@@ -25,14 +25,14 @@ const CreateSurvey: FunctionComponent<{ initial?: Survey }> = ({initial}) => {
 
     const authcode = useSelector((state:any) => state.login.authCode)
 
-    const OptionsTable: FunctionComponent<{ initial?: Array<Option> }> = (initial) => {
+    const OptionsTable: FunctionComponent<{ initial?: Array<OptionInput> }> = (initial) => {
         
         const nameInput = useRef<any>(null)
         const table = useRef<any>(null)
        
         
         function updateTable(optionName:string){
-            let temp = optionsState || new Array<Option>();
+            let temp = optionsState || new Array<OptionInput>();
             let row = document.createElement("tr");
             let content = document.createElement("td")
             content.textContent = `${optionName}`
@@ -75,11 +75,11 @@ const CreateSurvey: FunctionComponent<{ initial?: Survey }> = ({initial}) => {
             'Content-Type': 'image/jpeg',
             'Authorization': `Bearer ${authcode}`
         }
-       }).then(response => {
-        if (response.ok) {
+       }).then(resp => {
+        if (resp.ok) {
             history.push('/surveys')
         } else {
-            throw Error(`Request rejected with status ${response}`)
+            throw Error(`Request rejected with status ${resp}`)
         }
     }).catch(error => console.log(error))
         
@@ -90,7 +90,7 @@ const CreateSurvey: FunctionComponent<{ initial?: Survey }> = ({initial}) => {
         
         let startDate:Date = new Date();
          startDate.setMinutes(startDate.getMinutes() +2) 
-       let survey:Survey = {
+       let survey:SurveyInput = {
             'Name': name.current.value,
             'StartDate': startDate,
             'EndDate': endDate.current.value,
@@ -99,6 +99,7 @@ const CreateSurvey: FunctionComponent<{ initial?: Survey }> = ({initial}) => {
             'Color': color.current.value,
             'Options': optionsState
        }
+       console.log("zdr")
        
         fetch('https://localhost:5001/submitSurvey',{
         method: 'POST',
@@ -110,6 +111,7 @@ const CreateSurvey: FunctionComponent<{ initial?: Survey }> = ({initial}) => {
         })
        .then(response => response.json())
        .then(response => {
+           console.log(response)
            surveyId = response['id']
            uploadPhoto(surveyId)
         })
@@ -151,7 +153,7 @@ const CreateSurvey: FunctionComponent<{ initial?: Survey }> = ({initial}) => {
                 </div>
 
             </form>
-            <OptionsTable initial = {new Array<Option>()}></OptionsTable>
+            <OptionsTable initial = {new Array<OptionInput>()}></OptionsTable>
             <div className="buttonsContainer">
                 <div className="buttonsInternalContainer">
                     <button className = "btn btn-primary btn-lg mx-2 t-centered" onClick= {submit}>Submit</button>

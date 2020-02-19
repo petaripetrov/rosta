@@ -47,10 +47,11 @@ namespace backend.Controllers
                 var userDetails = new UserDetails();
                 userDetails.UserId = _userManager.FindByEmailAsync(input.Email).Result.Id;
                 repo.Add(userDetails);
-                var detailsId = repo.GetAll().Last().Id;
+                var detailsId = repo.GetAll()
+                    .First(x => x.UserId == _userManager.FindByEmailAsync(input.Email).Result.Id).Id;
 
                 user.DetailsId = detailsId;
-                _userManager.UpdateAsync(user);
+                await _userManager.UpdateAsync(user);
                 
                 
                 _logger.LogInformation("Account Created",user);

@@ -23,10 +23,6 @@
     width: 320px;
     scrollbar-color: gray transparent;
     scrollbar-width: thin;
-
-    box-shadow: 
-    inset 0px 11px 8px -10px #CCC,
-    inset 0px -11px 8px -10px #CCC; 
 }
 
 .surveyList{
@@ -118,20 +114,13 @@
     margin: auto;
 }
 
-.selectedSurveyWrapper{
-    position: absolute;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    top: 10%;
-
-    height: 92.01%;
-    width: 30.15%;
+.selectedSurvey{
+    width: 45%;
 }
 
 .nameField {
     background: #D8D5DB;
-    
+
     border-radius: 19px;
     border: none;
 }
@@ -150,6 +139,24 @@
 
     border-radius: 19px;
     border: none;
+}
+
+.optionButton{
+    background: #D8D5DB;
+    margin: 5px;
+    border-radius: 19px;
+    border: none;
+
+    text-align: center;
+}
+
+.selectedSurveySubmit{
+    width: 50%;
+    border: none;
+    background: #D8D5DB;
+    border-radius: 19px;
+
+    font-weight: inherit;
 }
 
 @media only screen and (max-width: 800px){
