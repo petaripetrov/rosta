@@ -50,21 +50,64 @@
 }
 
 .surveyNameGroup{
-    margin: 0;
-    width: 40%;
-    max-width: 371.2px;
+    margin: auto;
+    width: 33%;
+}
+.addOptionName{
+    margin: auto;
+    width: 100%;
+}
+.buttonsContainer{
+    margin: auto;
+    margin-top: 3% ;
+    width: 33%;
+}
+.buttonsInternalContainer{
+    margin: auto;
+    width: 50%;
 }
 
 .descriptionGroup{
-    margin: 0;
-    width: 40%;
-    max-width: 371.2px;
+    margin: auto;
+    width: 33%;
+   
+}
+
+.ColorPhotoEndDateContainer{
+    margin:auto;
+    width: 33%;
+}
+
+
+.surveyEndDateGroup{
+     margin:auto;
+     width: 33%;
+     display: inline-block; 
+}
+
+.surveyPhotoGroup{
+    margin:auto;
+     width: 33%;
+     display: inline-block; 
+}
+.surveyColorGroup{
+     margin:auto;
+     width: 33%;
+     height: auto;
+     display: inline-block;  
 }
 
 .surveyButtonText{
     color: black;
     font-size: large;
     font-weight: bold;
+}
+.tableContainer{
+    overflow: hidden;
+    overflow-y: scroll;
+    max-height: 200px;
+    width: 33%;
+    margin: auto;
 }
 
 .selectedSurvey{
@@ -73,9 +116,15 @@
 
 .nameField {
     background: #D8D5DB;
-    width: 100%;
+
     border-radius: 19px;
     border: none;
+}
+.nameFieldTable{
+    background-color: #D8D5DB;
+    border-radius: 0;
+    border: none;
+    width: 100%;
 }
 
 .descriptionField{
@@ -113,5 +162,97 @@
 
     .surveyButton{
         max-height: 149px;
+    }
+    .buttonsContainer{
+        margin: auto;
+        margin-top: 3% ;
+        width: 80%;
+    }
+    
+    .tableContainer{
+        overflow: hidden;
+        overflow-y: scroll;
+        max-height: 200px;
+        width: 80%;
+        margin: auto;
+    }
+    .buttonsInternalContainer{
+        margin: auto;
+        width: 80%;
+    }
+    
+
+    .surveyNameGroup{
+        margin: auto;
+        width: 80%;
+    }
+    .addOptionName{
+        margin: auto;
+        width: 100%;
+    }
+    .ColorPhotoEndDateContainer{
+        margin:auto;
+        width: 80%;
+    }
+    
+    .descriptionGroup{
+        margin: auto;
+        width: 80%;
+       
+    }
+    @media screen and (max-width: 600px){
+        .surveyEndDateGroup{
+            margin:auto;
+            width: 49%;
+            display: inline-block;   
+       }
+       .survey-color-input{
+           float: right;
+       }
+       .buttonsContainer{
+        margin: auto;
+        margin-top: 3% ;
+        width: 80%;
+        }
+       
+       
+       .surveyColorGroup{
+            margin:auto;
+            width: 49%;
+            display: inline-block;
+            padding-left: 10%;  
+       }
+       .photo-label{
+           float: left;
+           text-align: right;
+       }
+       .photo-input{
+           width: 75vw;
+           margin: auto;
+           float: left;
+        
+       }
+     
+       .surveyPhotoGroup{
+            width: 100%;
+            display: inline-block; 
+            float: right;
+            margin: auto;
+        }
+        .survey-endDate-input{
+            float: left;
+        }
+        .survey-color-input{
+            height: 5vh;
+            float: left;
+        }
+        .tableContainer{
+            overflow: hidden;
+            overflow-y: scroll;
+            max-height: 200px;
+            width: 90%;
+            margin: auto;
+        }
+
     }
 }

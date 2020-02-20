@@ -77,6 +77,7 @@ namespace backend.Repositories
         public IEnumerable<Survey> GetAll()
         {
             var context = new DataContext();
+
             return context.Surveys
                 .Include(x => x.Votes)
                 .Include(x => x.Options)

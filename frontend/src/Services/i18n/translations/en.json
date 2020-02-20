@@ -20,5 +20,10 @@
     "submit Survey": "Submit Survey",
     "candidacies": "Candidacies",
     "submit Candidacy": "Submit Candidacy",
-    "exit Account": "Exit Account"
+    "exit Account": "Exit Account",
+    
+    "endDate": "End Date",
+    "color": "Color",
+    "photo": "Photo",
+    "optionName": "Option"
 }

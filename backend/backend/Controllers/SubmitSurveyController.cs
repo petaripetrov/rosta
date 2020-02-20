@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Net.Mime;
 using System.Threading.Tasks;
@@ -41,9 +42,12 @@ namespace backend.Controllers
         {
             var token = HttpContext.Request.Headers["Authorization"].Last().Split(" ").Last();
             var roles = new List<string>(){"User","Admin","SchoolAdmin"};
+            var handler = new JwtSecurityTokenHandler();
+            var sub = handler.ReadJwtToken(token).Payload.Sub;
+            var surveyId = new UserDetailsRepository().GetByUserId(sub).Id;
             if (RoleService.CheckRoles(token,roles,_userManager))
             {
-                var survey = SurveyInputConverter.Convert(input);
+                var survey = SurveyInputConverter.Convert(input,surveyId);
                  _repository.Add(survey);
 
                  return CreatedAtAction("Submit", survey);
