@@ -1,6 +1,8 @@
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 using backend.DTOs.DTOConverters.Factories;
+using backend.DTOs.SurveyDTOs;
 using backend.DTOs.UserDTOs;
 using backend.Models.Identity;
 using backend.Repositories;
@@ -31,20 +33,36 @@ namespace backend.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [Authorize(AuthenticationSchemes = "Bearer")]
-        public async Task<IActionResult> Get(int id)
+        public async Task<IActionResult> GetAllSurveyResult(int id)
         {
-            string[] roles = {"Admin","SchoolAdmin","User"};
+            string[] roles = {"Admin","SchoolAdmin"};
             var token = HttpContext.Request.Headers["Authorization"].Last().Split(" ").Last();
             if (RoleService.CheckRoles(token,roles,_userManager))
             {
                 var surveyRepo = new SurveyRepository();
-                var optionsId = surveyRepo.GetById(id).Options.Select(x => x.Id);
-                var results = optionsId.Select(x => SurveyResultFactory.GetResult(x)).ToList();
+                var surveyIds = surveyRepo.GetAll().Where(x => x.Author.SchoolId == id).Select(x => x.Id);
+                var result = surveyIds.Select(x => GetSingleSurveyResult(x)).ToList();
                 
-                
-                return Ok(results);
+                return Ok(result);
             }
             return Unauthorized("Only Admin, SchoolAdmin have access to this controller.");
+        }
+
+        public Object GetSingleSurveyResult(int id)
+        {
+            var surveyRepo = new SurveyRepository();
+            var optionsId = surveyRepo.GetById(id).Options.Select(x => x.Id);
+            var surveyResults = optionsId.Select(x => SurveyResultFactory.GetResult(x)).ToList();
+
+            var surveySummary = new SurveySummary(surveyRepo.GetById(id));
+
+            var result = new
+            {
+                SurveySummary = surveySummary,
+                SurveyResults = surveyResults
+            };
+
+            return result;
         }
     }
 }
