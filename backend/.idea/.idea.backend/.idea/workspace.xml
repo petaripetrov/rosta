@@ -3,8 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="df290771-fae5-4299-a670-98d73b4b94cd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.backend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/Pages/Candidacies/candidacies.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/Pages/Candidacies/candidacies.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Controllers/AddCandidacyPhotoController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Controllers/AddCandidacyPhotoController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/bin/Debug/netcoreapp3.0/backend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/backend/bin/Debug/netcoreapp3.0/backend.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/bin/Debug/netcoreapp3.0/backend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/backend/bin/Debug/netcoreapp3.0/backend.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/obj/Debug/netcoreapp3.0/backend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/Debug/netcoreapp3.0/backend.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/obj/Debug/netcoreapp3.0/backend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/Debug/netcoreapp3.0/backend.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/Pages/Candidacies/submitCandidacy.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/Pages/Candidacies/submitCandidacy.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/Pages/Surveys/createSurvey.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/Pages/Surveys/createSurvey.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/Services/i18n/translations/bg.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/Services/i18n/translations/bg.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/Services/i18n/translations/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/Services/i18n/translations/en.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +141,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/backend/DTOs/DTOConverters/Factories/UserSummaryFactory.cs" />
         <option value="$PROJECT_DIR$/backend/DTOs/SchoolDTOs/SchoolSummary.cs" />
         <option value="$PROJECT_DIR$/backend/Controllers/GetAllSchoolsController.cs" />
         <option value="$PROJECT_DIR$/backend/Controllers/SubmitVoteController.cs" />
@@ -168,7 +174,6 @@
         <option value="$PROJECT_DIR$/backend/Repositories/VoteRepository.cs" />
         <option value="$PROJECT_DIR$/backend/Controllers/GetAllSurveysController.cs" />
         <option value="$PROJECT_DIR$/backend/Repositories/SurveyRepository.cs" />
-        <option value="$PROJECT_DIR$/backend/Infrastructure/Images/GCStorage/Rosta-a2299c0ab851.json" />
         <option value="$PROJECT_DIR$/backend/Repositories/CandidacyVoteRepository.cs" />
         <option value="$PROJECT_DIR$/backend/Infrastructure/DataContext.cs" />
         <option value="$PROJECT_DIR$/backend/Repositories/CandidacyVoteRecordRepository.cs" />
@@ -185,6 +190,8 @@
         <option value="$PROJECT_DIR$/backend/DTOs/CandidacyDTOs/CandidacyInput.cs" />
         <option value="$PROJECT_DIR$/backend/Controllers/SubmitCandidacyController.cs" />
         <option value="$PROJECT_DIR$/backend/DTOs/DTOConverters/InputConverters/CandidacyInputConverter.cs" />
+        <option value="$PROJECT_DIR$/backend/Infrastructure/Images/GCStorage/Rosta-a2299c0ab851.json" />
+        <option value="$PROJECT_DIR$/backend/Controllers/AddCandidacyPhotoController.cs" />
       </list>
     </option>
   </component>
@@ -301,7 +308,7 @@
       <workItem from="1581689386271" duration="1545000" />
       <workItem from="1582135295117" duration="525000" />
       <workItem from="1582221081288" duration="2391000" />
-      <workItem from="1582223930748" duration="5661000" />
+      <workItem from="1582223930748" duration="8124000" />
     </task>
     <servers />
   </component>
@@ -342,30 +349,30 @@
     </state>
     <state x="526" y="248" width="396" height="334" key="FileChooserDialogImpl/1360.0.1920.1080/0.34.1360.734@0.34.1360.734" timestamp="1578047000560" />
     <state x="2103" y="315" width="424" height="490" key="FileChooserDialogImpl/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579363100856" />
-    <state width="1870" height="164" key="GridCell.Tab.0.bottom" timestamp="1582228402250">
+    <state width="1870" height="164" key="GridCell.Tab.0.bottom" timestamp="1582290283477">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state width="1310" height="60" key="GridCell.Tab.0.bottom/1360.0.1920.1080/0.34.1360.734@0.34.1360.734" timestamp="1578047099865" />
     <state width="1870" height="182" key="GridCell.Tab.0.bottom/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579958820192" />
-    <state width="1870" height="164" key="GridCell.Tab.0.bottom/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1582228402250" />
-    <state width="1870" height="164" key="GridCell.Tab.0.center" timestamp="1582228402250">
+    <state width="1870" height="164" key="GridCell.Tab.0.bottom/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1582290283477" />
+    <state width="1870" height="164" key="GridCell.Tab.0.center" timestamp="1582290283477">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state width="1310" height="60" key="GridCell.Tab.0.center/1360.0.1920.1080/0.34.1360.734@0.34.1360.734" timestamp="1578047099865" />
     <state width="1870" height="182" key="GridCell.Tab.0.center/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579958820192" />
-    <state width="1870" height="164" key="GridCell.Tab.0.center/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1582228402250" />
-    <state width="1870" height="164" key="GridCell.Tab.0.left" timestamp="1582228402250">
+    <state width="1870" height="164" key="GridCell.Tab.0.center/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1582290283477" />
+    <state width="1870" height="164" key="GridCell.Tab.0.left" timestamp="1582290283477">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state width="1310" height="60" key="GridCell.Tab.0.left/1360.0.1920.1080/0.34.1360.734@0.34.1360.734" timestamp="1578047099865" />
     <state width="1870" height="182" key="GridCell.Tab.0.left/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579958820192" />
-    <state width="1870" height="164" key="GridCell.Tab.0.left/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1582228402250" />
-    <state width="1870" height="164" key="GridCell.Tab.0.right" timestamp="1582228402250">
+    <state width="1870" height="164" key="GridCell.Tab.0.left/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1582290283477" />
+    <state width="1870" height="164" key="GridCell.Tab.0.right" timestamp="1582290283477">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state width="1310" height="60" key="GridCell.Tab.0.right/1360.0.1920.1080/0.34.1360.734@0.34.1360.734" timestamp="1578047099865" />
     <state width="1870" height="182" key="GridCell.Tab.0.right/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579958820192" />
-    <state width="1870" height="164" key="GridCell.Tab.0.right/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1582228402250" />
+    <state width="1870" height="164" key="GridCell.Tab.0.right/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1582290283477" />
     <state width="1870" height="242" key="GridCell.Tab.1.bottom" timestamp="1581690931507">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>

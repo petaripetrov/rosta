@@ -50,8 +50,8 @@ const CreateSurvey: FunctionComponent<{ initial?: SurveyInput }> = ({initial}) =
                 <table className= "table addOptionName" ref= {table}>
                     <thead>
                         <tr>
-                            <th>Name</th>
-                            <th><button className = "btn btn-primary float-right"onClick = {() => updateTable(nameInput.current.value)}>Add</button></th>
+                            <th>{t('name')}</th>
+                            <th><button className = "btn btn-primary float-right"onClick = {() => updateTable(nameInput.current.value)}>{t('add')}</button></th>
                         </tr>
                     </thead>
                     <tbody id="tableBody">
@@ -158,8 +158,8 @@ const CreateSurvey: FunctionComponent<{ initial?: SurveyInput }> = ({initial}) =
             <OptionsTable initial = {new Array<OptionInput>()}></OptionsTable>
             <div className="buttonsContainer">
                 <div className="buttonsInternalContainer">
-                    <button className = "btn btn-primary btn-lg mx-2 t-centered" onClick= {submit}>Submit</button>
-                    <button className = "btn btn-primary btn-lg mx-2 t-centered" onClick = {cancel}>Candel</button>
+                    <button className = "btn btn-primary btn-lg mx-2 t-centered" onClick= {submit}>{t('submit')}</button>
+                    <button className = "btn btn-primary btn-lg mx-2 t-centered" onClick = {cancel}>{t('cancel')}</button>
                 </div>
                
             </div>
