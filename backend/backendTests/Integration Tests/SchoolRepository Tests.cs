@@ -62,15 +62,6 @@ namespace backendTests.Integration_Tests
             });
         }
 
-        [Test]
-        public void GetAllUsersInSchool()
-        {
-            var repo = new SchoolRepository();
-            var userRepo = new UserDetailsRepository();
-            var schoolId = repo.GetAll().Last().Id;
-            userRepo.Add(new UserDetails("null",null,schoolId));
-            var users = repo.GetAll().Last().Users;
-            Assert.True(users.Count > 0);
-        }
+       
     }
 }

@@ -6,9 +6,9 @@ namespace backend.DTOs.DTOConverters.InputConverters
 {
     public class CandidacyInputConverter
     {
-        public static Candidacy Convert(CandidacyInput input)
+        public static Candidacy Convert(CandidacyInput input, int OwnerId)
         {
-            return new Candidacy(input.Name,input.Description,input.PhotoPath,new UserDetailsRepository().GetById(input.OwnerId));
+            return new Candidacy(input.Name,input.Description,"",new UserDetailsRepository().GetById(OwnerId));
         }
     }
 }

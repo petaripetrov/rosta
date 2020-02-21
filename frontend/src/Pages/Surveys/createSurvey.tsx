@@ -84,6 +84,9 @@ const CreateSurvey: FunctionComponent<{ initial?: SurveyInput }> = ({initial}) =
     }).catch(error => console.log(error))
         
     }
+    function cancel(){
+        history.push('/surveys')
+    }
 
     function submit(){
         let surveyId =0;
@@ -156,7 +159,7 @@ const CreateSurvey: FunctionComponent<{ initial?: SurveyInput }> = ({initial}) =
             <div className="buttonsContainer">
                 <div className="buttonsInternalContainer">
                     <button className = "btn btn-primary btn-lg mx-2 t-centered" onClick= {submit}>Submit</button>
-                    <button className = "btn btn-primary btn-lg mx-2 t-centered">Candel</button>
+                    <button className = "btn btn-primary btn-lg mx-2 t-centered" onClick = {cancel}>Candel</button>
                 </div>
                
             </div>

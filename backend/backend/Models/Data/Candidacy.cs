@@ -7,6 +7,7 @@ namespace backend.Models.Data
     {
         public int Id { get; private set; }
         public  string Name { get; private set; }
+        public DateTime Date { get; set; }
         private string description;
         public string Description
         {
@@ -54,9 +55,10 @@ namespace backend.Models.Data
             PhotoPath = photoPath;
             Name = name;
             OwnerId = owner.Id;
-           
+            Date = DateTime.Now;
 
-            
+
+
         }
 
         public Candidacy()

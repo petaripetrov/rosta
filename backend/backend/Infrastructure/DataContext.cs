@@ -19,6 +19,8 @@ namespace backend.Infrastructure
         public DbSet<Survey> Surveys { get; set; }
         public DbSet<Vote> Votes { get; set; }
         public DbSet<VoteRecord> VoteRecords { get; set; }
+        public DbSet<CandidacyVote> CandidacyVotes { get; set; }
+        public DbSet<CandidacyVoteRecord> CandidacyVoteRecords { get; set; }
 
         
 
