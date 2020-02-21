@@ -12,6 +12,8 @@ export const Candidacies = (props: any) => {
 
     return (
         <div>
+
+            {/* Remove SubmitCandidacy from here. Its Just for test */}
             <SubmitCandidacy></SubmitCandidacy>
             <button onClick = {redirect}>Submit Survey</button>
         </div>

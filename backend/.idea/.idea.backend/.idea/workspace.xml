@@ -2,51 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df290771-fae5-4299-a670-98d73b4b94cd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/Controllers/SubmitCandidacyVoteController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/DTOs/CandidacyVoteDTOs/CandidacyVoteInput.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/DTOs/DTOConverters/InputConverters/CandidacyVoteInputConvertor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/Migrations/20200220184214_Date_Type_Chnaged_CandidacyVotes.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/Migrations/20200220184214_Date_Type_Chnaged_CandidacyVotes.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/Migrations/20200220184553_Date_Added_CandidacyVoteRecord.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/Migrations/20200220184553_Date_Added_CandidacyVoteRecord.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/Migrations/20200220184918_Date_Added_Candidacy.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/Migrations/20200220184918_Date_Added_Candidacy.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/Models/Data/CandidacyVote.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/Models/Data/CandidacyVoteRecord.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/Repositories/CandidacyVoteRecordRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/Repositories/CandidacyVoteRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.backend/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.backend/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.backend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Controllers/GetAllCandidaciesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Controllers/GetAllCandidaciesController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Controllers/SubmitCandidacyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Controllers/SubmitCandidacyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/DTOs/CandidacyDTOs/CandidacyInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/DTOs/CandidacyDTOs/CandidacyInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/DTOs/DTOConverters/InputConverters/CandidacyInputConverter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/DTOs/DTOConverters/InputConverters/CandidacyInputConverter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Infrastructure/DataContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Infrastructure/DataContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Infrastructure/Images/GCStorage/Rosta-a2299c0ab851.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Infrastructure/Images/GCStorage/Rosta-a2299c0ab851.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Migrations/ContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Migrations/ContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Models/Data/Candidacy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Models/Data/Candidacy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Repositories/CandidacyRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Repositories/CandidacyRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/bin/Debug/netcoreapp3.0/backend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/backend/bin/Debug/netcoreapp3.0/backend.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/bin/Debug/netcoreapp3.0/backend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/backend/bin/Debug/netcoreapp3.0/backend.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/obj/Debug/netcoreapp3.0/backend.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/Debug/netcoreapp3.0/backend.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/obj/Debug/netcoreapp3.0/backend.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/Debug/netcoreapp3.0/backend.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/obj/Debug/netcoreapp3.0/backend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/Debug/netcoreapp3.0/backend.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/obj/Debug/netcoreapp3.0/backend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/Debug/netcoreapp3.0/backend.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/obj/backend.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/backend.csproj.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/obj/backend.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/backend.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/obj/backend.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/backend.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendTests/Integration Tests/SchoolRepository Tests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backendTests/Integration Tests/SchoolRepository Tests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendTests/bin/Debug/netcoreapp3.0/nunit_random_seed.tmp" beforeDir="false" afterPath="$PROJECT_DIR$/backendTests/bin/Debug/netcoreapp3.0/nunit_random_seed.tmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendTests/obj/Debug/netcoreapp3.0/backendTests.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/backendTests/obj/Debug/netcoreapp3.0/backendTests.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendTests/obj/Debug/netcoreapp3.0/backendTests.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/backendTests/obj/Debug/netcoreapp3.0/backendTests.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendTests/obj/backendTests.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/backendTests/obj/backendTests.csproj.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendTests/obj/backendTests.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/backendTests/obj/backendTests.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendTests/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/backendTests/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendTests/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/backendTests/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/Pages/Surveys/createSurvey.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/Pages/Surveys/createSurvey.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/Pages/Candidacies/candidacies.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/Pages/Candidacies/candidacies.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/Pages/Candidacies/submitCandidacy.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/Pages/Candidacies/submitCandidacy.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
