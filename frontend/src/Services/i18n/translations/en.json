@@ -6,8 +6,10 @@
     "Confirm Password": "Confirm Password",
     "Username": "Username",
     "createSurvey": "Create Survey",
-    "name":"Name",
+    "name": "Name",
     "description": "Description",
+    "School": "School",
+    "Role": "Role",
 
     "emailErrorMessage": "Please enter a valid email.",
     "passwordErrorMessage": "Please enter a valid password(at least 8 characters).",

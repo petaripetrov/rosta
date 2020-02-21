@@ -15,7 +15,7 @@ import { useSelector, useDispatch } from 'react-redux'
  */
 const App: FunctionComponent = () => {
 
-  const authCode = useSelector((state: any) => state.login.authCode)
+  const authCode = useSelector((state: any) => state.user.authCode)
   const dispatch = useDispatch()
 
   dispatch({ type: 'LOAD_FROM_COOKIES' })
@@ -44,7 +44,7 @@ const App: FunctionComponent = () => {
   /**
    * Checks with global state that a user is logged in
    */
-  const isLoggedIn = useSelector((state: any) => state.login.isLoggedIn)
+  const isLoggedIn = useSelector((state: any) => state.user.isLoggedIn)
 
   interface RouteInterface {
     children: any,

@@ -4,18 +4,18 @@ import { useSelector } from 'react-redux'
 
 enum APIEndpoints {
     surveys = 'surveys',
-    login = 'login'
+    users = 'users'
 }
 
 /**
  * Handles simple GET API requests.
  * @param {string} type - route 
  */
-export default function useAPI(type: string) {
+export default function useAPI(type: string, additionalInfo?: string) {
 
     const dispatch = useDispatch()
     const [result, setResult] = useState()
-    const authCode = useSelector((state: any) => state.login.authCode)
+    const authCode = useSelector((state: any) => state.user.authCode)
 
     useEffect(() => {
         dispatch({ type: 'SET_PENDING_TRUE' })
@@ -35,10 +35,6 @@ export default function useAPI(type: string) {
                             throw (res.error);
                         }
                         dispatch({ type: 'SET_PENDING_FALSE' })
-                        dispatch({
-                            type: 'FETCH_SURVEYS_SUCCESS',
-                            surveys: res
-                        })
                         setResult(res)
                     })
                     .catch(error => {
@@ -50,8 +46,28 @@ export default function useAPI(type: string) {
                     })
                 break
 
-            case APIEndpoints.login:
-
+            case APIEndpoints.users:
+                fetch(`https://localhost:44375/getAllUsers/${additionalInfo}`, {
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${authCode}`
+                    }
+                })
+                    .then(res => res.json())
+                    .then(res => {
+                        if (res.error) {
+                            throw (res.error);
+                        }
+                        dispatch({ type: 'SET_PENDING_FALSE' })
+                        setResult(res)
+                    })
+                    .catch(error => {
+                        dispatch({
+                            type: 'SET_API_ERROR',
+                            error: error
+                        })
+                        dispatch({ type: 'SET_PENDING_FALSE' })
+                    })
                 break
 
             default:
