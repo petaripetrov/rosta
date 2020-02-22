@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Net.Mime;
 using System.Threading.Tasks;
@@ -40,10 +41,16 @@ namespace backend.Controllers
         public async Task<IActionResult> Submit(CandidacyInput input)
         {
             var token = HttpContext.Request.Headers["Authorization"].Last().Split(" ").Last();
-            var roles = new List<string>(){"User"};
+            var roles = new List<string>(){"User","Admin"};
+            
+            var handler = new JwtSecurityTokenHandler();
+            var sub = handler.ReadJwtToken(token).Payload.Sub;
+            
+            var detailsid = new UserDetailsRepository().GetByUserId(sub).Id;
+            
             if (RoleService.CheckRoles(token,roles,_usermanager))
             {
-                var candidacy = CandidacyInputConverter.Convert(input);
+                var candidacy = CandidacyInputConverter.Convert(input,detailsid);
                 _repository.Add(candidacy);
                 return CreatedAtAction("Submit", candidacy);
             }

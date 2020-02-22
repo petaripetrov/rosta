@@ -25,5 +25,9 @@
     "endDate": "End Date",
     "color": "Color",
     "photo": "Photo",
-    "optionName": "Option"
+    "optionName": "Option",
+    "add": "Add",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "add_Yours": "Add Yours"
 }

@@ -1,0 +1,101 @@
+.formContainer{
+    
+}
+.nameGroup{
+    width: 33%;
+    margin: auto;
+}
+
+.buttonsContainer{
+
+}
+.nameField {
+    background: #D8D5DB;
+
+    border-radius: 19px;
+    border: none;
+}
+.descriptionGroup{
+    width: 33%;
+    margin: auto;
+}
+.descriptionField{
+    background: #D8D5DB;
+    max-height: 500px;
+    min-height: 200px;
+    min-width: 100%; 
+
+    border-radius: 19px;
+    border: none;
+}
+.photoGroup{
+    width: 33%;
+    margin: auto;
+}
+.photoInput{
+    background: #D8D5DB;
+}
+.buttonsContainer{
+    margin: auto;
+    margin-top: 3% ;
+    width: 33%;
+}
+.buttonsInternalContainer{
+    margin: auto;
+    width: 50%;
+}
+.addYoursButton{
+    position: absolute;
+
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+
+    color: black;
+    font-weight: bold;
+    
+    background: #c4c4c4;
+    border: none;
+    box-shadow: none;
+    border-radius: 19px;
+}
+.candidacyContainer{
+    border-radius: 19px;
+    display: inline-block;
+    width: 20%;
+    height: 10;
+    margin-top: 2%;
+}
+.candidacyPhoto{
+    max-width: 98%;
+    max-height: 98%;
+    border-radius: 19px;
+}
+@media only screen and (max-width: 800px){
+    .nameGroup{
+        width: 80%;
+        margin: auto;
+    }
+    .descriptionGroup{
+        width: 80%;
+        margin: auto;
+    }
+    .photoGroup{
+        width: 80%;
+        margin: auto;
+    }
+    .buttonsInternalContainer{
+        margin: auto;
+        width: 40%;
+    }
+    .buttonsContainer{
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 600px){
+    .buttonsInternalContainer{
+        margin: auto;
+        width: 80%;
+    }
+}

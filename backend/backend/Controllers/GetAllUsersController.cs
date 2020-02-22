@@ -23,6 +23,13 @@ namespace backend.Controllers
         private readonly ILogger<GetAllUsersController> _logger;
         private readonly UserManager<User> _userManager;
 
+        private string  GetRole(string userId)
+        {
+            var user = _userManager.FindByIdAsync(userId).Result;
+            string role = _userManager.GetRolesAsync(user).Result.FirstOrDefault();
+            return role;
+        }
+
         public GetAllUsersController(ILogger<GetAllUsersController> logger, UserManager<User> userManager)
         {
             _logger = logger;
@@ -39,7 +46,7 @@ namespace backend.Controllers
             string[] roles = {"Admin","SchoolAdmin"};
             var schoolRepo = new SchoolRepository();
 
-            if (!schoolRepo.GetAll().Select(x => x.Id).Contains(id))
+            if (!schoolRepo.GetAll().Select(x => x.Id).Contains(id) && id != 0)
             {
                 return BadRequest("Not such id");
             }
@@ -55,6 +62,8 @@ namespace backend.Controllers
                         var detailsRepo = new UserDetailsRepository();
                         var result = detailsRepo.GetAll().Select(x => UserSummaryFactory
                             .CreateSummary(x,_userManager.FindByIdAsync(x.UserId).Result)).ToList();
+                        result.ForEach(x => x.Role = GetRole(x.Id));
+                        
                         
                         return Ok(result);
                     }
@@ -66,6 +75,12 @@ namespace backend.Controllers
                             var school = schoolRepo.GetAll().First(x => x.Id == id);
                             var result = school.Users.Select(x => UserSummaryFactory
                                 .CreateSummary(x,_userManager.FindByIdAsync(x.UserId).Result)).ToList();
+
+                            for (int i = 0; i < result.Count(); i++)
+                            {
+                                result[i].Role = GetRole(result[i].Id);
+                            }
+                            //result.ForEach(x => x.Role = GetRole(x.Id));
                 
                             return Ok(result);
                         }

@@ -26,5 +26,9 @@
     "endDate": "Край",
     "color": "Цвят",
     "photo": "Изображение",
-    "optionName": "Опция"
+    "optionName": "Опция",
+    "add": "Добави",
+    "submit": "Подай",
+    "cancel": "Отказ",
+    "add_Yours": "Добави твоята"
 }

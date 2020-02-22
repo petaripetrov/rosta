@@ -40,3 +40,11 @@ export interface FormInputField {
     classNames?: string;
     validity?: boolean;
 }
+
+export interface CandidacyInput {
+    name: string,
+    description: string
+}
+export interface Candidacy{
+    
+}

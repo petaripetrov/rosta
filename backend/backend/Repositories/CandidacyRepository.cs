@@ -41,7 +41,7 @@ namespace backend.Repositories
             Candidacy result = null;
             using (var context = new DataContext())
             {
-                result = context.Candidacies.FirstOrDefault(x => x.Id == id);
+                result = context.Candidacies.Include(x => x.Owner).FirstOrDefault(x => x.Id == id);
             }
 
             return result;

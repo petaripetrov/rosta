@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="$USER_HOME$/.Rider2019.3/system/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/.Rider2019.3/system/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_backend.1024712069.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/.Rider2019.3/system/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_backend.-1677492749.00" t="ExcludeRecursive" />
     <e p="$USER_HOME$/.nuget/packages/microsoft.net.test.sdk/16.2.0/build/netcoreapp1.0" t="Include">
       <e p="Microsoft.NET.Test.Sdk.Program.cs" t="Include" />
     </e>
@@ -24,11 +24,14 @@
           <e p="GetAllSurveysController.cs" t="Include" />
           <e p="GetAllUsersController.cs" t="Include" />
           <e p="GetCandidacyPhotoController.cs" t="Include" />
+          <e p="GetCandidacyResultsController.cs" t="Include" />
           <e p="GetSurveyPhotoController.cs" t="Include" />
+          <e p="GetSurveyResultsController.cs" t="Include" />
           <e p="LoginController.cs" t="Include" />
           <e p="RoleCheckController.cs" t="Include" />
           <e p="SignOutController.cs" t="Include" />
           <e p="SubmitCandidacyController.cs" t="Include" />
+          <e p="SubmitCandidacyVoteController.cs" t="Include" />
           <e p="SubmitSurveyController.cs" t="Include" />
           <e p="SubmitVoteController.cs" t="Include" />
         </e>
@@ -37,12 +40,17 @@
             <e p="CandidacyInput.cs" t="Include" />
             <e p="CandidacySummary.cs" t="Include" />
           </e>
+          <e p="CandidacyVoteDTOs" t="Include">
+            <e p="CandidacyVoteInput.cs" t="Include" />
+          </e>
           <e p="DTOConverters" t="Include">
             <e p="Factories" t="Include">
+              <e p="SurveyResultFactory.cs" t="Include" />
               <e p="UserSummaryFactory.cs" t="Include" />
             </e>
             <e p="InputConverters" t="Include">
               <e p="CandidacyInputConverter.cs" t="Include" />
+              <e p="CandidacyVoteInputConvertor.cs" t="Include" />
               <e p="OptionInputConverter.cs" t="Include" />
               <e p="SurveyInputConverter.cs" t="Include" />
               <e p="VoteInputConverter.cs" t="Include" />
@@ -70,6 +78,7 @@
             <e p="UserSummary.cs" t="Include" />
           </e>
           <e p="VoteDTOs" t="Include">
+            <e p="SurveyResult.cs" t="Include" />
             <e p="VoteInput.cs" t="Include" />
             <e p="VoteSummary.cs" t="Include" />
           </e>
@@ -108,6 +117,14 @@
           <e p="20200125134210_UserDetails_Removed_PhotoPath.cs" t="Include" />
           <e p="20200130000937_Added-VoteRecord.Designer.cs" t="Include" />
           <e p="20200130000937_Added-VoteRecord.cs" t="Include" />
+          <e p="20200220183610_Add_candidacyVote_And_CandidacyVoteRecord.Designer.cs" t="Include" />
+          <e p="20200220183610_Add_candidacyVote_And_CandidacyVoteRecord.cs" t="Include" />
+          <e p="20200220184214_Date_Type_Chnaged_CandidacyVotes.Designer.cs" t="Include" />
+          <e p="20200220184214_Date_Type_Chnaged_CandidacyVotes.cs" t="Include" />
+          <e p="20200220184553_Date_Added_CandidacyVoteRecord.Designer.cs" t="Include" />
+          <e p="20200220184553_Date_Added_CandidacyVoteRecord.cs" t="Include" />
+          <e p="20200220184918_Date_Added_Candidacy.Designer.cs" t="Include" />
+          <e p="20200220184918_Date_Added_Candidacy.cs" t="Include" />
           <e p="ContextModelSnapshot.cs" t="Include" />
           <e p="Identity" t="Include">
             <e p="20200103123536_IdentityContext_Created.Designer.cs" t="Include" />
@@ -120,6 +137,8 @@
         <e p="Models" t="Include">
           <e p="Data" t="Include">
             <e p="Candidacy.cs" t="Include" />
+            <e p="CandidacyVote.cs" t="Include" />
+            <e p="CandidacyVoteRecord.cs" t="Include" />
             <e p="Option.cs" t="Include" />
             <e p="School.cs" t="Include" />
             <e p="Survey.cs" t="Include" />
@@ -137,6 +156,8 @@
         </e>
         <e p="Repositories" t="Include">
           <e p="CandidacyRepository.cs" t="Include" />
+          <e p="CandidacyVoteRecordRepository.cs" t="Include" />
+          <e p="CandidacyVoteRepository.cs" t="Include" />
           <e p="IRepository.cs" t="Include" />
           <e p="OptionRepository.cs" t="Include" />
           <e p="SchoolRepository.cs" t="Include" />
@@ -161,8 +182,13 @@
         <e p="backend.csproj" t="IncludeRecursive" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="mono_crash.mem.13333.1.blob" t="Include" />
+        <e p="mono_crash.mem.15610.1.blob" t="Include" />
+        <e p="mono_crash.mem.16774.1.blob" t="Include" />
         <e p="mono_crash.mem.17555.1.blob" t="Include" />
         <e p="mono_crash.mem.19308.1.blob" t="Include" />
+        <e p="mono_crash.mem.23092.1.blob" t="Include" />
+        <e p="mono_crash.mem.27033.1.blob" t="Include" />
+        <e p="mono_crash.mem.6413.1.blob" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.0" t="Include">

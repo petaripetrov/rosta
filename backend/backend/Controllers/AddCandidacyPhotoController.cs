@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Net.Mime;
 using System.Threading.Tasks;
+using backend.Infrastructure.Infrastructure_Helpers;
 using backend.Models.Identity;
 using backend.Repositories;
 using backend.Services.Authorization;
@@ -41,7 +42,7 @@ namespace backend.Controllers
         public async Task<IActionResult> Add()
         {
             var token = HttpContext.Request.Headers["Authorization"].Last().Split(" ").Last();
-            string[] roles = {"User"};
+            string[] roles = {"User","Admin"};
             var handler = new JwtSecurityTokenHandler();
 
             if (RoleService.CheckRoles(token,roles,_userManager))
@@ -67,7 +68,8 @@ namespace backend.Controllers
                 var sub = handler.ReadJwtToken(token).Payload.Sub;
             
                 var credentials =
-                    GoogleCredential.FromFile("../Infrastructure/Images/GCStorage/Rosta-a2299c0ab851.json");
+                    GoogleCredential.FromFile(
+                        PathHelper.GetCredentialsPath());
                 var storage = StorageClient.CreateAsync(credentials);
 
                 var lastId = 0;
