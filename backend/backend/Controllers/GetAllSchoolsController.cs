@@ -61,7 +61,7 @@ namespace backend.Controllers
             
                 //Produces summary for each school with summaries for each of students.
                 var result = repo.GetAll().Select(x => new SchoolSummary(x.Id,x.Name,SchoolsUsers[x.Name]
-                    .Select(x => UserSummaryFactory.CreateSummary(detailsRepo.GetById(x.DetailsId),x)).ToList())).ToList();
+                    .Select(y => UserSummaryFactory.CreateSummary(detailsRepo.GetById(y.DetailsId),y)).ToList())).ToList();
             
                 return Ok(result);
             }

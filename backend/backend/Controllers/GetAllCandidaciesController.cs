@@ -53,7 +53,8 @@ namespace backend.Controllers
             if (RoleService.CheckRoles(token,roles,_userManager))
             {
                 
-                var result = repo.GetAll().Where(x => detailsRepo.GetById(x.OwnerId.GetValueOrDefault()).SchoolId == schoolId).ToList();
+                var result = repo.GetAll().Where(x => detailsRepo.GetById(x.OwnerId.GetValueOrDefault())
+                    .SchoolId == schoolId).Where(x => x.Date.Year== DateTime.Now.Year).ToList();
                 return Ok(result);
             }
 

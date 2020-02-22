@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/kris/Documents/Conflicts/rosta/backend/backendTests/backendTests.csproj": {}
+    "/home/kris/Documents/rosta/backend/backendTests/backendTests.csproj": {}
   },
   "projects": {
-    "/home/kris/Documents/Conflicts/rosta/backend/backend/backend.csproj": {
+    "/home/kris/Documents/rosta/backend/backend/backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/kris/Documents/Conflicts/rosta/backend/backend/backend.csproj",
+        "projectUniqueName": "/home/kris/Documents/rosta/backend/backend/backend.csproj",
         "projectName": "backend",
-        "projectPath": "/home/kris/Documents/Conflicts/rosta/backend/backend/backend.csproj",
+        "projectPath": "/home/kris/Documents/rosta/backend/backend/backend.csproj",
         "packagesPath": "/home/kris/.nuget/packages/",
-        "outputPath": "/home/kris/Documents/Conflicts/rosta/backend/backend/obj/",
+        "outputPath": "/home/kris/Documents/rosta/backend/backend/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/share/dotnet/sdk/NuGetFallbackFolder"
@@ -102,14 +102,14 @@
         }
       }
     },
-    "/home/kris/Documents/Conflicts/rosta/backend/backendTests/backendTests.csproj": {
+    "/home/kris/Documents/rosta/backend/backendTests/backendTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/kris/Documents/Conflicts/rosta/backend/backendTests/backendTests.csproj",
+        "projectUniqueName": "/home/kris/Documents/rosta/backend/backendTests/backendTests.csproj",
         "projectName": "backendTests",
-        "projectPath": "/home/kris/Documents/Conflicts/rosta/backend/backendTests/backendTests.csproj",
+        "projectPath": "/home/kris/Documents/rosta/backend/backendTests/backendTests.csproj",
         "packagesPath": "/home/kris/.nuget/packages/",
-        "outputPath": "/home/kris/Documents/Conflicts/rosta/backend/backendTests/obj/",
+        "outputPath": "/home/kris/Documents/rosta/backend/backendTests/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/share/dotnet/sdk/NuGetFallbackFolder"
@@ -126,8 +126,8 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "/home/kris/Documents/Conflicts/rosta/backend/backend/backend.csproj": {
-                "projectPath": "/home/kris/Documents/Conflicts/rosta/backend/backend/backend.csproj"
+              "/home/kris/Documents/rosta/backend/backend/backend.csproj": {
+                "projectPath": "/home/kris/Documents/rosta/backend/backend/backend.csproj"
               }
             }
           }

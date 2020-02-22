@@ -51,7 +51,10 @@ namespace backend.Repositories
             Survey result;
             using (var context = new DataContext())
             {
-                result = context.Surveys.FirstOrDefault(x => x.Id == id);
+                result = context.Surveys.Include(x => x.Votes)
+                    .Include(x => x.Options)
+                    .Include(x => x.Author).ToList()
+                    .FirstOrDefault(x => x.Id == id);
             }
 
             return result;
