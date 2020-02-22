@@ -18,28 +18,9 @@ const App: FunctionComponent = () => {
   const authCode = useSelector((state: any) => state.user.authCode)
   const dispatch = useDispatch()
 
-  dispatch({ type: 'LOAD_FROM_COOKIES' })
-
-  useEffect(() => {
-    fetch('https://localhost:44375/roleCheck', {
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${authCode}`
-      }
-    }).then(response => response.json())
-      .then(response => {
-        if (response.error) {
-          throw (response.error)
-        }
-        dispatch({
-          type: 'SET_USER_ROLE',
-          payload: response.role
-        })
-      })
-      .catch(error => {
-        console.error(error)
-      })
-  }, [authCode])
+  if(authCode === undefined) {
+    dispatch({type: 'LOAD_FROM_COOKIES'})
+  }
 
   /**
    * Checks with global state that a user is logged in

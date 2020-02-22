@@ -13,6 +13,7 @@ export const Dashboard = () => {
     const role = useSelector((state: any) => state.user.role)
     const dispatch = useDispatch()
 
+    console.log(role)
     if (!role) {
         dispatch({ type: 'SET_PENDING_TRUE' })
         return (<div></div>)

@@ -9,7 +9,7 @@ export const AdminPanel = () => {
     console.log(users)
 
     const userGroup = users?.map((user: any, index: number) => 
-    <tr>
+    <tr key={index}>
         <td>{user.username}</td>
         <td>{user.email}</td>
         <td>yeet</td>
