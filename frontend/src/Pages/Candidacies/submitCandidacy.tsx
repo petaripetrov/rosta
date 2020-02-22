@@ -84,8 +84,8 @@ export const SubmitCandidacy: FunctionComponent<{intial?:CandidacyInput}> = ({in
             
             <div className="buttonsContainer">
                 <div className="buttonsInternalContainer">
-                    <button className = "btn btn-primary btn-lg mx-2 t-centered" onClick= {submit}>{t('submit')}</button>
-                    <button className = "btn btn-primary btn-lg mx-2 t-centered" onClick = {cancel}>{t('cancel')}</button>
+                    <button className = "btn btn-primary btn-lg mx-2 float-left" onClick= {submit}>{t('submit')}</button>
+                    <button className = "btn btn-primary btn-lg mx-2 float-right" onClick = {cancel}>{t('cancel')}</button>
                 </div>
                
             </div>

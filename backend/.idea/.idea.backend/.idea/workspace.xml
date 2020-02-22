@@ -2,14 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df290771-fae5-4299-a670-98d73b4b94cd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.backend/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.backend/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.backend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Controllers/AddCandidacyPhotoController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Controllers/AddCandidacyPhotoController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Infrastructure/Images/GCStorage/Rosta-a2299c0ab851.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Infrastructure/Images/GCStorage/Rosta-a2299c0ab851.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/bin/Debug/netcoreapp3.0/backend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/backend/bin/Debug/netcoreapp3.0/backend.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/bin/Debug/netcoreapp3.0/backend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/backend/bin/Debug/netcoreapp3.0/backend.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/obj/Debug/netcoreapp3.0/backend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/Debug/netcoreapp3.0/backend.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/obj/Debug/netcoreapp3.0/backend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/Debug/netcoreapp3.0/backend.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/Pages/Candidacies/candidacies.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/Pages/Candidacies/candidacies.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/Pages/Candidacies/candidacies.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/Pages/Candidacies/candidacies.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/Pages/Candidacies/submitCandidacy.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/Pages/Candidacies/submitCandidacy.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/Pages/Surveys/createSurvey.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/Pages/Surveys/createSurvey.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/Services/API.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/Services/API.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/Services/i18n/translations/bg.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/Services/i18n/translations/bg.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/Services/i18n/translations/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/Services/i18n/translations/en.json" afterDir="false" />
     </list>
@@ -43,18 +46,31 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/backend/Controllers/GetAllSurveysController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/DTOs/SurveyDTOs/SurveyInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/.local/share/Symbols/src/nunit/nunit/c933a883ea25263ec575a654dae69fa38000edd9/src/NUnitFramework/framework/Internal/Execution/CompositeWorkItem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/.local/share/Symbols/src/nunit/nunit/c933a883ea25263ec575a654dae69fa38000edd9/src/NUnitFramework/framework/Internal/Execution/SimpleWorkItemDispatcher.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2F22993E-2191-4253-8BC4-D1A5A5B4B7F2/147/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/C34D92CF-0375-4665-9D3D-BD7DD359F0E5/24/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backendTests/Integration Tests/SchoolRepository Tests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backendTests/Integration Tests/VoteRepositoryTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backendTests/Integration Tests/Candidacy Repository Tests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backendTests/Integration Tests/SurveyRepository Tests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1DEB74A7-B5C6-44CA-821F-000560E09848/1D8/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/DB77E3B2-7989-47D2-B162-88293D8ADDF7/2E/ToCollection.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6F7983DF-5846-436F-8E9C-B779867785C7/9/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1DEB74A7-B5C6-44CA-821F-000560E09848/2E/RuntimeType.CoreCLR.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1DEB74A7-B5C6-44CA-821F-000560E09848/39C/EqualityComparer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1DEB74A7-B5C6-44CA-821F-000560E09848/2F/RuntimeType.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/WeatherForecast.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1DEB74A7-B5C6-44CA-821F-000560E09848/39D/Dictionary.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/28692D35-0106-4829-ADBD-A10D12CFFE6F/9/UserStoreBase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/29F30F0C-1BEC-4E45-9E6D-DB6D3F784536/6/UserStore.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1DEB74A7-B5C6-44CA-821F-000560E09848/140/CancellationToken.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/E90433BE-14D9-4018-8749-2AF0EBC04294/1D/UserManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/E90433BE-14D9-4018-8749-2AF0EBC04294/1C/UserLoginInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/Controllers/GetAllSurveysController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/DTOs/SurveyDTOs/SurveyInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/C34D92CF-0375-4665-9D3D-BD7DD359F0E5/24/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/Infrastructure/IdentityContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/Infrastructure/Constants.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/Repositories/SchoolRepository.cs" root0="FORCE_HIGHLIGHTING" />
@@ -62,7 +78,6 @@
     <setting file="file://$PROJECT_DIR$/backend/Repositories/UserDetailsRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/Repositories/SurveyRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/Repositories/CandidacyRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6F7983DF-5846-436F-8E9C-B779867785C7/9/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/Repositories/VoteRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7C04491C-D6D6-4C3E-9E46-423AB91DB1CA/FE/ControllerActionInvoker.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/Repositories/OptionRepository.cs" root0="FORCE_HIGHLIGHTING" />
@@ -73,33 +88,30 @@
     <setting file="file://$PROJECT_DIR$/backend/Controllers/SubmitCandidacyController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/Controllers/SubmitVoteController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/Controllers/AddOptionController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/DTOs/DTOConverters/Factories/SurveyResultFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/026A9B88-5377-49C9-86D7-80102A802EAF/30/Where.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/Controllers/SignOutController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/Controllers/GetAllUsersController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/DTOs/VoteDTOs/SurveyResult.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6F7983DF-5846-436F-8E9C-B779867785C7/E/DbContextOptions`.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/Controllers/CreateUserController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/Controllers/GetAllCandidaciesController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/Controllers/GetCandidacyResultsController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/Controllers/LoginController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1DEB74A7-B5C6-44CA-821F-000560E09848/2E/RuntimeType.CoreCLR.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6920812A-D363-4639-96C8-A3263DBC8C00/A/HashSet.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BD98E7B4-F908-4999-B0A8-A5A57D028192/ce/d48e8edb/JsonSerializer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/Controllers/AddToSchoolController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/Controllers/GetSurveyResultsController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/Controllers/AddCandidacyPhotoController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/Controllers/GetAllSchoolsController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1DEB74A7-B5C6-44CA-821F-000560E09848/39C/EqualityComparer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1DEB74A7-B5C6-44CA-821F-000560E09848/3A4/List.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1DEB74A7-B5C6-44CA-821F-000560E09848/2F/RuntimeType.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/Migrations/Identity/20200103123536_IdentityContext_Created.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/026A9B88-5377-49C9-86D7-80102A802EAF/27/Select.SpeedOpt.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/DTOs/DTOConverters/InputConverters/CandidacyVoteInputConvertor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/WeatherForecast.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1DEB74A7-B5C6-44CA-821F-000560E09848/39D/Dictionary.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/026A9B88-5377-49C9-86D7-80102A802EAF/2E/ToCollection.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/DTOs/CandidacyVoteDTOs/CandidacyVoteInput.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/28692D35-0106-4829-ADBD-A10D12CFFE6F/9/UserStoreBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/Controllers/SubmitCandidacyVoteController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1DEB74A7-B5C6-44CA-821F-000560E09848/20/Environment.CoreCLR.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/29F30F0C-1BEC-4E45-9E6D-DB6D3F784536/6/UserStore.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/026A9B88-5377-49C9-86D7-80102A802EAF/26/Select.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/DTOs/DTOConverters/InputConverters/CandidacyInputConverter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/DTOs/DTOConverters/InputConverters/SurveyInputConverter.cs" root0="FORCE_HIGHLIGHTING" />
@@ -107,28 +119,23 @@
     <setting file="file://$PROJECT_DIR$/backend/Migrations/20191209164713_Added_Survey_AuthorId.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/Repositories/CandidacyVoteRecordRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/DTOs/DTOConverters/InputConverters/VoteInputConverter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1DEB74A7-B5C6-44CA-821F-000560E09848/140/CancellationToken.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/Models/Data/CandidacyVoteRecord.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/DTOs/DTOConverters/Factories/UserSummaryFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/Repositories/CandidacyVoteRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/DTOs/CandidacyDTOs/CandidacyInput.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/E90433BE-14D9-4018-8749-2AF0EBC04294/1D/UserManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/Models/Data/CandidacyVote.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/Migrations/20191208183249_Initial.Designer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/DTOs/SurveyDTOs/SurveySummary.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/DTOs/CandidacyDTOs/CandidacySummary.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/DTOs/SchoolDTOs/SchoolSummary.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/E90433BE-14D9-4018-8749-2AF0EBC04294/1C/UserLoginInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/DTOs/OptionDTOs/OptionSummary.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/Services/Authorization/RoleService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/BF67F27C-88C2-4490-B291-2666AB47D2B2/A/AuthorizeAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/Models/Identity/User.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/DTOs/VoteDTOs/VoteInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/DTOs/VoteDTOs/VoteSummary.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/Models/Data/Vote.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/Models/Data/Option.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/Startup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/DTOs/UserDTOs/UserInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/Models/Data/Candidacy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/DTOs/UserDTOs/LoginInput.cs" root0="FORCE_HIGHLIGHTING" />
@@ -141,19 +148,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/backend/DTOs/SchoolDTOs/SchoolSummary.cs" />
-        <option value="$PROJECT_DIR$/backend/Controllers/GetAllSchoolsController.cs" />
-        <option value="$PROJECT_DIR$/backend/Controllers/SubmitVoteController.cs" />
-        <option value="$PROJECT_DIR$/backend/Controllers/AddOptionController.cs" />
-        <option value="$PROJECT_DIR$/backend/Controllers/SubmitSurveyController.cs" />
-        <option value="$PROJECT_DIR$/backend/Controllers/SignOutController.cs" />
-        <option value="$PROJECT_DIR$/backend/Controllers/CreateUserController.cs" />
-        <option value="$PROJECT_DIR$/backend/Models/Data/Vote.cs" />
-        <option value="$PROJECT_DIR$/backend/Services/Authorization/RoleService.cs" />
         <option value="$PROJECT_DIR$/backend/DTOs/UserDTOs/UserSchoolInput.cs" />
         <option value="$PROJECT_DIR$/backend/DTOs/UserDTOs/UserRoleInput.cs" />
         <option value="$PROJECT_DIR$/backend/Controllers/AddToRoleController.cs" />
-        <option value="$PROJECT_DIR$/backend/Controllers/GetAllUsersController.cs" />
         <option value="$PROJECT_DIR$/backend/Controllers/AddToSchoolController.cs" />
         <option value="$PROJECT_DIR$/backend/Models/Data/Survey.cs" />
         <option value="$PROJECT_DIR$/backend/DTOs/DTOConverters/InputConverters/SurveyInputConverter.cs" />
@@ -173,7 +170,6 @@
         <option value="$PROJECT_DIR$/backend/Repositories/UserDetailsRepository.cs" />
         <option value="$PROJECT_DIR$/backend/Repositories/VoteRepository.cs" />
         <option value="$PROJECT_DIR$/backend/Controllers/GetAllSurveysController.cs" />
-        <option value="$PROJECT_DIR$/backend/Repositories/SurveyRepository.cs" />
         <option value="$PROJECT_DIR$/backend/Repositories/CandidacyVoteRepository.cs" />
         <option value="$PROJECT_DIR$/backend/Infrastructure/DataContext.cs" />
         <option value="$PROJECT_DIR$/backend/Repositories/CandidacyVoteRecordRepository.cs" />
@@ -190,8 +186,19 @@
         <option value="$PROJECT_DIR$/backend/DTOs/CandidacyDTOs/CandidacyInput.cs" />
         <option value="$PROJECT_DIR$/backend/Controllers/SubmitCandidacyController.cs" />
         <option value="$PROJECT_DIR$/backend/DTOs/DTOConverters/InputConverters/CandidacyInputConverter.cs" />
-        <option value="$PROJECT_DIR$/backend/Infrastructure/Images/GCStorage/Rosta-a2299c0ab851.json" />
         <option value="$PROJECT_DIR$/backend/Controllers/AddCandidacyPhotoController.cs" />
+        <option value="$PROJECT_DIR$/backend/DTOs/UserDTOs/UserSummary.cs" />
+        <option value="$PROJECT_DIR$/backend/Controllers/GetAllUsersController.cs" />
+        <option value="$PROJECT_DIR$/backend/Controllers/GetCandidacyResults.cs" />
+        <option value="$PROJECT_DIR$/backend/Controllers/GetSurveyResults.cs" />
+        <option value="$PROJECT_DIR$/backend/DTOs/VoteDTOs/SurveyResult.cs" />
+        <option value="$PROJECT_DIR$/backend/DTOs/DTOConverters/Factories/SurveyResultFactory.cs" />
+        <option value="$PROJECT_DIR$/backend/Repositories/SurveyRepository.cs" />
+        <option value="$PROJECT_DIR$/backend/Controllers/GetCandidacyResultsController.cs" />
+        <option value="$PROJECT_DIR$/backend/DTOs/DTOConverters/Factories/UserSummaryFactory.cs" />
+        <option value="$PROJECT_DIR$/backend/Controllers/GetAllSchoolsController.cs" />
+        <option value="$PROJECT_DIR$/backend/Infrastructure/Images/GCStorage/Rosta-a2299c0ab851.json" />
+        <option value="$PROJECT_DIR$/backend/Controllers/GetSurveyResultsController.cs" />
       </list>
     </option>
   </component>
@@ -308,7 +315,7 @@
       <workItem from="1581689386271" duration="1545000" />
       <workItem from="1582135295117" duration="525000" />
       <workItem from="1582221081288" duration="2391000" />
-      <workItem from="1582223930748" duration="8124000" />
+      <workItem from="1582223930748" duration="22279000" />
     </task>
     <servers />
   </component>
@@ -349,119 +356,123 @@
     </state>
     <state x="526" y="248" width="396" height="334" key="FileChooserDialogImpl/1360.0.1920.1080/0.34.1360.734@0.34.1360.734" timestamp="1578047000560" />
     <state x="2103" y="315" width="424" height="490" key="FileChooserDialogImpl/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579363100856" />
-    <state width="1870" height="164" key="GridCell.Tab.0.bottom" timestamp="1582290283477">
+    <state width="1870" height="242" key="GridCell.Tab.0.bottom" timestamp="1582369813910">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state width="1310" height="60" key="GridCell.Tab.0.bottom/1360.0.1920.1080/0.34.1360.734@0.34.1360.734" timestamp="1578047099865" />
     <state width="1870" height="182" key="GridCell.Tab.0.bottom/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579958820192" />
-    <state width="1870" height="164" key="GridCell.Tab.0.bottom/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1582290283477" />
-    <state width="1870" height="164" key="GridCell.Tab.0.center" timestamp="1582290283477">
+    <state width="1870" height="242" key="GridCell.Tab.0.bottom/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1582369813910" />
+    <state width="1870" height="242" key="GridCell.Tab.0.center" timestamp="1582369813910">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state width="1310" height="60" key="GridCell.Tab.0.center/1360.0.1920.1080/0.34.1360.734@0.34.1360.734" timestamp="1578047099865" />
     <state width="1870" height="182" key="GridCell.Tab.0.center/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579958820192" />
-    <state width="1870" height="164" key="GridCell.Tab.0.center/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1582290283477" />
-    <state width="1870" height="164" key="GridCell.Tab.0.left" timestamp="1582290283477">
+    <state width="1870" height="242" key="GridCell.Tab.0.center/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1582369813910" />
+    <state width="1870" height="242" key="GridCell.Tab.0.left" timestamp="1582369813910">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state width="1310" height="60" key="GridCell.Tab.0.left/1360.0.1920.1080/0.34.1360.734@0.34.1360.734" timestamp="1578047099865" />
     <state width="1870" height="182" key="GridCell.Tab.0.left/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579958820192" />
-    <state width="1870" height="164" key="GridCell.Tab.0.left/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1582290283477" />
-    <state width="1870" height="164" key="GridCell.Tab.0.right" timestamp="1582290283477">
+    <state width="1870" height="242" key="GridCell.Tab.0.left/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1582369813910" />
+    <state width="1870" height="242" key="GridCell.Tab.0.right" timestamp="1582369813910">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state width="1310" height="60" key="GridCell.Tab.0.right/1360.0.1920.1080/0.34.1360.734@0.34.1360.734" timestamp="1578047099865" />
     <state width="1870" height="182" key="GridCell.Tab.0.right/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579958820192" />
-    <state width="1870" height="164" key="GridCell.Tab.0.right/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1582290283477" />
-    <state width="1870" height="242" key="GridCell.Tab.1.bottom" timestamp="1581690931507">
+    <state width="1870" height="242" key="GridCell.Tab.0.right/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1582369813910" />
+    <state width="1870" height="242" key="GridCell.Tab.1.bottom" timestamp="1582369813910">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state width="1870" height="242" key="GridCell.Tab.1.bottom/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579728215539" />
-    <state width="1870" height="242" key="GridCell.Tab.1.bottom/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1581690931507" />
-    <state width="1870" height="242" key="GridCell.Tab.1.center" timestamp="1581690931507">
+    <state width="1870" height="242" key="GridCell.Tab.1.bottom/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1582369813910" />
+    <state width="1870" height="242" key="GridCell.Tab.1.center" timestamp="1582369813910">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state width="1870" height="242" key="GridCell.Tab.1.center/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579728215539" />
-    <state width="1870" height="242" key="GridCell.Tab.1.center/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1581690931507" />
-    <state width="1870" height="242" key="GridCell.Tab.1.left" timestamp="1581690931507">
+    <state width="1870" height="242" key="GridCell.Tab.1.center/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1582369813910" />
+    <state width="1870" height="242" key="GridCell.Tab.1.left" timestamp="1582369813910">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state width="1870" height="242" key="GridCell.Tab.1.left/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579728215539" />
-    <state width="1870" height="242" key="GridCell.Tab.1.left/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1581690931507" />
-    <state width="1870" height="242" key="GridCell.Tab.1.right" timestamp="1581690931507">
+    <state width="1870" height="242" key="GridCell.Tab.1.left/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1582369813910" />
+    <state width="1870" height="242" key="GridCell.Tab.1.right" timestamp="1582369813910">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state width="1870" height="242" key="GridCell.Tab.1.right/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579728215539" />
-    <state width="1870" height="242" key="GridCell.Tab.1.right/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1581690931507" />
-    <state width="1870" height="242" key="GridCell.Tab.2.bottom" timestamp="1581690931507">
+    <state width="1870" height="242" key="GridCell.Tab.1.right/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1582369813910" />
+    <state width="1870" height="242" key="GridCell.Tab.2.bottom" timestamp="1582369813910">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state width="1870" height="242" key="GridCell.Tab.2.bottom/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579728215539" />
-    <state width="1870" height="242" key="GridCell.Tab.2.bottom/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1581690931507" />
-    <state width="1870" height="242" key="GridCell.Tab.2.center" timestamp="1581690931507">
+    <state width="1870" height="242" key="GridCell.Tab.2.bottom/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1582369813910" />
+    <state width="1870" height="242" key="GridCell.Tab.2.center" timestamp="1582369813910">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state width="1870" height="242" key="GridCell.Tab.2.center/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579728215539" />
-    <state width="1870" height="242" key="GridCell.Tab.2.center/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1581690931507" />
-    <state width="1870" height="242" key="GridCell.Tab.2.left" timestamp="1581690931507">
+    <state width="1870" height="242" key="GridCell.Tab.2.center/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1582369813910" />
+    <state width="1870" height="242" key="GridCell.Tab.2.left" timestamp="1582369813910">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state width="1870" height="242" key="GridCell.Tab.2.left/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579728215539" />
-    <state width="1870" height="242" key="GridCell.Tab.2.left/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1581690931507" />
-    <state width="1870" height="242" key="GridCell.Tab.2.right" timestamp="1581690931507">
+    <state width="1870" height="242" key="GridCell.Tab.2.left/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1582369813910" />
+    <state width="1870" height="242" key="GridCell.Tab.2.right" timestamp="1582369813910">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state width="1870" height="242" key="GridCell.Tab.2.right/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579728215539" />
-    <state width="1870" height="242" key="GridCell.Tab.2.right/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1581690931507" />
-    <state width="1870" height="242" key="GridCell.Tab.3.bottom" timestamp="1581690931507">
+    <state width="1870" height="242" key="GridCell.Tab.2.right/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1582369813910" />
+    <state width="1870" height="242" key="GridCell.Tab.3.bottom" timestamp="1582369813910">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state width="1870" height="242" key="GridCell.Tab.3.bottom/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579728215540" />
-    <state width="1870" height="242" key="GridCell.Tab.3.bottom/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1581690931507" />
-    <state width="1870" height="242" key="GridCell.Tab.3.center" timestamp="1581690931507">
+    <state width="1870" height="242" key="GridCell.Tab.3.bottom/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1582369813910" />
+    <state width="1870" height="242" key="GridCell.Tab.3.center" timestamp="1582369813910">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state width="1870" height="242" key="GridCell.Tab.3.center/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579728215540" />
-    <state width="1870" height="242" key="GridCell.Tab.3.center/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1581690931507" />
-    <state width="1870" height="242" key="GridCell.Tab.3.left" timestamp="1581690931507">
+    <state width="1870" height="242" key="GridCell.Tab.3.center/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1582369813910" />
+    <state width="1870" height="242" key="GridCell.Tab.3.left" timestamp="1582369813910">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state width="1870" height="242" key="GridCell.Tab.3.left/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579728215540" />
-    <state width="1870" height="242" key="GridCell.Tab.3.left/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1581690931507" />
-    <state width="1870" height="242" key="GridCell.Tab.3.right" timestamp="1581690931507">
+    <state width="1870" height="242" key="GridCell.Tab.3.left/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1582369813910" />
+    <state width="1870" height="242" key="GridCell.Tab.3.right" timestamp="1582369813910">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state width="1870" height="242" key="GridCell.Tab.3.right/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579728215540" />
-    <state width="1870" height="242" key="GridCell.Tab.3.right/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1581690931507" />
-    <state width="1870" height="242" key="GridCell.Tab.4.bottom" timestamp="1581690931508">
+    <state width="1870" height="242" key="GridCell.Tab.3.right/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1582369813910" />
+    <state width="1870" height="242" key="GridCell.Tab.4.bottom" timestamp="1582369813910">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state width="1870" height="242" key="GridCell.Tab.4.bottom/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579728215540" />
-    <state width="1870" height="242" key="GridCell.Tab.4.bottom/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1581690931508" />
-    <state width="1870" height="242" key="GridCell.Tab.4.center" timestamp="1581690931507">
+    <state width="1870" height="242" key="GridCell.Tab.4.bottom/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1582369813910" />
+    <state width="1870" height="242" key="GridCell.Tab.4.center" timestamp="1582369813910">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state width="1870" height="242" key="GridCell.Tab.4.center/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579728215540" />
-    <state width="1870" height="242" key="GridCell.Tab.4.center/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1581690931507" />
-    <state width="1870" height="242" key="GridCell.Tab.4.left" timestamp="1581690931507">
+    <state width="1870" height="242" key="GridCell.Tab.4.center/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1582369813910" />
+    <state width="1870" height="242" key="GridCell.Tab.4.left" timestamp="1582369813910">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state width="1870" height="242" key="GridCell.Tab.4.left/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579728215540" />
-    <state width="1870" height="242" key="GridCell.Tab.4.left/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1581690931507" />
-    <state width="1870" height="242" key="GridCell.Tab.4.right" timestamp="1581690931507">
+    <state width="1870" height="242" key="GridCell.Tab.4.left/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1582369813910" />
+    <state width="1870" height="242" key="GridCell.Tab.4.right" timestamp="1582369813910">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state width="1870" height="242" key="GridCell.Tab.4.right/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579728215540" />
-    <state width="1870" height="242" key="GridCell.Tab.4.right/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1581690931507" />
-    <state x="2429" y="274" width="730" height="613" key="RiderGenerateDialog" timestamp="1582225030162">
+    <state width="1870" height="242" key="GridCell.Tab.4.right/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1582369813910" />
+    <state x="2429" y="274" width="730" height="613" key="RiderGenerateDialog" timestamp="1582299342270">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state x="2429" y="274" width="730" height="661" key="RiderGenerateDialog/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579956426470" />
-    <state x="2429" y="274" width="730" height="613" key="RiderGenerateDialog/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1582225030162" />
+    <state x="2429" y="274" width="730" height="613" key="RiderGenerateDialog/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1582299342270" />
     <state x="2100" y="267" width="429" height="586" key="RollbackChangesDialog" timestamp="1579075239504">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state x="2100" y="267" width="429" height="586" key="RollbackChangesDialog/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579075239504" />
+    <state width="960" height="523" key="XDebugger.FullValuePopup" timestamp="1582310514815">
+      <screen x="1360" y="0" width="1920" height="1080" />
+    </state>
+    <state width="960" height="523" key="XDebugger.FullValuePopup/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1582310514815" />
     <state x="1524" y="227" width="1314" height="528" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1579457652698">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
@@ -486,19 +497,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/backend/Controllers/GetAllSurveysController.cs</url>
-          <line>58</line>
-          <properties documentPath="$PROJECT_DIR$/backend/Controllers/GetAllSurveysController.cs" initialLine="59">
-            <startOffsets>
-              <option value="2098" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2253" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

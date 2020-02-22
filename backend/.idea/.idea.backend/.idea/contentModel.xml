@@ -24,7 +24,9 @@
           <e p="GetAllSurveysController.cs" t="Include" />
           <e p="GetAllUsersController.cs" t="Include" />
           <e p="GetCandidacyPhotoController.cs" t="Include" />
+          <e p="GetCandidacyResultsController.cs" t="Include" />
           <e p="GetSurveyPhotoController.cs" t="Include" />
+          <e p="GetSurveyResultsController.cs" t="Include" />
           <e p="LoginController.cs" t="Include" />
           <e p="RoleCheckController.cs" t="Include" />
           <e p="SignOutController.cs" t="Include" />
@@ -43,6 +45,7 @@
           </e>
           <e p="DTOConverters" t="Include">
             <e p="Factories" t="Include">
+              <e p="SurveyResultFactory.cs" t="Include" />
               <e p="UserSummaryFactory.cs" t="Include" />
             </e>
             <e p="InputConverters" t="Include">
@@ -75,6 +78,7 @@
             <e p="UserSummary.cs" t="Include" />
           </e>
           <e p="VoteDTOs" t="Include">
+            <e p="SurveyResult.cs" t="Include" />
             <e p="VoteInput.cs" t="Include" />
             <e p="VoteSummary.cs" t="Include" />
           </e>
@@ -178,8 +182,13 @@
         <e p="backend.csproj" t="IncludeRecursive" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="mono_crash.mem.13333.1.blob" t="Include" />
+        <e p="mono_crash.mem.15610.1.blob" t="Include" />
+        <e p="mono_crash.mem.16774.1.blob" t="Include" />
         <e p="mono_crash.mem.17555.1.blob" t="Include" />
         <e p="mono_crash.mem.19308.1.blob" t="Include" />
+        <e p="mono_crash.mem.23092.1.blob" t="Include" />
+        <e p="mono_crash.mem.27033.1.blob" t="Include" />
+        <e p="mono_crash.mem.6413.1.blob" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.0" t="Include">

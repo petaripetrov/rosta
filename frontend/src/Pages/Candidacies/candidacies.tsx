@@ -1,6 +1,7 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
 import { SubmitCandidacy } from './submitCandidacy'
+import { VoteCandidacy } from './voteCandidacy'
 
 export const Candidacies = (props: any) => {
 
@@ -14,8 +15,8 @@ export const Candidacies = (props: any) => {
         <div>
 
             {/* Remove SubmitCandidacy from here. Its Just for test */}
+            {/* <VoteCandidacy></VoteCandidacy> */}
             <SubmitCandidacy></SubmitCandidacy>
-            <button onClick = {redirect}>Submit Survey</button>
         </div>
     )
 }
