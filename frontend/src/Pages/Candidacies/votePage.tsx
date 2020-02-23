@@ -19,6 +19,7 @@ export const VotePage: FunctionComponent<{intial?:Candidacy | undefined}> = ({in
     const name = useRef<any>()
     const description = useRef<any>()
     const photo = useRef<any>()
+    const voteBtn = useRef<any>();
     
     useEffect(() => {
         name.current.value = intial?.name
@@ -33,7 +34,7 @@ export const VotePage: FunctionComponent<{intial?:Candidacy | undefined}> = ({in
 
         let candidacyId = intial?.id;
         let voteInput: CandidacyVoteInput = {'candidacyId': candidacyId}
-        
+        voteBtn.current.diabled = true;
 
         fetch(`https://localhost:5001/submitCandidacyVote`,{
             method: 'POST',
@@ -43,6 +44,7 @@ export const VotePage: FunctionComponent<{intial?:Candidacy | undefined}> = ({in
                 'Authorization': `Bearer ${authcode}`
             }
         })
+        voteBtn.current.diabled = false;
     }
 
     //Return in tempolary 
@@ -67,7 +69,7 @@ export const VotePage: FunctionComponent<{intial?:Candidacy | undefined}> = ({in
             
             <div className="buttonsContainer">
                 <div className="buttonsInternalContainer">
-                    <button className = "btn btn-primary btn-lg mx-2 float-left" onClick= {vote}>{t('vote')}</button>
+                    <button className = "btn btn-primary btn-lg mx-2 float-left" onClick= {vote} ref= {voteBtn}>{t('vote')}</button>
                     <button className = "btn btn-primary btn-lg mx-2 float-right" onClick = {cancel}>{t('cancel')}</button>
                 </div>
             

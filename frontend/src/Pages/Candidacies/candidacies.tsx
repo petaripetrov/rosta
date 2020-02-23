@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom'
 import { SubmitCandidacy } from './submitCandidacy'
 import { VoteCandidacy } from './voteCandidacy'
 import { useTranslation } from 'react-i18next'
+import useAPI from '../../Services/API'
 
 export const Candidacies = (props: any) => {
 
@@ -16,6 +17,7 @@ export const Candidacies = (props: any) => {
     const {t} = useTranslation()
     const history = useHistory()
     const container = useRef<any>(null)
+    const addYoursButton = useRef<any>(null)
     const [mode, setMode ]= useState(Mode.ShowCandidacies)
     function redirect(){
         history.push("/submitCandidacy")
@@ -27,12 +29,6 @@ export const Candidacies = (props: any) => {
         console.log("loading submit")
     }
 
-    function changeContent(inp:Mode){
-        switch (inp){
-
-        }
-    }
-
     return (
         <div >
 
@@ -42,7 +38,7 @@ export const Candidacies = (props: any) => {
             { mode ===  Mode.ShowCandidacies ? 
             <div>
                 <VoteCandidacy ></VoteCandidacy> 
-                <button className= "btn addYoursButton" onClick =  {addYours}>{t('add_Yours')}</button>
+                <button className= "btn addYoursButton" ref={addYoursButton} onClick =  {addYours}>{t('add_Yours')}</button>
             </div>
             
             : <SubmitCandidacy></SubmitCandidacy>}

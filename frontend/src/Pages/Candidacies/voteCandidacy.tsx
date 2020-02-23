@@ -27,15 +27,6 @@ export const VoteCandidacy: FunctionComponent = () => {
    
     const candidaciesContainer = useRef<any>()
     
-    
-
-    
-    function update(){
-        console.log(candidacies)
-        photos.map((x: { photoLink: string }) => appenndNewCandidacyContainer(x.photoLink))
-        console.log(intialPhotos)
-        
-    }
 
     const intialPhotos =  photos != undefined ?
         photos.map((x: { photoLink: string | undefined,candidacyId: number|undefined }) => 
@@ -49,30 +40,8 @@ export const VoteCandidacy: FunctionComponent = () => {
         setMode('Vote')
     }
 
-    function appenndNewCandidacyContainer(photoLink:string){
-        let photo = document.createElement("img")
-        photo.className = "candidacyPhoto"
-        photo.setAttribute("src",photoLink)
-        let container = document.createElement("div")
-        container.className = "candidacyContainer"
-        container.append(photo);
-    
-        candidaciesContainer.current.append(container)
-        
-    }
-    function getPhotoLink(candidacyId:number){
-         fetch(`https://localhost:5001/getCandidacyPhoto/${candidacyId}`,{
-            method: 'GET',
-            headers: {
-                'Authorization': `Bearer ${authcode}`
-            }
-        }).then(response => response.json())
-        .then(response => {
-            let photoLinks = photos.map((x: { photoLink: string }) => x.photoLink)
-            photoLinks.push(response["url"])
-        })
-    }
-    
+   
+  
 
     //Return in tempolary 
 

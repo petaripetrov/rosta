@@ -14,17 +14,20 @@ export const SubmitCandidacy: FunctionComponent<{intial?:CandidacyInput}> = ({in
     const description = useRef<any>()
     const photo = useRef<any>()
     const history = useHistory()
+    const submitBtn = useRef<any>();
 
     const authcode = useSelector((state:any) => state.login.authCode)
     const { t } = useTranslation()
 
     function submit(){
+
         let candidacyId:number = 0
 
         let candidacy:CandidacyInput = {
             name: name.current.value,
             description: description.current.value
         }
+        submitBtn.current.disabled = true;
         fetch(`https://localhost:5001/submitCandidacy`,{
             method: 'POST',
             body: JSON.stringify(candidacy),
@@ -37,6 +40,7 @@ export const SubmitCandidacy: FunctionComponent<{intial?:CandidacyInput}> = ({in
             addPhoto(candidacyId);
             
         })
+        submitBtn.current.disabled = false;
         
     }
 
@@ -84,7 +88,7 @@ export const SubmitCandidacy: FunctionComponent<{intial?:CandidacyInput}> = ({in
             
             <div className="buttonsContainer">
                 <div className="buttonsInternalContainer">
-                    <button className = "btn btn-primary btn-lg mx-2 float-left" onClick= {submit}>{t('submit')}</button>
+                    <button className = "btn btn-primary btn-lg mx-2 float-left" ref = {submitBtn}onClick= {submit}>{t('submit')}</button>
                     <button className = "btn btn-primary btn-lg mx-2 float-right" onClick = {cancel}>{t('cancel')}</button>
                 </div>
                
