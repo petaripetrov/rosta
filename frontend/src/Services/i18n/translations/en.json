@@ -10,6 +10,7 @@
     "description": "Description",
     "School": "School",
     "Role": "Role",
+    "Action": "Action",
 
     "emailErrorMessage": "Please enter a valid email.",
     "passwordErrorMessage": "Please enter a valid password(at least 8 characters).",

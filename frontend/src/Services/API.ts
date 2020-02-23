@@ -4,7 +4,8 @@ import { useSelector } from 'react-redux'
 
 enum APIEndpoints {
     surveys = 'surveys',
-    users = 'users'
+    users = 'users',
+    schools = 'schools'
 }
 
 /**
@@ -23,7 +24,7 @@ export default function useAPI(type: string, additionalInfo?: string) {
         switch (type) {
 
             case APIEndpoints.surveys:
-                fetch('https://localhost:5001/getAllSurveys', {
+                fetch('https://localhost:44375/getAllSurveys', {
                     headers: {
                         'Content-Type': 'application/json',
                         'Authorization': `Bearer ${authCode}`
@@ -48,6 +49,30 @@ export default function useAPI(type: string, additionalInfo?: string) {
 
             case APIEndpoints.users:
                 fetch(`https://localhost:44375/getAllUsers/${additionalInfo}`, {
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${authCode}`
+                    }
+                })
+                    .then(res => res.json())
+                    .then(res => {
+                        if (res.error) {
+                            throw (res.error);
+                        }
+                        dispatch({ type: 'SET_PENDING_FALSE' })
+                        setResult(res)
+                    })
+                    .catch(error => {
+                        dispatch({
+                            type: 'SET_API_ERROR',
+                            error: error
+                        })
+                        dispatch({ type: 'SET_PENDING_FALSE' })
+                    })
+                break
+
+            case APIEndpoints.schools:
+                fetch(`https://localhost:44375/getAllSchools/`, {
                     headers: {
                         'Content-Type': 'application/json',
                         'Authorization': `Bearer ${authCode}`
