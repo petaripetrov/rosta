@@ -28,12 +28,12 @@ namespace backend.Controllers
             _userManager = userManager;
         }
 
-        [HttpGet()]
+        [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [Authorize(AuthenticationSchemes = "Bearer")]
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> Get(int id)
         {
             var token = HttpContext.Request.Headers["Authorization"].Last().Split(" ").Last();
             string[] roles = {"User","Admin","SchoolAdmin"};
@@ -46,8 +46,12 @@ namespace backend.Controllers
                 var handler = new JwtSecurityTokenHandler();
                 var sub = handler.ReadJwtToken(token).Payload.Sub;
 
-                var details = detailsRepo.GetByUserId(sub);
-                var candidacy = candidacyRepo.GetAll().Last(x => x.OwnerId.Value == details.Id);
+                var schoolId = detailsRepo.GetByUserId(sub).SchoolId;
+                var candidacy = candidacyRepo.GetAll().Last(x => x.Id == id);
+                if (candidacy.Owner.SchoolId != schoolId)
+                {
+                    return BadRequest("You can access candidacy photos from people in your school");
+                }
                 
                 var credentials =
                     GoogleCredential.FromFile(
@@ -55,7 +59,7 @@ namespace backend.Controllers
                 var storage = StorageClient.CreateAsync(credentials);
                 var url = SignedUrlHelper.GenerateV4SignedGetUrl("deep-castle-261418-user-photo-bucket",
                     candidacy.PhotoPath);
-                return Ok(url);
+                return Ok(new {Url = url});
 
             }
             

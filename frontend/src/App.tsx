@@ -26,24 +26,24 @@ const App: FunctionComponent = () => {
   dispatch({ type: 'LOAD_FROM_COOKIES' })
 
   useEffect(() => {
-    fetch('https://localhost:44375/roleCheck', {
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${authCode}`
-      }
-    }).then(response => response.json())
-      .then(response => {
-        if (response.error) {
-          throw (response.error)
-        }
-        dispatch({
-          type: 'SET_USER_ROLE',
-          payload: response.role
-        })
-      })
-      .catch(error => {
-        console.error(error)
-      })
+    // fetch('https://localhost:5001/roleCheck', {
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //     'Authorization': `Bearer ${authCode}`
+    //   }
+    // }).then(response => response.json())
+    //   .then(response => {
+    //     if (response.error) {
+    //       throw (response.error)
+    //     }
+    //     dispatch({
+    //       type: 'SET_USER_ROLE',
+    //       payload: response.role
+    //     })
+    //   })
+    //   .catch(error => {
+    //     console.error(error)
+    //   })
   }, [authCode])
 
   /**

@@ -72,7 +72,28 @@
     max-height: 98%;
     border-radius: 19px;
 }
+.candiddaciesContainer{
+    width: 40%;
+    margin:auto;
+    overflow: hidden;
+    overflow-y: scroll;
+    max-height: 600px;
+}
 @media only screen and (max-width: 800px){
+    .candiddaciesContainer{
+        width: 80%;
+        margin:auto;
+        overflow: hidden;
+        overflow-y: scroll;
+        max-height: 600px;
+    }
+    .candidacyContainer{
+        border-radius: 19px;
+        display: inline-block;
+        width: 30%;
+        height: 10;
+        margin-top: 2%;
+    }
     .nameGroup{
         width: 80%;
         margin: auto;
