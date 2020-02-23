@@ -1,12 +1,3 @@
 {
-  "type": "service_account",
-  "project_id": "deep-castle-261418",
-  "private_key_id": "b96b90cfa6694ecc11c8856445550e6ddffd3b0e",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCYwxwUMmoXJWdj\nFGdigrvYcUZJ6Cf4g4+4103gk+EspCLGJFOgtWItzJc6ZY5fqyo837xL9rQrrBAi\nKif/1DqVCU7ldWYedE9i1gywudSFDKaEiKjIwJp/f5Vm/FdXPHbw2pEKuEBM9i7R\nG8Fkk0ttK7onfqL9Td/KuQDJx3DCkVKdUAM4sADYru5ToG+jU7QzUHdc3RuQgEWu\nRyzu47gj/joZCmK/5dLAqTJcwHYZ+176R4YF+rwUvIbAPO7WPgt8BX4bCC0r5aT2\nZnUVYszR3fJgz+6AKZQvs7DQaKQXlXSTXLSJkuNIPDb8J0co3GEv7HRbWYJPmJxn\nzo30HAEPAgMBAAECggEAAfSG7xM+HF6HYwZ0OrFY3VcfaS6/5DeUc7v9uS24KHqC\n7DpNMuj5AR3cCaYaTmTCCglrC/KnMUmAfPXaxGffYBNaBfUDG5ZHHDxVHHK+CTEb\n27JlrQjm17iDg8/smXQJEBTo3Yd1YaBjaDW/7rbPGyFmJPJ2Yshhk6/bSYanjZxX\nFdPGsVmDq0IlGK7X5s+pFS7DUw7tnZZuxrEGXo2LalbyXS4dgKPXBmw8gGmSNePG\n2GHHgZcqgsiZc7qQUZU0L86jtXm+JXLNyeyliVPixMnS3Og/ttuh4CV0wydDg3UB\nZiRbeZdEUyw5Bt4ENJWlAKVVyvyO/z1CejPNkQp6AQKBgQDJWG8QFflRV7CES9Yz\nRH6m7sd9fvUsqw37bkHVSmUv4b+hindPQrV9QPz8sO1ec6+b/lnRUmw7aSaTXf2b\nUjp8szVN/TmimU8X5J4dKDTGfZBQtGlQ8ZskbkCJS2dEzia91KVeXCSB2dIgBwiB\nXDUqTmeAMWhKxjITZbOj9VN7gQKBgQDCOpr2NdEcKaRVY/pml9rSaZJ3LLEoe3eM\n7a2cIsAZM7qJIuBjV6rCb2rb/TqraGfcFX8i4xWdAguQJ8RBhnqnvwn0/rjN9oZs\n3MoYVMHVSrjsaC99en2cI1Eu5wboCii+0Xf47L85AtFOx/+ua8Sjr9onN4ICAXK1\nHvPMEowEjwKBgC1e8Cf/y5640937+Ni0ppWXWPy+jyDxqsTto4gcq5COnlAYk6oY\nriz7aAbJF7Qg/YF5X2P73sfEehzbITrO3L8c4vYgCczKHziTG84WMU5JHSwSe2jy\nCLO85G4Lv8mRasl8EYeh29gm7WKqMxBzZseRw2DvwUCYSNB2KnTX42gBAoGADa7l\nRd0quyov2pgthtbB4rrvR5gNbwWruXDxHyPPlrbvOEQNvNHrRMFmrNLdNEApuPaG\nu2V2G1aOi/xRNjCMKY8q22iqilAIzliLoEUwVp9qAbWhSty7RqmySXSbJvO4RSEq\nq426NwD8z+kFGTucYc+8tbCSZyPE+f+RO1o/JP8CgYB4n9MnqK6LV1L9DxwBJBen\n6EpHdQlJfOK6Ej5ECjy0ER9E/cUm1dtR8V1q4C7svm/z6umMNdUu0b0JJ7Al68LP\n4LL+O/F7zGzDQumZCALWbKLH/lr3a0DJkGeo0RJPVRH37oaOTNbe2emO5/oYo75M\nUNquqfVenTJRXhEOFs/2LA==\n-----END PRIVATE KEY-----\n",
-  "client_email": "rosta-865@deep-castle-261418.iam.gserviceaccount.com",
-  "client_id": "102558422427294696068",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://oauth2.googleapis.com/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/rosta-865%40deep-castle-261418.iam.gserviceaccount.com"
+
 }
