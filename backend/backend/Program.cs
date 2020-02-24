@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using backend.Infrastructure.Infrastructure_Helpers;
+using backend.Models.Data;
+using backend.Repositories;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Storage.V1;
 using Microsoft.AspNetCore.Hosting;
@@ -83,6 +85,13 @@ namespace backend
                         await roleManager.CreateAsync(posterRole);
                     }
 
+                }
+                //default school setup
+                var schoolRepo = new SchoolRepository();
+                if (!schoolRepo.GetAll().Select(x => x.Name ).Contains("Default"))
+                {
+                    var defaultSchool = new School("Default");
+                    schoolRepo.Add(defaultSchool);
                 }
 
                 await host.RunAsync();

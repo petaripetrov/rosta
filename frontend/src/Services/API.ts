@@ -4,8 +4,9 @@ import { useSelector } from 'react-redux'
 
 enum APIEndpoints {
     surveys = 'surveys',
-    users = 'users',
-    schools = 'schools'
+    login = 'login',
+    candidacies = 'candidacies',
+    candidaciyPhotos = 'candidaciesPhotos'
 }
 
 /**
@@ -93,6 +94,41 @@ export default function useAPI(type: string, additionalInfo?: string) {
                         })
                         dispatch({ type: 'SET_PENDING_FALSE' })
                     })
+                break
+            case APIEndpoints.candidacies:
+                fetch("https://localhost:5001/getAllCandidacies",{
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${authCode}`
+                    }
+                }).then(response => response.json())
+                .then(res => {
+                    dispatch({ type: 'SET_PENDING_FALSE' })
+                    dispatch({
+                        type: 'FETCH_CANDIDACIES_SUCCESS',
+                        surveys: res
+                    })
+                    setResult(res)
+                })
+
+                break
+            case APIEndpoints.candidaciyPhotos:
+                fetch("https://localhost:5001/getAllCandidacyPhotos",{
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${authCode}`
+                    }
+                }).then(response => response.json())
+                .then(res => {
+                    dispatch({ type: 'SET_PENDING_FALSE' })
+                    dispatch({
+                        type: 'FETCH_CANDIDACIES_SUCCESS',
+                        surveys: res
+                    })
+                    setResult(res)
+                })
+
+                
                 break
 
             default:

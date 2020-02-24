@@ -50,6 +50,10 @@ namespace backend.Controllers
             
             if (RoleService.CheckRoles(token,roles,_usermanager))
             {
+                if (_repository.GetAll().Where(x => x.Date.Year == DateTime.Now.Year).Select(x => x.OwnerId).Contains(detailsid))
+                {
+                    return BadRequest("You can submit candidacy only once per year");
+                }
                 var candidacy = CandidacyInputConverter.Convert(input,detailsid);
                 _repository.Add(candidacy);
                 return CreatedAtAction("Submit", candidacy);
