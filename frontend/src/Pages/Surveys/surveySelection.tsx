@@ -56,12 +56,12 @@ export const Surveys: FunctionComponent<{ initial?: Survey }> = ({ initial }) =>
     const SurveyWrapper = () => {
 
         return (
-            location.pathname === '/surveys'
+            location.pathname === '/dashboard'
                 ? <React.Fragment>
                     <SelectedSurvey selectedSurvey={selectedSurvey} />
                     <button className="createSurveyButton" onClick={() => { history.push(`${path}/createSurvey`) }}>{t('createSurvey')}</button>
                         <div className="surveyCol">
-                            <ul className="surveyList">
+                            <ul>
                                 {surveyButtons}
                                 <button className="button" onClick={handleClearButton}>Clear</button>
                             </ul>

@@ -8,6 +8,9 @@
     "createSurvey": "Създайте анкета.",
     "name": "Име",
     "description":"Описание",
+    "School": "Училище",
+    "Role": "Роля",
+    "Action": "Действие",
 
     
     "emailErrorMessage": "Моля въведете валиден имейл.",

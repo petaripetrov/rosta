@@ -16,7 +16,7 @@ export const SubmitCandidacy: FunctionComponent<{intial?:CandidacyInput}> = ({in
     const history = useHistory()
     const submitBtn = useRef<any>();
 
-    const authcode = useSelector((state:any) => state.login.authCode)
+    const authcode = useSelector((state:any) => state.user.authCode)
     const { t } = useTranslation()
 
     function submit(){

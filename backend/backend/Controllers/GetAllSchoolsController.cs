@@ -45,25 +45,25 @@ namespace backend.Controllers
                     .Select(x => new
                     {
                         Name = x.Name,
-                        UserIds = x.Users.Select(x => x.UserId)
+                        Id = x.Id
 
-                    }).ToDictionary(x => x.Name, x => x.UserIds);
+                    });
             
-                var SchoolsUsers = new Dictionary<string,List<User>>();
+                //var SchoolsUsers = new Dictionary<string,List<User>>();
             
-                foreach (var school in userIds.Keys)
-                {
-                    SchoolsUsers.Add(school,userIds[school].Select(x => _userManager.FindByIdAsync(x).Result).ToList());
-                }
+                //foreach (var school in userIds.Keys)
+                //{
+                //    SchoolsUsers.Add(school,userIds[school].Select(x => _userManager.FindByIdAsync(x).Result).ToList());
+                //}
             
-                var detailsRepo = new UserDetailsRepository();
+                //var detailsRepo = new UserDetailsRepository();
 
             
                 //Produces summary for each school with summaries for each of students.
-                var result = repo.GetAll().Select(x => new SchoolSummary(x.Id,x.Name,SchoolsUsers[x.Name]
-                    .Select(y => UserSummaryFactory.CreateSummary(detailsRepo.GetById(y.DetailsId),y)).ToList())).ToList();
+                //var result = repo.GetAll().Select(x => new SchoolSummary(x.Id,x.Name,SchoolsUsers[x.Name]
+                //    .Select(y => UserSummaryFactory.CreateSummary(detailsRepo.GetById(y.DetailsId),y)).ToList())).ToList();
             
-                return Ok(result);
+                return Ok(userIds);
             }
 
             return Unauthorized("Only Admin and SchoolAdmin roles have permission to this controller.");

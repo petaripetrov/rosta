@@ -5,6 +5,7 @@ import { routerMiddleware } from 'connected-react-router'
 import { composeWithDevTools } from 'redux-devtools-extension'
 
 import createRootReducer from './Reducers'
+import rostaMiddleware from './rostaMiddleware'
 
 /**
  * Create history object to allow react-router to work better with redux
@@ -22,6 +23,7 @@ export function configureStore() {
         createRootReducer(history),
         composeWithDevTools(
             applyMiddleware(
+                rostaMiddleware,
                 thunkMiddleware,
                 routerMiddleware(history)),
         )

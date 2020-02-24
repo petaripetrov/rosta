@@ -20,7 +20,7 @@ const SelectedSurvey = (props: selectedSurveyProps) => {
 
     const { t } = useTranslation()
     const [voteState, setVoteState] = useState<surveyInput>()
-    const authCode = useSelector((state: any) => state.login.authCode)
+    const authCode = useSelector((state: any) => state.user.authCode)
 
     function submitVote() {
 

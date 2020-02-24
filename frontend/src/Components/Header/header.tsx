@@ -9,7 +9,7 @@ import useAPI from '../../Services/API'
 export const Header = () => {
     const dispatch = useDispatch()
     const currentLanguage = useSelector((state: any) => state.translation.language)
-    const isLoggedIn = useSelector((state: any) => state.login.isLoggedIn)
+    const isLoggedIn = useSelector((state: any) => state.user.isLoggedIn)
     const [burgerOn, toggleBurger] = useState(false)
     const animation = useSpring({
         opacity: burgerOn ? 0 : 1,
