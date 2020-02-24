@@ -49,7 +49,7 @@ export const SubmitCandidacy: FunctionComponent<{intial?:CandidacyInput}> = ({in
     }
 
     function addPhoto(candidacyId:number){
-        fetch(`https://localhost:5001/addCandidacyPhoto`,{
+        fetch(`https://localhost:44375/addCandidacyPhoto`,{
             method: 'POST',
             body: photo.current.files[0],
             headers: {

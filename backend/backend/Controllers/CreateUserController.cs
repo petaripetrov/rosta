@@ -52,6 +52,8 @@ namespace backend.Controllers
 
                 user.DetailsId = detailsId;
                 await _userManager.UpdateAsync(user);
+                var schoolRepo = new SchoolRepository();
+                var school = schoolRepo.GetAll().FirstOrDefault(x => x.Name == "Default");
                 
                 
                 _logger.LogInformation("Account Created",user);

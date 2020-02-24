@@ -36,7 +36,7 @@ export const VotePage: FunctionComponent<{intial?:Candidacy | undefined}> = ({in
         let voteInput: CandidacyVoteInput = {'candidacyId': candidacyId}
         voteBtn.current.diabled = true;
 
-        fetch(`https://localhost:5001/submitCandidacyVote`,{
+        fetch(`https://localhost:44375/submitCandidacyVote`,{
             method: 'POST',
             body: JSON.stringify(voteInput),
             headers: {

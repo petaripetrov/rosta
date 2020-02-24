@@ -3,6 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="df290771-fae5-4299-a670-98d73b4b94cd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.backend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Controllers/CreateUserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Controllers/CreateUserController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Infrastructure/Images/GCStorage/Rosta-a2299c0ab851.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Infrastructure/Images/GCStorage/Rosta-a2299c0ab851.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/bin/Debug/netcoreapp3.0/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/bin/Debug/netcoreapp3.0/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/bin/Debug/netcoreapp3.0/backend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/backend/bin/Debug/netcoreapp3.0/backend.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/bin/Debug/netcoreapp3.0/backend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/backend/bin/Debug/netcoreapp3.0/backend.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/obj/Debug/netcoreapp3.0/backend.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/Debug/netcoreapp3.0/backend.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/obj/Debug/netcoreapp3.0/backend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/Debug/netcoreapp3.0/backend.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/obj/Debug/netcoreapp3.0/backend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/Debug/netcoreapp3.0/backend.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/Pages/Candidacies/submitCandidacy.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/Pages/Candidacies/submitCandidacy.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +70,7 @@
     <setting file="file://$PROJECT_DIR$/backend/Controllers/GetAllSurveysController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/DTOs/SurveyDTOs/SurveyInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/C34D92CF-0375-4665-9D3D-BD7DD359F0E5/24/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/Controllers/GetAllCandidacyPhotosController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/Infrastructure/IdentityContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/Infrastructure/Constants.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/Repositories/SchoolRepository.cs" root0="FORCE_HIGHLIGHTING" />
@@ -76,7 +88,6 @@
     <setting file="file://$PROJECT_DIR$/backend/Controllers/SubmitCandidacyController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/Controllers/SubmitVoteController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/Controllers/RoleCheckController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/Controllers/GetAllCandidacyPhotosController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/Controllers/AddOptionController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/DTOs/DTOConverters/Factories/SurveyResultFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/026A9B88-5377-49C9-86D7-80102A802EAF/30/Where.cs" root0="SKIP_HIGHLIGHTING" />
@@ -121,8 +132,10 @@
     <setting file="file://$PROJECT_DIR$/backend/DTOs/CandidacyDTOs/CandidacySummary.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/DTOs/SchoolDTOs/SchoolSummary.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/DTOs/OptionDTOs/OptionSummary.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/Services/Security/FileSecurityHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/Services/Authorization/RoleService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/BF67F27C-88C2-4490-B291-2666AB47D2B2/A/AuthorizeAttribute.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/Services/Security/ImageSecurityHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/Models/Identity/User.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/DTOs/VoteDTOs/VoteInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/DTOs/VoteDTOs/VoteSummary.cs" root0="FORCE_HIGHLIGHTING" />
@@ -133,6 +146,7 @@
     <setting file="file://$PROJECT_DIR$/backend/Models/Data/Candidacy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/DTOs/UserDTOs/LoginInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/Models/Data/UserDetails.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/DTOs/UserDTOs/UserSchoolInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/Models/Data/Survey.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/DTOs/UserDTOs/UserSummary.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/Models/Data/VoteRecord.cs" root0="FORCE_HIGHLIGHTING" />
@@ -141,9 +155,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/backend/Controllers/AddToSchoolController.cs" />
-        <option value="$PROJECT_DIR$/backend/Models/Data/Survey.cs" />
-        <option value="$PROJECT_DIR$/backend/DTOs/DTOConverters/InputConverters/SurveyInputConverter.cs" />
         <option value="$PROJECT_DIR$/backend/DTOs/OptionDTOs/OptionInput.cs" />
         <option value="$PROJECT_DIR$/backend/DTOs/OptionDTOs/ISurveyInput.cs" />
         <option value="$PROJECT_DIR$/backend/DTOs/OptionDTOs/IOptionInput.cs" />
@@ -189,9 +200,12 @@
         <option value="$PROJECT_DIR$/backend/Repositories/CandidacyRepository.cs" />
         <option value="$PROJECT_DIR$/backend/Controllers/GetAllCandidacyPhotosController.cs" />
         <option value="$PROJECT_DIR$/backend/Controllers/SubmitCandidacyVoteController.cs" />
-        <option value="$PROJECT_DIR$/backend/Infrastructure/Images/GCStorage/Rosta-a2299c0ab851.json" />
         <option value="$PROJECT_DIR$/backend/Controllers/SubmitCandidacyController.cs" />
         <option value="$PROJECT_DIR$/backend/DTOs/UserDTOs/UserRoleInput.cs" />
+        <option value="$PROJECT_DIR$/backend/Infrastructure/Images/GCStorage/Rosta-a2299c0ab851.json" />
+        <option value="$PROJECT_DIR$/backend/Properties/launchSettings.json" />
+        <option value="$PROJECT_DIR$/backend/Program.cs" />
+        <option value="$PROJECT_DIR$/backend/Controllers/CreateUserController.cs" />
       </list>
     </option>
   </component>
@@ -353,30 +367,30 @@
     </state>
     <state x="526" y="248" width="396" height="334" key="FileChooserDialogImpl/1360.0.1920.1080/0.34.1360.734@0.34.1360.734" timestamp="1578047000560" />
     <state x="2103" y="315" width="424" height="490" key="FileChooserDialogImpl/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579363100856" />
-    <state width="1870" height="157" key="GridCell.Tab.0.bottom" timestamp="1582497499945">
+    <state width="1870" height="157" key="GridCell.Tab.0.bottom" timestamp="1582558589165">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state width="1310" height="60" key="GridCell.Tab.0.bottom/1360.0.1920.1080/0.34.1360.734@0.34.1360.734" timestamp="1578047099865" />
     <state width="1870" height="182" key="GridCell.Tab.0.bottom/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579958820192" />
-    <state width="1870" height="157" key="GridCell.Tab.0.bottom/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1582497499945" />
-    <state width="1870" height="157" key="GridCell.Tab.0.center" timestamp="1582497499945">
+    <state width="1870" height="157" key="GridCell.Tab.0.bottom/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1582558589165" />
+    <state width="1870" height="157" key="GridCell.Tab.0.center" timestamp="1582558589165">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state width="1310" height="60" key="GridCell.Tab.0.center/1360.0.1920.1080/0.34.1360.734@0.34.1360.734" timestamp="1578047099865" />
     <state width="1870" height="182" key="GridCell.Tab.0.center/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579958820192" />
-    <state width="1870" height="157" key="GridCell.Tab.0.center/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1582497499945" />
-    <state width="1870" height="157" key="GridCell.Tab.0.left" timestamp="1582497499945">
+    <state width="1870" height="157" key="GridCell.Tab.0.center/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1582558589165" />
+    <state width="1870" height="157" key="GridCell.Tab.0.left" timestamp="1582558589165">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state width="1310" height="60" key="GridCell.Tab.0.left/1360.0.1920.1080/0.34.1360.734@0.34.1360.734" timestamp="1578047099865" />
     <state width="1870" height="182" key="GridCell.Tab.0.left/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579958820192" />
-    <state width="1870" height="157" key="GridCell.Tab.0.left/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1582497499945" />
-    <state width="1870" height="157" key="GridCell.Tab.0.right" timestamp="1582497499945">
+    <state width="1870" height="157" key="GridCell.Tab.0.left/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1582558589165" />
+    <state width="1870" height="157" key="GridCell.Tab.0.right" timestamp="1582558589165">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state width="1310" height="60" key="GridCell.Tab.0.right/1360.0.1920.1080/0.34.1360.734@0.34.1360.734" timestamp="1578047099865" />
     <state width="1870" height="182" key="GridCell.Tab.0.right/1360.0.1920.1080/0.34.1360.734@1360.0.1920.1080" timestamp="1579958820192" />
-    <state width="1870" height="157" key="GridCell.Tab.0.right/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1582497499945" />
+    <state width="1870" height="157" key="GridCell.Tab.0.right/1360.0.1920.1080/0.86.1360.768@1360.0.1920.1080" timestamp="1582558589165" />
     <state width="1870" height="242" key="GridCell.Tab.1.bottom" timestamp="1582369813910">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
