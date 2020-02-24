@@ -4,7 +4,7 @@ import {
   LoginForm,
   RegisterForm,
   Menu,
-  Surveys,
+  Dashboard,
   Candidacies,
 } from './Pages'
 import { Switch, Route, Redirect } from 'react-router-dom'
@@ -13,43 +13,19 @@ import { useSelector, useDispatch } from 'react-redux'
 /**
  * Renders an App shell that renders application pages
  */
-
-enum Roles {
-  Admin = 'Admin',
-  SchoolAdmin = 'SchoolAdmin'
-}
 const App: FunctionComponent = () => {
 
-  const authCode = useSelector((state: any) => state.login.authCode)
+  const authCode = useSelector((state: any) => state.user.authCode)
   const dispatch = useDispatch()
 
-  dispatch({ type: 'LOAD_FROM_COOKIES' })
-
-  useEffect(() => {
-    fetch('https://localhost:44375/roleCheck', {
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${authCode}`
-      }
-    }).then(response => response.json())
-      .then(response => {
-        if (response.error) {
-          throw (response.error)
-        }
-        dispatch({
-          type: 'SET_USER_ROLE',
-          payload: response.role
-        })
-      })
-      .catch(error => {
-        console.error(error)
-      })
-  }, [authCode])
+  if(authCode === undefined) {
+    dispatch({type: 'LOAD_FROM_COOKIES'})
+  }
 
   /**
    * Checks with global state that a user is logged in
    */
-  const isLoggedIn = useSelector((state: any) => state.login.isLoggedIn)
+  const isLoggedIn = useSelector((state: any) => state.user.isLoggedIn)
 
   interface RouteInterface {
     children: any,
@@ -65,53 +41,40 @@ const App: FunctionComponent = () => {
    * @param {string} path - path to render at
    */
   const AuthorizedRoute: React.FC<RouteInterface> = ({ children, exact, path }) => {
-    const role = useSelector((state: any) => state.login.role)
 
     if (exact) {
-      // if (role === Roles.Admin || role === Roles.SchoolAdmin) {
-      //   return (
-      //     <Redirect to={{ pathname: '/dashboard' }} />
-      //   )
-      // } else {
-
       return (
         <Route
           exact
           path={path}
-          render={() =>
+          render={({ location }) =>
             isLoggedIn ? (
               children) : (
-                < Redirect
+                <Redirect
                   to={{
-                    pathname: '/login',
-                  }
-                  }
+                    pathname: "/login",
+                    state: { from: location }
+                  }}
                 />
               )
           } />
       )
-      // }
     } else {
-      // if (role === Roles.Admin || role === Roles.SchoolAdmin) {
-      //   return (
-      //     <Redirect to={{ pathname: '/dashboard' }} />
-      //   )
-      // } else {
-
       return (
         <Route
           path={path}
-          render={() =>
+          render={({ location }) =>
             isLoggedIn ? (
               children) : (
-                < Redirect
+                <Redirect
                   to={{
-                    pathname: '/login',
-                  }
-                  }
+                    pathname: "/login",
+                    state: { from: location }
+                  }}
                 />
               )
-          } />
+          }
+        />
       )
     }
   }
@@ -133,7 +96,7 @@ const App: FunctionComponent = () => {
             children) : (
               <Redirect
                 to={{
-                  pathname: "/menu",
+                  pathname: "/dashboard",
                   state: { from: location }
                 }}
               />
@@ -161,8 +124,8 @@ const App: FunctionComponent = () => {
         <AuthorizedRoute exact path="/menu">
           <Menu />
         </AuthorizedRoute>
-        <AuthorizedRoute exact={false} path="/surveys">
-          <Surveys />
+        <AuthorizedRoute exact={false} path="/dashboard">
+          <Dashboard />
         </AuthorizedRoute>
         <AuthorizedRoute exact={false} path="/candidacies">
           <Candidacies />

@@ -26,7 +26,7 @@ namespace backend.Controllers
         private string  GetRole(string userId)
         {
             var user = _userManager.FindByIdAsync(userId).Result;
-            string role = _userManager.GetRolesAsync(user).Result.FirstOrDefault();
+            string role = _userManager.GetRolesAsync(user).Result.LastOrDefault();
             return role;
         }
 

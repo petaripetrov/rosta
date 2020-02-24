@@ -1,4 +1,4 @@
-import { LOGIN_USER, LOGOUT_USER, LOAD_FROM_COOKIES, SET_USER_ROLE } from '../Actions'
+import { LOGIN_USER, LOGOUT_USER, LOAD_FROM_COOKIES, SET_USER_ROLE, SET_USERS } from '../Actions'
 import { Action } from 'redux'
 
 interface LoginAction extends Action {
@@ -53,6 +53,9 @@ export const loginReducer = (state = { isLoggedIn: false, role: null }, action: 
                 ...state,
                 role: action.payload
             }
+
+        case SET_USERS:
+            
 
         default:
             return state

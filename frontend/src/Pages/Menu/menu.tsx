@@ -17,7 +17,7 @@ export const Menu: FunctionComponent = () => {
     const { t } = useTranslation()
 
     function handleSurveybutton() {
-        history.push('/surveys')
+        history.push('/dashboard')
     }
 
     function handleCandidacybutton() {

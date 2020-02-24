@@ -23,7 +23,7 @@ const CreateSurvey: FunctionComponent<{ initial?: SurveyInput }> = ({initial}) =
     const description = useRef<any>(null)
     const photo = useRef<any>(null)
 
-    const authcode = useSelector((state:any) => state.login.authCode)
+    const authcode = useSelector((state:any) => state.user.authCode)
 
     const OptionsTable: FunctionComponent<{ initial?: Array<OptionInput> }> = (initial) => {
         

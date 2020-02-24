@@ -1,3 +1,3 @@
 export * from './Translation'
-export * from './Login'
+export * from './User'
 export * from './API'
