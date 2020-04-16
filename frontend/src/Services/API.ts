@@ -6,7 +6,9 @@ enum APIEndpoints {
     surveys = 'surveys',
     login = 'login',
     candidacies = 'candidacies',
-    candidaciyPhotos = 'candidaciesPhotos'
+    candidaciyPhotos = 'candidaciesPhotos',
+    users = 'users',
+    schools = 'schoos'
 }
 
 /**
