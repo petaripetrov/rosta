@@ -43,7 +43,7 @@ export const loginReducer = (state = { isLoggedIn: false, role: null }, action: 
                 return {
                     ...state,
                     isLoggedIn: false,
-                    options: []
+                    authcode: undefined
                 }
             }
 
